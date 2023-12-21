@@ -1,0 +1,8 @@
+
+*.o
+*.dmp
+*.log
+*.exe
+*.json
+*.xml
+*.iml

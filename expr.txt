@@ -1,0 +1,19 @@
+{
+    input (a);
+    input (b);
+    input (c);
+
+    d = b ^ 2 - 4 * a * c;
+    if (d > 0)
+    {
+        x = (0 - b - sqrt(d)) / (2 * a);
+        y = (0 - b + sqrt(d)) / (2 * a);
+        print(x);
+        print(y);
+    }
+    else if (d == 0)
+    {
+        x = 0 - b / 2 * a;
+        print(x);
+    }
+}
