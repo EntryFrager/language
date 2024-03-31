@@ -36,21 +36,21 @@ NODE *get_code (TOKEN *token, int *code_error)
 NODE *get_op (TOKEN *token, size_t *pos, int *code_error)
 {
     my_assert (token != NULL, ERR_PTR);
-    my_assert (pos != NULL,   ERR_PTR);
+    my_assert (pos   != NULL,   ERR_PTR);
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == OPEN_BRACE);
+    syntax_assert (IS_TYPE (OP) && IS_OP (OPEN_BRACE));
     INCREM;
 
     NODE *node = OP_ (END_EXPR, NULL);
 
     NODE *temp_node = node;
 
-    while (CUR_TOK.data.types_op != CLOSE_BRACE)
+    while (!IS_OP (CLOSE_BRACE))
     {
         node->left = get_node_op (token, pos, code_error);
         ERR_RET (NULL);
 
-        if (CUR_TOK.data.types_op == CLOSE_BRACE)
+        if (IS_OP (CLOSE_BRACE))
         {
             break;
         }
@@ -59,12 +59,12 @@ NODE *get_op (TOKEN *token, size_t *pos, int *code_error)
         node = node->right;
     }
 
-    if (CUR_TOK.type != OP)
+    if (!IS_TYPE (OP))
     {
         temp_node->right = get_op (token, pos, code_error);
         ERR_RET (NULL);
     }
-    else if (CUR_TOK.data.types_op != CLOSE_BRACE)
+    else if (!IS_OP (CLOSE_BRACE))
     {
         temp_node->right = get_op (token, pos, code_error);
         ERR_RET (NULL);
@@ -118,6 +118,35 @@ NODE *get_node_op (TOKEN *token, size_t *pos, int *code_error)
                     node = get_break (token, pos, code_error);
                     break;
                 }
+                case (END_EXPR):
+                case (ADD):
+                case (SUB):
+                case (MUL):
+                case (DIV):
+                case (POW):
+                case (SIN):
+                case (COS):
+                case (FLOOR):
+                case (DIFF):
+                case (SQRT):
+                case (LN):
+                case (ELSE):
+                case (AND):
+                case (OR):
+                case (AE):
+                case (BE):
+                case (EQUAL):
+                case (NE):
+                case (ASSIG):
+                case (ABOVE):
+                case (LESS):
+                case (NOT):
+                case (CONTINUE):
+                case (RETURN):
+                case (OPEN_BRACKET):
+                case (CLOSE_BRACKET):
+                case (CLOSE_BRACE):
+                case (OP_NO):
                 default:
                 {
                     break;
@@ -131,6 +160,8 @@ NODE *get_node_op (TOKEN *token, size_t *pos, int *code_error)
             node = get_expr (token, pos, code_error);
             break;
         }
+        case (NUM):      {}
+        case (DEF_TYPE): {}
         default:
         {
             break;
@@ -149,12 +180,12 @@ NODE *get_if_else (TOKEN *token, size_t *pos, int *code_error)
     
     NODE *node = NULL;
 
-    if (CUR_TOK.type == OP && CUR_TOK.data.types_op == IF)
+    if (IS_TYPE (OP) && IS_OP (IF))
     {
         node = get_if (token, pos, code_error);
         ERR_RET (NULL);
 
-        if (CUR_TOK.type == OP && CUR_TOK.data.types_op == ELSE)
+        if (IS_TYPE (OP) && IS_OP (ELSE))
         {
             INCREM;
             node->right = get_if_else (token, pos, code_error);
@@ -175,7 +206,7 @@ NODE *get_if (TOKEN *token, size_t *pos, int *code_error)
     my_assert (token != NULL, ERR_PTR);
     my_assert (pos != NULL,   ERR_PTR);
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == IF);
+    syntax_assert (IS_TYPE (OP) && IS_OP (IF));
     NODE *node = OP_ (IF, NULL);
     INCREM;
 
@@ -195,7 +226,7 @@ NODE *get_while (TOKEN *token, size_t *pos, int *code_error)
     my_assert (token != NULL, ERR_PTR);
     my_assert (pos != NULL,   ERR_PTR);
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == WHILE);
+    syntax_assert (IS_TYPE (OP) && IS_OP (WHILE));
     NODE *node = OP_ (WHILE, NULL);
     INCREM;
 
@@ -213,21 +244,21 @@ NODE *get_stdin (TOKEN *token, op_comand type, size_t *pos, int *code_error)
     my_assert (token != NULL, ERR_PTR);
     my_assert (pos != NULL,   ERR_PTR);
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == type);
+    syntax_assert (IS_TYPE (OP) && IS_OP (type));
     NODE *node = OP_ (type, NULL);
     INCREM;
     
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == OPEN_BRACKET);
+    syntax_assert (IS_TYPE (OP) && IS_OP (OPEN_BRACKET));
     INCREM;
 
-    syntax_assert (CUR_TOK.type == IDENT);
+    syntax_assert (IS_TYPE (IDENT));
     node->right = IDENT_ (CUR_TOK.data.ident, NULL);
     INCREM;
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == CLOSE_BRACKET);
+    syntax_assert (IS_TYPE (OP) && IS_OP (CLOSE_BRACKET));
     INCREM;
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == END_EXPR);
+    syntax_assert (IS_TYPE (OP) && IS_OP (END_EXPR));
     INCREM;
 
     return node;
@@ -238,11 +269,11 @@ NODE *get_break (TOKEN *token, size_t *pos, int *code_error)
     my_assert (token != NULL, ERR_PTR);
     my_assert (pos != NULL,   ERR_PTR);
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == BREAK);
+    syntax_assert (IS_TYPE (OP) && IS_OP (BREAK));
     NODE *node = OP_ (BREAK, NULL);
     INCREM;
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == END_EXPR);
+    syntax_assert (IS_TYPE (OP) && IS_OP (END_EXPR));
     INCREM;
 
     return node;
@@ -253,13 +284,13 @@ NODE *get_condition (TOKEN *token, size_t *pos, int *code_error)
     my_assert (token != NULL, ERR_PTR);
     my_assert (pos != NULL,   ERR_PTR);
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == OPEN_BRACKET);
+    syntax_assert (IS_TYPE (OP) && IS_OP (OPEN_BRACKET));
     INCREM;
 
     NODE *node = get_compare (token, pos, code_error);
     ERR_RET (NULL);
 
-    while (CUR_TOK.type == OP && (IS_OP (AND) || IS_OP (OR)))
+    while (IS_TYPE (OP) && (IS_OP (AND) || IS_OP (OR)))
     {
         op_comand op = CUR_TOK.data.types_op;
         INCREM;
@@ -274,11 +305,46 @@ NODE *get_condition (TOKEN *token, size_t *pos, int *code_error)
             case (AND):
             {
                 node = AND_ (node_l, node_r);
+                break;
             }
             case (OR):
             {
                 node = OR_ (node_l, node_r);
+                break;
             }
+            case (END_EXPR):
+            case (ADD):
+            case (SUB):
+            case (MUL):
+            case (DIV):
+            case (POW):
+            case (SIN):
+            case (COS):
+            case (FLOOR):
+            case (DIFF):
+            case (SQRT):
+            case (LN):
+            case (IF):
+            case (ELSE):
+            case (WHILE):
+            case (AE):
+            case (BE):
+            case (EQUAL):
+            case (NE):
+            case (ASSIG):
+            case (ABOVE):
+            case (LESS):
+            case (NOT):
+            case (BREAK):
+            case (CONTINUE):
+            case (RETURN):
+            case (PRINT):
+            case (MY_INPUT):
+            case (OPEN_BRACKET):
+            case (CLOSE_BRACKET):
+            case (OPEN_BRACE):
+            case (CLOSE_BRACE):
+            case (OP_NO):
             default:
             {
                 break;
@@ -286,7 +352,7 @@ NODE *get_condition (TOKEN *token, size_t *pos, int *code_error)
         }
     }
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == CLOSE_BRACKET);
+    syntax_assert (IS_TYPE (OP) && IS_OP (CLOSE_BRACKET));
     INCREM;
 
     return node;
@@ -300,7 +366,7 @@ NODE *get_compare (TOKEN *token, size_t *pos, int *code_error)
     NODE *node_l = get_add_sub (token, pos, code_error);
     ERR_RET (NULL);
 
-    syntax_assert (CUR_TOK.type == OP);
+    syntax_assert (IS_TYPE (OP));
     op_comand op = CUR_TOK.data.types_op;
     INCREM;
 
@@ -321,7 +387,7 @@ NODE *get_expr (TOKEN *token, size_t *pos, int *code_error)
     NODE *node_l = IDENT_ (CUR_TOK.data.ident, NULL);
     INCREM;
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == ASSIG)
+    syntax_assert (IS_TYPE (OP) && IS_OP (ASSIG))
     INCREM;
 
     NODE *node_r = get_add_sub (token, pos, code_error);
@@ -330,7 +396,7 @@ NODE *get_expr (TOKEN *token, size_t *pos, int *code_error)
     NODE *node = create_node_op (ASSIG, node_l, node_r, NULL, code_error);
     ERR_RET (NULL);
 
-    syntax_assert (CUR_TOK.type == OP && CUR_TOK.data.types_op == END_EXPR);
+    syntax_assert (IS_TYPE (OP) && IS_OP (END_EXPR));
     INCREM;
 
     return node;
@@ -344,7 +410,7 @@ NODE *get_add_sub (TOKEN *token, size_t *pos, int *code_error)
     NODE *node = get_mul_div (token, pos, code_error);
     ERR_RET (NULL);
 
-    while (CUR_TOK.type == OP && (IS_OP (ADD) || IS_OP (SUB)))
+    while (IS_TYPE (OP) && (IS_OP (ADD) || IS_OP (SUB)))
     {
         op_comand op = CUR_TOK.data.types_op;
         INCREM;
@@ -366,14 +432,39 @@ NODE *get_add_sub (TOKEN *token, size_t *pos, int *code_error)
                 node = SUB_ (node_l, node_r);
                 break;
             }
-            case (OP_NO):
+            case (END_EXPR):
             case (MUL):
             case (DIV):
+            case (POW):
             case (SIN):
             case (COS):
+            case (FLOOR):
+            case (DIFF):
             case (SQRT):
+            case (LN):
+            case (IF):
+            case (ELSE):
+            case (WHILE):
+            case (AND):
+            case (OR):
+            case (AE):
+            case (BE):
+            case (EQUAL):
+            case (NE):
+            case (ASSIG):
+            case (ABOVE):
+            case (LESS):
+            case (NOT):
+            case (BREAK):
+            case (CONTINUE):
+            case (RETURN):
+            case (PRINT):
+            case (MY_INPUT):
             case (OPEN_BRACKET):
             case (CLOSE_BRACKET):
+            case (OPEN_BRACE):
+            case (CLOSE_BRACE):
+            case (OP_NO):
             default:
             {
                 break;
@@ -394,7 +485,7 @@ NODE *get_mul_div (TOKEN *token, size_t *pos, int *code_error)
     NODE *node = get_pow (token, pos, code_error);
     ERR_RET (NULL);
 
-    while (CUR_TOK.type == OP && (IS_OP (MUL) || IS_OP (DIV)))
+    while (IS_TYPE (OP) && (IS_OP (MUL) || IS_OP (DIV)))
     {
         op_comand op = CUR_TOK.data.types_op;
         INCREM;
@@ -416,14 +507,39 @@ NODE *get_mul_div (TOKEN *token, size_t *pos, int *code_error)
                 node = DIV_ (node_l, node_r);
                 break;
             }
-            case (OP_NO):
+            case (END_EXPR):
             case (ADD):
             case (SUB):
+            case (POW):
             case (SIN):
             case (COS):
+            case (FLOOR):
+            case (DIFF):
             case (SQRT):
+            case (LN):
+            case (IF):
+            case (ELSE):
+            case (WHILE):
+            case (AND):
+            case (OR):
+            case (AE):
+            case (BE):
+            case (EQUAL):
+            case (NE):
+            case (ASSIG):
+            case (ABOVE):
+            case (LESS):
+            case (NOT):
+            case (BREAK):
+            case (CONTINUE):
+            case (RETURN):
+            case (PRINT):
+            case (MY_INPUT):
             case (OPEN_BRACKET):
             case (CLOSE_BRACKET):
+            case (OPEN_BRACE):
+            case (CLOSE_BRACE):
+            case (OP_NO):
             default:
             {
                 break;
@@ -444,7 +560,7 @@ NODE *get_pow (TOKEN *token, size_t *pos, int *code_error)
     NODE *node = get_bracket (token, pos, code_error);
     ERR_RET (NULL);
 
-    while (CUR_TOK.type == OP && IS_OP (POW)) 
+    while (IS_TYPE (OP) && IS_OP (POW)) 
     {
         INCREM;
 
@@ -466,15 +582,14 @@ NODE *get_bracket (TOKEN *token, size_t *pos, int *code_error)
     my_assert (token != NULL, ERR_PTR);
     my_assert (pos != NULL,   ERR_PTR);
 
-    if (CUR_TOK.type == OP && IS_OP (OPEN_BRACKET))
+    if (IS_TYPE (OP) && IS_OP (OPEN_BRACKET))
     {
         INCREM;
 
         NODE *node = get_add_sub (token, pos, code_error);
         ERR_RET (NULL);
 
-
-        syntax_assert (CUR_TOK.type == OP && IS_OP (CLOSE_BRACKET));
+        syntax_assert (IS_TYPE (OP) && IS_OP (CLOSE_BRACKET));
         INCREM;
 
         ERR_RET (NULL);
@@ -514,13 +629,38 @@ NODE *get_trig (TOKEN *token, size_t *pos, int *code_error)
             {
                 return SQRT_ (node_r);
             }
-            case (OP_NO):
+            case (END_EXPR):
             case (ADD):
             case (SUB):
             case (MUL):
             case (DIV):
+            case (POW):
+            case (FLOOR):
+            case (DIFF):
+            case (LN):
+            case (IF):
+            case (ELSE):
+            case (WHILE):
+            case (AND):
+            case (OR):
+            case (AE):
+            case (BE):
+            case (EQUAL):
+            case (NE):
+            case (ASSIG):
+            case (ABOVE):
+            case (LESS):
+            case (NOT):
+            case (BREAK):
+            case (CONTINUE):
+            case (RETURN):
+            case (PRINT):
+            case (MY_INPUT):
             case (OPEN_BRACKET):
             case (CLOSE_BRACKET):
+            case (OPEN_BRACE):
+            case (CLOSE_BRACE):
+            case (OP_NO):
             default:
             {
                 break;

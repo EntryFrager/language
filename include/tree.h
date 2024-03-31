@@ -72,13 +72,13 @@ enum op_comand {
     CONTINUE      = 26,
     RETURN        = 27,
     PRINT         = 28,
-    MY_INPUT         = 29,
+    MY_INPUT      = 29,
     OPEN_BRACKET  = 30,
     CLOSE_BRACKET = 31,
     OPEN_BRACE    = 32,
     CLOSE_BRACE   = 33,
 
-    OP_NO         = 34
+    OP_NO         = 35
 };
 
 enum types {
@@ -115,7 +115,7 @@ typedef struct TOKEN {
 
 typedef struct {
     char *ident = NULL;
-    op_comand ident_type = OP_NO;
+    types ident_type = DEF_TYPE;
 } TABLE_NAME;
 
 typedef struct {

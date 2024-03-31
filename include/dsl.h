@@ -8,7 +8,6 @@
 #define NUM_(value, parent)   create_node_num   (value,    NULL, NULL, parent, code_error)
 #define IDENT_(str, parent)   create_node_ident (str,      NULL, NULL, parent, code_error)
 #define OP_(types_op, parent) create_node_op    (types_op, NULL, NULL, parent, code_error)
-#define FUNC_(str, parent)    create_node_func  (str,      NULL, NULL, parent, code_error)
 
 #define is_zero(value)  (compare (value, 0) == 0)
 #define is_one(value)   (compare (value, 1) == 0)
@@ -44,8 +43,9 @@
 
 #define str_len(str)  (sizeof (str) - 1)
 
-#define CUR_TOK      token[*pos]
-#define IS_OP(type)  (CUR_TOK.data.types_op == type)
-#define INCREM       ((*pos)++)
+#define CUR_TOK       token[*pos]
+#define IS_OP(type)   (CUR_TOK.data.types_op == type)
+#define IS_TYPE(type_) (CUR_TOK.type == type_)
+#define INCREM        ((*pos)++)
 
 #endif //DSL_H

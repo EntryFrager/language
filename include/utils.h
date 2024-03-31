@@ -20,7 +20,7 @@
 
 const double EPSILON = 1e-10;
 
-char *get_str_file (FILE *stream, size_t *size_file, int *code_error);
+char *get_file_to_str (FILE *stream, size_t *size_file, int *code_error);
 
 size_t get_file_size (FILE *stream, int *code_error);
 
@@ -28,7 +28,7 @@ char *get_str (FILE *stream, int *code_error);
 
 size_t get_n_lines (char *str, int *code_error);
 
-char *skip_isspace (char *str, int *code_error);
+char *skip_isspace (char *str, size_t len_str, int *code_error);
 
 char *read_ident (char **str, int *code_error);
 

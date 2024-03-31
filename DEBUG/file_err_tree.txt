@@ -1,947 +1,41 @@
-digraph List {
-	rankdir = HR;
-	bgcolor = "#696969";
-	node0 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node1 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{&&}"];
-	node0 -> node1 [color = "#8B00FF"];
-	node2 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{a}"];
-	node1 -> node2 [color = "#ccff99"];
-	node3 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{1}"];
-	node1 -> node3 [color = "#00BFFF"];
-	node4 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node0 -> node4 [color = "#8B00FF"];
-	node5 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{&&}"];
-	node4 -> node5 [color = "#8B00FF"];
-	node6 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{b}"];
-	node5 -> node6 [color = "#ccff99"];
-	node7 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{2}"];
-	node5 -> node7 [color = "#00BFFF"];
-	node8 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node4 -> node8 [color = "#8B00FF"];
-	node9 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{&&}"];
-	node8 -> node9 [color = "#8B00FF"];
-	node10 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{c}"];
-	node9 -> node10 [color = "#ccff99"];
-	node11 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{3}"];
-	node9 -> node11 [color = "#00BFFF"];
-	node12 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node8 -> node12 [color = "#8B00FF"];
-	node13 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{&&}"];
-	node12 -> node13 [color = "#8B00FF"];
-	node14 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{d}"];
-	node13 -> node14 [color = "#ccff99"];
-	node15 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{-}"];
-	node13 -> node15 [color = "#8B00FF"];
-	node16 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{^}"];
-	node15 -> node16 [color = "#8B00FF"];
-	node17 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{b}"];
-	node16 -> node17 [color = "#ccff99"];
-	node18 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{2}"];
-	node16 -> node18 [color = "#00BFFF"];
-	node19 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{*}"];
-	node15 -> node19 [color = "#8B00FF"];
-	node20 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{*}"];
-	node19 -> node20 [color = "#8B00FF"];
-	node21 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{4}"];
-	node20 -> node21 [color = "#00BFFF"];
-	node22 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{a}"];
-	node20 -> node22 [color = "#ccff99"];
-	node23 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{c}"];
-	node19 -> node23 [color = "#ccff99"];
-	node24 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node12 -> node24 [color = "#8B00FF"];
-	node25 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{if}"];
-	node24 -> node25 [color = "#8B00FF"];
-	node26 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{no key_word}"];
-	node25 -> node26 [color = "#8B00FF"];
-	node27 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{||}"];
-	node26 -> node27 [color = "#8B00FF"];
-	node28 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{d}"];
-	node27 -> node28 [color = "#ccff99"];
-	node29 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{0}"];
-	node27 -> node29 [color = "#00BFFF"];
-	node30 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node26 -> node30 [color = "#8B00FF"];
-	node31 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{&&}"];
-	node30 -> node31 [color = "#8B00FF"];
-	node32 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{x}"];
-	node31 -> node32 [color = "#ccff99"];
-	node33 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{/}"];
-	node31 -> node33 [color = "#8B00FF"];
-	node34 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{-}"];
-	node33 -> node34 [color = "#8B00FF"];
-	node35 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{b}"];
-	node34 -> node35 [color = "#ccff99"];
-	node36 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{sqrt}"];
-	node34 -> node36 [color = "#8B00FF"];
-	node37 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{1}"];
-	node36 -> node37 [color = "#00BFFF"];
-	node38 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{d}"];
-	node36 -> node38 [color = "#ccff99"];
-	node39 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{*}"];
-	node33 -> node39 [color = "#8B00FF"];
-	node40 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{2}"];
-	node39 -> node40 [color = "#00BFFF"];
-	node41 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{a}"];
-	node39 -> node41 [color = "#ccff99"];
-	node42 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node30 -> node42 [color = "#8B00FF"];
-	node43 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{&&}"];
-	node42 -> node43 [color = "#8B00FF"];
-	node44 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{y}"];
-	node43 -> node44 [color = "#ccff99"];
-	node45 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{/}"];
-	node43 -> node45 [color = "#8B00FF"];
-	node46 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{+}"];
-	node45 -> node46 [color = "#8B00FF"];
-	node47 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{b}"];
-	node46 -> node47 [color = "#ccff99"];
-	node48 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{sqrt}"];
-	node46 -> node48 [color = "#8B00FF"];
-	node49 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{1}"];
-	node48 -> node49 [color = "#00BFFF"];
-	node50 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{d}"];
-	node48 -> node50 [color = "#ccff99"];
-	node51 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{*}"];
-	node45 -> node51 [color = "#8B00FF"];
-	node52 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{2}"];
-	node51 -> node52 [color = "#00BFFF"];
-	node53 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{a}"];
-	node51 -> node53 [color = "#ccff99"];
-	node54 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{if}"];
-	node25 -> node54 [color = "#8B00FF"];
-	node55 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{no key_word}"];
-	node54 -> node55 [color = "#8B00FF"];
-	node56 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{==}"];
-	node55 -> node56 [color = "#8B00FF"];
-	node57 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{<}"];
-	node56 -> node57 [color = "#8B00FF"];
-	node58 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{d}"];
-	node57 -> node58 [color = "#ccff99"];
-	node59 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{0}"];
-	node57 -> node59 [color = "#00BFFF"];
-	node60 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{||}"];
-	node56 -> node60 [color = "#8B00FF"];
-	node61 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{x}"];
-	node60 -> node61 [color = "#ccff99"];
-	node62 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{0}"];
-	node60 -> node62 [color = "#00BFFF"];
-	node63 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node55 -> node63 [color = "#8B00FF"];
-	node64 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{&&}"];
-	node63 -> node64 [color = "#8B00FF"];
-	node65 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{x}"];
-	node64 -> node65 [color = "#ccff99"];
-	node66 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{/}"];
-	node64 -> node66 [color = "#8B00FF"];
-	node67 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{b}"];
-	node66 -> node67 [color = "#ccff99"];
-	node68 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{2}"];
-	node66 -> node68 [color = "#00BFFF"];
-	node69 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{;}"];
-	node54 -> node69 [color = "#8B00FF"];
-	node70 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{&&}"];
-	node69 -> node70 [color = "#8B00FF"];
-	node71 [shape = Mrecord, style = filled, fillcolor = "#ccff99", label = "{x}"];
-	node70 -> node71 [color = "#ccff99"];
-	node72 [shape = Mrecord, style = filled, fillcolor = "#00BFFF", label = "{0}"];
-	node70 -> node72 [color = "#00BFFF"];
-	label = "tree_dump from function main, Tree/main.cpp:13";}
-
 --------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
+tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
-		*node[0146DB70] = ;;
-		*node[0146DEB8] = &&;
-		*node[0146DB90] = a;
-		*node[0146DBB0] = 1;
-		*node[0146DDD8] = ;;
-		*node[0146DD18] = &&;
-		*node[0146DDF8] = b;
-		*node[0146DF38] = 2;
-		*node[0146DCD8] = ;;
-		*node[0146DE18] = &&;
-		*node[0146DDB8] = c;
-		*node[0146DFB8] = 3;
-		*node[0146DBF8] = ;;
-		*node[0146DF18] = &&;
-		*node[0146DED8] = d;
-		*node[0146DE38] = -;
-		*node[0146DC58] = ^;
-		*node[0146DCB8] = b;
-		*node[0146DC78] = 2;
-		*node[0146DD58] = *;
-		*node[0146DD38] = *;
-		*node[0146DEF8] = 4;
-		*node[0146DCF8] = a;
-		*node[0146DC98] = c;
-		*node[0146DF58] = ;;
-		*node[0146DD78] = if;
-		*node[0146DD98] = no key_word;
-		*node[0146DE98] = ||;
-		*node[0146DE58] = d;
-		*node[0146DE78] = 0;
-		*node[0146DF78] = ;;
-		*node[0146E408] = &&;
-		*node[0146DC18] = x;
-		*node[0146E6E8] = /;
-		*node[0146E768] = -;
-		*node[0146DF98] = b;
-		*node[0146E4C8] = sqrt;
-		*node[0146E7A8] = 1;
-		*node[0146DC38] = d;
-		*node[0146E488] = *;
-		*node[0146E5C8] = 2;
-		*node[0146E788] = a;
-		*node[0146E6C8] = ;;
-		*node[0146E548] = &&;
-		*node[0146E508] = y;
-		*node[0146E728] = /;
-		*node[0146E428] = +;
-		*node[0146E4E8] = b;
-		*node[0146E468] = sqrt;
-		*node[0146E448] = 1;
-		*node[0146E588] = d;
-		*node[0146E528] = *;
-		*node[0146E708] = 2;
-		*node[0146E4A8] = a;
-		*node[0146E668] = if;
-		*node[0146E5E8] = no key_word;
-		*node[0146E688] = ==;
-		*node[0146E648] = <;
-		*node[0146E748] = d;
-		*node[0146E568] = 0;
-		*node[0146E628] = ||;
-		*node[0146E5A8] = x;
-		*node[0146E608] = 0;
-		*node[0146E6A8] = ;;
-		*node[0146E248] = &&;
-		*node[0146E208] = x;
-		*node[0146E008] = /;
-		*node[0146E0E8] = b;
-		*node[0146E3E8] = 2;
-		*node[0146E2A8] = ;;
-		*node[0146E048] = &&;
-		*node[0146E2E8] = x;
-		*node[0146E3C8] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0154DB70] = ;;
-		*node[0154DD38] = &&;
-		*node[0154DB90] = a;
-		*node[0154DBB0] = 1;
-		*node[0154DCB8] = ;;
-		*node[0154DF78] = &&;
-		*node[0154DDF8] = b;
-		*node[0154DD58] = 2;
-		*node[0154DEB8] = ;;
-		*node[0154DFB8] = &&;
-		*node[0154DC38] = c;
-		*node[0154DC78] = 3;
-		*node[0154DED8] = ;;
-		*node[0154DC18] = &&;
-		*node[0154DF38] = d;
-		*node[0154DDB8] = -;
-		*node[0154DD98] = ^;
-		*node[0154DD78] = b;
-		*node[0154DC98] = 2;
-		*node[0154DF18] = *;
-		*node[0154DDD8] = *;
-		*node[0154DC58] = 4;
-		*node[0154DD18] = a;
-		*node[0154DEF8] = c;
-		*node[0154DF58] = ;;
-		*node[0154DF98] = if;
-		*node[0154DCD8] = no key_word;
-		*node[0154DBF8] = ||;
-		*node[0154DE18] = d;
-		*node[0154DE38] = 0;
-		*node[0154DCF8] = ;;
-		*node[0154E748] = &&;
-		*node[0154DE58] = x;
-		*node[0154E448] = /;
-		*node[0154E6E8] = -;
-		*node[0154DE78] = b;
-		*node[0154E7A8] = sqrt;
-		*node[0154E488] = 1;
-		*node[0154DE98] = d;
-		*node[0154E688] = *;
-		*node[0154E4A8] = 2;
-		*node[0154E668] = a;
-		*node[0154E5E8] = ;;
-		*node[0154E788] = &&;
-		*node[0154E708] = y;
-		*node[0154E548] = /;
-		*node[0154E4E8] = +;
-		*node[0154E408] = b;
-		*node[0154E6C8] = sqrt;
-		*node[0154E4C8] = 1;
-		*node[0154E568] = d;
-		*node[0154E608] = *;
-		*node[0154E508] = 2;
-		*node[0154E528] = a;
-		*node[0154E428] = if;
-		*node[0154E728] = no key_word;
-		*node[0154E648] = ==;
-		*node[0154E468] = <;
-		*node[0154E588] = d;
-		*node[0154E5A8] = 0;
-		*node[0154E628] = ||;
-		*node[0154E5C8] = x;
-		*node[0154E768] = 0;
-		*node[0154E6A8] = ;;
-		*node[0154E3C8] = &&;
-		*node[0154E2A8] = x;
-		*node[0154E248] = /;
-		*node[0154E2C8] = b;
-		*node[0154E068] = 2;
-		*node[0154E208] = ;;
-		*node[0154E2E8] = &&;
-		*node[0154E228] = x;
-		*node[0154E1E8] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[014BDB70] = ;;
-		*node[014BDD18] = &&;
-		*node[014BDB90] = a;
-		*node[014BDBB0] = 1;
-		*node[014BDEB8] = ;;
-		*node[014BDD38] = &&;
-		*node[014BDE18] = b;
-		*node[014BDC78] = 2;
-		*node[014BDE78] = ;;
-		*node[014BDD58] = &&;
-		*node[014BDCF8] = c;
-		*node[014BDDF8] = 3;
-		*node[014BDED8] = ;;
-		*node[014BDE38] = &&;
-		*node[014BDD98] = d;
-		*node[014BDF78] = -;
-		*node[014BDF18] = ^;
-		*node[014BDD78] = b;
-		*node[014BDEF8] = 2;
-		*node[014BDDD8] = *;
-		*node[014BDF38] = *;
-		*node[014BDF98] = 4;
-		*node[014BDE58] = a;
-		*node[014BDF58] = c;
-		*node[014BDE98] = ;;
-		*node[014BDC98] = if;
-		*node[014BDFB8] = no key_word;
-		*node[014BDCD8] = ||;
-		*node[014BDBF8] = d;
-		*node[014BDCB8] = 0;
-		*node[014BDC18] = ;;
-		*node[014BE028] = &&;
-		*node[014BDDB8] = x;
-		*node[014BE2C8] = /;
-		*node[014BE128] = -;
-		*node[014BDC38] = b;
-		*node[014BE108] = sqrt;
-		*node[014BE068] = 1;
-		*node[014BDC58] = d;
-		*node[014BE3A8] = *;
-		*node[014BE288] = 2;
-		*node[014BE1C8] = a;
-		*node[014BE328] = ;;
-		*node[014BE308] = &&;
-		*node[014BE088] = y;
-		*node[014BE168] = /;
-		*node[014BE228] = +;
-		*node[014BE188] = b;
-		*node[014BE0C8] = sqrt;
-		*node[014BE2A8] = 1;
-		*node[014BE3C8] = d;
-		*node[014BE208] = *;
-		*node[014BE1E8] = 2;
-		*node[014BE0A8] = a;
-		*node[014BE248] = if;
-		*node[014BE368] = no key_word;
-		*node[014BE388] = ==;
-		*node[014BE268] = <;
-		*node[014BE1A8] = d;
-		*node[014BE2E8] = 0;
-		*node[014BE3E8] = ||;
-		*node[014BE348] = x;
-		*node[014BE048] = 0;
-		*node[014BE0E8] = ;;
-		*node[014BE448] = &&;
-		*node[014BE008] = x;
-		*node[014BE488] = /;
-		*node[014BE148] = b;
-		*node[014BE6A8] = 2;
-		*node[014BE568] = ;;
-		*node[014BE668] = &&;
-		*node[014BE748] = x;
-		*node[014BE6C8] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-[31mERROR: ptr is null[0m
-[31mERROR: an error occurred while opening the file[0m
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-[31mERROR: ptr is null[0m
-[31mERROR: an error occurred while opening the file[0m
-tree[00B5FEBC] "tree" called from ../include/tree.cpp(205) destroy_tree
-{
-	is_init = 1
-	{
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00C8E348] = ;;
-		*node[00C8E6B0] = &&;
-		*node[00C8E368] = x;
-		*node[00C8E388] = 1;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00CEE348] = ;;
-		*node[00CEE570] = &&;
-		*node[00CEE368] = x;
-		*node[00CEE388] = 1;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00CBEA88] = ;;
-		*node[00CBEB30] = &&;
-		*node[00CBEAA8] = a;
-		*node[00CBEAC8] = 1;
-		*node[00CBEE10] = ;;
-		*node[00CBEBF0] = &&;
-		*node[00CBEDF0] = b;
-		*node[00CBEBD0] = 2;
-		*node[00CBEB50] = ;;
-		*node[00CBEDB0] = &&;
-		*node[00CBEE30] = c;
-		*node[00CBEED0] = 3;
-		*node[00CBEC70] = ;;
-		*node[00CBEE90] = &&;
-		*node[00CBEC10] = d;
-		*node[00CBEC30] = -;
-		*node[00CBEB90] = ^;
-		*node[00CBED30] = b;
-		*node[00CBEB70] = 2;
-		*node[00CBEBB0] = *;
-		*node[00CBED10] = *;
-		*node[00CBEDD0] = 4;
-		*node[00CBED50] = a;
-		*node[00CBED90] = c;
-		*node[00CBEE50] = ;;
-		*node[00CBEC50] = if;
-		*node[00CBED70] = no key_word;
-		*node[00CBEEB0] = ||;
-		*node[00CBEE70] = d;
-		*node[00CBECD0] = 0;
-		*node[00CBEC90] = ;;
-		*node[02D20758] = &&;
-		*node[00CBECB0] = x;
-		*node[02D206D8] = /;
-		*node[02D20558] = -;
-		*node[00CBECF0] = b;
-		*node[02D206B8] = sqrt;
-		*node[02D205B8] = 1;
-		*node[00CBEB10] = d;
-		*node[02D205D8] = *;
-		*node[02D20598] = 2;
-		*node[02D20698] = a;
-		*node[02D20818] = ;;
-		*node[02D20618] = &&;
-		*node[02D20498] = y;
-		*node[02D206F8] = /;
-		*node[02D205F8] = +;
-		*node[02D20478] = b;
-		*node[02D20798] = sqrt;
-		*node[02D20538] = 1;
-		*node[02D204B8] = d;
-		*node[02D20518] = *;
-		*node[02D204D8] = 2;
-		*node[02D204F8] = a;
-		*node[02D20578] = if;
-		*node[02D20638] = no key_word;
-		*node[02D207B8] = ==;
-		*node[02D20718] = <;
-		*node[02D20658] = d;
-		*node[02D20678] = 0;
-		*node[02D20778] = ||;
-		*node[02D20738] = x;
-		*node[02D207F8] = 0;
-		*node[02D207D8] = ;;
-		*node[02D20178] = &&;
-		*node[02D20118] = x;
-		*node[02D20138] = /;
-		*node[02D20358] = b;
-		*node[02D20238] = 2;
-		*node[02D20338] = ;;
-		*node[02D20278] = &&;
-		*node[02D20378] = x;
-		*node[02D200F8] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0150EA88] = ;;
-		*node[0150EC70] = &&;
-		*node[0150EAA8] = a;
-		*node[0150EAC8] = 1;
-		*node[0150ED70] = ;;
-		*node[0150ECF0] = &&;
-		*node[0150EC90] = b;
-		*node[0150EB90] = 2;
-		*node[0150EE50] = ;;
-		*node[0150EE90] = &&;
-		*node[0150EBF0] = c;
-		*node[0150EB10] = 3;
-		*node[0150ED50] = ;;
-		*node[0150EDB0] = &&;
-		*node[0150EC10] = d;
-		*node[0150EE30] = -;
-		*node[0150ECD0] = ^;
-		*node[0150EDD0] = b;
-		*node[0150ECB0] = 2;
-		*node[0150EC50] = *;
-		*node[0150EBD0] = *;
-		*node[0150EED0] = 4;
-		*node[0150ED90] = a;
-		*node[0150EC30] = c;
-		*node[0150EE10] = ;;
-		*node[0150EBB0] = if;
-		*node[0150ED10] = no key_word;
-		*node[0150ED30] = ||;
-		*node[0150EE70] = d;
-		*node[0150EB50] = 0;
-		*node[0150EB70] = ;;
-		*node[02CF0638] = &&;
-		*node[0150EDF0] = x;
-		*node[02CF0478] = /;
-		*node[02CF05B8] = -;
-		*node[0150EEB0] = b;
-		*node[02CF06B8] = sqrt;
-		*node[02CF0818] = 1;
-		*node[0150EB30] = d;
-		*node[02CF07D8] = *;
-		*node[02CF0618] = 2;
-		*node[02CF06D8] = a;
-		*node[02CF05F8] = ;;
-		*node[02CF04B8] = &&;
-		*node[02CF0778] = y;
-		*node[02CF07F8] = /;
-		*node[02CF0678] = +;
-		*node[02CF0698] = b;
-		*node[02CF0658] = sqrt;
-		*node[02CF06F8] = 1;
-		*node[02CF05D8] = d;
-		*node[02CF04F8] = *;
-		*node[02CF0718] = 2;
-		*node[02CF0518] = a;
-		*node[02CF0498] = if;
-		*node[02CF0798] = no key_word;
-		*node[02CF0578] = ==;
-		*node[02CF07B8] = <;
-		*node[02CF0738] = d;
-		*node[02CF04D8] = 0;
-		*node[02CF0558] = ||;
-		*node[02CF0758] = x;
-		*node[02CF0538] = 0;
-		*node[02CF0598] = ;;
-		*node[02CF03B8] = &&;
-		*node[02CF0118] = x;
-		*node[02CF01D8] = /;
-		*node[02CF0238] = b;
-		*node[02CF00D8] = 2;
-		*node[02CF02F8] = ;;
-		*node[02CF0298] = &&;
-		*node[02CF0158] = x;
-		*node[02CF0418] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0134EA88] = ;;
-		*node[0134EB70] = &&;
-		*node[0134EAA8] = a;
-		*node[0134EAC8] = 1;
-		*node[0134EB30] = ;;
-		*node[0134EE30] = &&;
-		*node[0134ECF0] = b;
-		*node[0134EC50] = 2;
-		*node[0134EC70] = ;;
-		*node[0134ED70] = &&;
-		*node[0134ED90] = c;
-		*node[0134EB50] = 3;
-		*node[0134EE50] = ;;
-		*node[0134EB10] = &&;
-		*node[0134EEB0] = d;
-		*node[0134EC10] = -;
-		*node[0134EBD0] = ^;
-		*node[0134EB90] = b;
-		*node[0134EBB0] = 2;
-		*node[0134EC30] = *;
-		*node[0134EED0] = *;
-		*node[0134EE70] = 4;
-		*node[0134EBF0] = a;
-		*node[0134EE90] = c;
-		*node[0134EC90] = ;;
-		*node[0134ECB0] = if;
-		*node[0134ECD0] = no key_word;
-		*node[0134EDB0] = ||;
-		*node[0134ED10] = d;
-		*node[0134ED30] = 0;
-		*node[0134ED50] = ;;
-		*node[03030518] = &&;
-		*node[0134EDD0] = x;
-		*node[030307B8] = /;
-		*node[03030718] = -;
-		*node[0134EDF0] = b;
-		*node[03030818] = sqrt;
-		*node[030305D8] = 1;
-		*node[0134EE10] = d;
-		*node[030306D8] = *;
-		*node[030304F8] = 2;
-		*node[03030738] = a;
-		*node[030305F8] = ;;
-		*node[03030478] = &&;
-		*node[03030698] = y;
-		*node[03030638] = /;
-		*node[03030538] = +;
-		*node[030307F8] = b;
-		*node[03030778] = sqrt;
-		*node[03030758] = 1;
-		*node[03030558] = d;
-		*node[03030578] = *;
-		*node[03030658] = 2;
-		*node[03030618] = a;
-		*node[030306F8] = if;
-		*node[03030598] = no key_word;
-		*node[030306B8] = ==;
-		*node[03030798] = <;
-		*node[03030498] = d;
-		*node[030304B8] = 0;
-		*node[03030678] = ||;
-		*node[030305B8] = x;
-		*node[030304D8] = 0;
-		*node[030307D8] = ;;
-		*node[030300B8] = &&;
-		*node[03030318] = x;
-		*node[03030358] = /;
-		*node[03030278] = b;
-		*node[030302F8] = 2;
-		*node[03030298] = ;;
-		*node[03030178] = &&;
-		*node[03030158] = x;
-		*node[030301F8] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00C9EA88] = ;;
-		*node[00C9EBB0] = &&;
-		*node[00C9EAA8] = a;
-		*node[00C9EAC8] = 1;
-		*node[00C9EB50] = ;;
-		*node[00C9EED0] = &&;
-		*node[00C9EEB0] = b;
-		*node[00C9EB70] = 2;
-		*node[00C9EE50] = ;;
-		*node[00C9EBF0] = &&;
-		*node[00C9EC90] = c;
-		*node[00C9EB90] = 3;
-		*node[00C9ECB0] = ;;
-		*node[00C9ED70] = &&;
-		*node[00C9EC70] = d;
-		*node[00C9ED30] = -;
-		*node[00C9EC30] = ^;
-		*node[00C9EC10] = b;
-		*node[00C9EBD0] = 2;
-		*node[00C9ED10] = *;
-		*node[00C9EC50] = *;
-		*node[00C9ECF0] = 4;
-		*node[00C9ECD0] = a;
-		*node[00C9ED50] = c;
-		*node[00C9EB10] = ;;
-		*node[00C9ED90] = if;
-		*node[00C9EDF0] = no key_word;
-		*node[00C9EE10] = ||;
-		*node[00C9EB30] = d;
-		*node[00C9EDB0] = 0;
-		*node[00C9EDD0] = ;;
-		*node[03040198] = &&;
-		*node[00C9EE30] = x;
-		*node[03040258] = /;
-		*node[030401F8] = -;
-		*node[00C9EE70] = b;
-		*node[03040178] = sqrt;
-		*node[030401D8] = 1;
-		*node[00C9EE90] = d;
-		*node[03040218] = *;
-		*node[03040418] = 2;
-		*node[03040378] = a;
-		*node[03040238] = ;;
-		*node[030400B8] = &&;
-		*node[030403D8] = y;
-		*node[03040458] = /;
-		*node[030403F8] = +;
-		*node[03040078] = b;
-		*node[030400D8] = sqrt;
-		*node[030402D8] = 1;
-		*node[03040158] = d;
-		*node[030401B8] = *;
-		*node[03040278] = 2;
-		*node[03040298] = a;
-		*node[03040098] = if;
-		*node[030402B8] = no key_word;
-		*node[03040358] = ==;
-		*node[03040118] = <;
-		*node[030402F8] = d;
-		*node[030400F8] = 0;
-		*node[03040318] = ||;
-		*node[03040138] = x;
-		*node[03040398] = 0;
-		*node[03040438] = ;;
-		*node[03040518] = &&;
-		*node[03040338] = x;
-		*node[030404B8] = /;
-		*node[030403B8] = b;
-		*node[03040658] = 2;
-		*node[03040758] = ;;
-		*node[030407D8] = &&;
-		*node[03040738] = x;
-		*node[03040538] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0151EA88] = ;;
-		*node[0151EEB0] = =;
-		*node[0151EAA8] = a;
-		*node[0151EAC8] = 1;
-		*node[0151EB10] = ;;
-		*node[0151EB50] = =;
-		*node[0151EDB0] = b;
-		*node[0151ED50] = 2;
-		*node[0151EBB0] = ;;
-		*node[0151EE70] = =;
-		*node[0151ED10] = c;
-		*node[0151ED70] = 3;
-		*node[0151EC30] = ;;
-		*node[0151EC10] = =;
-		*node[0151ED30] = d;
-		*node[0151EC70] = -;
-		*node[0151EE30] = ^;
-		*node[0151EBD0] = b;
-		*node[0151EC50] = 2;
-		*node[0151EED0] = *;
-		*node[0151EB90] = *;
-		*node[0151EB70] = 4;
-		*node[0151EBF0] = a;
-		*node[0151EE90] = c;
-		*node[0151EC90] = ;;
-		*node[0151ECB0] = if;
-		*node[0151EB30] = no key_word;
-		*node[0151ED90] = >;
-		*node[0151ECD0] = d;
-		*node[0151ECF0] = 0;
-		*node[0151EDD0] = ;;
-		*node[030405B8] = =;
-		*node[0151EDF0] = x;
-		*node[030407D8] = /;
-		*node[03040778] = -;
-		*node[0151EE10] = b;
-		*node[03040558] = sqrt;
-		*node[03040678] = 1;
-		*node[0151EE50] = d;
-		*node[030404B8] = *;
-		*node[030404D8] = 2;
-		*node[03040478] = a;
-		*node[03040718] = ;;
-		*node[030405F8] = =;
-		*node[03040698] = y;
-		*node[03040818] = /;
-		*node[03040538] = +;
-		*node[03040518] = b;
-		*node[030406B8] = sqrt;
-		*node[030404F8] = 1;
-		*node[03040578] = d;
-		*node[030406D8] = *;
-		*node[030405D8] = 2;
-		*node[03040598] = a;
-		*node[030406F8] = if;
-		*node[03040498] = no key_word;
-		*node[030407B8] = ||;
-		*node[03040658] = ==;
-		*node[03040618] = d;
-		*node[03040638] = 0;
-		*node[03040798] = >;
-		*node[03040738] = x;
-		*node[03040758] = 0;
-		*node[030407F8] = ;;
-		*node[03040438] = =;
-		*node[030403D8] = x;
-		*node[030400F8] = /;
-		*node[030401D8] = b;
-		*node[03040278] = 2;
-		*node[030403B8] = ;;
-		*node[03040078] = =;
-		*node[030402B8] = x;
-		*node[03040458] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEBC] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[014CEA88] = ;;
-		*node[014CEB50] = =;
-		*node[014CEAA8] = a;
-		*node[014CEAC8] = 1;
-		*node[014CEC50] = ;;
-		*node[014CEB90] = =;
-		*node[014CED10] = b;
-		*node[014CED90] = 2;
-		*node[014CEE10] = ;;
-		*node[014CEB70] = =;
-		*node[014CED50] = c;
-		*node[014CEC10] = 3;
-		*node[014CEBB0] = ;;
-		*node[014CEC90] = =;
-		*node[014CEBD0] = d;
-		*node[014CEEB0] = -;
-		*node[014CEC30] = ^;
-		*node[014CECD0] = b;
-		*node[014CED70] = 2;
-		*node[014CEBF0] = *;
-		*node[014CED30] = *;
-		*node[014CECF0] = 4;
-		*node[014CEDB0] = a;
-		*node[014CEC70] = c;
-		*node[014CEDD0] = ;;
-		*node[014CECB0] = if;
-		*node[014CEE50] = no key_word;
-		*node[014CEE70] = >;
-		*node[014CEDF0] = d;
-		*node[014CEE30] = 0;
-		*node[014CEE90] = ;;
-		*node[030606F8] = =;
-		*node[014CEED0] = x;
-		*node[03060718] = /;
-		*node[03060778] = -;
-		*node[014CEB10] = b;
-		*node[030605F8] = sqrt;
-		*node[03060598] = 1;
-		*node[014CEB30] = d;
-		*node[03060538] = *;
-		*node[03060818] = 2;
-		*node[03060558] = a;
-		*node[030605B8] = ;;
-		*node[030606D8] = =;
-		*node[03060578] = y;
-		*node[03060738] = /;
-		*node[030604B8] = +;
-		*node[03060498] = b;
-		*node[030605D8] = sqrt;
-		*node[03060798] = 1;
-		*node[030607D8] = d;
-		*node[03060478] = *;
-		*node[030604F8] = 2;
-		*node[03060618] = a;
-		*node[030604D8] = if;
-		*node[03060638] = no key_word;
-		*node[03060758] = ||;
-		*node[03060658] = ==;
-		*node[030607B8] = d;
-		*node[03060518] = 0;
-		*node[030606B8] = >;
-		*node[03060698] = x;
-		*node[03060678] = 0;
-		*node[030607F8] = ;;
-		*node[03060158] = =;
-		*node[03060258] = x;
-		*node[030601D8] = /;
-		*node[030603F8] = b;
-		*node[03060278] = 2;
-		*node[03060138] = ;;
-		*node[03060218] = =;
-		*node[030602F8] = x;
-		*node[03060418] = 0;
+		*node[00B9D420] = ;;
+		*node[00B9D440] = input;
+		*node[00B9E790] = x;
+		*node[00B9EB38] = ;;
+		*node[00B9EA78] = if;
+		*node[00B9E7D8] = (null);
+		*node[00B9E9D8] = >;
+		*node[00B9EA18] = x;
+		*node[00B9E9B8] = 0;
+		*node[00B9E918] = ;;
+		*node[00B9EAB8] = =;
+		*node[00B9E878] = b;
+		*node[00B9E978] = 1;
+		*node[00B9E9F8] = ;;
+		*node[00B9EA38] = while;
+		*node[00B9E858] = >;
+		*node[00B9E7F8] = x;
+		*node[00B9EB98] = 0;
+		*node[00B9E818] = ;;
+		*node[00B9EB18] = =;
+		*node[00B9E998] = b;
+		*node[00B9EA58] = *;
+		*node[00B9E838] = b;
+		*node[00B9EAF8] = x;
+		*node[00B9E938] = ;;
+		*node[00B9E8D8] = =;
+		*node[00B9E8F8] = x;
+		*node[00B9EA98] = -;
+		*node[00B9E8B8] = x;
+		*node[00B9E898] = 1;
+		*node[00B9E958] = ;;
+		*node[00B9EAD8] = print;
+		*node[00B9EB58] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------
@@ -952,253 +46,46 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
-		*node[014CEA88] = ;;
-		*node[014CEBD0] = =;
-		*node[014CEAA8] = a;
-		*node[014CEAC8] = 1;
-		*node[014CEE70] = ;;
-		*node[014CEE90] = =;
-		*node[014CECB0] = b;
-		*node[014CED10] = 2;
-		*node[014CEE30] = ;;
-		*node[014CEE10] = =;
-		*node[014CED30] = c;
-		*node[014CEEB0] = 3;
-		*node[014CEB50] = ;;
-		*node[014CEC10] = =;
-		*node[014CECD0] = d;
-		*node[014CEC30] = -;
-		*node[014CEDB0] = ^;
-		*node[014CEBF0] = b;
-		*node[014CED70] = 2;
-		*node[014CECF0] = *;
-		*node[014CEE50] = *;
-		*node[014CED90] = 4;
-		*node[014CED50] = a;
-		*node[014CEC90] = c;
-		*node[014CEED0] = ;;
-		*node[014CEC70] = if;
-		*node[014CEB70] = no key_word;
-		*node[014CEB10] = >;
-		*node[014CEDD0] = d;
-		*node[014CEC50] = 0;
-		*node[014CEDF0] = ;;
-		*node[02CE0698] = =;
-		*node[014CEB30] = x;
-		*node[02CE0518] = /;
-		*node[02CE0498] = -;
-		*node[014CEB90] = b;
-		*node[02CE0478] = sqrt;
-		*node[02CE0558] = 1;
-		*node[014CEBB0] = d;
-		*node[02CE04B8] = *;
-		*node[02CE06F8] = 2;
-		*node[02CE0738] = a;
-		*node[02CE0718] = ;;
-		*node[02CE0598] = =;
-		*node[02CE06B8] = y;
-		*node[02CE0638] = /;
-		*node[02CE07D8] = +;
-		*node[02CE0758] = b;
-		*node[02CE0578] = sqrt;
-		*node[02CE04D8] = 1;
-		*node[02CE0618] = d;
-		*node[02CE07B8] = *;
-		*node[02CE0778] = 2;
-		*node[02CE0798] = a;
-		*node[02CE05B8] = if;
-		*node[02CE0658] = no key_word;
-		*node[02CE0678] = ||;
-		*node[02CE05D8] = ==;
-		*node[02CE07F8] = d;
-		*node[02CE06D8] = 0;
-		*node[02CE04F8] = >;
-		*node[02CE0818] = x;
-		*node[02CE05F8] = 0;
-		*node[02CE0538] = ;;
-		*node[02CE0278] = =;
-		*node[02CE0118] = x;
-		*node[02CE0258] = /;
-		*node[02CE01F8] = b;
-		*node[02CE0238] = 2;
-		*node[02CE0438] = ;;
-		*node[02CE0198] = =;
-		*node[02CE0458] = x;
-		*node[02CE0158] = 0;
+		*node[0148E428] = ;;
+		*node[0148E448] = input;
+		*node[0148E790] = x;
+		*node[0148EB18] = ;;
+		*node[0148E7D8] = if;
+		*node[0148EB38] = (null);
+		*node[0148E8D8] = >;
+		*node[0148EA58] = x;
+		*node[0148EB58] = 0;
+		*node[0148EB78] = ;;
+		*node[0148EB98] = =;
+		*node[0148EAD8] = b;
+		*node[0148E898] = 1;
+		*node[0148E9F8] = ;;
+		*node[0148E7F8] = while;
+		*node[0148EA78] = >;
+		*node[0148EAF8] = x;
+		*node[0148E818] = 0;
+		*node[0148E998] = ;;
+		*node[0148E938] = =;
+		*node[0148E838] = b;
+		*node[0148E858] = *;
+		*node[0148E918] = b;
+		*node[0148E8B8] = x;
+		*node[0148E978] = ;;
+		*node[0148E9D8] = =;
+		*node[0148E958] = x;
+		*node[0148EA98] = -;
+		*node[0148E9B8] = x;
+		*node[0148E8F8] = 1;
+		*node[0148E878] = ;;
+		*node[0148EAB8] = print;
+		*node[0148EA38] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------
 
 
 --------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00E1EA88] = ;;
-		*node[00E1ED50] = =;
-		*node[00E1EAA8] = a;
-		*node[00E1EAC8] = 1;
-		*node[00E1EE50] = ;;
-		*node[00E1EBB0] = =;
-		*node[00E1EDB0] = b;
-		*node[00E1EB90] = 2;
-		*node[00E1EDD0] = ;;
-		*node[00E1EC30] = =;
-		*node[00E1EBD0] = c;
-		*node[00E1ECB0] = 3;
-		*node[00E1EDF0] = ;;
-		*node[00E1EC70] = =;
-		*node[00E1EB10] = d;
-		*node[00E1EB50] = -;
-		*node[00E1EC10] = ^;
-		*node[00E1EBF0] = b;
-		*node[00E1EB30] = 2;
-		*node[00E1EE70] = *;
-		*node[00E1ECF0] = *;
-		*node[00E1EC50] = 4;
-		*node[00E1EE30] = a;
-		*node[00E1EED0] = c;
-		*node[00E1ECD0] = ;;
-		*node[00E1EB70] = if;
-		*node[00E1ED10] = no key_word;
-		*node[00E1ED70] = >;
-		*node[00E1EC90] = d;
-		*node[00E1ED30] = 0;
-		*node[00E1ED90] = ;;
-		*node[02D701F8] = =;
-		*node[00E1EE10] = x;
-		*node[02D70418] = /;
-		*node[02D70158] = -;
-		*node[00E1EE90] = b;
-		*node[02D703B8] = sqrt;
-		*node[02D70298] = 1;
-		*node[00E1EEB0] = d;
-		*node[02D702B8] = *;
-		*node[02D70238] = 2;
-		*node[02D703D8] = a;
-		*node[02D703F8] = ;;
-		*node[02D70218] = =;
-		*node[02D701D8] = y;
-		*node[02D70178] = /;
-		*node[02D70378] = +;
-		*node[02D700F8] = b;
-		*node[02D70438] = sqrt;
-		*node[02D70118] = 1;
-		*node[02D700D8] = d;
-		*node[02D70078] = *;
-		*node[02D702D8] = 2;
-		*node[02D70458] = a;
-		*node[02D702F8] = if;
-		*node[02D70318] = no key_word;
-		*node[02D70138] = ||;
-		*node[02D70258] = ==;
-		*node[02D700B8] = d;
-		*node[02D70338] = 0;
-		*node[02D70358] = >;
-		*node[02D70278] = x;
-		*node[02D70198] = 0;
-		*node[02D70098] = ;;
-		*node[02D70718] = =;
-		*node[02D70398] = x;
-		*node[02D70478] = /;
-		*node[02D701B8] = b;
-		*node[02D705D8] = 2;
-		*node[02D706F8] = ;;
-		*node[02D704D8] = =;
-		*node[02D70498] = x;
-		*node[02D704B8] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00D0EA88] = ;;
-		*node[00D0EB70] = =;
-		*node[00D0EAA8] = a;
-		*node[00D0EAC8] = 1;
-		*node[00D0EDD0] = ;;
-		*node[00D0ED70] = =;
-		*node[00D0EDF0] = b;
-		*node[00D0EE10] = 2;
-		*node[00D0EED0] = ;;
-		*node[00D0EE30] = =;
-		*node[00D0EBD0] = c;
-		*node[00D0EB90] = 3;
-		*node[00D0EE70] = ;;
-		*node[00D0EDB0] = =;
-		*node[00D0EEB0] = d;
-		*node[00D0ECF0] = -;
-		*node[00D0EE50] = ^;
-		*node[00D0ED50] = b;
-		*node[00D0EE90] = 2;
-		*node[00D0ED90] = *;
-		*node[00D0ECB0] = *;
-		*node[00D0EB10] = 4;
-		*node[00D0EB50] = a;
-		*node[00D0EC50] = c;
-		*node[00D0EB30] = ;;
-		*node[00D0EBB0] = if;
-		*node[00D0ED10] = no key_word;
-		*node[00D0EC30] = >;
-		*node[00D0EBF0] = d;
-		*node[00D0EC10] = 0;
-		*node[00D0EC70] = ;;
-		*node[030505D8] = =;
-		*node[00D0EC90] = x;
-		*node[030504F8] = /;
-		*node[03050578] = -;
-		*node[00D0ECD0] = b;
-		*node[030507D8] = sqrt;
-		*node[03050818] = 1;
-		*node[00D0ED30] = d;
-		*node[030504D8] = *;
-		*node[030507F8] = 2;
-		*node[03050738] = a;
-		*node[030507B8] = ;;
-		*node[030505B8] = =;
-		*node[03050598] = y;
-		*node[03050558] = /;
-		*node[03050518] = +;
-		*node[030506D8] = b;
-		*node[03050478] = sqrt;
-		*node[03050778] = 1;
-		*node[03050758] = d;
-		*node[03050538] = *;
-		*node[03050498] = 2;
-		*node[030504B8] = a;
-		*node[030505F8] = if;
-		*node[03050718] = no key_word;
-		*node[030506F8] = ||;
-		*node[030506B8] = ==;
-		*node[03050618] = d;
-		*node[03050638] = 0;
-		*node[03050698] = >;
-		*node[03050658] = x;
-		*node[03050678] = 0;
-		*node[03050798] = ;;
-		*node[03050338] = =;
-		*node[03050218] = x;
-		*node[03050298] = /;
-		*node[030503D8] = b;
-		*node[030501B8] = 2;
-		*node[03050398] = ;;
-		*node[03050238] = =;
-		*node[03050358] = x;
-		*node[03050458] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-[31mERROR: ptr is null[0m
-[31mERROR: an error occurred while opening the file[0m
+[31mERROR: Syntax error[0m
 tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
@@ -1209,9 +96,8 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 
 
 --------------------------------------------------------------------------------------------------------
-[31mERROR: ptr is null[0m
-[31mERROR: an error occurred while opening the file[0m
-tree[00B5FEB4] "tree" called from ../include/tree.cpp(221) destroy_tree
+[31mERROR: Syntax error[0m
+tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
@@ -1225,103 +111,39 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
-		*node[00E5EA88] = ;;
-		*node[00E5EE90] = =;
-		*node[00E5EAA8] = a;
-		*node[00E5EAC8] = 1;
-		*node[00E5ED10] = ;;
-		*node[00E5ECD0] = =;
-		*node[00E5ECF0] = b;
-		*node[00E5ED30] = 2;
-		*node[00E5EE70] = ;;
-		*node[00E5EC10] = =;
-		*node[00E5EC70] = c;
-		*node[00E5EB30] = 3;
-		*node[00E5EE30] = ;;
-		*node[00E5EDF0] = =;
-		*node[00E5EB50] = d;
-		*node[00E5EB70] = -;
-		*node[00E5ED50] = ^;
-		*node[00E5EB10] = b;
-		*node[00E5EE10] = 2;
-		*node[00E5EED0] = *;
-		*node[00E5ED70] = *;
-		*node[00E5EC90] = 4;
-		*node[00E5EDB0] = a;
-		*node[00E5ED90] = c;
-		*node[00E5EBB0] = ;;
-		*node[00E5EB90] = if;
-		*node[00E5EDD0] = no key_word;
-		*node[00E5EBD0] = >;
-		*node[00E5EE50] = d;
-		*node[00E5EEB0] = 0;
-		*node[00E5EBF0] = ;;
-		*node[02DC0118] = =;
-		*node[00E5EC30] = x;
-		*node[02DC01B8] = /;
-		*node[02DC0138] = -;
-		*node[00E5EC50] = b;
-		*node[02DC0078] = sqrt;
-		*node[02DC01F8] = 1;
-		*node[00E5ECB0] = d;
-		*node[02DC0258] = *;
-		*node[02DC03B8] = 2;
-		*node[02DC0158] = a;
-		*node[02DC02B8] = ;;
-		*node[02DC0438] = =;
-		*node[02DC01D8] = y;
-		*node[02DC0358] = /;
-		*node[02DC00D8] = +;
-		*node[02DC0098] = b;
-		*node[02DC0418] = sqrt;
-		*node[02DC0238] = 1;
-		*node[02DC0398] = d;
-		*node[02DC00B8] = *;
-		*node[02DC0178] = 2;
-		*node[02DC0298] = a;
-		*node[02DC00F8] = if;
-		*node[02DC0278] = no key_word;
-		*node[02DC0318] = ||;
-		*node[02DC0218] = ==;
-		*node[02DC0378] = d;
-		*node[02DC0198] = 0;
-		*node[02DC03D8] = >;
-		*node[02DC02D8] = x;
-		*node[02DC02F8] = 0;
-		*node[02DC0458] = ;;
-		*node[02DC0558] = =;
-		*node[02DC0338] = x;
-		*node[02DC0678] = /;
-		*node[02DC03F8] = b;
-		*node[02DC0718] = 2;
-		*node[02DC0698] = ;;
-		*node[02DC07F8] = =;
-		*node[02DC04B8] = x;
-		*node[02DC0758] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-[31mERROR: ptr is null[0m
-[31mERROR: an error occurred while opening the file[0m
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-[31mERROR: ptr is null[0m
-[31mERROR: an error occurred while opening the file[0m
-tree[00B5FEB4] "tree" called from ../include/tree.cpp(221) destroy_tree
-{
-	is_init = 1
-	{
+		*node[013BD420] = ;;
+		*node[013BD440] = input;
+		*node[013BE790] = x;
+		*node[013BE9F8] = ;;
+		*node[013BE998] = if;
+		*node[013BE7F8] = (null);
+		*node[013BE7D8] = >;
+		*node[013BE8D8] = x;
+		*node[013BEA98] = 0;
+		*node[013BEB58] = ;;
+		*node[013BEB38] = =;
+		*node[013BEA18] = b;
+		*node[013BE978] = 1;
+		*node[013BEB78] = ;;
+		*node[013BE8F8] = while;
+		*node[013BE818] = >;
+		*node[013BEB18] = x;
+		*node[013BE858] = 0;
+		*node[013BEB98] = ;;
+		*node[013BE878] = =;
+		*node[013BE9B8] = b;
+		*node[013BE938] = *;
+		*node[013BE838] = b;
+		*node[013BE918] = x;
+		*node[013BE9D8] = ;;
+		*node[013BEA38] = =;
+		*node[013BE898] = x;
+		*node[013BE8B8] = -;
+		*node[013BE958] = x;
+		*node[013BEA78] = 1;
+		*node[013BEAB8] = ;;
+		*node[013BEA58] = print;
+		*node[013BEAD8] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------
@@ -1332,1238 +154,39 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
-		*node[00CEEA88] = ;;
-		*node[00CEED90] = =;
-		*node[00CEEAA8] = a;
-		*node[00CEEAC8] = 1;
-		*node[00CEED10] = ;;
-		*node[00CEEB10] = =;
-		*node[00CEEE70] = b;
-		*node[00CEEBF0] = 2;
-		*node[00CEEED0] = ;;
-		*node[00CEEE50] = =;
-		*node[00CEEB30] = c;
-		*node[00CEEC10] = 3;
-		*node[00CEEEB0] = ;;
-		*node[00CEEBB0] = =;
-		*node[00CEEE90] = d;
-		*node[00CEEDB0] = -;
-		*node[00CEED50] = ^;
-		*node[00CEEB70] = b;
-		*node[00CEEC70] = 2;
-		*node[00CEEB90] = *;
-		*node[00CEEC30] = *;
-		*node[00CEECB0] = 4;
-		*node[00CEEB50] = a;
-		*node[00CEED70] = c;
-		*node[00CEEBD0] = ;;
-		*node[00CEEC50] = if;
-		*node[00CEEDD0] = no key_word;
-		*node[00CEEDF0] = >;
-		*node[00CEECD0] = d;
-		*node[00CEECF0] = 0;
-		*node[00CEEC90] = ;;
-		*node[030D04D8] = =;
-		*node[00CEED30] = x;
-		*node[030D0578] = /;
-		*node[030D0738] = -;
-		*node[00CEEE10] = b;
-		*node[030D0658] = sqrt;
-		*node[030D0698] = 1;
-		*node[00CEEE30] = d;
-		*node[030D05F8] = *;
-		*node[030D0678] = 2;
-		*node[030D0758] = a;
-		*node[030D06D8] = ;;
-		*node[030D0478] = =;
-		*node[030D0538] = y;
-		*node[030D04F8] = /;
-		*node[030D06F8] = +;
-		*node[030D05B8] = b;
-		*node[030D06B8] = sqrt;
-		*node[030D0718] = 1;
-		*node[030D0798] = d;
-		*node[030D0778] = *;
-		*node[030D05D8] = 2;
-		*node[030D0618] = a;
-		*node[030D0598] = if;
-		*node[030D07D8] = no key_word;
-		*node[030D0818] = ||;
-		*node[030D07F8] = ==;
-		*node[030D0638] = d;
-		*node[030D07B8] = 0;
-		*node[030D0558] = >;
-		*node[030D0518] = x;
-		*node[030D0498] = 0;
-		*node[030D04B8] = ;;
-		*node[030D01B8] = =;
-		*node[030D00D8] = x;
-		*node[030D0358] = /;
-		*node[030D0078] = b;
-		*node[030D0238] = 2;
-		*node[030D02D8] = ;;
-		*node[030D0098] = =;
-		*node[030D0378] = x;
-		*node[030D0118] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0136EA88] = ;;
-		*node[0136EB10] = =;
-		*node[0136EAA8] = a;
-		*node[0136EAC8] = 1;
-		*node[0136EB30] = ;;
-		*node[0136EE10] = =;
-		*node[0136EC10] = b;
-		*node[0136EC70] = 2;
-		*node[0136EC90] = ;;
-		*node[0136ED30] = =;
-		*node[0136EE90] = c;
-		*node[0136EBF0] = 3;
-		*node[0136EB50] = ;;
-		*node[0136ECB0] = =;
-		*node[0136ECF0] = d;
-		*node[0136EED0] = -;
-		*node[0136ED50] = ^;
-		*node[0136EDF0] = b;
-		*node[0136EDB0] = 2;
-		*node[0136ED70] = *;
-		*node[0136EE50] = *;
-		*node[0136EE30] = 4;
-		*node[0136EEB0] = a;
-		*node[0136EE70] = c;
-		*node[0136ED90] = ;;
-		*node[0136EDD0] = if;
-		*node[0136EB70] = no key_word;
-		*node[0136EBB0] = >;
-		*node[0136EB90] = d;
-		*node[0136EBD0] = 0;
-		*node[0136EC30] = ;;
-		*node[03031560] = =;
-		*node[0136EC50] = x;
-		*node[03031500] = /;
-		*node[030315A0] = -;
-		*node[0136ECD0] = b;
-		*node[030315E0] = sqrt;
-		*node[030315C0] = 1;
-		*node[0136ED10] = d;
-		*node[030316E0] = *;
-		*node[030317A0] = 2;
-		*node[03031600] = a;
-		*node[03031640] = ;;
-		*node[030314C0] = =;
-		*node[03031820] = y;
-		*node[03031580] = /;
-		*node[030314A0] = +;
-		*node[03031480] = b;
-		*node[03031660] = sqrt;
-		*node[03031620] = 1;
-		*node[03031760] = d;
-		*node[03031680] = *;
-		*node[030317E0] = 2;
-		*node[03031800] = a;
-		*node[03031700] = if;
-		*node[030316A0] = no key_word;
-		*node[03031540] = ||;
-		*node[030314E0] = ==;
-		*node[03031780] = d;
-		*node[030316C0] = 0;
-		*node[03031520] = >;
-		*node[030317C0] = x;
-		*node[03031740] = 0;
-		*node[03031720] = ;;
-		*node[03031440] = =;
-		*node[03031260] = x;
-		*node[030310E0] = /;
-		*node[03031340] = b;
-		*node[030311E0] = 2;
-		*node[03031460] = ;;
-		*node[030312C0] = =;
-		*node[030313E0] = x;
-		*node[03031100] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[014FEB78] = ;;
-		*node[014FEDC0] = =;
-		*node[014FEB98] = a;
-		*node[014FEBB8] = 1;
-		*node[014FEEC0] = ;;
-		*node[014FEEA0] = =;
-		*node[014FECE0] = b;
-		*node[014FED60] = 2;
-		*node[014FEEE0] = ;;
-		*node[014FED80] = =;
-		*node[014FEF40] = c;
-		*node[014FEDA0] = 3;
-		*node[014FEC40] = ;;
-		*node[014FEE80] = =;
-		*node[014FECC0] = d;
-		*node[014FEE60] = -;
-		*node[014FED40] = ^;
-		*node[014FEC80] = b;
-		*node[014FED20] = 2;
-		*node[014FEC20] = *;
-		*node[014FEDE0] = *;
-		*node[014FEF00] = 4;
-		*node[014FEFC0] = a;
-		*node[014FEC00] = c;
-		*node[014FECA0] = ;;
-		*node[014FEE00] = if;
-		*node[014FEE20] = no key_word;
-		*node[014FEF80] = >;
-		*node[014FED00] = d;
-		*node[014FEF20] = 0;
-		*node[014FEFA0] = ;;
-		*node[03051620] = =;
-		*node[014FEE40] = x;
-		*node[03051600] = /;
-		*node[030514E0] = -;
-		*node[014FEF60] = b;
-		*node[03051760] = sqrt;
-		*node[030515C0] = 1;
-		*node[014FEC60] = d;
-		*node[03051680] = *;
-		*node[03051740] = 2;
-		*node[030515E0] = a;
-		*node[030516C0] = ;;
-		*node[030516E0] = =;
-		*node[030514C0] = y;
-		*node[030516A0] = /;
-		*node[03051520] = +;
-		*node[030515A0] = b;
-		*node[030517C0] = sqrt;
-		*node[03051640] = 1;
-		*node[03051700] = d;
-		*node[03051660] = *;
-		*node[03051720] = 2;
-		*node[030517A0] = a;
-		*node[03051780] = if;
-		*node[030517E0] = no key_word;
-		*node[03051560] = ||;
-		*node[03051480] = ==;
-		*node[03051800] = d;
-		*node[03051820] = 0;
-		*node[03051540] = >;
-		*node[030514A0] = x;
-		*node[03051500] = 0;
-		*node[03051580] = ;;
-		*node[03051100] = =;
-		*node[03051220] = x;
-		*node[030510E0] = /;
-		*node[030510A0] = b;
-		*node[03051180] = 2;
-		*node[03051240] = ;;
-		*node[03051440] = =;
-		*node[030510C0] = x;
-		*node[03051420] = 0;
-		*node[030513A0] = ;;
-		*node[03051260] = if;
-		*node[03051340] = no key_word;
-		*node[03051360] = >;
-		*node[03051120] = x;
-		*node[03051380] = 0;
-		*node[030511A0] = ;;
-		*node[03051080] = =;
-		*node[03051460] = x;
-		*node[030513C0] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0150EC20] = ;;
-		*node[02CF1398] = =;
-		*node[0150EC40] = a;
-		*node[0150EC60] = 1;
-		*node[02CF1258] = ;;
-		*node[02CF13B8] = =;
-		*node[02CF1218] = b;
-		*node[02CF1098] = 2;
-		*node[02CF10B8] = ;;
-		*node[02CF1118] = =;
-		*node[02CF10D8] = c;
-		*node[02CF1158] = 3;
-		*node[02CF1198] = ;;
-		*node[02CF12F8] = =;
-		*node[02CF1318] = d;
-		*node[02CF1238] = -;
-		*node[02CF1138] = ^;
-		*node[02CF11D8] = b;
-		*node[02CF13D8] = 2;
-		*node[02CF1278] = *;
-		*node[02CF11F8] = *;
-		*node[02CF1378] = 4;
-		*node[02CF13F8] = a;
-		*node[02CF1418] = c;
-		*node[02CF1298] = ;;
-		*node[02CF12B8] = if;
-		*node[02CF10F8] = no key_word;
-		*node[02CF12D8] = >;
-		*node[02CF1438] = d;
-		*node[02CF1338] = 0;
-		*node[02CF1358] = ;;
-		*node[02CF1AE8] = =;
-		*node[02CF1078] = x;
-		*node[02CF1B68] = /;
-		*node[02CF1988] = -;
-		*node[02CF1178] = b;
-		*node[02CF1AA8] = sqrt;
-		*node[02CF1A28] = 1;
-		*node[02CF11B8] = d;
-		*node[02CF18E8] = *;
-		*node[02CF1C08] = 2;
-		*node[02CF1BC8] = a;
-		*node[02CF1BA8] = ;;
-		*node[02CF18C8] = =;
-		*node[02CF1C28] = y;
-		*node[02CF1B28] = /;
-		*node[02CF1968] = +;
-		*node[02CF1BE8] = b;
-		*node[02CF1B48] = sqrt;
-		*node[02CF1B08] = 1;
-		*node[02CF19E8] = d;
-		*node[02CF1A08] = *;
-		*node[02CF18A8] = 2;
-		*node[02CF1888] = a;
-		*node[02CF1908] = if;
-		*node[02CF1A48] = no key_word;
-		*node[02CF1688] = ||;
-		*node[02CF15E8] = ||;
-		*node[02CF19C8] = ||;
-		*node[02CF1A88] = ==;
-		*node[02CF19A8] = d;
-		*node[02CF1A68] = 0;
-		*node[02CF1948] = >;
-		*node[02CF1B88] = x;
-		*node[02CF1928] = 0;
-		*node[02CF14A8] = <;
-		*node[02CF1AC8] = x;
-		*node[02CF1748] = 0;
-		*node[02CF14E8] = >;
-		*node[02CF1548] = a;
-		*node[02CF1668] = 0;
-		*node[02CF1708] = ;;
-		*node[02CF1768] = =;
-		*node[02CF14C8] = x;
-		*node[02CF1648] = /;
-		*node[02CF1488] = b;
-		*node[02CF1588] = 2;
-		*node[02CF1828] = ;;
-		*node[02CF1788] = =;
-		*node[02CF1508] = x;
-		*node[02CF1528] = 0;
-		*node[02CF1608] = ;;
-		*node[02CF15A8] = if;
-		*node[02CF1728] = no key_word;
-		*node[02CF16A8] = >;
-		*node[02CF1628] = x;
-		*node[02CF1808] = 0;
-		*node[02CF16C8] = ;;
-		*node[02CF1868] = =;
-		*node[02CF15C8] = x;
-		*node[02CF16E8] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[014FEA30] = ;;
-		*node[014FEDD8] = =;
-		*node[014FEA50] = a;
-		*node[014FEA70] = 1;
-		*node[014FEDF8] = ;;
-		*node[014FECF8] = =;
-		*node[014FED18] = b;
-		*node[014FEC38] = 2;
-		*node[014FEAF8] = ;;
-		*node[014FEE38] = =;
-		*node[014FEAB8] = c;
-		*node[014FEB18] = 3;
-		*node[014FEAD8] = ;;
-		*node[014FEC98] = =;
-		*node[014FEC78] = d;
-		*node[014FEB38] = -;
-		*node[014FEC58] = ^;
-		*node[014FED38] = b;
-		*node[014FEE78] = 2;
-		*node[014FED98] = *;
-		*node[014FEBD8] = *;
-		*node[014FEE18] = 4;
-		*node[014FED58] = a;
-		*node[014FED78] = c;
-		*node[014FEE58] = ;;
-		*node[014FEDB8] = if;
-		*node[014FEB58] = no key_word;
-		*node[014FEBF8] = >;
-		*node[014FEB78] = d;
-		*node[014FEB98] = 0;
-		*node[014FECD8] = ;;
-		*node[030510A0] = =;
-		*node[014FEBB8] = x;
-		*node[03051240] = /;
-		*node[030512E0] = -;
-		*node[014FEC18] = b;
-		*node[03051200] = sqrt;
-		*node[03051080] = 1;
-		*node[014FECB8] = d;
-		*node[03051220] = *;
-		*node[03051100] = 2;
-		*node[030511E0] = a;
-		*node[03051300] = ;;
-		*node[03051400] = =;
-		*node[03051360] = y;
-		*node[03051160] = /;
-		*node[03051380] = +;
-		*node[030511A0] = b;
-		*node[030510C0] = sqrt;
-		*node[03051260] = 1;
-		*node[030513C0] = d;
-		*node[030513E0] = *;
-		*node[03051280] = 2;
-		*node[030513A0] = a;
-		*node[03051420] = if;
-		*node[03051120] = no key_word;
-		*node[03051440] = ==;
-		*node[030512A0] = d;
-		*node[030512C0] = 0;
-		*node[030511C0] = ;;
-		*node[03051460] = =;
-		*node[03051320] = x;
-		*node[03051340] = /;
-		*node[030510E0] = b;
-		*node[03051140] = 2;
-		*node[03051180] = ;;
-		*node[03051800] = =;
-		*node[030517E0] = x;
-		*node[03051500] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[013DEA30] = ;;
-		*node[013DEE58] = =;
-		*node[013DEA50] = a;
-		*node[013DEA70] = 1;
-		*node[013DEB38] = ;;
-		*node[013DEDF8] = =;
-		*node[013DEBB8] = b;
-		*node[013DEB58] = 2;
-		*node[013DEBD8] = ;;
-		*node[013DEB78] = =;
-		*node[013DEB18] = c;
-		*node[013DED98] = 3;
-		*node[013DECF8] = ;;
-		*node[013DED78] = =;
-		*node[013DEC98] = d;
-		*node[013DED38] = -;
-		*node[013DEC38] = ^;
-		*node[013DEB98] = b;
-		*node[013DEAF8] = 2;
-		*node[013DEC18] = *;
-		*node[013DED18] = *;
-		*node[013DEBF8] = 4;
-		*node[013DEDB8] = a;
-		*node[013DED58] = c;
-		*node[013DEDD8] = ;;
-		*node[013DEC58] = if;
-		*node[013DEC78] = no key_word;
-		*node[013DEAB8] = >;
-		*node[013DECB8] = d;
-		*node[013DECD8] = 0;
-		*node[013DEE18] = ;;
-		*node[03031400] = =;
-		*node[013DEAD8] = x;
-		*node[030313A0] = /;
-		*node[030311A0] = -;
-		*node[013DEE78] = b;
-		*node[030310A0] = sqrt;
-		*node[030313E0] = 1;
-		*node[013DEE38] = d;
-		*node[03031360] = *;
-		*node[03031420] = 2;
-		*node[03031380] = a;
-		*node[03031440] = ;;
-		*node[030310C0] = =;
-		*node[03031180] = y;
-		*node[03031080] = /;
-		*node[03031300] = +;
-		*node[03031220] = b;
-		*node[030311C0] = sqrt;
-		*node[03031460] = 1;
-		*node[03031340] = d;
-		*node[030311E0] = *;
-		*node[03031160] = 2;
-		*node[03031140] = a;
-		*node[03031200] = if;
-		*node[030310E0] = no key_word;
-		*node[03031120] = ==;
-		*node[030313C0] = d;
-		*node[03031100] = 0;
-		*node[03031240] = ;;
-		*node[030312E0] = =;
-		*node[03031260] = x;
-		*node[030312C0] = /;
-		*node[03031280] = b;
-		*node[030312A0] = 2;
-		*node[03031320] = ;;
-		*node[03031800] = =;
-		*node[030316C0] = x;
-		*node[03031660] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[014FEA30] = ;;
-		*node[014FEE58] = =;
-		*node[014FEA50] = a;
-		*node[014FEA70] = 1;
-		*node[014FED38] = ;;
-		*node[014FEBB8] = =;
-		*node[014FEC18] = b;
-		*node[014FEB98] = 2;
-		*node[014FEC58] = ;;
-		*node[014FED18] = =;
-		*node[014FEAB8] = c;
-		*node[014FEAD8] = 3;
-		*node[014FED58] = ;;
-		*node[014FEC98] = =;
-		*node[014FEAF8] = d;
-		*node[014FEBD8] = -;
-		*node[014FEBF8] = ^;
-		*node[014FEDD8] = b;
-		*node[014FEC38] = 2;
-		*node[014FED78] = *;
-		*node[014FEB58] = *;
-		*node[014FEB18] = 4;
-		*node[014FEB38] = a;
-		*node[014FEC78] = c;
-		*node[014FECB8] = ;;
-		*node[014FECF8] = if;
-		*node[014FEB78] = no key_word;
-		*node[014FEE38] = >;
-		*node[014FED98] = d;
-		*node[014FEDB8] = 0;
-		*node[014FECD8] = ;;
-		*node[03051160] = =;
-		*node[014FEDF8] = x;
-		*node[030512C0] = /;
-		*node[030512A0] = -;
-		*node[014FEE18] = b;
-		*node[03051240] = sqrt;
-		*node[03051340] = 1;
-		*node[014FEE78] = d;
-		*node[030510A0] = *;
-		*node[03051260] = 2;
-		*node[03051220] = a;
-		*node[03051180] = ;;
-		*node[030512E0] = =;
-		*node[030513A0] = y;
-		*node[03051420] = /;
-		*node[030513C0] = +;
-		*node[030511A0] = b;
-		*node[03051140] = sqrt;
-		*node[03051360] = 1;
-		*node[03051280] = d;
-		*node[03051080] = *;
-		*node[030510C0] = 2;
-		*node[03051380] = a;
-		*node[030513E0] = if;
-		*node[030510E0] = no key_word;
-		*node[03051440] = ==;
-		*node[03051400] = d;
-		*node[03051100] = 0;
-		*node[030511C0] = ;;
-		*node[03051300] = =;
-		*node[030511E0] = x;
-		*node[03051200] = /;
-		*node[03051460] = b;
-		*node[03051120] = 2;
-		*node[03051320] = ;;
-		*node[03051580] = =;
-		*node[03051660] = x;
-		*node[03051720] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0172EA30] = ;;
-		*node[0172ED38] = =;
-		*node[0172EA50] = a;
-		*node[0172EA70] = 1;
-		*node[0172EC78] = ;;
-		*node[0172ECF8] = =;
-		*node[0172EB58] = b;
-		*node[0172EDB8] = 2;
-		*node[0172EC58] = ;;
-		*node[0172EBD8] = =;
-		*node[0172ED78] = c;
-		*node[0172ED98] = 3;
-		*node[0172ED58] = ;;
-		*node[0172EC38] = =;
-		*node[0172EDD8] = d;
-		*node[0172EE58] = -;
-		*node[0172EB18] = ^;
-		*node[0172EBF8] = b;
-		*node[0172EAF8] = 2;
-		*node[0172EE38] = *;
-		*node[0172EE18] = *;
-		*node[0172EB38] = 4;
-		*node[0172EDF8] = a;
-		*node[0172EC18] = c;
-		*node[0172EE78] = ;;
-		*node[0172EAB8] = if;
-		*node[0172EAD8] = no key_word;
-		*node[0172EC98] = >;
-		*node[0172EBB8] = d;
-		*node[0172ED18] = 0;
-		*node[0172EB78] = ;;
-		*node[02D41240] = =;
-		*node[0172EB98] = x;
-		*node[02D41080] = /;
-		*node[02D41220] = -;
-		*node[0172ECB8] = b;
-		*node[02D413A0] = sqrt;
-		*node[02D411C0] = 1;
-		*node[0172ECD8] = d;
-		*node[02D41140] = *;
-		*node[02D41180] = 2;
-		*node[02D412A0] = a;
-		*node[02D41280] = ;;
-		*node[02D410E0] = =;
-		*node[02D411E0] = y;
-		*node[02D410C0] = /;
-		*node[02D41100] = +;
-		*node[02D410A0] = b;
-		*node[02D41300] = sqrt;
-		*node[02D41320] = 1;
-		*node[02D41460] = d;
-		*node[02D41400] = *;
-		*node[02D412C0] = 2;
-		*node[02D41340] = a;
-		*node[02D41360] = if;
-		*node[02D41120] = no key_word;
-		*node[02D411A0] = ==;
-		*node[02D41200] = d;
-		*node[02D41260] = 0;
-		*node[02D41160] = ;;
-		*node[02D413E0] = =;
-		*node[02D412E0] = x;
-		*node[02D41420] = /;
-		*node[02D41380] = b;
-		*node[02D413C0] = 2;
-		*node[02D41440] = ;;
-		*node[02D41720] = =;
-		*node[02D417A0] = x;
-		*node[02D41740] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0159EA30] = ;;
-		*node[0159EDD8] = =;
-		*node[0159EA50] = a;
-		*node[0159EA70] = 1;
-		*node[0159EC18] = ;;
-		*node[0159EAB8] = =;
-		*node[0159EB98] = b;
-		*node[0159ED98] = 2;
-		*node[0159EE78] = ;;
-		*node[0159EC98] = =;
-		*node[0159ED78] = c;
-		*node[0159ED18] = 3;
-		*node[0159EDF8] = ;;
-		*node[0159EE58] = =;
-		*node[0159EE18] = d;
-		*node[0159ECD8] = -;
-		*node[0159ED38] = ^;
-		*node[0159EDB8] = b;
-		*node[0159EE38] = 2;
-		*node[0159EC38] = *;
-		*node[0159EAD8] = *;
-		*node[0159EB18] = 4;
-		*node[0159EBB8] = a;
-		*node[0159EBF8] = c;
-		*node[0159ED58] = ;;
-		*node[0159EC78] = if;
-		*node[0159EC58] = no key_word;
-		*node[0159EB58] = >;
-		*node[0159EAF8] = d;
-		*node[0159EB38] = 0;
-		*node[0159EB78] = ;;
-		*node[02D41540] = =;
-		*node[0159ECB8] = x;
-		*node[02D417A0] = /;
-		*node[02D414C0] = -;
-		*node[0159EBD8] = b;
-		*node[02D41760] = sqrt;
-		*node[02D41660] = 1;
-		*node[0159ECF8] = d;
-		*node[02D41740] = *;
-		*node[02D41780] = 2;
-		*node[02D41620] = a;
-		*node[02D41820] = ;;
-		*node[02D41800] = =;
-		*node[02D41640] = y;
-		*node[02D41560] = /;
-		*node[02D41680] = +;
-		*node[02D414E0] = b;
-		*node[02D417E0] = sqrt;
-		*node[02D416E0] = 1;
-		*node[02D41580] = d;
-		*node[02D416C0] = *;
-		*node[02D415C0] = 2;
-		*node[02D41700] = a;
-		*node[02D41720] = if;
-		*node[02D417C0] = no key_word;
-		*node[02D414A0] = ==;
-		*node[02D41480] = d;
-		*node[02D415A0] = 0;
-		*node[02D41600] = ;;
-		*node[02D41340] = =;
-		*node[02D41500] = x;
-		*node[02D41520] = /;
-		*node[02D416A0] = b;
-		*node[02D415E0] = 2;
-		*node[02D413A0] = ;;
-		*node[02D41380] = =;
-		*node[02D412C0] = x;
-		*node[02D41100] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0162EA30] = ;;
-		*node[0162EDD8] = =;
-		*node[0162EA50] = a;
-		*node[0162EA70] = 1;
-		*node[0162EB98] = ;;
-		*node[0162EDB8] = =;
-		*node[0162EBB8] = b;
-		*node[0162ED98] = 2;
-		*node[0162EAF8] = ;;
-		*node[0162EE18] = =;
-		*node[0162EC78] = c;
-		*node[0162EE58] = 3;
-		*node[0162EC98] = ;;
-		*node[0162EBF8] = =;
-		*node[0162ED38] = d;
-		*node[0162EB38] = -;
-		*node[0162EAD8] = ^;
-		*node[0162EDF8] = b;
-		*node[0162EAB8] = 2;
-		*node[0162EB18] = *;
-		*node[0162EE78] = *;
-		*node[0162EE38] = 4;
-		*node[0162ECB8] = a;
-		*node[0162ED58] = c;
-		*node[0162EB58] = ;;
-		*node[0162EB78] = if;
-		*node[0162EBD8] = no key_word;
-		*node[0162ECF8] = >;
-		*node[0162EC18] = d;
-		*node[0162EC38] = 0;
-		*node[0162EC58] = ;;
-		*node[02CF13C0] = =;
-		*node[0162ECD8] = x;
-		*node[02CF1260] = /;
-		*node[02CF12A0] = -;
-		*node[0162ED18] = b;
-		*node[02CF11C0] = sqrt;
-		*node[02CF1420] = 1;
-		*node[0162ED78] = d;
-		*node[02CF1440] = *;
-		*node[02CF11E0] = 2;
-		*node[02CF12C0] = a;
-		*node[02CF11A0] = ;;
-		*node[02CF10E0] = =;
-		*node[02CF1300] = y;
-		*node[02CF1280] = /;
-		*node[02CF1140] = +;
-		*node[02CF1460] = b;
-		*node[02CF1200] = sqrt;
-		*node[02CF13A0] = 1;
-		*node[02CF1380] = d;
-		*node[02CF1240] = *;
-		*node[02CF1220] = 2;
-		*node[02CF1320] = a;
-		*node[02CF1080] = if;
-		*node[02CF1100] = no key_word;
-		*node[02CF12E0] = ==;
-		*node[02CF1160] = d;
-		*node[02CF1120] = 0;
-		*node[02CF10A0] = ;;
-		*node[02CF13E0] = =;
-		*node[02CF1180] = x;
-		*node[02CF1360] = /;
-		*node[02CF1340] = b;
-		*node[02CF10C0] = 2;
-		*node[02CF1400] = ;;
-		*node[02CF14E0] = =;
-		*node[02CF1500] = x;
-		*node[02CF1760] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0173EA30] = ;;
-		*node[0173ED98] = =;
-		*node[0173EA50] = a;
-		*node[0173EA70] = 1;
-		*node[0173EAB8] = ;;
-		*node[0173EDD8] = =;
-		*node[0173EB38] = b;
-		*node[0173EE38] = 2;
-		*node[0173EDF8] = ;;
-		*node[0173ECF8] = =;
-		*node[0173EE58] = c;
-		*node[0173EE18] = 3;
-		*node[0173EC18] = ;;
-		*node[0173EC78] = =;
-		*node[0173EE78] = d;
-		*node[0173EBF8] = -;
-		*node[0173ED78] = ^;
-		*node[0173EC98] = b;
-		*node[0173EAD8] = 2;
-		*node[0173EB58] = *;
-		*node[0173EB18] = *;
-		*node[0173EBD8] = 4;
-		*node[0173EAF8] = a;
-		*node[0173EC38] = c;
-		*node[0173EB78] = ;;
-		*node[0173EB98] = if;
-		*node[0173EBB8] = no key_word;
-		*node[0173ECB8] = >;
-		*node[0173EC58] = d;
-		*node[0173EDB8] = 0;
-		*node[0173ECD8] = ;;
-		*node[02D51780] = =;
-		*node[0173ED18] = x;
-		*node[02D517E0] = /;
-		*node[02D51820] = -;
-		*node[0173ED38] = b;
-		*node[02D51800] = sqrt;
-		*node[02D51540] = 1;
-		*node[0173ED58] = d;
-		*node[02D514A0] = *;
-		*node[02D51480] = 2;
-		*node[02D51500] = a;
-		*node[02D514C0] = ;;
-		*node[02D51620] = =;
-		*node[02D51720] = y;
-		*node[02D515E0] = /;
-		*node[02D51520] = +;
-		*node[02D51600] = b;
-		*node[02D517A0] = sqrt;
-		*node[02D514E0] = 1;
-		*node[02D51560] = d;
-		*node[02D515C0] = *;
-		*node[02D51580] = 2;
-		*node[02D515A0] = a;
-		*node[02D51640] = if;
-		*node[02D517C0] = no key_word;
-		*node[02D51680] = ==;
-		*node[02D51660] = d;
-		*node[02D51740] = 0;
-		*node[02D516A0] = ;;
-		*node[02D513C0] = =;
-		*node[02D516C0] = x;
-		*node[02D51700] = /;
-		*node[02D51760] = b;
-		*node[02D516E0] = 2;
-		*node[02D51280] = ;;
-		*node[02D511C0] = =;
-		*node[02D513A0] = x;
-		*node[02D512C0] = 0;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00CBEA70] = ;;
-		*node[00CBEC38] = =;
-		*node[00CBEA90] = a;
-		*node[00CBEAB0] = 1;
-		*node[00CBEE78] = ;;
-		*node[00CBED78] = =;
-		*node[00CBED58] = b;
-		*node[00CBEC78] = 2;
-		*node[00CBEEB8] = ;;
-		*node[00CBEDD8] = =;
-		*node[00CBEAF8] = c;
-		*node[00CBEBB8] = 3;
-		*node[00CBEE58] = ;;
-		*node[00CBEB18] = =;
-		*node[00CBECB8] = d;
-		*node[00CBECD8] = -;
-		*node[00CBEBD8] = ^;
-		*node[00CBECF8] = b;
-		*node[00CBED18] = 2;
-		*node[00CBEC18] = *;
-		*node[00CBEBF8] = *;
-		*node[00CBED98] = 4;
-		*node[00CBEC98] = a;
-		*node[00CBEC58] = c;
-		*node[00CBEB38] = ;;
-		*node[00CBEB58] = if;
-		*node[00CBED38] = no key_word;
-		*node[00CBEB98] = >;
-		*node[00CBEDB8] = d;
-		*node[00CBEDF8] = 0;
-		*node[00CBEB78] = ;;
-		*node[030C05D8] = =;
-		*node[00CBEE18] = x;
-		*node[030C0778] = /;
-		*node[030C0478] = -;
-		*node[00CBEE38] = b;
-		*node[030C0818] = sqrt;
-		*node[030C05F8] = 1;
-		*node[00CBEE98] = d;
-		*node[030C0618] = *;
-		*node[030C04F8] = 2;
-		*node[030C0538] = a;
-		*node[030C0658] = ;;
-		*node[030C05B8] = =;
-		*node[030C0498] = y;
-		*node[030C0638] = /;
-		*node[030C0598] = +;
-		*node[030C0738] = b;
-		*node[030C0718] = sqrt;
-		*node[030C07B8] = 1;
-		*node[030C0518] = d;
-		*node[030C07D8] = *;
-		*node[030C0678] = 2;
-		*node[030C0578] = a;
-		*node[030C06F8] = if;
-		*node[030C0698] = no key_word;
-		*node[030C0758] = ==;
-		*node[030C06B8] = d;
-		*node[030C06D8] = 0;
-		*node[030C07F8] = ;;
-		*node[030C0138] = =;
-		*node[030C04B8] = x;
-		*node[030C0798] = /;
-		*node[030C04D8] = b;
-		*node[030C0558] = 2;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-[31mERROR: an error occurred while opening the file[0m
-[31mERROR: an error occurred while closing the file[0m
-tree[00B5FEB4] "tree" called from ../include/tree.cpp(227) destroy_tree
-{
-	is_init = 1
-	{
-		*node[00CBEA70] = ;;
-		*node[00CBEC38] = =;
-		*node[00CBEA90] = a;
-		*node[00CBEAB0] = 1;
-		*node[00CBEE78] = ;;
-		*node[00CBED78] = =;
-		*node[00CBED58] = b;
-		*node[00CBEC78] = 2;
-		*node[00CBEEB8] = ;;
-		*node[00CBEDD8] = =;
-		*node[00CBEAF8] = c;
-		*node[00CBEBB8] = 3;
-		*node[00CBEE58] = ;;
-		*node[00CBEB18] = =;
-		*node[00CBECB8] = d;
-		*node[00CBECD8] = -;
-		*node[00CBEBD8] = ^;
-		*node[00CBECF8] = b;
-		*node[00CBED18] = 2;
-		*node[00CBEC18] = *;
-		*node[00CBEBF8] = *;
-		*node[00CBED98] = 4;
-		*node[00CBEC98] = a;
-		*node[00CBEC58] = c;
-		*node[00CBEB38] = ;;
-		*node[00CBEB58] = if;
-		*node[00CBED38] = no key_word;
-		*node[00CBEB98] = >;
-		*node[00CBEDB8] = d;
-		*node[00CBEDF8] = 0;
-		*node[00CBEB78] = ;;
-		*node[030C05D8] = =;
-		*node[00CBEE18] = x;
-		*node[030C0778] = /;
-		*node[030C0478] = -;
-		*node[00CBEE38] = b;
-		*node[030C0818] = sqrt;
-		*node[030C05F8] = 1;
-		*node[00CBEE98] = d;
-		*node[030C0618] = *;
-		*node[030C04F8] = 2;
-		*node[030C0538] = a;
-		*node[030C0658] = ;;
-		*node[030C05B8] = =;
-		*node[030C0498] = y;
-		*node[030C0638] = /;
-		*node[030C0598] = +;
-		*node[030C0738] = b;
-		*node[030C0718] = sqrt;
-		*node[030C07B8] = 1;
-		*node[030C0518] = d;
-		*node[030C07D8] = *;
-		*node[030C0678] = 2;
-		*node[030C0578] = a;
-		*node[030C06F8] = if;
-		*node[030C0698] = no key_word;
-		*node[030C0758] = ==;
-		*node[030C06B8] = d;
-		*node[030C06D8] = 0;
-		*node[030C07F8] = ;;
-		*node[030C0138] = =;
-		*node[030C04B8] = x;
-		*node[030C0798] = /;
-		*node[030C04D8] = b;
-		*node[030C0558] = 2;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-[31mERROR: ptr is null[0m
-[31mERROR: an error occurred while opening the file[0m
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-[31mERROR: ptr is null[0m
-[31mERROR: an error occurred while opening the file[0m
-[31mERROR: an error occurred while closing the file[0m
-tree[00B5FEB4] "tree" called from ../include/tree.cpp(227) destroy_tree
-{
-	is_init = 1
-	{
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[014BEA70] = ;;
-		*node[014BEC58] = =;
-		*node[014BEA90] = a;
-		*node[014BEAB0] = 1;
-		*node[014BEE78] = ;;
-		*node[014BEAF8] = =;
-		*node[014BEDF8] = b;
-		*node[014BEC98] = 2;
-		*node[014BEE98] = ;;
-		*node[014BEDD8] = =;
-		*node[014BEE18] = c;
-		*node[014BEB38] = 3;
-		*node[014BEC78] = ;;
-		*node[014BECF8] = =;
-		*node[014BEC38] = d;
-		*node[014BECD8] = -;
-		*node[014BEBD8] = ^;
-		*node[014BEE58] = b;
-		*node[014BEDB8] = 2;
-		*node[014BEB58] = *;
-		*node[014BECB8] = *;
-		*node[014BEB18] = 4;
-		*node[014BEE38] = a;
-		*node[014BEEB8] = c;
-		*node[014BED18] = ;;
-		*node[014BED58] = if;
-		*node[014BEB78] = no key_word;
-		*node[014BED78] = >;
-		*node[014BED38] = d;
-		*node[014BEB98] = 0;
-		*node[014BEBB8] = ;;
-		*node[030502B8] = =;
-		*node[014BED98] = x;
-		*node[03050278] = /;
-		*node[03050218] = -;
-		*node[014BEBF8] = b;
-		*node[030502D8] = sqrt;
-		*node[03050358] = 1;
-		*node[014BEC18] = d;
-		*node[03050398] = *;
-		*node[03050298] = 2;
-		*node[030501F8] = a;
-		*node[03050178] = ;;
-		*node[030503F8] = =;
-		*node[03050438] = y;
-		*node[03050338] = /;
-		*node[030503B8] = +;
-		*node[030502F8] = b;
-		*node[03050378] = sqrt;
-		*node[03050138] = 1;
-		*node[03050458] = d;
-		*node[03050318] = *;
-		*node[03050078] = 2;
-		*node[030503D8] = a;
-		*node[03050098] = if;
-		*node[03050198] = no key_word;
-		*node[03050418] = ==;
-		*node[030501D8] = d;
-		*node[03050258] = 0;
-		*node[03050238] = ;;
-		*node[03050158] = =;
-		*node[030500B8] = x;
-		*node[03050118] = /;
-		*node[030500D8] = b;
-		*node[030500F8] = 2;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
+		*node[0149D420] = ;;
+		*node[0149D440] = input;
+		*node[0149E790] = x;
+		*node[0149EAD8] = ;;
+		*node[0149E918] = if;
+		*node[0149E878] = (null);
+		*node[0149E8F8] = >;
+		*node[0149EA38] = x;
+		*node[0149E8D8] = 0;
+		*node[0149E898] = ;;
+		*node[0149E938] = =;
+		*node[0149EA18] = b;
+		*node[0149E8B8] = 1;
+		*node[0149EB18] = ;;
+		*node[0149EA58] = while;
+		*node[0149EA78] = >;
+		*node[0149E958] = x;
+		*node[0149E978] = 0;
 		*node[0149EA98] = ;;
-		*node[0149ED20] = =;
-		*node[0149EAB8] = a;
-		*node[0149EAD8] = 1;
-		*node[0149EDE0] = ;;
-		*node[0149EEE0] = =;
-		*node[0149EE00] = b;
-		*node[0149EEA0] = 2;
-		*node[0149ECC0] = ;;
-		*node[0149EE60] = =;
-		*node[0149ED40] = c;
-		*node[0149EE40] = 3;
-		*node[0149EBE0] = ;;
-		*node[0149EEC0] = =;
-		*node[0149EE80] = d;
-		*node[0149EC60] = -;
-		*node[0149ED60] = ^;
-		*node[0149EC20] = b;
-		*node[0149EB40] = 2;
-		*node[0149ED80] = *;
-		*node[0149EC40] = *;
-		*node[0149ED00] = 4;
-		*node[0149EC00] = a;
-		*node[0149EB60] = c;
-		*node[0149EDA0] = ;;
-		*node[0149EB20] = if;
-		*node[0149EB80] = no key_word;
-		*node[0149EBC0] = >;
-		*node[0149EBA0] = d;
-		*node[0149EC80] = 0;
-		*node[0149ECA0] = ;;
-		*node[03070598] = =;
-		*node[0149ECE0] = x;
-		*node[03070778] = /;
-		*node[030705F8] = -;
-		*node[0149EDC0] = b;
-		*node[030706D8] = sqrt;
-		*node[03070498] = 1;
-		*node[0149EE20] = d;
-		*node[03070638] = *;
-		*node[03070618] = 2;
-		*node[03070578] = a;
-		*node[030707F8] = ;;
-		*node[030704B8] = =;
-		*node[030705D8] = y;
-		*node[03070678] = /;
-		*node[03070738] = +;
-		*node[03070478] = b;
-		*node[03070558] = sqrt;
-		*node[03070758] = 1;
-		*node[03070698] = d;
-		*node[03070658] = *;
-		*node[03070798] = 2;
-		*node[030704F8] = a;
-		*node[030707B8] = if;
-		*node[03070818] = no key_word;
-		*node[030707D8] = ==;
-		*node[030704D8] = d;
-		*node[03070518] = 0;
-		*node[030706B8] = ;;
-		*node[03070218] = =;
-		*node[030706F8] = x;
-		*node[03070338] = *;
-		*node[03070718] = /;
-		*node[03070538] = b;
-		*node[030705B8] = 2;
-		*node[030703D8] = a;
+		*node[0149E9F8] = =;
+		*node[0149EAB8] = b;
+		*node[0149E9D8] = *;
+		*node[0149E998] = b;
+		*node[0149E9B8] = x;
+		*node[0149EAF8] = ;;
+		*node[0149E7D8] = =;
+		*node[0149EB38] = x;
+		*node[0149EB98] = -;
+		*node[0149EB58] = x;
+		*node[0149EB78] = 1;
+		*node[0149E7F8] = ;;
+		*node[0149E818] = print;
+		*node[0149E838] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------
@@ -2574,73 +197,43 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
-		*node[0161EA98] = ;;
-		*node[0161EB80] = =;
-		*node[0161EAB8] = a;
-		*node[0161EAD8] = 1;
-		*node[0161EC80] = ;;
-		*node[0161ED80] = =;
-		*node[0161ECE0] = b;
-		*node[0161ED60] = 2;
-		*node[0161EE60] = ;;
-		*node[0161EC00] = =;
-		*node[0161EC20] = c;
-		*node[0161EC40] = 1;
-		*node[0161EE20] = ;;
-		*node[0161EBA0] = =;
-		*node[0161EDC0] = d;
-		*node[0161EE80] = -;
-		*node[0161EB60] = ^;
-		*node[0161EE00] = b;
-		*node[0161EB40] = 2;
-		*node[0161EB20] = *;
-		*node[0161EE40] = *;
-		*node[0161EC60] = 4;
-		*node[0161ED40] = a;
-		*node[0161EDA0] = c;
-		*node[0161EBC0] = ;;
-		*node[0161ED00] = if;
-		*node[0161EDE0] = no key_word;
-		*node[0161EEC0] = >;
-		*node[0161EEA0] = d;
-		*node[0161ECA0] = 0;
-		*node[0161ED20] = ;;
-		*node[030404B8] = =;
-		*node[0161EEE0] = x;
-		*node[030406B8] = /;
-		*node[03040478] = -;
-		*node[0161EBE0] = b;
-		*node[03040558] = sqrt;
-		*node[03040698] = 1;
-		*node[0161ECC0] = d;
-		*node[030407D8] = *;
-		*node[03040538] = 2;
-		*node[03040818] = a;
-		*node[03040678] = ;;
-		*node[03040638] = =;
-		*node[03040618] = y;
-		*node[03040778] = /;
-		*node[03040658] = +;
-		*node[03040798] = b;
-		*node[03040738] = sqrt;
-		*node[03040498] = 1;
-		*node[03040598] = d;
-		*node[030406D8] = *;
-		*node[03040578] = 2;
-		*node[030404D8] = a;
-		*node[030405B8] = if;
-		*node[030405F8] = no key_word;
-		*node[030406F8] = ==;
-		*node[030404F8] = d;
-		*node[030407B8] = 0;
-		*node[03040758] = ;;
-		*node[03040418] = =;
-		*node[03040518] = x;
-		*node[03040278] = *;
-		*node[030407F8] = /;
-		*node[030405D8] = b;
-		*node[03040718] = 2;
-		*node[03040218] = a;
+		*node[00ECD430] = ;;
+		*node[00ECD450] = input;
+		*node[00ECE7D8] = x;
+		*node[00ECE900] = ;;
+		*node[00ECE880] = if;
+		*node[00ECEAC0] = (null);
+		*node[00ECEAA0] = ||;
+		*node[00ECE8A0] = >;
+		*node[00ECEB40] = x;
+		*node[00ECEB80] = 0;
+		*node[00ECEBA0] = ==;
+		*node[00ECEA40] = x;
+		*node[00ECEB60] = 1;
+		*node[00ECEA00] = ;;
+		*node[00ECEA60] = =;
+		*node[00ECE8E0] = b;
+		*node[00ECE820] = 1;
+		*node[00ECE9C0] = ;;
+		*node[00ECE920] = while;
+		*node[00ECE960] = >;
+		*node[00ECEBE0] = x;
+		*node[00ECE940] = 0;
+		*node[00ECEAE0] = ;;
+		*node[00ECEBC0] = =;
+		*node[00ECE980] = b;
+		*node[00ECEB20] = *;
+		*node[00ECE840] = b;
+		*node[00ECEB00] = x;
+		*node[00ECEA20] = ;;
+		*node[030C0358] = =;
+		*node[00ECE8C0] = x;
+		*node[00ECE9E0] = -;
+		*node[00ECE9A0] = x;
+		*node[00ECEA80] = 1;
+		*node[030C0378] = ;;
+		*node[030C0238] = print;
+		*node[030C0218] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------
@@ -2651,82 +244,43 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
-		*node[0142EBE8] = ;;
-		*node[03030090] = =;
-		*node[0142EC08] = a;
-		*node[0142EC28] = 1;
-		*node[03030310] = ;;
-		*node[030303F0] = =;
-		*node[030301D0] = b;
-		*node[030300B0] = 2;
-		*node[03030110] = ;;
-		*node[03030410] = =;
-		*node[03030130] = c;
-		*node[03030330] = 1;
-		*node[03030350] = ;;
-		*node[030302D0] = =;
-		*node[03030250] = d;
-		*node[03030390] = -;
-		*node[030303D0] = ^;
-		*node[030301B0] = b;
-		*node[03030170] = 2;
-		*node[03030370] = *;
-		*node[03030290] = *;
-		*node[03030270] = 4;
-		*node[030301F0] = a;
-		*node[03030430] = c;
-		*node[03030070] = ;;
-		*node[030302B0] = if;
-		*node[03030210] = no key_word;
-		*node[030300D0] = >;
-		*node[030303B0] = d;
-		*node[030302F0] = 0;
-		*node[03030230] = ;;
-		*node[030307E0] = =;
-		*node[030300F0] = x;
-		*node[03030620] = /;
-		*node[03030540] = -;
-		*node[03030150] = b;
-		*node[03030580] = sqrt;
-		*node[03030640] = 1;
-		*node[03030190] = d;
-		*node[030307C0] = *;
-		*node[030305E0] = 2;
-		*node[03030600] = a;
-		*node[03030660] = ;;
-		*node[030305C0] = =;
-		*node[03030680] = y;
-		*node[03030720] = /;
-		*node[03030700] = +;
-		*node[030306E0] = b;
-		*node[03030840] = sqrt;
-		*node[030306A0] = 1;
-		*node[03030800] = d;
-		*node[03030820] = *;
-		*node[03030500] = 2;
-		*node[030305A0] = a;
-		*node[030306C0] = ;;
-		*node[03030740] = print;
-		*node[03030760] = x;
-		*node[03030860] = ;;
-		*node[03030520] = print;
-		*node[03030480] = y;
-		*node[03030780] = if;
-		*node[030307A0] = no key_word;
-		*node[030304E0] = ==;
-		*node[030304A0] = d;
-		*node[030304C0] = 0;
-		*node[03030560] = ;;
-		*node[03030BA0] = =;
-		*node[03030AC0] = x;
-		*node[030309A0] = *;
-		*node[03030A00] = /;
-		*node[03030960] = b;
-		*node[03030BC0] = 2;
-		*node[03030AE0] = a;
-		*node[03030940] = ;;
-		*node[03030B40] = print;
-		*node[030309E0] = x;
+		*node[013ED430] = ;;
+		*node[013ED450] = input;
+		*node[013EE7D8] = x;
+		*node[013EEA60] = ;;
+		*node[013EEBE0] = if;
+		*node[013EE820] = (null);
+		*node[013EE840] = ||;
+		*node[013EEA80] = >;
+		*node[013EEBA0] = x;
+		*node[013EE960] = 0;
+		*node[013EEBC0] = ==;
+		*node[013EE9C0] = x;
+		*node[013EE980] = 1;
+		*node[013EE940] = ;;
+		*node[013EEAA0] = =;
+		*node[013EE860] = b;
+		*node[013EEB80] = 1;
+		*node[013EEB60] = ;;
+		*node[013EEAC0] = while;
+		*node[013EE880] = >;
+		*node[013EE9E0] = x;
+		*node[013EEAE0] = 0;
+		*node[013EE8A0] = ;;
+		*node[013EE9A0] = =;
+		*node[013EE8C0] = b;
+		*node[013EE8E0] = *;
+		*node[013EEB00] = b;
+		*node[013EEA00] = x;
+		*node[013EEA20] = ;;
+		*node[013EEB40] = =;
+		*node[013EE900] = x;
+		*node[013EEB20] = -;
+		*node[013EE920] = x;
+		*node[013EEA40] = 1;
+		*node[030502F8] = ;;
+		*node[030500F8] = print;
+		*node[03050098] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------
@@ -2737,82 +291,43 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
-		*node[00DEEBE8] = ;;
-		*node[02D40350] = =;
-		*node[00DEEC08] = a;
-		*node[00DEEC28] = 1;
-		*node[02D40250] = ;;
-		*node[02D401B0] = =;
-		*node[02D40410] = b;
-		*node[02D40290] = 4;
-		*node[02D40150] = ;;
-		*node[02D402D0] = =;
-		*node[02D400B0] = c;
-		*node[02D40430] = 4;
-		*node[02D40370] = ;;
-		*node[02D40090] = =;
-		*node[02D402B0] = d;
-		*node[02D40330] = -;
-		*node[02D402F0] = ^;
-		*node[02D40230] = b;
-		*node[02D401D0] = 2;
-		*node[02D40270] = *;
-		*node[02D40210] = *;
-		*node[02D40390] = 4;
-		*node[02D401F0] = a;
-		*node[02D40310] = c;
-		*node[02D403B0] = ;;
-		*node[02D403D0] = if;
-		*node[02D400F0] = no key_word;
-		*node[02D40070] = >;
-		*node[02D403F0] = d;
-		*node[02D40110] = 0;
-		*node[02D400D0] = ;;
-		*node[02D40540] = =;
-		*node[02D40130] = x;
-		*node[02D406E0] = /;
-		*node[02D404C0] = -;
-		*node[02D40170] = b;
-		*node[02D40620] = sqrt;
-		*node[02D40820] = 1;
-		*node[02D40190] = d;
-		*node[02D406C0] = *;
-		*node[02D405C0] = 2;
-		*node[02D40860] = a;
-		*node[02D405E0] = ;;
-		*node[02D40680] = =;
-		*node[02D40640] = y;
-		*node[02D40780] = /;
-		*node[02D40660] = +;
-		*node[02D40580] = b;
-		*node[02D40760] = sqrt;
-		*node[02D40840] = 1;
-		*node[02D404E0] = d;
-		*node[02D40720] = *;
-		*node[02D40700] = 2;
-		*node[02D40600] = a;
-		*node[02D40480] = ;;
-		*node[02D407A0] = print;
-		*node[02D406A0] = x;
-		*node[02D40800] = ;;
-		*node[02D404A0] = print;
-		*node[02D40740] = y;
-		*node[02D407C0] = if;
-		*node[02D40520] = no key_word;
-		*node[02D405A0] = ==;
-		*node[02D407E0] = d;
-		*node[02D40500] = 0;
-		*node[02D40560] = ;;
-		*node[02D40980] = =;
-		*node[02D40A60] = x;
-		*node[02D40B80] = *;
-		*node[02D40940] = /;
-		*node[02D40A20] = b;
-		*node[02D409E0] = 2;
-		*node[02D40880] = a;
-		*node[02D408A0] = ;;
-		*node[02D40A00] = print;
-		*node[02D40B20] = x;
+		*node[014ED430] = ;;
+		*node[014ED450] = input;
+		*node[014EE7D8] = x;
+		*node[014EE8A0] = ;;
+		*node[014EEAA0] = if;
+		*node[014EEA40] = (null);
+		*node[014EE880] = ||;
+		*node[014EEA80] = >;
+		*node[014EE9C0] = x;
+		*node[014EEA60] = 0;
+		*node[014EEB20] = ==;
+		*node[014EE980] = x;
+		*node[014EEB60] = 1;
+		*node[014EEB40] = ;;
+		*node[014EE860] = =;
+		*node[014EE920] = b;
+		*node[014EE940] = 1;
+		*node[014EEA00] = ;;
+		*node[014EEB80] = while;
+		*node[014EE9A0] = >;
+		*node[014EEB00] = x;
+		*node[014EEAC0] = 0;
+		*node[014EEBE0] = ;;
+		*node[014EE820] = =;
+		*node[014EE900] = b;
+		*node[014EEA20] = *;
+		*node[014EE9E0] = b;
+		*node[014EE960] = x;
+		*node[014EEAE0] = ;;
+		*node[03060278] = =;
+		*node[014EE8C0] = x;
+		*node[014EE8E0] = -;
+		*node[014EEBA0] = x;
+		*node[014EEBC0] = 1;
+		*node[030601F8] = ;;
+		*node[03060418] = print;
+		*node[030603B8] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------
@@ -2823,501 +338,43 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 {
 	is_init = 1
 	{
-		*node[00C6EBE8] = ;;
-		*node[03030230] = =;
-		*node[00C6EC08] = a;
-		*node[00C6EC28] = 1;
-		*node[03030150] = ;;
-		*node[03030130] = =;
-		*node[030303D0] = b;
-		*node[03030250] = 4;
-		*node[030301B0] = ;;
-		*node[03030190] = =;
-		*node[03030170] = c;
-		*node[030301D0] = 4;
-		*node[030301F0] = ;;
-		*node[03030350] = =;
-		*node[03030270] = d;
-		*node[03030310] = -;
-		*node[03030390] = ^;
-		*node[03030330] = b;
-		*node[03030210] = 2;
-		*node[030302B0] = *;
-		*node[03030110] = *;
-		*node[030302D0] = 4;
-		*node[030302F0] = a;
-		*node[03030290] = c;
-		*node[03030070] = ;;
-		*node[03030370] = if;
-		*node[030303B0] = no key_word;
-		*node[03030410] = >;
-		*node[030303F0] = d;
-		*node[03030090] = 0;
-		*node[03030430] = ;;
-		*node[03030780] = =;
-		*node[030300B0] = x;
-		*node[03030580] = /;
-		*node[030307C0] = -;
-		*node[030300D0] = b;
-		*node[03030680] = sqrt;
-		*node[03030740] = 1;
-		*node[030300F0] = d;
-		*node[03030760] = *;
-		*node[030306A0] = 2;
-		*node[03030720] = a;
-		*node[03030800] = ;;
-		*node[03030600] = =;
-		*node[030306C0] = y;
-		*node[03030700] = /;
-		*node[030305C0] = +;
-		*node[03030480] = b;
-		*node[030304A0] = sqrt;
-		*node[030305A0] = 1;
-		*node[03030560] = d;
-		*node[030305E0] = *;
-		*node[030306E0] = 2;
-		*node[030307E0] = a;
-		*node[03030820] = ;;
-		*node[03030660] = print;
-		*node[03030620] = x;
-		*node[030307A0] = ;;
-		*node[03030840] = print;
-		*node[03030860] = y;
-		*node[030304C0] = if;
-		*node[030304E0] = no key_word;
-		*node[03030540] = ==;
-		*node[03030500] = d;
-		*node[03030520] = 0;
-		*node[03030640] = ;;
-		*node[030308E0] = =;
-		*node[03030B20] = x;
-		*node[030308A0] = *;
-		*node[03030900] = /;
-		*node[03030960] = b;
-		*node[03030AC0] = 2;
-		*node[03030AE0] = a;
-		*node[03030A60] = ;;
-		*node[030309E0] = print;
-		*node[03030C00] = x;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0142EC28] = ;;
-		*node[0142EC48] = input;
-		*node[0142EC68] = a;
-		*node[03080210] = ;;
-		*node[03080330] = input;
-		*node[030803B0] = b;
-		*node[030800D0] = ;;
-		*node[030803F0] = input;
-		*node[03080310] = c;
-		*node[03080270] = ;;
-		*node[03080350] = =;
-		*node[03080410] = d;
-		*node[03080230] = -;
-		*node[030802B0] = ^;
-		*node[030802D0] = b;
-		*node[03080370] = 2;
-		*node[030802F0] = *;
-		*node[03080390] = *;
-		*node[03080170] = 4;
-		*node[03080090] = a;
-		*node[030801F0] = c;
-		*node[03080290] = ;;
-		*node[03080190] = if;
-		*node[03080250] = no key_word;
-		*node[03080430] = >;
-		*node[030803D0] = d;
-		*node[030800F0] = 0;
-		*node[030800B0] = ;;
-		*node[03080820] = =;
-		*node[03080110] = x;
-		*node[03080500] = /;
-		*node[030801B0] = -;
-		*node[03080070] = b;
-		*node[030801D0] = sqrt;
-		*node[03080130] = 1;
-		*node[03080150] = d;
-		*node[03080800] = *;
-		*node[030805A0] = 2;
-		*node[030804C0] = a;
-		*node[030806C0] = ;;
-		*node[030805C0] = =;
-		*node[03080600] = y;
-		*node[03080640] = /;
-		*node[030806E0] = +;
-		*node[03080660] = b;
-		*node[03080480] = sqrt;
-		*node[03080760] = 1;
-		*node[030804E0] = d;
-		*node[03080700] = *;
-		*node[03080620] = 2;
-		*node[03080680] = a;
-		*node[03080520] = ;;
-		*node[03080720] = print;
-		*node[030807E0] = x;
-		*node[030804A0] = ;;
-		*node[03080740] = print;
-		*node[03080540] = y;
-		*node[03080840] = if;
-		*node[030806A0] = no key_word;
-		*node[030807A0] = ==;
-		*node[03080780] = d;
-		*node[030805E0] = 0;
-		*node[03080560] = ;;
-		*node[03080AE0] = =;
-		*node[030807C0] = x;
-		*node[030809A0] = *;
-		*node[030808E0] = /;
-		*node[03080580] = b;
-		*node[03080860] = 2;
-		*node[03080920] = a;
-		*node[03080B80] = ;;
-		*node[03080AC0] = print;
-		*node[03080A00] = x;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0148EC70] = ;;
-		*node[0148EC90] = input;
-		*node[0148ECB0] = a;
-		*node[03030150] = ;;
-		*node[03030070] = input;
-		*node[03030250] = b;
-		*node[030300F0] = ;;
-		*node[03030190] = input;
-		*node[03030290] = c;
-		*node[030302B0] = ;;
-		*node[03030390] = =;
-		*node[03030270] = d;
-		*node[03030430] = -;
-		*node[030300B0] = ^;
-		*node[03030410] = b;
-		*node[03030310] = 2;
-		*node[03030330] = *;
-		*node[03030370] = *;
-		*node[030303D0] = 4;
-		*node[030300D0] = a;
-		*node[030302F0] = c;
-		*node[030301B0] = ;;
-		*node[03030110] = if;
-		*node[030301D0] = no key_word;
-		*node[03030350] = >;
-		*node[030302D0] = d;
-		*node[030303F0] = 0;
-		*node[03030130] = ;;
-		*node[030305E0] = =;
-		*node[03030170] = x;
-		*node[03030820] = /;
-		*node[030307A0] = -;
-		*node[03030210] = -;
-		*node[030301F0] = 0;
-		*node[030303B0] = b;
-		*node[030306E0] = sqrt;
-		*node[03030090] = 1;
-		*node[03030230] = d;
-		*node[03030580] = *;
-		*node[030305A0] = 2;
-		*node[030304C0] = a;
-		*node[030307C0] = ;;
-		*node[030307E0] = =;
-		*node[03030860] = y;
-		*node[03030620] = /;
-		*node[03030500] = +;
-		*node[03030640] = -;
-		*node[030306A0] = 0;
-		*node[03030720] = b;
-		*node[030305C0] = sqrt;
-		*node[030304A0] = 1;
-		*node[030304E0] = d;
-		*node[03030740] = *;
-		*node[03030680] = 2;
-		*node[03030760] = a;
-		*node[03030600] = ;;
-		*node[03030780] = print;
-		*node[030306C0] = x;
-		*node[03030480] = ;;
-		*node[03030520] = print;
-		*node[03030800] = y;
-		*node[03030700] = if;
-		*node[03030540] = no key_word;
-		*node[03030840] = ==;
-		*node[03030560] = d;
-		*node[03030660] = 0;
-		*node[03030A80] = ;;
-		*node[03030C20] = =;
-		*node[030309C0] = x;
-		*node[03030980] = *;
-		*node[030309A0] = /;
-		*node[03030BA0] = b;
-		*node[03030940] = 2;
-		*node[030308E0] = a;
-		*node[030309E0] = ;;
-		*node[03030BC0] = print;
-		*node[03030A00] = x;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00CAEC98] = ;;
-		*node[00CAECB8] = input;
-		*node[00CAECD8] = a;
-		*node[03060410] = ;;
-		*node[030603B0] = input;
-		*node[030600F0] = b;
-		*node[03060190] = ;;
-		*node[030603D0] = input;
-		*node[03060230] = c;
-		*node[03060170] = ;;
-		*node[03060370] = =;
-		*node[030600B0] = d;
-		*node[03060090] = -;
-		*node[030601D0] = ^;
-		*node[030603F0] = b;
-		*node[030602F0] = 2;
-		*node[030601F0] = *;
-		*node[03060270] = *;
-		*node[03060110] = 4;
-		*node[03060130] = a;
-		*node[03060350] = c;
-		*node[03060310] = ;;
-		*node[03060250] = if;
-		*node[03060150] = no key_word;
-		*node[030601B0] = >;
-		*node[03060430] = d;
-		*node[03060330] = 0;
-		*node[03060210] = ;;
-		*node[03060BA0] = =;
-		*node[03060290] = x;
-		*node[03060BC0] = /;
-		*node[030608C0] = -;
-		*node[030602B0] = -;
-		*node[030600D0] = 0;
-		*node[03060070] = b;
-		*node[03060B40] = sqrt;
-		*node[03060390] = 1;
-		*node[030602D0] = d;
-		*node[03060BE0] = *;
-		*node[03060A60] = 2;
-		*node[030609A0] = a;
-		*node[03060C00] = ;;
-		*node[03060B20] = =;
-		*node[03060B60] = y;
-		*node[03060A80] = /;
-		*node[03060AC0] = +;
-		*node[030609E0] = -;
-		*node[03060B80] = 0;
-		*node[03060880] = b;
-		*node[030608E0] = sqrt;
-		*node[030608A0] = 1;
-		*node[03060C20] = d;
-		*node[03060920] = *;
-		*node[03060900] = 2;
-		*node[03060AE0] = a;
-		*node[03060980] = ;;
-		*node[03060940] = print;
-		*node[03060960] = x;
-		*node[030609C0] = ;;
-		*node[03060A00] = print;
-		*node[03060A20] = y;
-		*node[03060A40] = if;
-		*node[03060AA0] = no key_word;
-		*node[03060600] = ==;
-		*node[03060B00] = d;
-		*node[03060840] = 0;
-		*node[03060780] = ;;
-		*node[03060800] = =;
-		*node[03060560] = x;
-		*node[030607E0] = -;
-		*node[03060540] = 0;
-		*node[030607C0] = *;
-		*node[03060720] = /;
-		*node[03060640] = b;
-		*node[03060860] = 2;
-		*node[030607A0] = a;
-		*node[03060700] = ;;
-		*node[030604A0] = print;
-		*node[03060620] = x;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[013CEC98] = ;;
-		*node[013CECB8] = input;
-		*node[013CECD8] = a;
-		*node[03040070] = ;;
-		*node[03040250] = input;
-		*node[03040210] = b;
-		*node[03040190] = ;;
-		*node[03040330] = input;
-		*node[030402B0] = c;
-		*node[03040350] = ;;
-		*node[030400D0] = =;
-		*node[03040390] = d;
-		*node[030403D0] = -;
-		*node[03040170] = ^;
-		*node[030402D0] = b;
-		*node[03040150] = 2;
-		*node[030400B0] = *;
-		*node[030403B0] = *;
-		*node[03040410] = 4;
-		*node[03040310] = a;
-		*node[03040430] = c;
-		*node[030402F0] = ;;
-		*node[03040270] = if;
-		*node[030400F0] = no key_word;
-		*node[03040130] = >;
-		*node[03040110] = d;
-		*node[03040370] = 0;
-		*node[030401B0] = ;;
-		*node[03040A20] = =;
-		*node[03040090] = x;
-		*node[03040B20] = /;
-		*node[03040BA0] = -;
-		*node[03040290] = -;
-		*node[030401D0] = 0;
-		*node[030403F0] = b;
-		*node[03040B40] = sqrt;
-		*node[030401F0] = 1;
-		*node[03040230] = d;
-		*node[03040A40] = *;
-		*node[03040960] = 2;
-		*node[03040A00] = a;
-		*node[03040980] = ;;
-		*node[03040920] = =;
-		*node[03040C00] = y;
-		*node[03040AE0] = /;
-		*node[03040900] = +;
-		*node[03040940] = -;
-		*node[03040BC0] = 0;
-		*node[03040BE0] = b;
-		*node[03040C20] = sqrt;
-		*node[030408E0] = 1;
-		*node[03040B60] = d;
-		*node[03040B80] = *;
-		*node[03040880] = 2;
-		*node[030408A0] = a;
-		*node[030408C0] = ;;
-		*node[03040AC0] = print;
-		*node[03040B00] = x;
-		*node[030409A0] = ;;
-		*node[030409C0] = print;
-		*node[030409E0] = y;
-		*node[03040A60] = if;
-		*node[03040A80] = no key_word;
-		*node[03040720] = ==;
-		*node[03040AA0] = d;
-		*node[030404E0] = 0;
-		*node[030405C0] = ;;
-		*node[03040660] = =;
-		*node[03040500] = x;
-		*node[03040480] = -;
-		*node[030407C0] = 0;
-		*node[03040840] = *;
-		*node[03040540] = /;
-		*node[03040520] = b;
-		*node[03040780] = 2;
-		*node[03040560] = a;
-		*node[03040580] = ;;
-		*node[030407E0] = print;
-		*node[030405A0] = x;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[00CDD3C0] = ;;
-		*node[00CDE720] = =;
-		*node[00CDD3E0] = x;
-		*node[00CDE598] = 1;
-		*node[00CDE7C0] = ;;
-		*node[00CDE7E0] = if;
-		*node[00CDE800] = no key_word;
-		*node[00CDE8E0] = ==;
-		*node[00CDE7A0] = x;
-		*node[00CDE820] = 1;
-		*node[00CDE980] = ;;
-		*node[00CDE860] = break;
-		*node[00CDE660] = ;;
-		*node[00CDE960] = print;
-		*node[00CDE700] = x;
-	}
-}
---------------------------------------------------------------------------------------------------------
-
-
---------------------------------------------------------------------------------------------------------
-tree[00B5FEB4] "tree" called from main.cpp(15) main
-{
-	is_init = 1
-	{
-		*node[0003D440] = ;;
-		*node[0003D460] = input;
-		*node[0003E850] = x;
-		*node[0003E938] = ;;
-		*node[0003E958] = if;
-		*node[0003E978] = no key_word;
-		*node[0003EC18] = >;
-		*node[0003EA58] = x;
-		*node[0003EBF8] = 0;
-		*node[0003EBD8] = ;;
-		*node[0003E8F8] = =;
-		*node[0003EBB8] = b;
-		*node[0003EC38] = 1;
-		*node[0003EB78] = ;;
-		*node[0003EAF8] = while;
-		*node[0003EA78] = >;
-		*node[0003E998] = x;
-		*node[0003EC58] = 0;
-		*node[0003E898] = ;;
-		*node[0003E918] = =;
-		*node[0003E8B8] = b;
-		*node[0003EAB8] = *;
-		*node[0003EA98] = b;
-		*node[0003E8D8] = x;
-		*node[0003EB18] = ;;
-		*node[0003E9D8] = =;
-		*node[0003E9B8] = x;
-		*node[0003EA18] = -;
-		*node[0003EB38] = x;
-		*node[0003EAD8] = 1;
-		*node[0003E9F8] = ;;
-		*node[0003EB58] = print;
-		*node[0003EA38] = b;
-		*node[0003EB98] = ;;
-		*node[03030638] = print;
-		*node[030304D8] = (null);
+		*node[014BD430] = ;;
+		*node[014BD450] = input;
+		*node[014BE7D8] = x;
+		*node[014BE8E0] = ;;
+		*node[014BE8A0] = if;
+		*node[014BE860] = (null);
+		*node[014BE880] = ||;
+		*node[014BEBA0] = >;
+		*node[014BEB80] = x;
+		*node[014BEBC0] = 0;
+		*node[014BE8C0] = ==;
+		*node[014BE9E0] = x;
+		*node[014BE840] = 1;
+		*node[014BE9C0] = ;;
+		*node[014BEA00] = =;
+		*node[014BEAC0] = b;
+		*node[014BE920] = 1;
+		*node[014BEB00] = ;;
+		*node[014BEB40] = while;
+		*node[014BE900] = >;
+		*node[014BEBE0] = x;
+		*node[014BE820] = 0;
+		*node[014BEA20] = ;;
+		*node[014BEAE0] = =;
+		*node[014BE940] = b;
+		*node[014BE980] = *;
+		*node[014BE960] = b;
+		*node[014BEAA0] = x;
+		*node[014BEB20] = ;;
+		*node[014BEB60] = =;
+		*node[014BE9A0] = x;
+		*node[014BEA80] = -;
+		*node[014BEA60] = x;
+		*node[014BEA40] = 1;
+		*node[03050118] = ;;
+		*node[030502D8] = print;
+		*node[030503F8] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------
@@ -3331,36 +388,314 @@ tree[00B5FEB4] "tree" called from main.cpp(15) main
 		*node[0154D420] = ;;
 		*node[0154D440] = input;
 		*node[0154E790] = x;
-		*node[0154EB18] = ;;
-		*node[0154EB38] = if;
-		*node[0154E9D8] = no key_word;
-		*node[0154EA38] = >;
-		*node[0154E938] = x;
-		*node[0154E9F8] = 0;
-		*node[0154E8B8] = ;;
-		*node[0154E8D8] = =;
-		*node[0154E8F8] = b;
-		*node[0154E978] = 1;
-		*node[0154E958] = ;;
-		*node[0154EA78] = while;
+		*node[0154EB78] = ;;
+		*node[0154E818] = if;
+		*node[0154E938] = (null);
+		*node[0154E7F8] = >;
+		*node[0154EA78] = x;
+		*node[0154E8D8] = 0;
+		*node[0154E838] = ;;
+		*node[0154E918] = =;
+		*node[0154E9D8] = b;
+		*node[0154EA98] = 1;
+		*node[0154EAB8] = ;;
+		*node[0154EAD8] = while;
 		*node[0154EB98] = >;
+		*node[0154E7D8] = x;
+		*node[0154EB18] = 0;
+		*node[0154EA38] = ;;
+		*node[0154EB38] = =;
+		*node[0154E9B8] = b;
+		*node[0154E958] = *;
+		*node[0154EA58] = b;
+		*node[0154E978] = x;
+		*node[0154E858] = ;;
+		*node[0154E8F8] = =;
+		*node[0154EAF8] = x;
+		*node[0154E898] = -;
 		*node[0154EB58] = x;
-		*node[0154EA58] = 0;
-		*node[0154E818] = ;;
-		*node[0154EA18] = =;
-		*node[0154E898] = b;
-		*node[0154E9B8] = *;
-		*node[0154E918] = b;
-		*node[0154E998] = x;
-		*node[0154EA98] = ;;
-		*node[0154EB78] = =;
-		*node[0154E878] = x;
-		*node[0154EAF8] = -;
-		*node[0154EAB8] = x;
-		*node[0154EAD8] = 1;
-		*node[0154E7D8] = ;;
-		*node[0154E7F8] = print;
-		*node[0154E838] = b;
+		*node[0154E878] = 1;
+		*node[0154E998] = ;;
+		*node[0154E8B8] = print;
+		*node[0154E9F8] = b;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[00B5FEB4] "tree" called from main.cpp(15) main
+{
+	is_init = 1
+	{
+		*node[0141D430] = ;;
+		*node[0141D450] = input;
+		*node[0141E7D8] = x;
+		*node[0141E840] = ;;
+		*node[0141EBA0] = if;
+		*node[0141E960] = (null);
+		*node[0141E980] = ||;
+		*node[0141E8A0] = >;
+		*node[0141E860] = x;
+		*node[0141EBE0] = 0;
+		*node[0141E940] = ==;
+		*node[0141EAC0] = x;
+		*node[0141E920] = 0;
+		*node[0141EA20] = ;;
+		*node[0141EA80] = =;
+		*node[0141EB00] = b;
+		*node[0141E8C0] = 1;
+		*node[0141E820] = ;;
+		*node[0141E9C0] = while;
+		*node[0141E9E0] = >;
+		*node[0141EA40] = x;
+		*node[0141E8E0] = 0;
+		*node[0141E900] = ;;
+		*node[0141EAE0] = =;
+		*node[0141E9A0] = b;
+		*node[0141EAA0] = *;
+		*node[0141EA00] = b;
+		*node[0141EA60] = x;
+		*node[0141EB20] = ;;
+		*node[030B07B8] = =;
+		*node[0141EB40] = x;
+		*node[0141EBC0] = -;
+		*node[0141EB60] = x;
+		*node[0141EB80] = 1;
+		*node[030B0478] = ;;
+		*node[030B04D8] = print;
+		*node[030B05F8] = b;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[00B5FEB4] "tree" called from main.cpp(15) main
+{
+	is_init = 1
+	{
+		*node[0141D430] = ;;
+		*node[0141D450] = input;
+		*node[0141E7D8] = x;
+		*node[0141EAA0] = ;;
+		*node[0141EA00] = if;
+		*node[0141EB80] = (null);
+		*node[0141EB00] = ||;
+		*node[0141E940] = >;
+		*node[0141E9E0] = x;
+		*node[0141E9C0] = 0;
+		*node[0141EA60] = ==;
+		*node[0141EA20] = x;
+		*node[0141E840] = 0;
+		*node[0141E900] = ;;
+		*node[0141EB40] = =;
+		*node[0141E960] = b;
+		*node[0141EB20] = 1;
+		*node[0141E860] = ;;
+		*node[0141EB60] = while;
+		*node[0141EAC0] = >;
+		*node[0141EBA0] = x;
+		*node[0141EA40] = 0;
+		*node[0141E920] = ;;
+		*node[0141EBC0] = =;
+		*node[0141E880] = b;
+		*node[0141E820] = *;
+		*node[0141EAE0] = b;
+		*node[0141E980] = x;
+		*node[0141EBE0] = ;;
+		*node[030300B8] = =;
+		*node[0141E8A0] = x;
+		*node[0141E9A0] = -;
+		*node[0141E8C0] = x;
+		*node[0141E8E0] = 1;
+		*node[030301D8] = ;;
+		*node[03030398] = print;
+		*node[03030098] = b;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[00B5FEB4] "tree" called from main.cpp(15) main
+{
+	is_init = 1
+	{
+		*node[0146D430] = ;;
+		*node[0146D450] = input;
+		*node[0146E7D8] = x;
+		*node[0146E980] = ;;
+		*node[0146EB60] = if;
+		*node[0146E860] = (null);
+		*node[0146EA00] = ||;
+		*node[0146EAA0] = >;
+		*node[0146E9A0] = x;
+		*node[0146E9E0] = 0;
+		*node[0146EBA0] = ==;
+		*node[0146E8E0] = x;
+		*node[0146E880] = 0;
+		*node[0146EA20] = ;;
+		*node[0146E900] = =;
+		*node[0146EA40] = b;
+		*node[0146EBC0] = 1;
+		*node[0146E920] = ;;
+		*node[0146E940] = while;
+		*node[0146EA80] = >;
+		*node[0146EB00] = x;
+		*node[0146EA60] = 0;
+		*node[0146EAC0] = ;;
+		*node[0146EBE0] = =;
+		*node[0146EAE0] = b;
+		*node[0146E960] = *;
+		*node[0146EB20] = b;
+		*node[0146EB40] = x;
+		*node[0146EB80] = ;;
+		*node[02CE0738] = =;
+		*node[0146E820] = x;
+		*node[0146E8C0] = -;
+		*node[0146E840] = x;
+		*node[0146E8A0] = 1;
+		*node[02CE07B8] = ;;
+		*node[02CE04F8] = print;
+		*node[02CE0578] = b;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[00B5FEB4] "tree" called from main.cpp(15) main
+{
+	is_init = 1
+	{
+		*node[00C7D430] = ;;
+		*node[00C7D450] = input;
+		*node[00C7E7D8] = x;
+		*node[00C7EBE0] = ;;
+		*node[00C7E960] = if;
+		*node[00C7EB00] = (null);
+		*node[00C7EB20] = &&;
+		*node[00C7E840] = >;
+		*node[00C7EA20] = x;
+		*node[00C7E9C0] = 0;
+		*node[00C7E980] = ==;
+		*node[00C7EAC0] = x;
+		*node[00C7EA60] = 0;
+		*node[00C7E860] = ;;
+		*node[00C7E880] = =;
+		*node[00C7EA40] = b;
+		*node[00C7E8C0] = 1;
+		*node[00C7E820] = ;;
+		*node[00C7E9E0] = while;
+		*node[00C7EA00] = >;
+		*node[00C7EBC0] = x;
+		*node[00C7EB80] = 0;
+		*node[00C7E8A0] = ;;
+		*node[00C7EAA0] = =;
+		*node[00C7EAE0] = b;
+		*node[00C7E8E0] = *;
+		*node[00C7EB40] = b;
+		*node[00C7EA80] = x;
+		*node[00C7EB60] = ;;
+		*node[00C7E9A0] = =;
+		*node[00C7EBA0] = x;
+		*node[00C7E940] = -;
+		*node[00C7E900] = x;
+		*node[00C7E920] = 1;
+		*node[03050778] = ;;
+		*node[03050718] = print;
+		*node[03050738] = b;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[00B5FEB4] "tree" called from main.cpp(15) main
+{
+	is_init = 1
+	{
+		*node[0148D430] = ;;
+		*node[0148D450] = input;
+		*node[0148E7D8] = x;
+		*node[0148EB40] = ;;
+		*node[0148E960] = if;
+		*node[0148E8A0] = (null);
+		*node[0148EBA0] = ||;
+		*node[0148EA60] = >;
+		*node[0148EB60] = x;
+		*node[0148EB80] = 0;
+		*node[0148E9E0] = ==;
+		*node[0148EAC0] = x;
+		*node[0148EA00] = 0;
+		*node[0148EBC0] = ;;
+		*node[0148E940] = =;
+		*node[0148EA80] = b;
+		*node[0148E900] = 1;
+		*node[0148EBE0] = ;;
+		*node[0148E920] = while;
+		*node[0148E980] = >;
+		*node[0148EB00] = x;
+		*node[0148EB20] = 0;
+		*node[0148E9A0] = ;;
+		*node[0148EA40] = =;
+		*node[0148E820] = b;
+		*node[0148EA20] = *;
+		*node[0148EAE0] = b;
+		*node[0148E9C0] = x;
+		*node[0148EAA0] = ;;
+		*node[0148E8C0] = =;
+		*node[0148E840] = x;
+		*node[0148E880] = -;
+		*node[0148E860] = x;
+		*node[0148E8E0] = 1;
+		*node[03030658] = ;;
+		*node[030304F8] = print;
+		*node[03030518] = b;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[00B5FEB4] "tree" called from main.cpp(15) main
+{
+	is_init = 1
+	{
+		*node[00C4D420] = ;;
+		*node[00C4D440] = input;
+		*node[00C4E790] = x;
+		*node[00C4EB98] = ;;
+		*node[00C4EA58] = if;
+		*node[00C4EAD8] = (null);
+		*node[00C4E998] = >;
+		*node[00C4EB58] = x;
+		*node[00C4E8B8] = 0;
+		*node[00C4E8D8] = ;;
+		*node[00C4E898] = =;
+		*node[00C4E878] = b;
+		*node[00C4E8F8] = 1;
+		*node[00C4EAF8] = ;;
+		*node[00C4E918] = while;
+		*node[00C4E838] = >;
+		*node[00C4E9D8] = x;
+		*node[00C4EB18] = 0;
+		*node[00C4E9F8] = ;;
+		*node[00C4EA78] = =;
+		*node[00C4E9B8] = b;
+		*node[00C4EA38] = *;
+		*node[00C4E978] = b;
+		*node[00C4E938] = x;
+		*node[00C4EAB8] = ;;
+		*node[00C4EA98] = =;
+		*node[00C4EB38] = x;
+		*node[00C4E958] = -;
+		*node[00C4EA18] = x;
+		*node[00C4EB78] = 1;
+		*node[00C4E7D8] = ;;
+		*node[00C4E7F8] = print;
+		*node[00C4E818] = b;
 	}
 }
 --------------------------------------------------------------------------------------------------------

@@ -7,28 +7,28 @@ CFLAGS = -c -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-
 	-Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing   \
 	-Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
 	
-INCLUDES = tree.h error.h utils.h input.h
+INCLUDES = ass.h error.h func_ass.h
 
-SOURCES = main.cpp error.cpp tree.cpp utils.cpp input.cpp lexical_analysis.cpp parsing.cpp dump.cpp
+SOURCES = main.cpp error.cpp ass.cpp func_ass.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-EXECUTABLE = frontend
+EXECUTABLE = assembler
 
-VPATH = ../include/
+VPATH = ..\include
 
-all: $(SOURCES) $(INCLUDES) $(EXECUTABLE)
+all: $(SOURCES) $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
-	$(CC) $(OBJECTS) -o $@ 
+	$(CC) $(OBJECTS) -o $@
 
 .cpp.o: $(INCLUDES) $(SOURCES)
-	$(CC) $(CFLAGS) $< -o $@ 
+	$(CC) $(CFLAGS) $< -o $@
 
 .PHONY: clean
 
 clean:
-	rm -rf *.o frontend
-	rm -rf frontend.exe
-	rm -rf frontend.exe.log
-	rm -rf frontend.exe.log.dmp
+	rm -rf *.o assembler
+	rm -rf assembler.exe
+	rm -rf assembler.exe.log
+	rm -rf assembler.exe.log.dmp

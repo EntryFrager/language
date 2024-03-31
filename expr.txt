@@ -3,17 +3,52 @@
     input (b);
     input (c);
 
-    d = b ^ 2 - 4 * a * c;
-    if (d > 0)
+    INFINITY_ROOTS = 1000;
+    NO_ROOTS = -1;
+
+    ONE_ROOT = 1;
+    TWO_ROOTS = 2;
+
+    if (a == 0)
     {
-        x = (0 - b - sqrt(d)) / (2 * a);
-        y = (0 - b + sqrt(d)) / (2 * a);
-        print(x);
-        print(y);
+        if (b == 0)
+        {
+            if (c == 0)
+            {
+                print (INFINITY_ROOTS);
+            }
+            else
+            {
+                print (NO_ROOTS);
+            }
+        }
+        else
+        {
+            x = 0 -  c / b;
+            print (x);
+        }
     }
-    else if (d == 0)
+    else
     {
-        x = 0 - b / 2 * a;
-        print(x);
+        disc = b ^ 2 - 4 * a * c;
+
+        if (disc == 0)
+        {
+            x = 0 - b / (2 * a);
+
+            print (ONE_ROOT);
+            print (x);
+        }
+        else if (disc < 0)
+        {
+            print (NO_ROOTS);
+        }
+        else
+        {
+            x_1 = ((0 - b) - sqrt (disc)) / (2 * a);
+            x_2 = ((0 - b) + sqrt (disc)) / (2 * a);
+            print (x_1);
+            print (x_2);
+        }
     }
 }

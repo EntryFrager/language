@@ -10,7 +10,7 @@ digraph List {
 	node0 -> node3 [color = "#8B00FF"];
 	node4 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{if}"];
 	node3 -> node4 [color = "#8B00FF"];
-	node5 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{no key_word}"];
+	node5 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{(null)}"];
 	node4 -> node5 [color = "#8B00FF"];
 	node6 [shape = Mrecord, style = filled, fillcolor = "#8B00FF", label = "{>}"];
 	node5 -> node6 [color = "#8B00FF"];

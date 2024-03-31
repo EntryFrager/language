@@ -25,6 +25,7 @@ int create_tree (TREE *tree, int argc, char *argv[], int *code_error)
     else
     {
         tree->info.fp_name_expr = "../expr.txt";
+        tree->info.fp_name_tree = "../tree.txt";
     }
 
     tree->info.fp_name_table_name = "../table_name.txt";
@@ -60,16 +61,6 @@ NODE *create_node_num (ELEMENT value, NODE *left, NODE *right, NODE *parent, int
 
     return node;
 }
-NODE *create_node_op (op_comand types_op, NODE *left, NODE *right, NODE *parent, int *code_error)
-{
-    NODE *node = calloc_node (left, right, parent, code_error);
-    ERR_RET (NULL);
-
-    node->data.types_op = types_op;
-    node->type          = OP;
-
-    return node;
-}
 
 NODE *create_node_ident (char *ident, NODE *left, NODE *right, NODE *parent, int *code_error)
 {
@@ -78,6 +69,17 @@ NODE *create_node_ident (char *ident, NODE *left, NODE *right, NODE *parent, int
 
     node->data.ident = ident;
     node->type       = IDENT;
+
+    return node;
+}
+
+NODE *create_node_op (op_comand types_op, NODE *left, NODE *right, NODE *parent, int *code_error)
+{
+    NODE *node = calloc_node (left, right, parent, code_error);
+    ERR_RET (NULL);
+
+    node->data.types_op = types_op;
+    node->type          = OP;
 
     return node;
 }
@@ -206,6 +208,7 @@ void print_tree (NODE *node, FILE *stream, int *code_error)
 
     fprintf (stream, ") ");
 }
+
 
 void print_table_name (TREE *tree, int *code_error)
 {

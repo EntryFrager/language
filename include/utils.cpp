@@ -1,6 +1,6 @@
 #include "utils.h"
 
-char *get_str_file (FILE *stream, size_t *size_file, int *code_error)
+char *get_file_to_str (FILE *stream, size_t *size_file, int *code_error)
 {
     my_assert (stream != NULL, ERR_PTR);
     my_assert (size_file != NULL, ERR_PTR);
@@ -12,7 +12,7 @@ char *get_str_file (FILE *stream, size_t *size_file, int *code_error)
     my_assert (buf != NULL, ERR_MEM);
 
     size_t read_size = fread (buf, sizeof (char), *size_file, stream);
-    //my_assert (read_size == *size_file, ERR_FREAD);
+    my_assert (read_size == *size_file, ERR_FREAD);
 
     buf[*size_file] = '\0';
 
@@ -80,17 +80,16 @@ size_t get_n_lines (char *str, int *code_error)
     return n_lines;
 }
 
-char *skip_isspace (char *str, int *code_error)
+char *skip_isspace (char *str, size_t len_str, int *code_error)
 {
     my_assert (str != NULL, ERR_PTR);
 
-    size_t len = strlen (str);
-    char *new_str = (char *) calloc (len, sizeof (char));
+    char *new_str = (char *) calloc (len_str, sizeof (char));
     my_assert (new_str != NULL, ERR_MEM);
 
     size_t pos = 0;
 
-    for (size_t i = 0; i < len; i++)
+    for (size_t i = 0; i < len_str; i++)
     {
         if (!isspace (str[i]))
         {
@@ -116,7 +115,7 @@ char *read_ident (char **str, int *code_error)
     my_assert (new_str != NULL, ERR_MEM);
     size_t pos = 0;
 
-    while (isalpha (**str))
+    while (isalpha (**str) || **str == '_')
     {
         new_str[pos++] = **str;
         (*str)++;

@@ -6,10 +6,10 @@ int input_expr (TREE *tree, int *code_error)
 {
     my_assert (tree != NULL, ERR_PTR);
 
-    tree->info.buf = get_str_file (tree->info.fp_expr, &tree->info.size_file, code_error);
+    tree->info.buf = get_file_to_str (tree->info.fp_expr, &tree->info.size_file, code_error);
     ERR_RET (*code_error);
 
-    tree->info.buf = skip_isspace (tree->info.buf, code_error);
+    tree->info.buf = skip_isspace (tree->info.buf, tree->info.size_file, code_error);
     ERR_RET (*code_error);
 
     get_token (tree, code_error);
