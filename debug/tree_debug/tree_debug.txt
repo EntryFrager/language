@@ -1366,3 +1366,3188 @@ tree[0x7ffc18509ce0] "tree" called from ./src/main.cpp(14) main
 --------------------------------------------------------------------------------------------------------
 
 
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffea951bd80] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffea951bd80] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffc3495afc0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffc3495afc0] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7fffe513d4d0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7fffe513d4d0] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffc47362cb0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffc47362cb0] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffc3d725f20] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffc3d725f20] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffd2e365050] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffd2e365050] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffdf1298870] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffdf1298870] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffd88b6d2f0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffd88b6d2f0] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffd2c741650] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffd2c741650] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffca53e97b0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffca53e97b0] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffde2655f60] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffde2655f60] "tree" called from ../tree/tree.cpp(270) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffc8bd661b0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5694e822ead0] = ;;
+		*node[0x5694e822eb00] = 0;
+		*node[0x5694e822eb30] = ;;
+		*node[0x5694e822eb60] = input;
+		*node[0x5694e822eb90] = 1;
+		*node[0x5694e822ebc0] = 2;
+		*node[0x5694e822ebf0] = 3;
+		*node[0x5694e822f030] = ;;
+		*node[0x5694e822f0c0] = 1;
+		*node[0x5694e822f0f0] = 2;
+		*node[0x5694e822f120] = 3;
+		*node[0x5694e822f090] = 4;
+		*node[0x5694e822f150] = ;;
+		*node[0x5694e822f180] = 0;
+		*node[0x5694e822f1b0] = 1;
+		*node[0x5694e822f1e0] = 2;
+		*node[0x5694e822f210] = 3;
+		*node[0x5694e822f240] = ;;
+		*node[0x5694e822f270] = if;
+		*node[0x5694e822f2a0] = op_no;
+		*node[0x5694e822f330] = ==;
+		*node[0x5694e822f2d0] = 1;
+		*node[0x5694e822f300] = 0;
+		*node[0x5694e822f360] = ;;
+		*node[0x5694e822f3f0] = 2;
+		*node[0x5694e822f420] = 3;
+		*node[0x5694e822f3c0] = 5;
+		*node[0x5694e822f450] = ;;
+		*node[0x5694e822f4e0] = 1;
+		*node[0x5694e822f510] = 2;
+		*node[0x5694e822f540] = 3;
+		*node[0x5694e822f4b0] = 6;
+		*node[0x5694e822f570] = ;;
+		*node[0x5694e822f5a0] = 0;
+		*node[0x5694e822f5d0] = 1;
+		*node[0x5694e822f600] = 2;
+		*node[0x5694e822f630] = ;;
+		*node[0x5694e822f6c0] = =;
+		*node[0x5694e822f660] = 7;
+		*node[0x5694e822f6f0] = ;;
+		*node[0x5694e822f780] = =;
+		*node[0x5694e822f720] = 8;
+		*node[0x5694e822f750] = 1;
+		*node[0x5694e822f7b0] = ;;
+		*node[0x5694e822f840] = =;
+		*node[0x5694e822f7e0] = 9;
+		*node[0x5694e822f810] = 1000;
+		*node[0x5694e822f870] = ;;
+		*node[0x5694e822f8a0] = if;
+		*node[0x5694e822f8d0] = op_no;
+		*node[0x5694e822f960] = ==;
+		*node[0x5694e822f900] = 1;
+		*node[0x5694e822f930] = 0;
+		*node[0x5694e822f990] = ;;
+		*node[0x5694e822f9c0] = if;
+		*node[0x5694e822f9f0] = op_no;
+		*node[0x5694e822fa80] = ==;
+		*node[0x5694e822fa20] = 2;
+		*node[0x5694e822fa50] = 0;
+		*node[0x5694e822fab0] = ;;
+		*node[0x5694e822fae0] = print;
+		*node[0x5694e822fb10] = 9;
+		*node[0x5694e822fb40] = ;;
+		*node[0x5694e822fb70] = print;
+		*node[0x5694e822fba0] = 7;
+		*node[0x5694e822fbd0] = ;;
+		*node[0x5694e822fd20] = =;
+		*node[0x5694e822fc00] = 10;
+		*node[0x5694e822fcf0] = /;
+		*node[0x5694e822fc90] = -;
+		*node[0x5694e822fc30] = 0;
+		*node[0x5694e822fc60] = 2;
+		*node[0x5694e822fcc0] = 1;
+		*node[0x5694e822fd50] = ;;
+		*node[0x5694e822fd80] = print;
+		*node[0x5694e822fdb0] = 8;
+		*node[0x5694e822fde0] = ;;
+		*node[0x5694e822fe10] = print;
+		*node[0x5694e822fe40] = 10;
+		*node[0x5694e822fe70] = ;;
+		*node[0x5694e822fea0] = return;
+		*node[0x5694e822fed0] = 0;
+		*node[0x5694e822ff00] = ;;
+		*node[0x5694e822ff30] = 0;
+		*node[0x5694e822ff60] = 1;
+		*node[0x5694e822ff90] = 2;
+		*node[0x5694e822ffc0] = 3;
+		*node[0x5694e822fff0] = ;;
+		*node[0x5694e8230080] = =;
+		*node[0x5694e8230020] = 7;
+		*node[0x5694e82300b0] = ;;
+		*node[0x5694e8230140] = =;
+		*node[0x5694e82300e0] = 8;
+		*node[0x5694e8230110] = 1;
+		*node[0x5694e8230170] = ;;
+		*node[0x5694e8230200] = =;
+		*node[0x5694e82301a0] = 11;
+		*node[0x5694e82301d0] = 2;
+		*node[0x5694e8230230] = ;;
+		*node[0x5694e8230260] = if;
+		*node[0x5694e8230290] = op_no;
+		*node[0x5694e8230320] = ==;
+		*node[0x5694e82302c0] = 3;
+		*node[0x5694e82302f0] = 0;
+		*node[0x5694e8230350] = ;;
+		*node[0x5694e82303e0] = =;
+		*node[0x5694e8230380] = 12;
+		*node[0x5694e82303b0] = 0;
+		*node[0x5694e8230410] = ;;
+		*node[0x5694e8230560] = =;
+		*node[0x5694e8230440] = 13;
+		*node[0x5694e8230530] = /;
+		*node[0x5694e82304d0] = -;
+		*node[0x5694e8230470] = 0;
+		*node[0x5694e82304a0] = 2;
+		*node[0x5694e8230500] = 1;
+		*node[0x5694e8230590] = ;;
+		*node[0x5694e82305c0] = print;
+		*node[0x5694e82305f0] = 11;
+		*node[0x5694e8230620] = ;;
+		*node[0x5694e8230650] = print;
+		*node[0x5694e8230680] = 12;
+		*node[0x5694e82306b0] = 13;
+		*node[0x5694e82306e0] = ;;
+		*node[0x5694e82308f0] = =;
+		*node[0x5694e8230710] = 14;
+		*node[0x5694e82308c0] = -;
+		*node[0x5694e82307a0] = *;
+		*node[0x5694e8230740] = 2;
+		*node[0x5694e8230770] = 2;
+		*node[0x5694e8230890] = *;
+		*node[0x5694e8230830] = *;
+		*node[0x5694e82307d0] = 4;
+		*node[0x5694e8230800] = 1;
+		*node[0x5694e8230860] = 3;
+		*node[0x5694e8230920] = ;;
+		*node[0x5694e8230950] = if;
+		*node[0x5694e8230980] = op_no;
+		*node[0x5694e8230a10] = >;
+		*node[0x5694e82309b0] = 14;
+		*node[0x5694e82309e0] = 0;
+		*node[0x5694e8230a40] = ;;
+		*node[0x5694e8230cb0] = =;
+		*node[0x5694e8230a70] = 12;
+		*node[0x5694e8230c80] = /;
+		*node[0x5694e8230bc0] = -;
+		*node[0x5694e8230b00] = -;
+		*node[0x5694e8230aa0] = 0;
+		*node[0x5694e8230ad0] = 2;
+		*node[0x5694e8230b90] = sqrt;
+		*node[0x5694e8230b60] = 1;
+		*node[0x5694e8230b30] = 15;
+		*node[0x5694e8230c50] = *;
+		*node[0x5694e8230bf0] = 2;
+		*node[0x5694e8230c20] = 1;
+		*node[0x5694e8230ce0] = ;;
+		*node[0x5694e8230f50] = =;
+		*node[0x5694e8230d10] = 13;
+		*node[0x5694e8230f20] = /;
+		*node[0x5694e8230e60] = +;
+		*node[0x5694e8230da0] = -;
+		*node[0x5694e8230d40] = 0;
+		*node[0x5694e8230d70] = 2;
+		*node[0x5694e8230e30] = sqrt;
+		*node[0x5694e8230e00] = 1;
+		*node[0x5694e8230dd0] = 15;
+		*node[0x5694e8230ef0] = *;
+		*node[0x5694e8230e90] = 2;
+		*node[0x5694e8230ec0] = 1;
+		*node[0x5694e8230f80] = ;;
+		*node[0x5694e8230fb0] = print;
+		*node[0x5694e8230fe0] = 11;
+		*node[0x5694e8231010] = ;;
+		*node[0x5694e8231040] = print;
+		*node[0x5694e8231070] = 12;
+		*node[0x5694e82310a0] = 13;
+		*node[0x5694e82310d0] = if;
+		*node[0x5694e8231100] = op_no;
+		*node[0x5694e8231190] = ==;
+		*node[0x5694e8231130] = 14;
+		*node[0x5694e8231160] = 0;
+		*node[0x5694e82311c0] = ;;
+		*node[0x5694e8231370] = =;
+		*node[0x5694e82311f0] = 10;
+		*node[0x5694e8231340] = /;
+		*node[0x5694e8231280] = -;
+		*node[0x5694e8231220] = 0;
+		*node[0x5694e8231250] = 2;
+		*node[0x5694e8231310] = *;
+		*node[0x5694e82312b0] = 2;
+		*node[0x5694e82312e0] = 1;
+		*node[0x5694e82313a0] = ;;
+		*node[0x5694e82313d0] = print;
+		*node[0x5694e8231400] = 8;
+		*node[0x5694e8231430] = ;;
+		*node[0x5694e8231460] = print;
+		*node[0x5694e8231490] = 10;
+		*node[0x5694e82314c0] = ;;
+		*node[0x5694e82314f0] = print;
+		*node[0x5694e8231520] = 7;
+		*node[0x5694e8231550] = ;;
+		*node[0x5694e8231580] = return;
+		*node[0x5694e82315b0] = 0;
+		*node[0x5694e82315e0] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffc8c01c7c0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5bc386ded5d0] = ;;
+		*node[0x5bc386ded600] = 0;
+		*node[0x5bc386ded630] = ;;
+		*node[0x5bc386ded660] = input;
+		*node[0x5bc386ded690] = 1;
+		*node[0x5bc386ded6c0] = 2;
+		*node[0x5bc386ded6f0] = 3;
+		*node[0x5bc386ded720] = ;;
+		*node[0x5bc386ded7b0] = 1;
+		*node[0x5bc386ded7e0] = 2;
+		*node[0x5bc386ded810] = 3;
+		*node[0x5bc386ded780] = 4;
+		*node[0x5bc386ded840] = ;;
+		*node[0x5bc386ded870] = 0;
+		*node[0x5bc386ded8a0] = 1;
+		*node[0x5bc386ded8d0] = 2;
+		*node[0x5bc386ded900] = 3;
+		*node[0x5bc386ded930] = ;;
+		*node[0x5bc386ded960] = if;
+		*node[0x5bc386ded990] = op_no;
+		*node[0x5bc386deda20] = ==;
+		*node[0x5bc386ded9c0] = 1;
+		*node[0x5bc386ded9f0] = 0;
+		*node[0x5bc386deda50] = ;;
+		*node[0x5bc386dedae0] = 2;
+		*node[0x5bc386dedb10] = 3;
+		*node[0x5bc386dedab0] = 5;
+		*node[0x5bc386dedb40] = ;;
+		*node[0x5bc386dedbd0] = 1;
+		*node[0x5bc386dedc00] = 2;
+		*node[0x5bc386dedc30] = 3;
+		*node[0x5bc386dedba0] = 6;
+		*node[0x5bc386dedc60] = ;;
+		*node[0x5bc386dedc90] = 0;
+		*node[0x5bc386dedcc0] = 1;
+		*node[0x5bc386dedcf0] = 2;
+		*node[0x5bc386dedd20] = ;;
+		*node[0x5bc386deddb0] = =;
+		*node[0x5bc386dedd50] = 7;
+		*node[0x5bc386dedde0] = ;;
+		*node[0x5bc386dede70] = =;
+		*node[0x5bc386dede10] = 8;
+		*node[0x5bc386dede40] = 1;
+		*node[0x5bc386dedea0] = ;;
+		*node[0x5bc386dedf30] = =;
+		*node[0x5bc386deded0] = 9;
+		*node[0x5bc386dedf00] = 1000;
+		*node[0x5bc386dedf60] = ;;
+		*node[0x5bc386dedf90] = if;
+		*node[0x5bc386dedfc0] = op_no;
+		*node[0x5bc386dee050] = ==;
+		*node[0x5bc386dedff0] = 1;
+		*node[0x5bc386dee020] = 0;
+		*node[0x5bc386dee080] = ;;
+		*node[0x5bc386dee0b0] = if;
+		*node[0x5bc386dee0e0] = op_no;
+		*node[0x5bc386dee170] = ==;
+		*node[0x5bc386dee110] = 2;
+		*node[0x5bc386dee140] = 0;
+		*node[0x5bc386dee1a0] = ;;
+		*node[0x5bc386dee1d0] = print;
+		*node[0x5bc386dee200] = 9;
+		*node[0x5bc386dee230] = ;;
+		*node[0x5bc386dee260] = print;
+		*node[0x5bc386dee290] = 7;
+		*node[0x5bc386dee2c0] = ;;
+		*node[0x5bc386dee410] = =;
+		*node[0x5bc386dee2f0] = 10;
+		*node[0x5bc386dee3e0] = /;
+		*node[0x5bc386dee380] = -;
+		*node[0x5bc386dee320] = 0;
+		*node[0x5bc386dee350] = 2;
+		*node[0x5bc386dee3b0] = 1;
+		*node[0x5bc386dee440] = ;;
+		*node[0x5bc386dee470] = print;
+		*node[0x5bc386dee4a0] = 8;
+		*node[0x5bc386dee4d0] = ;;
+		*node[0x5bc386dee500] = print;
+		*node[0x5bc386dee530] = 10;
+		*node[0x5bc386dee560] = ;;
+		*node[0x5bc386dee590] = return;
+		*node[0x5bc386dee5c0] = 0;
+		*node[0x5bc386dee5f0] = ;;
+		*node[0x5bc386dee620] = 0;
+		*node[0x5bc386dee650] = 1;
+		*node[0x5bc386dee680] = 2;
+		*node[0x5bc386dee6b0] = 3;
+		*node[0x5bc386dee6e0] = ;;
+		*node[0x5bc386dee770] = =;
+		*node[0x5bc386dee710] = 7;
+		*node[0x5bc386dee7a0] = ;;
+		*node[0x5bc386dee830] = =;
+		*node[0x5bc386dee7d0] = 8;
+		*node[0x5bc386dee800] = 1;
+		*node[0x5bc386dee860] = ;;
+		*node[0x5bc386dee8f0] = =;
+		*node[0x5bc386dee890] = 11;
+		*node[0x5bc386dee8c0] = 2;
+		*node[0x5bc386dee920] = ;;
+		*node[0x5bc386dee950] = if;
+		*node[0x5bc386dee980] = op_no;
+		*node[0x5bc386deea10] = ==;
+		*node[0x5bc386dee9b0] = 3;
+		*node[0x5bc386dee9e0] = 0;
+		*node[0x5bc386deea40] = ;;
+		*node[0x5bc386deead0] = =;
+		*node[0x5bc386deea70] = 12;
+		*node[0x5bc386deeaa0] = 0;
+		*node[0x5bc386deeb00] = ;;
+		*node[0x5bc386deec50] = =;
+		*node[0x5bc386deeb30] = 13;
+		*node[0x5bc386deec20] = /;
+		*node[0x5bc386deebc0] = -;
+		*node[0x5bc386deeb60] = 0;
+		*node[0x5bc386deeb90] = 2;
+		*node[0x5bc386deebf0] = 1;
+		*node[0x5bc386deec80] = ;;
+		*node[0x5bc386deecb0] = print;
+		*node[0x5bc386deece0] = 11;
+		*node[0x5bc386deed10] = ;;
+		*node[0x5bc386deed40] = print;
+		*node[0x5bc386deed70] = 12;
+		*node[0x5bc386deeda0] = 13;
+		*node[0x5bc386deedd0] = ;;
+		*node[0x5bc386deefe0] = =;
+		*node[0x5bc386deee00] = 14;
+		*node[0x5bc386deefb0] = -;
+		*node[0x5bc386deee90] = *;
+		*node[0x5bc386deee30] = 2;
+		*node[0x5bc386deee60] = 2;
+		*node[0x5bc386deef80] = *;
+		*node[0x5bc386deef20] = *;
+		*node[0x5bc386deeec0] = 4;
+		*node[0x5bc386deeef0] = 1;
+		*node[0x5bc386deef50] = 3;
+		*node[0x5bc386def010] = ;;
+		*node[0x5bc386def040] = if;
+		*node[0x5bc386def070] = op_no;
+		*node[0x5bc386def100] = >;
+		*node[0x5bc386def0a0] = 14;
+		*node[0x5bc386def0d0] = 0;
+		*node[0x5bc386def130] = ;;
+		*node[0x5bc386def220] = =;
+		*node[0x5bc386def160] = 15;
+		*node[0x5bc386def1f0] = sqrt;
+		*node[0x5bc386def1c0] = 1;
+		*node[0x5bc386def190] = 14;
+		*node[0x5bc386def250] = ;;
+		*node[0x5bc386def460] = =;
+		*node[0x5bc386def280] = 12;
+		*node[0x5bc386def430] = /;
+		*node[0x5bc386def370] = -;
+		*node[0x5bc386def310] = -;
+		*node[0x5bc386def2b0] = 0;
+		*node[0x5bc386def2e0] = 2;
+		*node[0x5bc386def340] = 15;
+		*node[0x5bc386def400] = *;
+		*node[0x5bc386def3a0] = 2;
+		*node[0x5bc386def3d0] = 1;
+		*node[0x5bc386def490] = ;;
+		*node[0x5bc386def6a0] = =;
+		*node[0x5bc386def4c0] = 13;
+		*node[0x5bc386def670] = /;
+		*node[0x5bc386def5b0] = +;
+		*node[0x5bc386def550] = -;
+		*node[0x5bc386def4f0] = 0;
+		*node[0x5bc386def520] = 2;
+		*node[0x5bc386def580] = 15;
+		*node[0x5bc386def640] = *;
+		*node[0x5bc386def5e0] = 2;
+		*node[0x5bc386def610] = 1;
+		*node[0x5bc386def6d0] = ;;
+		*node[0x5bc386def700] = print;
+		*node[0x5bc386def730] = 11;
+		*node[0x5bc386def760] = ;;
+		*node[0x5bc386def790] = print;
+		*node[0x5bc386def7c0] = 12;
+		*node[0x5bc386def7f0] = 13;
+		*node[0x5bc386def820] = if;
+		*node[0x5bc386def850] = op_no;
+		*node[0x5bc386def8e0] = ==;
+		*node[0x5bc386def880] = 14;
+		*node[0x5bc386def8b0] = 0;
+		*node[0x5bc386def910] = ;;
+		*node[0x5bc386defac0] = =;
+		*node[0x5bc386def940] = 10;
+		*node[0x5bc386defa90] = /;
+		*node[0x5bc386def9d0] = -;
+		*node[0x5bc386def970] = 0;
+		*node[0x5bc386def9a0] = 2;
+		*node[0x5bc386defa60] = *;
+		*node[0x5bc386defa00] = 2;
+		*node[0x5bc386defa30] = 1;
+		*node[0x5bc386defaf0] = ;;
+		*node[0x5bc386defb20] = print;
+		*node[0x5bc386defb50] = 8;
+		*node[0x5bc386defb80] = ;;
+		*node[0x5bc386defbb0] = print;
+		*node[0x5bc386defbe0] = 10;
+		*node[0x5bc386defc10] = ;;
+		*node[0x5bc386defc40] = print;
+		*node[0x5bc386defc70] = 7;
+		*node[0x5bc386defca0] = ;;
+		*node[0x5bc386defcd0] = return;
+		*node[0x5bc386defd00] = 0;
+		*node[0x5bc386defd30] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffd46088450] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x58b4642915d0] = ;;
+		*node[0x58b464291600] = 0;
+		*node[0x58b464291630] = ;;
+		*node[0x58b464291660] = input;
+		*node[0x58b464291690] = 1;
+		*node[0x58b4642916c0] = 2;
+		*node[0x58b4642916f0] = 3;
+		*node[0x58b464291720] = ;;
+		*node[0x58b4642917b0] = 1;
+		*node[0x58b4642917e0] = 2;
+		*node[0x58b464291810] = 3;
+		*node[0x58b464291780] = 4;
+		*node[0x58b464291840] = ;;
+		*node[0x58b464291870] = 0;
+		*node[0x58b4642918a0] = 1;
+		*node[0x58b4642918d0] = 2;
+		*node[0x58b464291900] = 3;
+		*node[0x58b464291930] = ;;
+		*node[0x58b464291960] = if;
+		*node[0x58b464291990] = op_no;
+		*node[0x58b464291a20] = ==;
+		*node[0x58b4642919c0] = 1;
+		*node[0x58b4642919f0] = 0;
+		*node[0x58b464291a50] = ;;
+		*node[0x58b464291ae0] = 2;
+		*node[0x58b464291b10] = 3;
+		*node[0x58b464291ab0] = 5;
+		*node[0x58b464291b40] = ;;
+		*node[0x58b464291bd0] = 1;
+		*node[0x58b464291c00] = 2;
+		*node[0x58b464291c30] = 3;
+		*node[0x58b464291ba0] = 6;
+		*node[0x58b464291c60] = ;;
+		*node[0x58b464291c90] = 0;
+		*node[0x58b464291cc0] = 1;
+		*node[0x58b464291cf0] = 2;
+		*node[0x58b464291d20] = ;;
+		*node[0x58b464291db0] = =;
+		*node[0x58b464291d50] = 7;
+		*node[0x58b464291de0] = ;;
+		*node[0x58b464291e70] = =;
+		*node[0x58b464291e10] = 8;
+		*node[0x58b464291e40] = 1;
+		*node[0x58b464291ea0] = ;;
+		*node[0x58b464291f30] = =;
+		*node[0x58b464291ed0] = 9;
+		*node[0x58b464291f00] = 1000;
+		*node[0x58b464291f60] = ;;
+		*node[0x58b464291f90] = if;
+		*node[0x58b464291fc0] = op_no;
+		*node[0x58b464292050] = ==;
+		*node[0x58b464291ff0] = 1;
+		*node[0x58b464292020] = 0;
+		*node[0x58b464292080] = ;;
+		*node[0x58b4642920b0] = if;
+		*node[0x58b4642920e0] = op_no;
+		*node[0x58b464292170] = ==;
+		*node[0x58b464292110] = 2;
+		*node[0x58b464292140] = 0;
+		*node[0x58b4642921a0] = ;;
+		*node[0x58b4642921d0] = print;
+		*node[0x58b464292200] = 9;
+		*node[0x58b464292230] = ;;
+		*node[0x58b464292260] = print;
+		*node[0x58b464292290] = 7;
+		*node[0x58b4642922c0] = ;;
+		*node[0x58b464292410] = =;
+		*node[0x58b4642922f0] = 10;
+		*node[0x58b4642923e0] = /;
+		*node[0x58b464292380] = -;
+		*node[0x58b464292320] = 0;
+		*node[0x58b464292350] = 2;
+		*node[0x58b4642923b0] = 1;
+		*node[0x58b464292440] = ;;
+		*node[0x58b464292470] = print;
+		*node[0x58b4642924a0] = 8;
+		*node[0x58b4642924d0] = ;;
+		*node[0x58b464292500] = print;
+		*node[0x58b464292530] = 10;
+		*node[0x58b464292560] = ;;
+		*node[0x58b464292590] = return;
+		*node[0x58b4642925c0] = 0;
+		*node[0x58b4642925f0] = ;;
+		*node[0x58b464292620] = 0;
+		*node[0x58b464292650] = 1;
+		*node[0x58b464292680] = 2;
+		*node[0x58b4642926b0] = 3;
+		*node[0x58b4642926e0] = ;;
+		*node[0x58b464292770] = =;
+		*node[0x58b464292710] = 7;
+		*node[0x58b4642927a0] = ;;
+		*node[0x58b464292830] = =;
+		*node[0x58b4642927d0] = 8;
+		*node[0x58b464292800] = 1;
+		*node[0x58b464292860] = ;;
+		*node[0x58b4642928f0] = =;
+		*node[0x58b464292890] = 11;
+		*node[0x58b4642928c0] = 2;
+		*node[0x58b464292920] = ;;
+		*node[0x58b464292950] = if;
+		*node[0x58b464292980] = op_no;
+		*node[0x58b464292a10] = ==;
+		*node[0x58b4642929b0] = 3;
+		*node[0x58b4642929e0] = 0;
+		*node[0x58b464292a40] = ;;
+		*node[0x58b464292ad0] = =;
+		*node[0x58b464292a70] = 12;
+		*node[0x58b464292aa0] = 0;
+		*node[0x58b464292b00] = ;;
+		*node[0x58b464292c50] = =;
+		*node[0x58b464292b30] = 13;
+		*node[0x58b464292c20] = /;
+		*node[0x58b464292bc0] = -;
+		*node[0x58b464292b60] = 0;
+		*node[0x58b464292b90] = 2;
+		*node[0x58b464292bf0] = 1;
+		*node[0x58b464292c80] = ;;
+		*node[0x58b464292cb0] = print;
+		*node[0x58b464292ce0] = 11;
+		*node[0x58b464292d10] = ;;
+		*node[0x58b464292d40] = print;
+		*node[0x58b464292d70] = 12;
+		*node[0x58b464292da0] = 13;
+		*node[0x58b464292dd0] = ;;
+		*node[0x58b464292fe0] = =;
+		*node[0x58b464292e00] = 14;
+		*node[0x58b464292fb0] = -;
+		*node[0x58b464292e90] = *;
+		*node[0x58b464292e30] = 2;
+		*node[0x58b464292e60] = 2;
+		*node[0x58b464292f80] = *;
+		*node[0x58b464292f20] = *;
+		*node[0x58b464292ec0] = 4;
+		*node[0x58b464292ef0] = 1;
+		*node[0x58b464292f50] = 3;
+		*node[0x58b464293010] = ;;
+		*node[0x58b464293040] = if;
+		*node[0x58b464293070] = op_no;
+		*node[0x58b464293100] = >;
+		*node[0x58b4642930a0] = 14;
+		*node[0x58b4642930d0] = 0;
+		*node[0x58b464293130] = ;;
+		*node[0x58b464293220] = =;
+		*node[0x58b464293160] = 15;
+		*node[0x58b4642931f0] = sqrt;
+		*node[0x58b4642931c0] = 1;
+		*node[0x58b464293190] = 14;
+		*node[0x58b464293250] = ;;
+		*node[0x58b464293460] = =;
+		*node[0x58b464293280] = 12;
+		*node[0x58b464293430] = /;
+		*node[0x58b464293370] = -;
+		*node[0x58b464293310] = -;
+		*node[0x58b4642932b0] = 0;
+		*node[0x58b4642932e0] = 2;
+		*node[0x58b464293340] = 15;
+		*node[0x58b464293400] = *;
+		*node[0x58b4642933a0] = 2;
+		*node[0x58b4642933d0] = 1;
+		*node[0x58b464293490] = ;;
+		*node[0x58b4642936a0] = =;
+		*node[0x58b4642934c0] = 13;
+		*node[0x58b464293670] = /;
+		*node[0x58b4642935b0] = +;
+		*node[0x58b464293550] = -;
+		*node[0x58b4642934f0] = 0;
+		*node[0x58b464293520] = 2;
+		*node[0x58b464293580] = 15;
+		*node[0x58b464293640] = *;
+		*node[0x58b4642935e0] = 2;
+		*node[0x58b464293610] = 1;
+		*node[0x58b4642936d0] = ;;
+		*node[0x58b464293700] = print;
+		*node[0x58b464293730] = 11;
+		*node[0x58b464293760] = ;;
+		*node[0x58b464293790] = print;
+		*node[0x58b4642937c0] = 12;
+		*node[0x58b4642937f0] = 13;
+		*node[0x58b464293820] = if;
+		*node[0x58b464293850] = op_no;
+		*node[0x58b4642938e0] = ==;
+		*node[0x58b464293880] = 14;
+		*node[0x58b4642938b0] = 0;
+		*node[0x58b464293910] = ;;
+		*node[0x58b464293ac0] = =;
+		*node[0x58b464293940] = 10;
+		*node[0x58b464293a90] = /;
+		*node[0x58b4642939d0] = -;
+		*node[0x58b464293970] = 0;
+		*node[0x58b4642939a0] = 2;
+		*node[0x58b464293a60] = *;
+		*node[0x58b464293a00] = 2;
+		*node[0x58b464293a30] = 1;
+		*node[0x58b464293af0] = ;;
+		*node[0x58b464293b20] = print;
+		*node[0x58b464293b50] = 8;
+		*node[0x58b464293b80] = ;;
+		*node[0x58b464293bb0] = print;
+		*node[0x58b464293be0] = 10;
+		*node[0x58b464293c10] = ;;
+		*node[0x58b464293c40] = print;
+		*node[0x58b464293c70] = 7;
+		*node[0x58b464293ca0] = ;;
+		*node[0x58b464293cd0] = return;
+		*node[0x58b464293d00] = 0;
+		*node[0x58b464293d30] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffe80e757e0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x6455bee2e610] = ;;
+		*node[0x6455bee2e640] = 0;
+		*node[0x6455bee2e670] = ;;
+		*node[0x6455bee2e6a0] = input;
+		*node[0x6455bee2e6d0] = 1;
+		*node[0x6455bee2e700] = 2;
+		*node[0x6455bee2e730] = 3;
+		*node[0x6455bee2e760] = ;;
+		*node[0x6455bee2e7f0] = 1;
+		*node[0x6455bee2e820] = 2;
+		*node[0x6455bee2e850] = 3;
+		*node[0x6455bee2e7c0] = 4;
+		*node[0x6455bee2e880] = ;;
+		*node[0x6455bee2e8b0] = 0;
+		*node[0x6455bee2e8e0] = 1;
+		*node[0x6455bee2e910] = 2;
+		*node[0x6455bee2e940] = 3;
+		*node[0x6455bee2e970] = ;;
+		*node[0x6455bee2e9a0] = if;
+		*node[0x6455bee2e9d0] = op_no;
+		*node[0x6455bee2ea60] = ==;
+		*node[0x6455bee2ea00] = 1;
+		*node[0x6455bee2ea30] = 0;
+		*node[0x6455bee2ea90] = ;;
+		*node[0x6455bee2eb20] = 2;
+		*node[0x6455bee2eb50] = 3;
+		*node[0x6455bee2eaf0] = 5;
+		*node[0x6455bee2eb80] = ;;
+		*node[0x6455bee2ec10] = 1;
+		*node[0x6455bee2ec40] = 2;
+		*node[0x6455bee2ec70] = 3;
+		*node[0x6455bee2ebe0] = 6;
+		*node[0x6455bee2eca0] = ;;
+		*node[0x6455bee2ecd0] = 0;
+		*node[0x6455bee2ed00] = 1;
+		*node[0x6455bee2ed30] = 2;
+		*node[0x6455bee2ed60] = ;;
+		*node[0x6455bee2edf0] = =;
+		*node[0x6455bee2ed90] = 7;
+		*node[0x6455bee2ee20] = ;;
+		*node[0x6455bee2eeb0] = =;
+		*node[0x6455bee2ee50] = 8;
+		*node[0x6455bee2ee80] = 1;
+		*node[0x6455bee2eee0] = ;;
+		*node[0x6455bee2ef70] = =;
+		*node[0x6455bee2ef10] = 9;
+		*node[0x6455bee2ef40] = 1000;
+		*node[0x6455bee2efa0] = ;;
+		*node[0x6455bee2efd0] = if;
+		*node[0x6455bee2f000] = op_no;
+		*node[0x6455bee2f090] = ==;
+		*node[0x6455bee2f030] = 1;
+		*node[0x6455bee2f060] = 0;
+		*node[0x6455bee2f0c0] = ;;
+		*node[0x6455bee2f0f0] = if;
+		*node[0x6455bee2f120] = op_no;
+		*node[0x6455bee2f1b0] = ==;
+		*node[0x6455bee2f150] = 2;
+		*node[0x6455bee2f180] = 0;
+		*node[0x6455bee2f1e0] = ;;
+		*node[0x6455bee2f210] = print;
+		*node[0x6455bee2f240] = 9;
+		*node[0x6455bee2f270] = ;;
+		*node[0x6455bee2f2a0] = print;
+		*node[0x6455bee2f2d0] = 7;
+		*node[0x6455bee2f300] = ;;
+		*node[0x6455bee2f450] = =;
+		*node[0x6455bee2f330] = 10;
+		*node[0x6455bee2f420] = /;
+		*node[0x6455bee2f3c0] = -;
+		*node[0x6455bee2f360] = 0;
+		*node[0x6455bee2f390] = 2;
+		*node[0x6455bee2f3f0] = 1;
+		*node[0x6455bee2f480] = ;;
+		*node[0x6455bee2f4b0] = print;
+		*node[0x6455bee2f4e0] = 8;
+		*node[0x6455bee2f510] = ;;
+		*node[0x6455bee2f540] = print;
+		*node[0x6455bee2f570] = 10;
+		*node[0x6455bee2f5a0] = ;;
+		*node[0x6455bee2f5d0] = return;
+		*node[0x6455bee2f600] = 0;
+		*node[0x6455bee2f630] = ;;
+		*node[0x6455bee2f660] = 0;
+		*node[0x6455bee2f690] = 1;
+		*node[0x6455bee2f6c0] = 2;
+		*node[0x6455bee2f6f0] = 3;
+		*node[0x6455bee2f720] = ;;
+		*node[0x6455bee2f810] = =;
+		*node[0x6455bee2f750] = 7;
+		*node[0x6455bee2f7e0] = -;
+		*node[0x6455bee2f780] = 0;
+		*node[0x6455bee2f7b0] = 1;
+		*node[0x6455bee2f840] = ;;
+		*node[0x6455bee2f8d0] = =;
+		*node[0x6455bee2f870] = 8;
+		*node[0x6455bee2f8a0] = 1;
+		*node[0x6455bee2f900] = ;;
+		*node[0x6455bee2f990] = =;
+		*node[0x6455bee2f930] = 11;
+		*node[0x6455bee2f960] = 2;
+		*node[0x6455bee2f9c0] = ;;
+		*node[0x6455bee2f9f0] = if;
+		*node[0x6455bee2fa20] = op_no;
+		*node[0x6455bee2fab0] = ==;
+		*node[0x6455bee2fa50] = 3;
+		*node[0x6455bee2fa80] = 0;
+		*node[0x6455bee2fae0] = ;;
+		*node[0x6455bee2fb70] = =;
+		*node[0x6455bee2fb10] = 12;
+		*node[0x6455bee2fb40] = 0;
+		*node[0x6455bee2fba0] = ;;
+		*node[0x6455bee2fcf0] = =;
+		*node[0x6455bee2fbd0] = 13;
+		*node[0x6455bee2fcc0] = /;
+		*node[0x6455bee2fc60] = -;
+		*node[0x6455bee2fc00] = 0;
+		*node[0x6455bee2fc30] = 2;
+		*node[0x6455bee2fc90] = 1;
+		*node[0x6455bee2fd20] = ;;
+		*node[0x6455bee2fd50] = print;
+		*node[0x6455bee2fd80] = 11;
+		*node[0x6455bee2fdb0] = ;;
+		*node[0x6455bee2fde0] = print;
+		*node[0x6455bee2fe10] = 12;
+		*node[0x6455bee2fe40] = 13;
+		*node[0x6455bee2fe70] = ;;
+		*node[0x6455bee30080] = =;
+		*node[0x6455bee2fea0] = 14;
+		*node[0x6455bee30050] = -;
+		*node[0x6455bee2ff30] = *;
+		*node[0x6455bee2fed0] = 2;
+		*node[0x6455bee2ff00] = 2;
+		*node[0x6455bee30020] = *;
+		*node[0x6455bee2ffc0] = *;
+		*node[0x6455bee2ff60] = 4;
+		*node[0x6455bee2ff90] = 1;
+		*node[0x6455bee2fff0] = 3;
+		*node[0x6455bee300b0] = ;;
+		*node[0x6455bee300e0] = if;
+		*node[0x6455bee30110] = op_no;
+		*node[0x6455bee301a0] = >;
+		*node[0x6455bee30140] = 14;
+		*node[0x6455bee30170] = 0;
+		*node[0x6455bee301d0] = ;;
+		*node[0x6455bee302c0] = =;
+		*node[0x6455bee30200] = 15;
+		*node[0x6455bee30290] = sqrt;
+		*node[0x6455bee30260] = 1;
+		*node[0x6455bee30230] = 14;
+		*node[0x6455bee302f0] = ;;
+		*node[0x6455bee30500] = =;
+		*node[0x6455bee30320] = 12;
+		*node[0x6455bee304d0] = /;
+		*node[0x6455bee30410] = -;
+		*node[0x6455bee303b0] = -;
+		*node[0x6455bee30350] = 0;
+		*node[0x6455bee30380] = 2;
+		*node[0x6455bee303e0] = 15;
+		*node[0x6455bee304a0] = *;
+		*node[0x6455bee30440] = 2;
+		*node[0x6455bee30470] = 1;
+		*node[0x6455bee30530] = ;;
+		*node[0x6455bee30740] = =;
+		*node[0x6455bee30560] = 13;
+		*node[0x6455bee30710] = /;
+		*node[0x6455bee30650] = +;
+		*node[0x6455bee305f0] = -;
+		*node[0x6455bee30590] = 0;
+		*node[0x6455bee305c0] = 2;
+		*node[0x6455bee30620] = 15;
+		*node[0x6455bee306e0] = *;
+		*node[0x6455bee30680] = 2;
+		*node[0x6455bee306b0] = 1;
+		*node[0x6455bee30770] = ;;
+		*node[0x6455bee307a0] = print;
+		*node[0x6455bee307d0] = 11;
+		*node[0x6455bee30800] = ;;
+		*node[0x6455bee30830] = print;
+		*node[0x6455bee30860] = 12;
+		*node[0x6455bee30890] = 13;
+		*node[0x6455bee308c0] = if;
+		*node[0x6455bee308f0] = op_no;
+		*node[0x6455bee30980] = ==;
+		*node[0x6455bee30920] = 14;
+		*node[0x6455bee30950] = 0;
+		*node[0x6455bee309b0] = ;;
+		*node[0x6455bee30b60] = =;
+		*node[0x6455bee309e0] = 10;
+		*node[0x6455bee30b30] = /;
+		*node[0x6455bee30a70] = -;
+		*node[0x6455bee30a10] = 0;
+		*node[0x6455bee30a40] = 2;
+		*node[0x6455bee30b00] = *;
+		*node[0x6455bee30aa0] = 2;
+		*node[0x6455bee30ad0] = 1;
+		*node[0x6455bee30b90] = ;;
+		*node[0x6455bee30bc0] = print;
+		*node[0x6455bee30bf0] = 8;
+		*node[0x6455bee30c20] = ;;
+		*node[0x6455bee30c50] = print;
+		*node[0x6455bee30c80] = 10;
+		*node[0x6455bee30cb0] = ;;
+		*node[0x6455bee30ce0] = print;
+		*node[0x6455bee30d10] = 7;
+		*node[0x6455bee30d40] = ;;
+		*node[0x6455bee30d70] = return;
+		*node[0x6455bee30da0] = 0;
+		*node[0x6455bee30dd0] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7fff4137a600] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5c428d7a4630] = ;;
+		*node[0x5c428d7a4660] = 0;
+		*node[0x5c428d7a4690] = ;;
+		*node[0x5c428d7a46c0] = input;
+		*node[0x5c428d7a46f0] = 1;
+		*node[0x5c428d7a4720] = 2;
+		*node[0x5c428d7a4750] = 3;
+		*node[0x5c428d7a4780] = ;;
+		*node[0x5c428d7a4810] = 1;
+		*node[0x5c428d7a4840] = 2;
+		*node[0x5c428d7a4870] = 3;
+		*node[0x5c428d7a47e0] = 4;
+		*node[0x5c428d7a48a0] = ;;
+		*node[0x5c428d7a48d0] = 0;
+		*node[0x5c428d7a4900] = 1;
+		*node[0x5c428d7a4930] = 2;
+		*node[0x5c428d7a4960] = 3;
+		*node[0x5c428d7a4990] = ;;
+		*node[0x5c428d7a49c0] = if;
+		*node[0x5c428d7a49f0] = op_no;
+		*node[0x5c428d7a4a80] = ==;
+		*node[0x5c428d7a4a20] = 1;
+		*node[0x5c428d7a4a50] = 0;
+		*node[0x5c428d7a4ab0] = ;;
+		*node[0x5c428d7a4b40] = 2;
+		*node[0x5c428d7a4b70] = 3;
+		*node[0x5c428d7a4b10] = 5;
+		*node[0x5c428d7a4ba0] = ;;
+		*node[0x5c428d7a4c30] = 1;
+		*node[0x5c428d7a4c60] = 2;
+		*node[0x5c428d7a4c90] = 3;
+		*node[0x5c428d7a4c00] = 6;
+		*node[0x5c428d7a4cc0] = ;;
+		*node[0x5c428d7a4cf0] = 0;
+		*node[0x5c428d7a4d20] = 1;
+		*node[0x5c428d7a4d50] = 2;
+		*node[0x5c428d7a4d80] = ;;
+		*node[0x5c428d7a4e70] = =;
+		*node[0x5c428d7a4db0] = 7;
+		*node[0x5c428d7a4e40] = -;
+		*node[0x5c428d7a4de0] = 0;
+		*node[0x5c428d7a4e10] = 1;
+		*node[0x5c428d7a4ea0] = ;;
+		*node[0x5c428d7a4f30] = =;
+		*node[0x5c428d7a4ed0] = 8;
+		*node[0x5c428d7a4f00] = 1;
+		*node[0x5c428d7a4f60] = ;;
+		*node[0x5c428d7a4ff0] = =;
+		*node[0x5c428d7a4f90] = 9;
+		*node[0x5c428d7a4fc0] = 1000;
+		*node[0x5c428d7a5020] = ;;
+		*node[0x5c428d7a5050] = if;
+		*node[0x5c428d7a5080] = op_no;
+		*node[0x5c428d7a5110] = ==;
+		*node[0x5c428d7a50b0] = 1;
+		*node[0x5c428d7a50e0] = 0;
+		*node[0x5c428d7a5140] = ;;
+		*node[0x5c428d7a5170] = if;
+		*node[0x5c428d7a51a0] = op_no;
+		*node[0x5c428d7a5230] = ==;
+		*node[0x5c428d7a51d0] = 2;
+		*node[0x5c428d7a5200] = 0;
+		*node[0x5c428d7a5260] = ;;
+		*node[0x5c428d7a5290] = print;
+		*node[0x5c428d7a52c0] = 9;
+		*node[0x5c428d7a52f0] = ;;
+		*node[0x5c428d7a5320] = print;
+		*node[0x5c428d7a5350] = 7;
+		*node[0x5c428d7a5380] = ;;
+		*node[0x5c428d7a54d0] = =;
+		*node[0x5c428d7a53b0] = 10;
+		*node[0x5c428d7a54a0] = /;
+		*node[0x5c428d7a5440] = -;
+		*node[0x5c428d7a53e0] = 0;
+		*node[0x5c428d7a5410] = 2;
+		*node[0x5c428d7a5470] = 1;
+		*node[0x5c428d7a5500] = ;;
+		*node[0x5c428d7a5530] = print;
+		*node[0x5c428d7a5560] = 8;
+		*node[0x5c428d7a5590] = ;;
+		*node[0x5c428d7a55c0] = print;
+		*node[0x5c428d7a55f0] = 10;
+		*node[0x5c428d7a5620] = ;;
+		*node[0x5c428d7a5650] = return;
+		*node[0x5c428d7a5680] = 0;
+		*node[0x5c428d7a56b0] = ;;
+		*node[0x5c428d7a56e0] = 0;
+		*node[0x5c428d7a5710] = 1;
+		*node[0x5c428d7a5740] = 2;
+		*node[0x5c428d7a5770] = 3;
+		*node[0x5c428d7a57a0] = ;;
+		*node[0x5c428d7a5890] = =;
+		*node[0x5c428d7a57d0] = 7;
+		*node[0x5c428d7a5860] = -;
+		*node[0x5c428d7a5800] = 0;
+		*node[0x5c428d7a5830] = 1;
+		*node[0x5c428d7a58c0] = ;;
+		*node[0x5c428d7a5950] = =;
+		*node[0x5c428d7a58f0] = 8;
+		*node[0x5c428d7a5920] = 1;
+		*node[0x5c428d7a5980] = ;;
+		*node[0x5c428d7a5a10] = =;
+		*node[0x5c428d7a59b0] = 11;
+		*node[0x5c428d7a59e0] = 2;
+		*node[0x5c428d7a5a40] = ;;
+		*node[0x5c428d7a5a70] = if;
+		*node[0x5c428d7a5aa0] = op_no;
+		*node[0x5c428d7a5b30] = ==;
+		*node[0x5c428d7a5ad0] = 3;
+		*node[0x5c428d7a5b00] = 0;
+		*node[0x5c428d7a5b60] = ;;
+		*node[0x5c428d7a5bf0] = =;
+		*node[0x5c428d7a5b90] = 12;
+		*node[0x5c428d7a5bc0] = 0;
+		*node[0x5c428d7a5c20] = ;;
+		*node[0x5c428d7a5d70] = =;
+		*node[0x5c428d7a5c50] = 13;
+		*node[0x5c428d7a5d40] = /;
+		*node[0x5c428d7a5ce0] = -;
+		*node[0x5c428d7a5c80] = 0;
+		*node[0x5c428d7a5cb0] = 2;
+		*node[0x5c428d7a5d10] = 1;
+		*node[0x5c428d7a5da0] = ;;
+		*node[0x5c428d7a5dd0] = print;
+		*node[0x5c428d7a5e00] = 11;
+		*node[0x5c428d7a5e30] = ;;
+		*node[0x5c428d7a5e60] = print;
+		*node[0x5c428d7a5e90] = 12;
+		*node[0x5c428d7a5ec0] = 13;
+		*node[0x5c428d7a5ef0] = ;;
+		*node[0x5c428d7a6100] = =;
+		*node[0x5c428d7a5f20] = 14;
+		*node[0x5c428d7a60d0] = -;
+		*node[0x5c428d7a5fb0] = *;
+		*node[0x5c428d7a5f50] = 2;
+		*node[0x5c428d7a5f80] = 2;
+		*node[0x5c428d7a60a0] = *;
+		*node[0x5c428d7a6040] = *;
+		*node[0x5c428d7a5fe0] = 4;
+		*node[0x5c428d7a6010] = 1;
+		*node[0x5c428d7a6070] = 3;
+		*node[0x5c428d7a6130] = ;;
+		*node[0x5c428d7a6160] = if;
+		*node[0x5c428d7a6190] = op_no;
+		*node[0x5c428d7a6220] = >;
+		*node[0x5c428d7a61c0] = 14;
+		*node[0x5c428d7a61f0] = 0;
+		*node[0x5c428d7a6250] = ;;
+		*node[0x5c428d7a6340] = =;
+		*node[0x5c428d7a6280] = 15;
+		*node[0x5c428d7a6310] = sqrt;
+		*node[0x5c428d7a62e0] = 1;
+		*node[0x5c428d7a62b0] = 14;
+		*node[0x5c428d7a6370] = ;;
+		*node[0x5c428d7a6580] = =;
+		*node[0x5c428d7a63a0] = 12;
+		*node[0x5c428d7a6550] = /;
+		*node[0x5c428d7a6490] = -;
+		*node[0x5c428d7a6430] = -;
+		*node[0x5c428d7a63d0] = 0;
+		*node[0x5c428d7a6400] = 2;
+		*node[0x5c428d7a6460] = 15;
+		*node[0x5c428d7a6520] = *;
+		*node[0x5c428d7a64c0] = 2;
+		*node[0x5c428d7a64f0] = 1;
+		*node[0x5c428d7a65b0] = ;;
+		*node[0x5c428d7a67c0] = =;
+		*node[0x5c428d7a65e0] = 13;
+		*node[0x5c428d7a6790] = /;
+		*node[0x5c428d7a66d0] = +;
+		*node[0x5c428d7a6670] = -;
+		*node[0x5c428d7a6610] = 0;
+		*node[0x5c428d7a6640] = 2;
+		*node[0x5c428d7a66a0] = 15;
+		*node[0x5c428d7a6760] = *;
+		*node[0x5c428d7a6700] = 2;
+		*node[0x5c428d7a6730] = 1;
+		*node[0x5c428d7a67f0] = ;;
+		*node[0x5c428d7a6820] = print;
+		*node[0x5c428d7a6850] = 11;
+		*node[0x5c428d7a6880] = ;;
+		*node[0x5c428d7a68b0] = print;
+		*node[0x5c428d7a68e0] = 12;
+		*node[0x5c428d7a6910] = 13;
+		*node[0x5c428d7a6940] = if;
+		*node[0x5c428d7a6970] = op_no;
+		*node[0x5c428d7a6a00] = ==;
+		*node[0x5c428d7a69a0] = 14;
+		*node[0x5c428d7a69d0] = 0;
+		*node[0x5c428d7a6a30] = ;;
+		*node[0x5c428d7a6be0] = =;
+		*node[0x5c428d7a6a60] = 10;
+		*node[0x5c428d7a6bb0] = /;
+		*node[0x5c428d7a6af0] = -;
+		*node[0x5c428d7a6a90] = 0;
+		*node[0x5c428d7a6ac0] = 2;
+		*node[0x5c428d7a6b80] = *;
+		*node[0x5c428d7a6b20] = 2;
+		*node[0x5c428d7a6b50] = 1;
+		*node[0x5c428d7a6c10] = ;;
+		*node[0x5c428d7a6c40] = print;
+		*node[0x5c428d7a6c70] = 8;
+		*node[0x5c428d7a6ca0] = ;;
+		*node[0x5c428d7a6cd0] = print;
+		*node[0x5c428d7a6d00] = 10;
+		*node[0x5c428d7a6d30] = ;;
+		*node[0x5c428d7a6d60] = print;
+		*node[0x5c428d7a6d90] = 7;
+		*node[0x5c428d7a6dc0] = ;;
+		*node[0x5c428d7a6df0] = return;
+		*node[0x5c428d7a6e20] = 0;
+		*node[0x5c428d7a6e50] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffe37bcb2c0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5dbecc964630] = ;;
+		*node[0x5dbecc964660] = 0;
+		*node[0x5dbecc964690] = ;;
+		*node[0x5dbecc9646c0] = input;
+		*node[0x5dbecc9646f0] = 1;
+		*node[0x5dbecc964720] = 2;
+		*node[0x5dbecc964750] = 3;
+		*node[0x5dbecc964780] = ;;
+		*node[0x5dbecc964810] = 1;
+		*node[0x5dbecc964840] = 2;
+		*node[0x5dbecc964870] = 3;
+		*node[0x5dbecc9647e0] = 4;
+		*node[0x5dbecc9648a0] = ;;
+		*node[0x5dbecc9648d0] = 0;
+		*node[0x5dbecc964900] = 1;
+		*node[0x5dbecc964930] = 2;
+		*node[0x5dbecc964960] = 3;
+		*node[0x5dbecc964990] = ;;
+		*node[0x5dbecc9649c0] = if;
+		*node[0x5dbecc9649f0] = op_no;
+		*node[0x5dbecc964a80] = ==;
+		*node[0x5dbecc964a20] = 1;
+		*node[0x5dbecc964a50] = 0;
+		*node[0x5dbecc964ab0] = ;;
+		*node[0x5dbecc964b40] = 2;
+		*node[0x5dbecc964b70] = 3;
+		*node[0x5dbecc964b10] = 5;
+		*node[0x5dbecc964ba0] = ;;
+		*node[0x5dbecc964c30] = 1;
+		*node[0x5dbecc964c60] = 2;
+		*node[0x5dbecc964c90] = 3;
+		*node[0x5dbecc964c00] = 6;
+		*node[0x5dbecc964cc0] = ;;
+		*node[0x5dbecc964cf0] = 0;
+		*node[0x5dbecc964d20] = 1;
+		*node[0x5dbecc964d50] = 2;
+		*node[0x5dbecc964d80] = ;;
+		*node[0x5dbecc964e70] = =;
+		*node[0x5dbecc964db0] = 7;
+		*node[0x5dbecc964e40] = -;
+		*node[0x5dbecc964de0] = 0;
+		*node[0x5dbecc964e10] = 1;
+		*node[0x5dbecc964ea0] = ;;
+		*node[0x5dbecc964f30] = =;
+		*node[0x5dbecc964ed0] = 8;
+		*node[0x5dbecc964f00] = 1;
+		*node[0x5dbecc964f60] = ;;
+		*node[0x5dbecc964ff0] = =;
+		*node[0x5dbecc964f90] = 9;
+		*node[0x5dbecc964fc0] = 1000;
+		*node[0x5dbecc965020] = ;;
+		*node[0x5dbecc965050] = if;
+		*node[0x5dbecc965080] = op_no;
+		*node[0x5dbecc965110] = ==;
+		*node[0x5dbecc9650b0] = 1;
+		*node[0x5dbecc9650e0] = 0;
+		*node[0x5dbecc965140] = ;;
+		*node[0x5dbecc965170] = if;
+		*node[0x5dbecc9651a0] = op_no;
+		*node[0x5dbecc965230] = ==;
+		*node[0x5dbecc9651d0] = 2;
+		*node[0x5dbecc965200] = 0;
+		*node[0x5dbecc965260] = ;;
+		*node[0x5dbecc965290] = print;
+		*node[0x5dbecc9652c0] = 9;
+		*node[0x5dbecc9652f0] = ;;
+		*node[0x5dbecc965320] = print;
+		*node[0x5dbecc965350] = 7;
+		*node[0x5dbecc965380] = ;;
+		*node[0x5dbecc9654d0] = =;
+		*node[0x5dbecc9653b0] = 10;
+		*node[0x5dbecc9654a0] = /;
+		*node[0x5dbecc965440] = -;
+		*node[0x5dbecc9653e0] = 0;
+		*node[0x5dbecc965410] = 2;
+		*node[0x5dbecc965470] = 1;
+		*node[0x5dbecc965500] = ;;
+		*node[0x5dbecc965530] = print;
+		*node[0x5dbecc965560] = 8;
+		*node[0x5dbecc965590] = ;;
+		*node[0x5dbecc9655c0] = print;
+		*node[0x5dbecc9655f0] = 10;
+		*node[0x5dbecc965620] = ;;
+		*node[0x5dbecc965650] = return;
+		*node[0x5dbecc965680] = 0;
+		*node[0x5dbecc9656b0] = ;;
+		*node[0x5dbecc9656e0] = 0;
+		*node[0x5dbecc965710] = 1;
+		*node[0x5dbecc965740] = 2;
+		*node[0x5dbecc965770] = 3;
+		*node[0x5dbecc9657a0] = ;;
+		*node[0x5dbecc965890] = =;
+		*node[0x5dbecc9657d0] = 7;
+		*node[0x5dbecc965860] = -;
+		*node[0x5dbecc965800] = 0;
+		*node[0x5dbecc965830] = 1;
+		*node[0x5dbecc9658c0] = ;;
+		*node[0x5dbecc965950] = =;
+		*node[0x5dbecc9658f0] = 8;
+		*node[0x5dbecc965920] = 1;
+		*node[0x5dbecc965980] = ;;
+		*node[0x5dbecc965a10] = =;
+		*node[0x5dbecc9659b0] = 11;
+		*node[0x5dbecc9659e0] = 2;
+		*node[0x5dbecc965a40] = ;;
+		*node[0x5dbecc965a70] = if;
+		*node[0x5dbecc965aa0] = op_no;
+		*node[0x5dbecc965b30] = ==;
+		*node[0x5dbecc965ad0] = 3;
+		*node[0x5dbecc965b00] = 0;
+		*node[0x5dbecc965b60] = ;;
+		*node[0x5dbecc965bf0] = =;
+		*node[0x5dbecc965b90] = 12;
+		*node[0x5dbecc965bc0] = 0;
+		*node[0x5dbecc965c20] = ;;
+		*node[0x5dbecc965d70] = =;
+		*node[0x5dbecc965c50] = 13;
+		*node[0x5dbecc965d40] = /;
+		*node[0x5dbecc965ce0] = -;
+		*node[0x5dbecc965c80] = 0;
+		*node[0x5dbecc965cb0] = 2;
+		*node[0x5dbecc965d10] = 1;
+		*node[0x5dbecc965da0] = ;;
+		*node[0x5dbecc965dd0] = print;
+		*node[0x5dbecc965e00] = 11;
+		*node[0x5dbecc965e30] = ;;
+		*node[0x5dbecc965e60] = print;
+		*node[0x5dbecc965e90] = 12;
+		*node[0x5dbecc965ec0] = 13;
+		*node[0x5dbecc965ef0] = ;;
+		*node[0x5dbecc966100] = =;
+		*node[0x5dbecc965f20] = 14;
+		*node[0x5dbecc9660d0] = -;
+		*node[0x5dbecc965fb0] = *;
+		*node[0x5dbecc965f50] = 2;
+		*node[0x5dbecc965f80] = 2;
+		*node[0x5dbecc9660a0] = *;
+		*node[0x5dbecc966040] = *;
+		*node[0x5dbecc965fe0] = 4;
+		*node[0x5dbecc966010] = 1;
+		*node[0x5dbecc966070] = 3;
+		*node[0x5dbecc966130] = ;;
+		*node[0x5dbecc966160] = if;
+		*node[0x5dbecc966190] = op_no;
+		*node[0x5dbecc966220] = >;
+		*node[0x5dbecc9661c0] = 14;
+		*node[0x5dbecc9661f0] = 0;
+		*node[0x5dbecc966250] = ;;
+		*node[0x5dbecc966340] = =;
+		*node[0x5dbecc966280] = 15;
+		*node[0x5dbecc966310] = sqrt;
+		*node[0x5dbecc9662e0] = 1;
+		*node[0x5dbecc9662b0] = 14;
+		*node[0x5dbecc966370] = ;;
+		*node[0x5dbecc966580] = =;
+		*node[0x5dbecc9663a0] = 12;
+		*node[0x5dbecc966550] = /;
+		*node[0x5dbecc966490] = -;
+		*node[0x5dbecc966430] = -;
+		*node[0x5dbecc9663d0] = 0;
+		*node[0x5dbecc966400] = 2;
+		*node[0x5dbecc966460] = 15;
+		*node[0x5dbecc966520] = *;
+		*node[0x5dbecc9664c0] = 2;
+		*node[0x5dbecc9664f0] = 1;
+		*node[0x5dbecc9665b0] = ;;
+		*node[0x5dbecc9667c0] = =;
+		*node[0x5dbecc9665e0] = 13;
+		*node[0x5dbecc966790] = /;
+		*node[0x5dbecc9666d0] = +;
+		*node[0x5dbecc966670] = -;
+		*node[0x5dbecc966610] = 0;
+		*node[0x5dbecc966640] = 2;
+		*node[0x5dbecc9666a0] = 15;
+		*node[0x5dbecc966760] = *;
+		*node[0x5dbecc966700] = 2;
+		*node[0x5dbecc966730] = 1;
+		*node[0x5dbecc9667f0] = ;;
+		*node[0x5dbecc966820] = print;
+		*node[0x5dbecc966850] = 11;
+		*node[0x5dbecc966880] = ;;
+		*node[0x5dbecc9668b0] = print;
+		*node[0x5dbecc9668e0] = 12;
+		*node[0x5dbecc966910] = 13;
+		*node[0x5dbecc966940] = if;
+		*node[0x5dbecc966970] = op_no;
+		*node[0x5dbecc966a00] = ==;
+		*node[0x5dbecc9669a0] = 14;
+		*node[0x5dbecc9669d0] = 0;
+		*node[0x5dbecc966a30] = ;;
+		*node[0x5dbecc966be0] = =;
+		*node[0x5dbecc966a60] = 10;
+		*node[0x5dbecc966bb0] = /;
+		*node[0x5dbecc966af0] = -;
+		*node[0x5dbecc966a90] = 0;
+		*node[0x5dbecc966ac0] = 2;
+		*node[0x5dbecc966b80] = *;
+		*node[0x5dbecc966b20] = 2;
+		*node[0x5dbecc966b50] = 1;
+		*node[0x5dbecc966c10] = ;;
+		*node[0x5dbecc966c40] = print;
+		*node[0x5dbecc966c70] = 8;
+		*node[0x5dbecc966ca0] = ;;
+		*node[0x5dbecc966cd0] = print;
+		*node[0x5dbecc966d00] = 10;
+		*node[0x5dbecc966d30] = ;;
+		*node[0x5dbecc966d60] = print;
+		*node[0x5dbecc966d90] = 7;
+		*node[0x5dbecc966dc0] = ;;
+		*node[0x5dbecc966df0] = return;
+		*node[0x5dbecc966e20] = 0;
+		*node[0x5dbecc966e50] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7fff494aa180] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x55cfdfc54220] = ;;
+		*node[0x55cfdfc54250] = 0;
+		*node[0x55cfdfc54280] = ;;
+		*node[0x55cfdfc542b0] = input;
+		*node[0x55cfdfc542e0] = 1;
+		*node[0x55cfdfc54310] = 2;
+		*node[0x55cfdfc54340] = 3;
+		*node[0x55cfdfc54370] = ;;
+		*node[0x55cfdfc54400] = 1;
+		*node[0x55cfdfc54430] = 2;
+		*node[0x55cfdfc54460] = 3;
+		*node[0x55cfdfc543d0] = 4;
+		*node[0x55cfdfc54490] = ;;
+		*node[0x55cfdfc544c0] = 0;
+		*node[0x55cfdfc544f0] = 1;
+		*node[0x55cfdfc54520] = 2;
+		*node[0x55cfdfc54550] = 3;
+		*node[0x55cfdfc54580] = ;;
+		*node[0x55cfdfc545b0] = if;
+		*node[0x55cfdfc545e0] = op_no;
+		*node[0x55cfdfc54670] = ==;
+		*node[0x55cfdfc54610] = 1;
+		*node[0x55cfdfc54640] = 0;
+		*node[0x55cfdfc546a0] = ;;
+		*node[0x55cfdfc54730] = 2;
+		*node[0x55cfdfc54760] = 3;
+		*node[0x55cfdfc54700] = 5;
+		*node[0x55cfdfc54790] = ;;
+		*node[0x55cfdfc54820] = 1;
+		*node[0x55cfdfc54850] = 2;
+		*node[0x55cfdfc54880] = 3;
+		*node[0x55cfdfc547f0] = 6;
+		*node[0x55cfdfc548b0] = ;;
+		*node[0x55cfdfc548e0] = 0;
+		*node[0x55cfdfc54910] = 1;
+		*node[0x55cfdfc54940] = 2;
+		*node[0x55cfdfc54970] = ;;
+		*node[0x55cfdfc54a60] = =;
+		*node[0x55cfdfc549a0] = 7;
+		*node[0x55cfdfc54a30] = -;
+		*node[0x55cfdfc549d0] = 0;
+		*node[0x55cfdfc54a00] = 1;
+		*node[0x55cfdfc54a90] = ;;
+		*node[0x55cfdfc54b20] = =;
+		*node[0x55cfdfc54ac0] = 8;
+		*node[0x55cfdfc54af0] = 1;
+		*node[0x55cfdfc54b50] = ;;
+		*node[0x55cfdfc54be0] = =;
+		*node[0x55cfdfc54b80] = 9;
+		*node[0x55cfdfc54bb0] = 1000;
+		*node[0x55cfdfc54c10] = ;;
+		*node[0x55cfdfc54c40] = if;
+		*node[0x55cfdfc54c70] = op_no;
+		*node[0x55cfdfc54d00] = ==;
+		*node[0x55cfdfc54ca0] = 1;
+		*node[0x55cfdfc54cd0] = 0;
+		*node[0x55cfdfc54d30] = ;;
+		*node[0x55cfdfc54d60] = if;
+		*node[0x55cfdfc54d90] = op_no;
+		*node[0x55cfdfc54e20] = ==;
+		*node[0x55cfdfc54dc0] = 2;
+		*node[0x55cfdfc54df0] = 0;
+		*node[0x55cfdfc54e50] = ;;
+		*node[0x55cfdfc54e80] = print;
+		*node[0x55cfdfc54eb0] = 9;
+		*node[0x55cfdfc54ee0] = ;;
+		*node[0x55cfdfc54f10] = print;
+		*node[0x55cfdfc54f40] = 7;
+		*node[0x55cfdfc54f70] = ;;
+		*node[0x55cfdfc550c0] = =;
+		*node[0x55cfdfc54fa0] = 10;
+		*node[0x55cfdfc55090] = /;
+		*node[0x55cfdfc55030] = -;
+		*node[0x55cfdfc54fd0] = 0;
+		*node[0x55cfdfc55000] = 2;
+		*node[0x55cfdfc55060] = 1;
+		*node[0x55cfdfc550f0] = ;;
+		*node[0x55cfdfc55120] = print;
+		*node[0x55cfdfc55150] = 8;
+		*node[0x55cfdfc55180] = ;;
+		*node[0x55cfdfc551b0] = print;
+		*node[0x55cfdfc551e0] = 10;
+		*node[0x55cfdfc55210] = ;;
+		*node[0x55cfdfc55240] = return;
+		*node[0x55cfdfc55270] = 0;
+		*node[0x55cfdfc552a0] = ;;
+		*node[0x55cfdfc552d0] = 0;
+		*node[0x55cfdfc55300] = 1;
+		*node[0x55cfdfc55330] = 2;
+		*node[0x55cfdfc55360] = 3;
+		*node[0x55cfdfc55390] = ;;
+		*node[0x55cfdfc55480] = =;
+		*node[0x55cfdfc553c0] = 7;
+		*node[0x55cfdfc55450] = -;
+		*node[0x55cfdfc553f0] = 0;
+		*node[0x55cfdfc55420] = 1;
+		*node[0x55cfdfc554b0] = ;;
+		*node[0x55cfdfc55540] = =;
+		*node[0x55cfdfc554e0] = 8;
+		*node[0x55cfdfc55510] = 1;
+		*node[0x55cfdfc55570] = ;;
+		*node[0x55cfdfc55600] = =;
+		*node[0x55cfdfc555a0] = 11;
+		*node[0x55cfdfc555d0] = 2;
+		*node[0x55cfdfc55630] = ;;
+		*node[0x55cfdfc55660] = if;
+		*node[0x55cfdfc55690] = op_no;
+		*node[0x55cfdfc55720] = ==;
+		*node[0x55cfdfc556c0] = 3;
+		*node[0x55cfdfc556f0] = 0;
+		*node[0x55cfdfc55750] = ;;
+		*node[0x55cfdfc557e0] = =;
+		*node[0x55cfdfc55780] = 12;
+		*node[0x55cfdfc557b0] = 0;
+		*node[0x55cfdfc55810] = ;;
+		*node[0x55cfdfc55960] = =;
+		*node[0x55cfdfc55840] = 13;
+		*node[0x55cfdfc55930] = /;
+		*node[0x55cfdfc558d0] = -;
+		*node[0x55cfdfc55870] = 0;
+		*node[0x55cfdfc558a0] = 2;
+		*node[0x55cfdfc55900] = 1;
+		*node[0x55cfdfc55990] = ;;
+		*node[0x55cfdfc559c0] = print;
+		*node[0x55cfdfc559f0] = 11;
+		*node[0x55cfdfc55a20] = ;;
+		*node[0x55cfdfc55a50] = print;
+		*node[0x55cfdfc55a80] = 12;
+		*node[0x55cfdfc55ab0] = 13;
+		*node[0x55cfdfc55ae0] = ;;
+		*node[0x55cfdfc55cf0] = =;
+		*node[0x55cfdfc55b10] = 14;
+		*node[0x55cfdfc55cc0] = -;
+		*node[0x55cfdfc55ba0] = *;
+		*node[0x55cfdfc55b40] = 2;
+		*node[0x55cfdfc55b70] = 2;
+		*node[0x55cfdfc55c90] = *;
+		*node[0x55cfdfc55c30] = *;
+		*node[0x55cfdfc55bd0] = 4;
+		*node[0x55cfdfc55c00] = 1;
+		*node[0x55cfdfc55c60] = 3;
+		*node[0x55cfdfc55d20] = ;;
+		*node[0x55cfdfc55d50] = if;
+		*node[0x55cfdfc55d80] = op_no;
+		*node[0x55cfdfc55e10] = >;
+		*node[0x55cfdfc55db0] = 14;
+		*node[0x55cfdfc55de0] = 0;
+		*node[0x55cfdfc55e40] = ;;
+		*node[0x55cfdfc55f30] = =;
+		*node[0x55cfdfc55e70] = 15;
+		*node[0x55cfdfc55f00] = sqrt;
+		*node[0x55cfdfc55ed0] = 1;
+		*node[0x55cfdfc55ea0] = 14;
+		*node[0x55cfdfc55f60] = ;;
+		*node[0x55cfdfc56170] = =;
+		*node[0x55cfdfc55f90] = 12;
+		*node[0x55cfdfc56140] = /;
+		*node[0x55cfdfc56080] = -;
+		*node[0x55cfdfc56020] = -;
+		*node[0x55cfdfc55fc0] = 0;
+		*node[0x55cfdfc55ff0] = 2;
+		*node[0x55cfdfc56050] = 15;
+		*node[0x55cfdfc56110] = *;
+		*node[0x55cfdfc560b0] = 2;
+		*node[0x55cfdfc560e0] = 1;
+		*node[0x55cfdfc561a0] = ;;
+		*node[0x55cfdfc563b0] = =;
+		*node[0x55cfdfc561d0] = 13;
+		*node[0x55cfdfc56380] = /;
+		*node[0x55cfdfc562c0] = +;
+		*node[0x55cfdfc56260] = -;
+		*node[0x55cfdfc56200] = 0;
+		*node[0x55cfdfc56230] = 2;
+		*node[0x55cfdfc56290] = 15;
+		*node[0x55cfdfc56350] = *;
+		*node[0x55cfdfc562f0] = 2;
+		*node[0x55cfdfc56320] = 1;
+		*node[0x55cfdfc563e0] = ;;
+		*node[0x55cfdfc56410] = print;
+		*node[0x55cfdfc56440] = 11;
+		*node[0x55cfdfc56470] = ;;
+		*node[0x55cfdfc564a0] = print;
+		*node[0x55cfdfc564d0] = 12;
+		*node[0x55cfdfc56500] = 13;
+		*node[0x55cfdfc56530] = if;
+		*node[0x55cfdfc56560] = op_no;
+		*node[0x55cfdfc565f0] = ==;
+		*node[0x55cfdfc56590] = 14;
+		*node[0x55cfdfc565c0] = 0;
+		*node[0x55cfdfc56620] = ;;
+		*node[0x55cfdfc567d0] = =;
+		*node[0x55cfdfc56650] = 10;
+		*node[0x55cfdfc567a0] = /;
+		*node[0x55cfdfc566e0] = -;
+		*node[0x55cfdfc56680] = 0;
+		*node[0x55cfdfc566b0] = 2;
+		*node[0x55cfdfc56770] = *;
+		*node[0x55cfdfc56710] = 2;
+		*node[0x55cfdfc56740] = 1;
+		*node[0x55cfdfc56800] = ;;
+		*node[0x55cfdfc56830] = print;
+		*node[0x55cfdfc56860] = 8;
+		*node[0x55cfdfc56890] = ;;
+		*node[0x55cfdfc568c0] = print;
+		*node[0x55cfdfc568f0] = 10;
+		*node[0x55cfdfc56920] = ;;
+		*node[0x55cfdfc56950] = print;
+		*node[0x55cfdfc56980] = 7;
+		*node[0x55cfdfc569b0] = ;;
+		*node[0x55cfdfc569e0] = return;
+		*node[0x55cfdfc56a10] = 0;
+		*node[0x55cfdfc56a40] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffc8b9d6370] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5f3a575f3220] = ;;
+		*node[0x5f3a575f3250] = 0;
+		*node[0x5f3a575f3280] = ;;
+		*node[0x5f3a575f32b0] = input;
+		*node[0x5f3a575f32e0] = 1;
+		*node[0x5f3a575f3310] = 2;
+		*node[0x5f3a575f3340] = 3;
+		*node[0x5f3a575f3370] = ;;
+		*node[0x5f3a575f3400] = 1;
+		*node[0x5f3a575f3430] = 2;
+		*node[0x5f3a575f3460] = 3;
+		*node[0x5f3a575f33d0] = 4;
+		*node[0x5f3a575f3490] = ;;
+		*node[0x5f3a575f34c0] = 4;
+		*node[0x5f3a575f34f0] = 1;
+		*node[0x5f3a575f3520] = 2;
+		*node[0x5f3a575f3550] = 3;
+		*node[0x5f3a575f3580] = ;;
+		*node[0x5f3a575f35b0] = if;
+		*node[0x5f3a575f35e0] = op_no;
+		*node[0x5f3a575f3670] = ==;
+		*node[0x5f3a575f3610] = 1;
+		*node[0x5f3a575f3640] = 0;
+		*node[0x5f3a575f36a0] = ;;
+		*node[0x5f3a575f3730] = 2;
+		*node[0x5f3a575f3760] = 3;
+		*node[0x5f3a575f3700] = 5;
+		*node[0x5f3a575f3790] = ;;
+		*node[0x5f3a575f3820] = 1;
+		*node[0x5f3a575f3850] = 2;
+		*node[0x5f3a575f3880] = 3;
+		*node[0x5f3a575f37f0] = 6;
+		*node[0x5f3a575f38b0] = ;;
+		*node[0x5f3a575f38e0] = 5;
+		*node[0x5f3a575f3910] = 1;
+		*node[0x5f3a575f3940] = 2;
+		*node[0x5f3a575f3970] = ;;
+		*node[0x5f3a575f3a60] = =;
+		*node[0x5f3a575f39a0] = 7;
+		*node[0x5f3a575f3a30] = -;
+		*node[0x5f3a575f39d0] = 0;
+		*node[0x5f3a575f3a00] = 1;
+		*node[0x5f3a575f3a90] = ;;
+		*node[0x5f3a575f3b20] = =;
+		*node[0x5f3a575f3ac0] = 8;
+		*node[0x5f3a575f3af0] = 1;
+		*node[0x5f3a575f3b50] = ;;
+		*node[0x5f3a575f3be0] = =;
+		*node[0x5f3a575f3b80] = 9;
+		*node[0x5f3a575f3bb0] = 1000;
+		*node[0x5f3a575f3c10] = ;;
+		*node[0x5f3a575f3c40] = if;
+		*node[0x5f3a575f3c70] = op_no;
+		*node[0x5f3a575f3d00] = ==;
+		*node[0x5f3a575f3ca0] = 1;
+		*node[0x5f3a575f3cd0] = 0;
+		*node[0x5f3a575f3d30] = ;;
+		*node[0x5f3a575f3d60] = if;
+		*node[0x5f3a575f3d90] = op_no;
+		*node[0x5f3a575f3e20] = ==;
+		*node[0x5f3a575f3dc0] = 2;
+		*node[0x5f3a575f3df0] = 0;
+		*node[0x5f3a575f3e50] = ;;
+		*node[0x5f3a575f3e80] = print;
+		*node[0x5f3a575f3eb0] = 9;
+		*node[0x5f3a575f3ee0] = ;;
+		*node[0x5f3a575f3f10] = print;
+		*node[0x5f3a575f3f40] = 7;
+		*node[0x5f3a575f3f70] = ;;
+		*node[0x5f3a575f40c0] = =;
+		*node[0x5f3a575f3fa0] = 10;
+		*node[0x5f3a575f4090] = /;
+		*node[0x5f3a575f4030] = -;
+		*node[0x5f3a575f3fd0] = 0;
+		*node[0x5f3a575f4000] = 2;
+		*node[0x5f3a575f4060] = 1;
+		*node[0x5f3a575f40f0] = ;;
+		*node[0x5f3a575f4120] = print;
+		*node[0x5f3a575f4150] = 8;
+		*node[0x5f3a575f4180] = ;;
+		*node[0x5f3a575f41b0] = print;
+		*node[0x5f3a575f41e0] = 10;
+		*node[0x5f3a575f4210] = ;;
+		*node[0x5f3a575f4240] = return;
+		*node[0x5f3a575f4270] = 0;
+		*node[0x5f3a575f42a0] = ;;
+		*node[0x5f3a575f42d0] = 6;
+		*node[0x5f3a575f4300] = 1;
+		*node[0x5f3a575f4330] = 2;
+		*node[0x5f3a575f4360] = 3;
+		*node[0x5f3a575f4390] = ;;
+		*node[0x5f3a575f4480] = =;
+		*node[0x5f3a575f43c0] = 7;
+		*node[0x5f3a575f4450] = -;
+		*node[0x5f3a575f43f0] = 0;
+		*node[0x5f3a575f4420] = 1;
+		*node[0x5f3a575f44b0] = ;;
+		*node[0x5f3a575f4540] = =;
+		*node[0x5f3a575f44e0] = 8;
+		*node[0x5f3a575f4510] = 1;
+		*node[0x5f3a575f4570] = ;;
+		*node[0x5f3a575f4600] = =;
+		*node[0x5f3a575f45a0] = 11;
+		*node[0x5f3a575f45d0] = 2;
+		*node[0x5f3a575f4630] = ;;
+		*node[0x5f3a575f4660] = if;
+		*node[0x5f3a575f4690] = op_no;
+		*node[0x5f3a575f4720] = ==;
+		*node[0x5f3a575f46c0] = 3;
+		*node[0x5f3a575f46f0] = 0;
+		*node[0x5f3a575f4750] = ;;
+		*node[0x5f3a575f47e0] = =;
+		*node[0x5f3a575f4780] = 12;
+		*node[0x5f3a575f47b0] = 0;
+		*node[0x5f3a575f4810] = ;;
+		*node[0x5f3a575f4960] = =;
+		*node[0x5f3a575f4840] = 13;
+		*node[0x5f3a575f4930] = /;
+		*node[0x5f3a575f48d0] = -;
+		*node[0x5f3a575f4870] = 0;
+		*node[0x5f3a575f48a0] = 2;
+		*node[0x5f3a575f4900] = 1;
+		*node[0x5f3a575f4990] = ;;
+		*node[0x5f3a575f49c0] = print;
+		*node[0x5f3a575f49f0] = 11;
+		*node[0x5f3a575f4a20] = ;;
+		*node[0x5f3a575f4a50] = print;
+		*node[0x5f3a575f4a80] = 12;
+		*node[0x5f3a575f4ab0] = 13;
+		*node[0x5f3a575f4ae0] = ;;
+		*node[0x5f3a575f4cf0] = =;
+		*node[0x5f3a575f4b10] = 14;
+		*node[0x5f3a575f4cc0] = -;
+		*node[0x5f3a575f4ba0] = *;
+		*node[0x5f3a575f4b40] = 2;
+		*node[0x5f3a575f4b70] = 2;
+		*node[0x5f3a575f4c90] = *;
+		*node[0x5f3a575f4c30] = *;
+		*node[0x5f3a575f4bd0] = 4;
+		*node[0x5f3a575f4c00] = 1;
+		*node[0x5f3a575f4c60] = 3;
+		*node[0x5f3a575f4d20] = ;;
+		*node[0x5f3a575f4d50] = if;
+		*node[0x5f3a575f4d80] = op_no;
+		*node[0x5f3a575f4e10] = >;
+		*node[0x5f3a575f4db0] = 14;
+		*node[0x5f3a575f4de0] = 0;
+		*node[0x5f3a575f4e40] = ;;
+		*node[0x5f3a575f4f30] = =;
+		*node[0x5f3a575f4e70] = 15;
+		*node[0x5f3a575f4f00] = sqrt;
+		*node[0x5f3a575f4ed0] = 1;
+		*node[0x5f3a575f4ea0] = 14;
+		*node[0x5f3a575f4f60] = ;;
+		*node[0x5f3a575f5170] = =;
+		*node[0x5f3a575f4f90] = 12;
+		*node[0x5f3a575f5140] = /;
+		*node[0x5f3a575f5080] = -;
+		*node[0x5f3a575f5020] = -;
+		*node[0x5f3a575f4fc0] = 0;
+		*node[0x5f3a575f4ff0] = 2;
+		*node[0x5f3a575f5050] = 15;
+		*node[0x5f3a575f5110] = *;
+		*node[0x5f3a575f50b0] = 2;
+		*node[0x5f3a575f50e0] = 1;
+		*node[0x5f3a575f51a0] = ;;
+		*node[0x5f3a575f53b0] = =;
+		*node[0x5f3a575f51d0] = 13;
+		*node[0x5f3a575f5380] = /;
+		*node[0x5f3a575f52c0] = +;
+		*node[0x5f3a575f5260] = -;
+		*node[0x5f3a575f5200] = 0;
+		*node[0x5f3a575f5230] = 2;
+		*node[0x5f3a575f5290] = 15;
+		*node[0x5f3a575f5350] = *;
+		*node[0x5f3a575f52f0] = 2;
+		*node[0x5f3a575f5320] = 1;
+		*node[0x5f3a575f53e0] = ;;
+		*node[0x5f3a575f5410] = print;
+		*node[0x5f3a575f5440] = 11;
+		*node[0x5f3a575f5470] = ;;
+		*node[0x5f3a575f54a0] = print;
+		*node[0x5f3a575f54d0] = 12;
+		*node[0x5f3a575f5500] = 13;
+		*node[0x5f3a575f5530] = if;
+		*node[0x5f3a575f5560] = op_no;
+		*node[0x5f3a575f55f0] = ==;
+		*node[0x5f3a575f5590] = 14;
+		*node[0x5f3a575f55c0] = 0;
+		*node[0x5f3a575f5620] = ;;
+		*node[0x5f3a575f57d0] = =;
+		*node[0x5f3a575f5650] = 10;
+		*node[0x5f3a575f57a0] = /;
+		*node[0x5f3a575f56e0] = -;
+		*node[0x5f3a575f5680] = 0;
+		*node[0x5f3a575f56b0] = 2;
+		*node[0x5f3a575f5770] = *;
+		*node[0x5f3a575f5710] = 2;
+		*node[0x5f3a575f5740] = 1;
+		*node[0x5f3a575f5800] = ;;
+		*node[0x5f3a575f5830] = print;
+		*node[0x5f3a575f5860] = 8;
+		*node[0x5f3a575f5890] = ;;
+		*node[0x5f3a575f58c0] = print;
+		*node[0x5f3a575f58f0] = 10;
+		*node[0x5f3a575f5920] = ;;
+		*node[0x5f3a575f5950] = print;
+		*node[0x5f3a575f5980] = 7;
+		*node[0x5f3a575f59b0] = ;;
+		*node[0x5f3a575f59e0] = return;
+		*node[0x5f3a575f5a10] = 0;
+		*node[0x5f3a575f5a40] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: an error occurred while opening the file[0m
+tree[0x7ffd7f4428a0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffd06074670] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5888dc5cdf40] = ;;
+		*node[0x5888dc5cdf70] = 0;
+		*node[0x5888dc5cdfa0] = ;;
+		*node[0x5888dc5cdfd0] = input;
+		*node[0x5888dc5ce000] = 1;
+		*node[0x5888dc5ce030] = ;;
+		*node[0x5888dc5ce0c0] = =;
+		*node[0x5888dc5ce060] = 2;
+		*node[0x5888dc5ce090] = 1;
+		*node[0x5888dc5ce0f0] = ;;
+		*node[0x5888dc5ce120] = if;
+		*node[0x5888dc5ce150] = op_no;
+		*node[0x5888dc5ce2a0] = ||;
+		*node[0x5888dc5ce1e0] = <;
+		*node[0x5888dc5ce180] = 1;
+		*node[0x5888dc5ce1b0] = 0;
+		*node[0x5888dc5ce270] = ==;
+		*node[0x5888dc5ce210] = 1;
+		*node[0x5888dc5ce240] = 0;
+		*node[0x5888dc5ce2d0] = ;;
+		*node[0x5888dc5ce300] = print;
+		*node[0x5888dc5ce330] = 2;
+		*node[0x5888dc5ce360] = if;
+		*node[0x5888dc5ce390] = op_no;
+		*node[0x5888dc5ce420] = ==;
+		*node[0x5888dc5ce3c0] = 1;
+		*node[0x5888dc5ce3f0] = 1;
+		*node[0x5888dc5ce450] = ;;
+		*node[0x5888dc5ce480] = print;
+		*node[0x5888dc5ce4b0] = 1;
+		*node[0x5888dc5ce4e0] = ;;
+		*node[0x5888dc5ce570] = 1;
+		*node[0x5888dc5ce540] = 3;
+		*node[0x5888dc5ce5a0] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffc1ad68bb0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffc1ad68bb0] "tree" called from ../tree/tree.cpp(275) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffe6fa3f2e0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffe6fa3f2e0] "tree" called from ../tree/tree.cpp(275) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffd21b316d0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffd21b316d0] "tree" called from ../tree/tree.cpp(275) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffd1d30d870] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x561cfa297280] = ;;
+		*node[0x561cfa2972b0] = 0;
+		*node[0x561cfa2972e0] = ;;
+		*node[0x561cfa297310] = input;
+		*node[0x561cfa297340] = 1;
+		*node[0x561cfa297370] = 2;
+		*node[0x561cfa2973a0] = 3;
+		*node[0x561cfa2973d0] = ;;
+		*node[0x561cfa297460] = 1;
+		*node[0x561cfa297490] = 2;
+		*node[0x561cfa2974c0] = 3;
+		*node[0x561cfa297430] = 4;
+		*node[0x561cfa2974f0] = ;;
+		*node[0x561cfa297520] = 4;
+		*node[0x561cfa297550] = 1;
+		*node[0x561cfa297580] = 2;
+		*node[0x561cfa2975b0] = 3;
+		*node[0x561cfa2975e0] = ;;
+		*node[0x561cfa297610] = if;
+		*node[0x561cfa297640] = op_no;
+		*node[0x561cfa2976d0] = ==;
+		*node[0x561cfa297670] = 1;
+		*node[0x561cfa2976a0] = 0;
+		*node[0x561cfa297700] = ;;
+		*node[0x561cfa297790] = 2;
+		*node[0x561cfa2977c0] = 3;
+		*node[0x561cfa297760] = 5;
+		*node[0x561cfa2977f0] = ;;
+		*node[0x561cfa297880] = 1;
+		*node[0x561cfa2978b0] = 2;
+		*node[0x561cfa2978e0] = 3;
+		*node[0x561cfa297850] = 6;
+		*node[0x561cfa297910] = ;;
+		*node[0x561cfa297940] = 5;
+		*node[0x561cfa297970] = 1;
+		*node[0x561cfa2979a0] = 2;
+		*node[0x561cfa2979d0] = ;;
+		*node[0x561cfa297ac0] = =;
+		*node[0x561cfa297a00] = 7;
+		*node[0x561cfa297a90] = -;
+		*node[0x561cfa297a30] = 0;
+		*node[0x561cfa297a60] = 1;
+		*node[0x561cfa297af0] = ;;
+		*node[0x561cfa297b80] = =;
+		*node[0x561cfa297b20] = 8;
+		*node[0x561cfa297b50] = 1;
+		*node[0x561cfa297bb0] = ;;
+		*node[0x561cfa297c40] = =;
+		*node[0x561cfa297be0] = 9;
+		*node[0x561cfa297c10] = 1000;
+		*node[0x561cfa297c70] = ;;
+		*node[0x561cfa297ca0] = if;
+		*node[0x561cfa297cd0] = op_no;
+		*node[0x561cfa297d60] = ==;
+		*node[0x561cfa297d00] = 1;
+		*node[0x561cfa297d30] = 0;
+		*node[0x561cfa297d90] = ;;
+		*node[0x561cfa297dc0] = if;
+		*node[0x561cfa297df0] = op_no;
+		*node[0x561cfa297e80] = ==;
+		*node[0x561cfa297e20] = 2;
+		*node[0x561cfa297e50] = 0;
+		*node[0x561cfa297eb0] = ;;
+		*node[0x561cfa297ee0] = print;
+		*node[0x561cfa297f10] = 9;
+		*node[0x561cfa297f40] = ;;
+		*node[0x561cfa297f70] = print;
+		*node[0x561cfa297fa0] = 7;
+		*node[0x561cfa297fd0] = ;;
+		*node[0x561cfa298120] = =;
+		*node[0x561cfa298000] = 10;
+		*node[0x561cfa2980f0] = /;
+		*node[0x561cfa298090] = -;
+		*node[0x561cfa298030] = 0;
+		*node[0x561cfa298060] = 2;
+		*node[0x561cfa2980c0] = 1;
+		*node[0x561cfa298150] = ;;
+		*node[0x561cfa298180] = print;
+		*node[0x561cfa2981b0] = 8;
+		*node[0x561cfa2981e0] = ;;
+		*node[0x561cfa298210] = print;
+		*node[0x561cfa298240] = 10;
+		*node[0x561cfa298270] = ;;
+		*node[0x561cfa2982a0] = return;
+		*node[0x561cfa298330] = -;
+		*node[0x561cfa2982d0] = 0;
+		*node[0x561cfa298300] = 1;
+		*node[0x561cfa298360] = ;;
+		*node[0x561cfa298390] = 6;
+		*node[0x561cfa2983c0] = 1;
+		*node[0x561cfa2983f0] = 2;
+		*node[0x561cfa298420] = 3;
+		*node[0x561cfa298450] = ;;
+		*node[0x561cfa298540] = =;
+		*node[0x561cfa298480] = 7;
+		*node[0x561cfa298510] = -;
+		*node[0x561cfa2984b0] = 0;
+		*node[0x561cfa2984e0] = 1;
+		*node[0x561cfa298570] = ;;
+		*node[0x561cfa298600] = =;
+		*node[0x561cfa2985a0] = 8;
+		*node[0x561cfa2985d0] = 1;
+		*node[0x561cfa298630] = ;;
+		*node[0x561cfa2986c0] = =;
+		*node[0x561cfa298660] = 11;
+		*node[0x561cfa298690] = 2;
+		*node[0x561cfa2986f0] = ;;
+		*node[0x561cfa298720] = if;
+		*node[0x561cfa298750] = op_no;
+		*node[0x561cfa2987e0] = ==;
+		*node[0x561cfa298780] = 3;
+		*node[0x561cfa2987b0] = 0;
+		*node[0x561cfa298810] = ;;
+		*node[0x561cfa2988a0] = =;
+		*node[0x561cfa298840] = 12;
+		*node[0x561cfa298870] = 0;
+		*node[0x561cfa2988d0] = ;;
+		*node[0x561cfa298a20] = =;
+		*node[0x561cfa298900] = 13;
+		*node[0x561cfa2989f0] = /;
+		*node[0x561cfa298990] = -;
+		*node[0x561cfa298930] = 0;
+		*node[0x561cfa298960] = 2;
+		*node[0x561cfa2989c0] = 1;
+		*node[0x561cfa298a50] = ;;
+		*node[0x561cfa298a80] = print;
+		*node[0x561cfa298ab0] = 11;
+		*node[0x561cfa298ae0] = ;;
+		*node[0x561cfa298b10] = print;
+		*node[0x561cfa298b40] = 12;
+		*node[0x561cfa298b70] = 13;
+		*node[0x561cfa298ba0] = ;;
+		*node[0x561cfa298db0] = =;
+		*node[0x561cfa298bd0] = 14;
+		*node[0x561cfa298d80] = -;
+		*node[0x561cfa298c60] = *;
+		*node[0x561cfa298c00] = 2;
+		*node[0x561cfa298c30] = 2;
+		*node[0x561cfa298d50] = *;
+		*node[0x561cfa298cf0] = *;
+		*node[0x561cfa298c90] = 4;
+		*node[0x561cfa298cc0] = 1;
+		*node[0x561cfa298d20] = 3;
+		*node[0x561cfa298de0] = ;;
+		*node[0x561cfa298e10] = if;
+		*node[0x561cfa298e40] = op_no;
+		*node[0x561cfa298ed0] = >;
+		*node[0x561cfa298e70] = 14;
+		*node[0x561cfa298ea0] = 0;
+		*node[0x561cfa298f00] = ;;
+		*node[0x561cfa298ff0] = =;
+		*node[0x561cfa298f30] = 15;
+		*node[0x561cfa298fc0] = sqrt;
+		*node[0x561cfa298f90] = 1;
+		*node[0x561cfa298f60] = 14;
+		*node[0x561cfa299020] = ;;
+		*node[0x561cfa299230] = =;
+		*node[0x561cfa299050] = 12;
+		*node[0x561cfa299200] = /;
+		*node[0x561cfa299140] = -;
+		*node[0x561cfa2990e0] = -;
+		*node[0x561cfa299080] = 0;
+		*node[0x561cfa2990b0] = 2;
+		*node[0x561cfa299110] = 15;
+		*node[0x561cfa2991d0] = *;
+		*node[0x561cfa299170] = 2;
+		*node[0x561cfa2991a0] = 1;
+		*node[0x561cfa299260] = ;;
+		*node[0x561cfa299470] = =;
+		*node[0x561cfa299290] = 13;
+		*node[0x561cfa299440] = /;
+		*node[0x561cfa299380] = +;
+		*node[0x561cfa299320] = -;
+		*node[0x561cfa2992c0] = 0;
+		*node[0x561cfa2992f0] = 2;
+		*node[0x561cfa299350] = 15;
+		*node[0x561cfa299410] = *;
+		*node[0x561cfa2993b0] = 2;
+		*node[0x561cfa2993e0] = 1;
+		*node[0x561cfa2994a0] = ;;
+		*node[0x561cfa2994d0] = print;
+		*node[0x561cfa299500] = 11;
+		*node[0x561cfa299530] = ;;
+		*node[0x561cfa299560] = print;
+		*node[0x561cfa299590] = 12;
+		*node[0x561cfa2995c0] = 13;
+		*node[0x561cfa2995f0] = if;
+		*node[0x561cfa299620] = op_no;
+		*node[0x561cfa2996b0] = ==;
+		*node[0x561cfa299650] = 14;
+		*node[0x561cfa299680] = 0;
+		*node[0x561cfa2996e0] = ;;
+		*node[0x561cfa299890] = =;
+		*node[0x561cfa299710] = 10;
+		*node[0x561cfa299860] = /;
+		*node[0x561cfa2997a0] = -;
+		*node[0x561cfa299740] = 0;
+		*node[0x561cfa299770] = 2;
+		*node[0x561cfa299830] = *;
+		*node[0x561cfa2997d0] = 2;
+		*node[0x561cfa299800] = 1;
+		*node[0x561cfa2998c0] = ;;
+		*node[0x561cfa2998f0] = print;
+		*node[0x561cfa299920] = 8;
+		*node[0x561cfa299950] = ;;
+		*node[0x561cfa299980] = print;
+		*node[0x561cfa2999b0] = 10;
+		*node[0x561cfa2999e0] = ;;
+		*node[0x561cfa299a10] = print;
+		*node[0x561cfa299a40] = 7;
+		*node[0x561cfa299a70] = ;;
+		*node[0x561cfa299aa0] = return;
+		*node[0x561cfa299ad0] = 0;
+		*node[0x561cfa299b00] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffcd0941440] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffcd0941440] "tree" called from ../tree/tree.cpp(275) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7ffc256c9720] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7ffc256c9720] "tree" called from ../tree/tree.cpp(275) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7fff96701fe0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7fff96701fe0] "tree" called from ../tree/tree.cpp(275) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffd15e4f8d0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x62c7811b73c0] = ;;
+		*node[0x62c7811b73f0] = 0;
+		*node[0x62c7811b7420] = ;;
+		*node[0x62c7811b7450] = input;
+		*node[0x62c7811b7480] = 1;
+		*node[0x62c7811b74b0] = ;;
+		*node[0x62c7811b7540] = =;
+		*node[0x62c7811b74e0] = 2;
+		*node[0x62c7811b7510] = 1;
+		*node[0x62c7811b7570] = ;;
+		*node[0x62c7811b75a0] = if;
+		*node[0x62c7811b75d0] = op_no;
+		*node[0x62c7811b7720] = ||;
+		*node[0x62c7811b7660] = <;
+		*node[0x62c7811b7600] = 1;
+		*node[0x62c7811b7630] = 0;
+		*node[0x62c7811b76f0] = ==;
+		*node[0x62c7811b7690] = 1;
+		*node[0x62c7811b76c0] = 0;
+		*node[0x62c7811b7750] = ;;
+		*node[0x62c7811b7780] = print;
+		*node[0x62c7811b77b0] = 2;
+		*node[0x62c7811b77e0] = if;
+		*node[0x62c7811b7810] = op_no;
+		*node[0x62c7811b78a0] = ==;
+		*node[0x62c7811b7840] = 1;
+		*node[0x62c7811b7870] = 1;
+		*node[0x62c7811b78d0] = ;;
+		*node[0x62c7811b7900] = print;
+		*node[0x62c7811b7930] = 1;
+		*node[0x62c7811b7960] = ;;
+		*node[0x62c7811b7990] = print;
+		*node[0x62c7811b79c0] = 3;
+		*node[0x62c7811b79f0] = ;;
+		*node[0x62c7811b7a20] = 4;
+		*node[0x62c7811b7a50] = 1;
+		*node[0x62c7811b7a80] = ;;
+		*node[0x62c7811b7ab0] = if;
+		*node[0x62c7811b7ae0] = op_no;
+		*node[0x62c7811b7b70] = ==;
+		*node[0x62c7811b7b10] = 1;
+		*node[0x62c7811b7b40] = 1;
+		*node[0x62c7811b7ba0] = ;;
+		*node[0x62c7811b7bd0] = return;
+		*node[0x62c7811b7c00] = 1;
+		*node[0x62c7811b7c30] = ;;
+		*node[0x62c7811b7c60] = return;
+		*node[0x62c7811b7c90] = 1;
+		*node[0x62c7811b7cc0] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffd027a4f30] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x55ce250bb220] = ;;
+		*node[0x55ce250bb250] = 0;
+		*node[0x55ce250bb280] = ;;
+		*node[0x55ce250bb2b0] = input;
+		*node[0x55ce250bb2e0] = 1;
+		*node[0x55ce250bb310] = 2;
+		*node[0x55ce250bb340] = 3;
+		*node[0x55ce250bb370] = ;;
+		*node[0x55ce250bb400] = 1;
+		*node[0x55ce250bb430] = 2;
+		*node[0x55ce250bb460] = 3;
+		*node[0x55ce250bb3d0] = 4;
+		*node[0x55ce250bb490] = ;;
+		*node[0x55ce250bb4c0] = 4;
+		*node[0x55ce250bb4f0] = 1;
+		*node[0x55ce250bb520] = 2;
+		*node[0x55ce250bb550] = 3;
+		*node[0x55ce250bb580] = ;;
+		*node[0x55ce250bb5b0] = if;
+		*node[0x55ce250bb5e0] = op_no;
+		*node[0x55ce250bb670] = ==;
+		*node[0x55ce250bb610] = 1;
+		*node[0x55ce250bb640] = 0;
+		*node[0x55ce250bb6a0] = ;;
+		*node[0x55ce250bb730] = 2;
+		*node[0x55ce250bb760] = 3;
+		*node[0x55ce250bb700] = 5;
+		*node[0x55ce250bb790] = ;;
+		*node[0x55ce250bb820] = 1;
+		*node[0x55ce250bb850] = 2;
+		*node[0x55ce250bb880] = 3;
+		*node[0x55ce250bb7f0] = 6;
+		*node[0x55ce250bb8b0] = ;;
+		*node[0x55ce250bb8e0] = 5;
+		*node[0x55ce250bb910] = 1;
+		*node[0x55ce250bb940] = 2;
+		*node[0x55ce250bb970] = ;;
+		*node[0x55ce250bba60] = =;
+		*node[0x55ce250bb9a0] = 7;
+		*node[0x55ce250bba30] = -;
+		*node[0x55ce250bb9d0] = 0;
+		*node[0x55ce250bba00] = 1;
+		*node[0x55ce250bba90] = ;;
+		*node[0x55ce250bbb20] = =;
+		*node[0x55ce250bbac0] = 8;
+		*node[0x55ce250bbaf0] = 1;
+		*node[0x55ce250bbb50] = ;;
+		*node[0x55ce250bbbe0] = =;
+		*node[0x55ce250bbb80] = 9;
+		*node[0x55ce250bbbb0] = 1000;
+		*node[0x55ce250bbc10] = ;;
+		*node[0x55ce250bbc40] = if;
+		*node[0x55ce250bbc70] = op_no;
+		*node[0x55ce250bbd00] = ==;
+		*node[0x55ce250bbca0] = 1;
+		*node[0x55ce250bbcd0] = 0;
+		*node[0x55ce250bbd30] = ;;
+		*node[0x55ce250bbd60] = if;
+		*node[0x55ce250bbd90] = op_no;
+		*node[0x55ce250bbe20] = ==;
+		*node[0x55ce250bbdc0] = 2;
+		*node[0x55ce250bbdf0] = 0;
+		*node[0x55ce250bbe50] = ;;
+		*node[0x55ce250bbe80] = print;
+		*node[0x55ce250bbeb0] = 9;
+		*node[0x55ce250bbee0] = ;;
+		*node[0x55ce250bbf10] = print;
+		*node[0x55ce250bbf40] = 7;
+		*node[0x55ce250bbf70] = ;;
+		*node[0x55ce250bc0c0] = =;
+		*node[0x55ce250bbfa0] = 10;
+		*node[0x55ce250bc090] = /;
+		*node[0x55ce250bc030] = -;
+		*node[0x55ce250bbfd0] = 0;
+		*node[0x55ce250bc000] = 2;
+		*node[0x55ce250bc060] = 1;
+		*node[0x55ce250bc0f0] = ;;
+		*node[0x55ce250bc120] = print;
+		*node[0x55ce250bc150] = 8;
+		*node[0x55ce250bc180] = ;;
+		*node[0x55ce250bc1b0] = print;
+		*node[0x55ce250bc1e0] = 10;
+		*node[0x55ce250bc210] = ;;
+		*node[0x55ce250bc240] = return;
+		*node[0x55ce250bc270] = 0;
+		*node[0x55ce250bc2a0] = ;;
+		*node[0x55ce250bc2d0] = 6;
+		*node[0x55ce250bc300] = 1;
+		*node[0x55ce250bc330] = 2;
+		*node[0x55ce250bc360] = 3;
+		*node[0x55ce250bc390] = ;;
+		*node[0x55ce250bc480] = =;
+		*node[0x55ce250bc3c0] = 7;
+		*node[0x55ce250bc450] = -;
+		*node[0x55ce250bc3f0] = 0;
+		*node[0x55ce250bc420] = 1;
+		*node[0x55ce250bc4b0] = ;;
+		*node[0x55ce250bc540] = =;
+		*node[0x55ce250bc4e0] = 8;
+		*node[0x55ce250bc510] = 1;
+		*node[0x55ce250bc570] = ;;
+		*node[0x55ce250bc600] = =;
+		*node[0x55ce250bc5a0] = 11;
+		*node[0x55ce250bc5d0] = 2;
+		*node[0x55ce250bc630] = ;;
+		*node[0x55ce250bc660] = if;
+		*node[0x55ce250bc690] = op_no;
+		*node[0x55ce250bc720] = ==;
+		*node[0x55ce250bc6c0] = 3;
+		*node[0x55ce250bc6f0] = 0;
+		*node[0x55ce250bc750] = ;;
+		*node[0x55ce250bc7e0] = =;
+		*node[0x55ce250bc780] = 12;
+		*node[0x55ce250bc7b0] = 0;
+		*node[0x55ce250bc810] = ;;
+		*node[0x55ce250bc960] = =;
+		*node[0x55ce250bc840] = 13;
+		*node[0x55ce250bc930] = /;
+		*node[0x55ce250bc8d0] = -;
+		*node[0x55ce250bc870] = 0;
+		*node[0x55ce250bc8a0] = 2;
+		*node[0x55ce250bc900] = 1;
+		*node[0x55ce250bc990] = ;;
+		*node[0x55ce250bc9c0] = print;
+		*node[0x55ce250bc9f0] = 11;
+		*node[0x55ce250bca20] = ;;
+		*node[0x55ce250bca50] = print;
+		*node[0x55ce250bca80] = 12;
+		*node[0x55ce250bcab0] = 13;
+		*node[0x55ce250bcae0] = ;;
+		*node[0x55ce250bccf0] = =;
+		*node[0x55ce250bcb10] = 14;
+		*node[0x55ce250bccc0] = -;
+		*node[0x55ce250bcba0] = *;
+		*node[0x55ce250bcb40] = 2;
+		*node[0x55ce250bcb70] = 2;
+		*node[0x55ce250bcc90] = *;
+		*node[0x55ce250bcc30] = *;
+		*node[0x55ce250bcbd0] = 4;
+		*node[0x55ce250bcc00] = 1;
+		*node[0x55ce250bcc60] = 3;
+		*node[0x55ce250bcd20] = ;;
+		*node[0x55ce250bcd50] = if;
+		*node[0x55ce250bcd80] = op_no;
+		*node[0x55ce250bce10] = >;
+		*node[0x55ce250bcdb0] = 14;
+		*node[0x55ce250bcde0] = 0;
+		*node[0x55ce250bce40] = ;;
+		*node[0x55ce250bcf30] = =;
+		*node[0x55ce250bce70] = 15;
+		*node[0x55ce250bcf00] = sqrt;
+		*node[0x55ce250bced0] = 1;
+		*node[0x55ce250bcea0] = 14;
+		*node[0x55ce250bcf60] = ;;
+		*node[0x55ce250bd170] = =;
+		*node[0x55ce250bcf90] = 12;
+		*node[0x55ce250bd140] = /;
+		*node[0x55ce250bd080] = -;
+		*node[0x55ce250bd020] = -;
+		*node[0x55ce250bcfc0] = 0;
+		*node[0x55ce250bcff0] = 2;
+		*node[0x55ce250bd050] = 15;
+		*node[0x55ce250bd110] = *;
+		*node[0x55ce250bd0b0] = 2;
+		*node[0x55ce250bd0e0] = 1;
+		*node[0x55ce250bd1a0] = ;;
+		*node[0x55ce250bd3b0] = =;
+		*node[0x55ce250bd1d0] = 13;
+		*node[0x55ce250bd380] = /;
+		*node[0x55ce250bd2c0] = +;
+		*node[0x55ce250bd260] = -;
+		*node[0x55ce250bd200] = 0;
+		*node[0x55ce250bd230] = 2;
+		*node[0x55ce250bd290] = 15;
+		*node[0x55ce250bd350] = *;
+		*node[0x55ce250bd2f0] = 2;
+		*node[0x55ce250bd320] = 1;
+		*node[0x55ce250bd3e0] = ;;
+		*node[0x55ce250bd410] = print;
+		*node[0x55ce250bd440] = 11;
+		*node[0x55ce250bd470] = ;;
+		*node[0x55ce250bd4a0] = print;
+		*node[0x55ce250bd4d0] = 12;
+		*node[0x55ce250bd500] = 13;
+		*node[0x55ce250bd530] = if;
+		*node[0x55ce250bd560] = op_no;
+		*node[0x55ce250bd5f0] = ==;
+		*node[0x55ce250bd590] = 14;
+		*node[0x55ce250bd5c0] = 0;
+		*node[0x55ce250bd620] = ;;
+		*node[0x55ce250bd7d0] = =;
+		*node[0x55ce250bd650] = 10;
+		*node[0x55ce250bd7a0] = /;
+		*node[0x55ce250bd6e0] = -;
+		*node[0x55ce250bd680] = 0;
+		*node[0x55ce250bd6b0] = 2;
+		*node[0x55ce250bd770] = *;
+		*node[0x55ce250bd710] = 2;
+		*node[0x55ce250bd740] = 1;
+		*node[0x55ce250bd800] = ;;
+		*node[0x55ce250bd830] = print;
+		*node[0x55ce250bd860] = 8;
+		*node[0x55ce250bd890] = ;;
+		*node[0x55ce250bd8c0] = print;
+		*node[0x55ce250bd8f0] = 10;
+		*node[0x55ce250bd920] = ;;
+		*node[0x55ce250bd950] = print;
+		*node[0x55ce250bd980] = 7;
+		*node[0x55ce250bd9b0] = ;;
+		*node[0x55ce250bd9e0] = return;
+		*node[0x55ce250bda10] = 0;
+		*node[0x55ce250bda40] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffead19cc60] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5cba6eb324d0] = ;;
+		*node[0x5cba6eb32500] = 0;
+		*node[0x5cba6eb32530] = ;;
+		*node[0x5cba6eb32560] = input;
+		*node[0x5cba6eb32590] = 1;
+		*node[0x5cba6eb325c0] = ;;
+		*node[0x5cba6eb32650] = =;
+		*node[0x5cba6eb325f0] = 2;
+		*node[0x5cba6eb32620] = 1;
+		*node[0x5cba6eb32680] = ;;
+		*node[0x5cba6eb326b0] = if;
+		*node[0x5cba6eb326e0] = op_no;
+		*node[0x5cba6eb32830] = ||;
+		*node[0x5cba6eb32770] = <;
+		*node[0x5cba6eb32710] = 1;
+		*node[0x5cba6eb32740] = 0;
+		*node[0x5cba6eb32800] = ==;
+		*node[0x5cba6eb327a0] = 1;
+		*node[0x5cba6eb327d0] = 0;
+		*node[0x5cba6eb32860] = ;;
+		*node[0x5cba6eb32890] = print;
+		*node[0x5cba6eb328c0] = 2;
+		*node[0x5cba6eb328f0] = if;
+		*node[0x5cba6eb32920] = op_no;
+		*node[0x5cba6eb329b0] = ==;
+		*node[0x5cba6eb32950] = 1;
+		*node[0x5cba6eb32980] = 1;
+		*node[0x5cba6eb329e0] = ;;
+		*node[0x5cba6eb32a10] = print;
+		*node[0x5cba6eb32a40] = 1;
+		*node[0x5cba6eb32a70] = ;;
+		*node[0x5cba6eb32aa0] = print;
+		*node[0x5cba6eb32ad0] = 3;
+		*node[0x5cba6eb32b00] = ;;
+		*node[0x5cba6eb32b30] = 4;
+		*node[0x5cba6eb32b60] = 1;
+		*node[0x5cba6eb32b90] = ;;
+		*node[0x5cba6eb32bc0] = if;
+		*node[0x5cba6eb32bf0] = op_no;
+		*node[0x5cba6eb32c80] = ==;
+		*node[0x5cba6eb32c20] = 1;
+		*node[0x5cba6eb32c50] = 1;
+		*node[0x5cba6eb32cb0] = ;;
+		*node[0x5cba6eb32ce0] = return;
+		*node[0x5cba6eb32d10] = 1;
+		*node[0x5cba6eb32d40] = ;;
+		*node[0x5cba6eb32e30] = =;
+		*node[0x5cba6eb32d70] = 5;
+		*node[0x5cba6eb32e00] = -;
+		*node[0x5cba6eb32da0] = 1;
+		*node[0x5cba6eb32dd0] = 1;
+		*node[0x5cba6eb32e60] = ;;
+		*node[0x5cba6eb32e90] = return;
+		*node[0x5cba6eb32ec0] = 1;
+		*node[0x5cba6eb32ef0] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffd77a4fd30] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5e361e4bb220] = ;;
+		*node[0x5e361e4bb250] = 0;
+		*node[0x5e361e4bb280] = ;;
+		*node[0x5e361e4bb2b0] = input;
+		*node[0x5e361e4bb2e0] = 1;
+		*node[0x5e361e4bb310] = 2;
+		*node[0x5e361e4bb340] = 3;
+		*node[0x5e361e4bb370] = ;;
+		*node[0x5e361e4bb400] = 1;
+		*node[0x5e361e4bb430] = 2;
+		*node[0x5e361e4bb460] = 3;
+		*node[0x5e361e4bb3d0] = 4;
+		*node[0x5e361e4bb490] = ;;
+		*node[0x5e361e4bb4c0] = 4;
+		*node[0x5e361e4bb4f0] = 1;
+		*node[0x5e361e4bb520] = 2;
+		*node[0x5e361e4bb550] = 3;
+		*node[0x5e361e4bb580] = ;;
+		*node[0x5e361e4bb5b0] = if;
+		*node[0x5e361e4bb5e0] = op_no;
+		*node[0x5e361e4bb670] = ==;
+		*node[0x5e361e4bb610] = 1;
+		*node[0x5e361e4bb640] = 0;
+		*node[0x5e361e4bb6a0] = ;;
+		*node[0x5e361e4bb730] = 2;
+		*node[0x5e361e4bb760] = 3;
+		*node[0x5e361e4bb700] = 5;
+		*node[0x5e361e4bb790] = ;;
+		*node[0x5e361e4bb820] = 1;
+		*node[0x5e361e4bb850] = 2;
+		*node[0x5e361e4bb880] = 3;
+		*node[0x5e361e4bb7f0] = 6;
+		*node[0x5e361e4bb8b0] = ;;
+		*node[0x5e361e4bb8e0] = 5;
+		*node[0x5e361e4bb910] = 1;
+		*node[0x5e361e4bb940] = 2;
+		*node[0x5e361e4bb970] = ;;
+		*node[0x5e361e4bba60] = =;
+		*node[0x5e361e4bb9a0] = 7;
+		*node[0x5e361e4bba30] = -;
+		*node[0x5e361e4bb9d0] = 0;
+		*node[0x5e361e4bba00] = 1;
+		*node[0x5e361e4bba90] = ;;
+		*node[0x5e361e4bbb20] = =;
+		*node[0x5e361e4bbac0] = 8;
+		*node[0x5e361e4bbaf0] = 1;
+		*node[0x5e361e4bbb50] = ;;
+		*node[0x5e361e4bbbe0] = =;
+		*node[0x5e361e4bbb80] = 9;
+		*node[0x5e361e4bbbb0] = 1000;
+		*node[0x5e361e4bbc10] = ;;
+		*node[0x5e361e4bbc40] = if;
+		*node[0x5e361e4bbc70] = op_no;
+		*node[0x5e361e4bbd00] = ==;
+		*node[0x5e361e4bbca0] = 1;
+		*node[0x5e361e4bbcd0] = 0;
+		*node[0x5e361e4bbd30] = ;;
+		*node[0x5e361e4bbd60] = if;
+		*node[0x5e361e4bbd90] = op_no;
+		*node[0x5e361e4bbe20] = ==;
+		*node[0x5e361e4bbdc0] = 2;
+		*node[0x5e361e4bbdf0] = 0;
+		*node[0x5e361e4bbe50] = ;;
+		*node[0x5e361e4bbe80] = print;
+		*node[0x5e361e4bbeb0] = 9;
+		*node[0x5e361e4bbee0] = ;;
+		*node[0x5e361e4bbf10] = print;
+		*node[0x5e361e4bbf40] = 7;
+		*node[0x5e361e4bbf70] = ;;
+		*node[0x5e361e4bc0c0] = =;
+		*node[0x5e361e4bbfa0] = 10;
+		*node[0x5e361e4bc090] = /;
+		*node[0x5e361e4bc030] = -;
+		*node[0x5e361e4bbfd0] = 0;
+		*node[0x5e361e4bc000] = 2;
+		*node[0x5e361e4bc060] = 1;
+		*node[0x5e361e4bc0f0] = ;;
+		*node[0x5e361e4bc120] = print;
+		*node[0x5e361e4bc150] = 8;
+		*node[0x5e361e4bc180] = ;;
+		*node[0x5e361e4bc1b0] = print;
+		*node[0x5e361e4bc1e0] = 10;
+		*node[0x5e361e4bc210] = ;;
+		*node[0x5e361e4bc240] = return;
+		*node[0x5e361e4bc270] = 0;
+		*node[0x5e361e4bc2a0] = ;;
+		*node[0x5e361e4bc2d0] = 6;
+		*node[0x5e361e4bc300] = 1;
+		*node[0x5e361e4bc330] = 2;
+		*node[0x5e361e4bc360] = 3;
+		*node[0x5e361e4bc390] = ;;
+		*node[0x5e361e4bc480] = =;
+		*node[0x5e361e4bc3c0] = 7;
+		*node[0x5e361e4bc450] = -;
+		*node[0x5e361e4bc3f0] = 0;
+		*node[0x5e361e4bc420] = 1;
+		*node[0x5e361e4bc4b0] = ;;
+		*node[0x5e361e4bc540] = =;
+		*node[0x5e361e4bc4e0] = 8;
+		*node[0x5e361e4bc510] = 1;
+		*node[0x5e361e4bc570] = ;;
+		*node[0x5e361e4bc600] = =;
+		*node[0x5e361e4bc5a0] = 11;
+		*node[0x5e361e4bc5d0] = 2;
+		*node[0x5e361e4bc630] = ;;
+		*node[0x5e361e4bc660] = if;
+		*node[0x5e361e4bc690] = op_no;
+		*node[0x5e361e4bc720] = ==;
+		*node[0x5e361e4bc6c0] = 3;
+		*node[0x5e361e4bc6f0] = 0;
+		*node[0x5e361e4bc750] = ;;
+		*node[0x5e361e4bc7e0] = =;
+		*node[0x5e361e4bc780] = 12;
+		*node[0x5e361e4bc7b0] = 0;
+		*node[0x5e361e4bc810] = ;;
+		*node[0x5e361e4bc960] = =;
+		*node[0x5e361e4bc840] = 13;
+		*node[0x5e361e4bc930] = /;
+		*node[0x5e361e4bc8d0] = -;
+		*node[0x5e361e4bc870] = 0;
+		*node[0x5e361e4bc8a0] = 2;
+		*node[0x5e361e4bc900] = 1;
+		*node[0x5e361e4bc990] = ;;
+		*node[0x5e361e4bc9c0] = print;
+		*node[0x5e361e4bc9f0] = 11;
+		*node[0x5e361e4bca20] = ;;
+		*node[0x5e361e4bca50] = print;
+		*node[0x5e361e4bca80] = 12;
+		*node[0x5e361e4bcab0] = 13;
+		*node[0x5e361e4bcae0] = ;;
+		*node[0x5e361e4bccf0] = =;
+		*node[0x5e361e4bcb10] = 14;
+		*node[0x5e361e4bccc0] = -;
+		*node[0x5e361e4bcba0] = *;
+		*node[0x5e361e4bcb40] = 2;
+		*node[0x5e361e4bcb70] = 2;
+		*node[0x5e361e4bcc90] = *;
+		*node[0x5e361e4bcc30] = *;
+		*node[0x5e361e4bcbd0] = 4;
+		*node[0x5e361e4bcc00] = 1;
+		*node[0x5e361e4bcc60] = 3;
+		*node[0x5e361e4bcd20] = ;;
+		*node[0x5e361e4bcd50] = if;
+		*node[0x5e361e4bcd80] = op_no;
+		*node[0x5e361e4bce10] = >;
+		*node[0x5e361e4bcdb0] = 14;
+		*node[0x5e361e4bcde0] = 0;
+		*node[0x5e361e4bce40] = ;;
+		*node[0x5e361e4bcf30] = =;
+		*node[0x5e361e4bce70] = 15;
+		*node[0x5e361e4bcf00] = sqrt;
+		*node[0x5e361e4bced0] = 1;
+		*node[0x5e361e4bcea0] = 14;
+		*node[0x5e361e4bcf60] = ;;
+		*node[0x5e361e4bd170] = =;
+		*node[0x5e361e4bcf90] = 12;
+		*node[0x5e361e4bd140] = /;
+		*node[0x5e361e4bd080] = -;
+		*node[0x5e361e4bd020] = -;
+		*node[0x5e361e4bcfc0] = 0;
+		*node[0x5e361e4bcff0] = 2;
+		*node[0x5e361e4bd050] = 15;
+		*node[0x5e361e4bd110] = *;
+		*node[0x5e361e4bd0b0] = 2;
+		*node[0x5e361e4bd0e0] = 1;
+		*node[0x5e361e4bd1a0] = ;;
+		*node[0x5e361e4bd3b0] = =;
+		*node[0x5e361e4bd1d0] = 13;
+		*node[0x5e361e4bd380] = /;
+		*node[0x5e361e4bd2c0] = +;
+		*node[0x5e361e4bd260] = -;
+		*node[0x5e361e4bd200] = 0;
+		*node[0x5e361e4bd230] = 2;
+		*node[0x5e361e4bd290] = 15;
+		*node[0x5e361e4bd350] = *;
+		*node[0x5e361e4bd2f0] = 2;
+		*node[0x5e361e4bd320] = 1;
+		*node[0x5e361e4bd3e0] = ;;
+		*node[0x5e361e4bd410] = print;
+		*node[0x5e361e4bd440] = 11;
+		*node[0x5e361e4bd470] = ;;
+		*node[0x5e361e4bd4a0] = print;
+		*node[0x5e361e4bd4d0] = 12;
+		*node[0x5e361e4bd500] = 13;
+		*node[0x5e361e4bd530] = if;
+		*node[0x5e361e4bd560] = op_no;
+		*node[0x5e361e4bd5f0] = ==;
+		*node[0x5e361e4bd590] = 14;
+		*node[0x5e361e4bd5c0] = 0;
+		*node[0x5e361e4bd620] = ;;
+		*node[0x5e361e4bd7d0] = =;
+		*node[0x5e361e4bd650] = 10;
+		*node[0x5e361e4bd7a0] = /;
+		*node[0x5e361e4bd6e0] = -;
+		*node[0x5e361e4bd680] = 0;
+		*node[0x5e361e4bd6b0] = 2;
+		*node[0x5e361e4bd770] = *;
+		*node[0x5e361e4bd710] = 2;
+		*node[0x5e361e4bd740] = 1;
+		*node[0x5e361e4bd800] = ;;
+		*node[0x5e361e4bd830] = print;
+		*node[0x5e361e4bd860] = 8;
+		*node[0x5e361e4bd890] = ;;
+		*node[0x5e361e4bd8c0] = print;
+		*node[0x5e361e4bd8f0] = 10;
+		*node[0x5e361e4bd920] = ;;
+		*node[0x5e361e4bd950] = print;
+		*node[0x5e361e4bd980] = 7;
+		*node[0x5e361e4bd9b0] = ;;
+		*node[0x5e361e4bd9e0] = return;
+		*node[0x5e361e4bda10] = 0;
+		*node[0x5e361e4bda40] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+tree[0x7fff99a673e0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+[31mERROR: Syntax error[0m
+[31mERROR: error when counting the number of variables[0m
+tree[0x7fff99a673e0] "tree" called from ../tree/tree.cpp(275) destroy_tree
+{
+	is_init = 1
+	{
+		*root[NULL]
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7fff132a15b0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x56acc4374710] = ;;
+		*node[0x56acc4374740] = 0;
+		*node[0x56acc4374770] = ;;
+		*node[0x56acc43747a0] = input;
+		*node[0x56acc43747d0] = 1;
+		*node[0x56acc4374800] = ;;
+		*node[0x56acc4374890] = =;
+		*node[0x56acc4374830] = 2;
+		*node[0x56acc4374860] = 1;
+		*node[0x56acc43748c0] = ;;
+		*node[0x56acc43748f0] = if;
+		*node[0x56acc4374920] = op_no;
+		*node[0x56acc4374a70] = ||;
+		*node[0x56acc43749b0] = <;
+		*node[0x56acc4374950] = 1;
+		*node[0x56acc4374980] = 0;
+		*node[0x56acc4374a40] = ==;
+		*node[0x56acc43749e0] = 1;
+		*node[0x56acc4374a10] = 0;
+		*node[0x56acc4374aa0] = ;;
+		*node[0x56acc4374ad0] = print;
+		*node[0x56acc4374b00] = 2;
+		*node[0x56acc4374b30] = if;
+		*node[0x56acc4374b60] = op_no;
+		*node[0x56acc4374bf0] = ==;
+		*node[0x56acc4374b90] = 1;
+		*node[0x56acc4374bc0] = 1;
+		*node[0x56acc4374c20] = ;;
+		*node[0x56acc4374c50] = print;
+		*node[0x56acc4374c80] = 1;
+		*node[0x56acc4374cb0] = ;;
+		*node[0x56acc4374da0] = =;
+		*node[0x56acc4374ce0] = 3;
+		*node[0x56acc4374d70] = 1;
+		*node[0x56acc4374d40] = 4;
+		*node[0x56acc4374dd0] = ;;
+		*node[0x56acc4374e00] = print;
+		*node[0x56acc4374e30] = 3;
+		*node[0x56acc4374e60] = ;;
+		*node[0x56acc4374e90] = 4;
+		*node[0x56acc4374ec0] = 1;
+		*node[0x56acc4374ef0] = ;;
+		*node[0x56acc4374f20] = if;
+		*node[0x56acc4374f50] = op_no;
+		*node[0x56acc4374fe0] = ==;
+		*node[0x56acc4374f80] = 1;
+		*node[0x56acc4374fb0] = 1;
+		*node[0x56acc4375010] = ;;
+		*node[0x56acc4375040] = return;
+		*node[0x56acc4375070] = 1;
+		*node[0x56acc43750a0] = ;;
+		*node[0x56acc4375190] = =;
+		*node[0x56acc43750d0] = 5;
+		*node[0x56acc4375160] = -;
+		*node[0x56acc4375100] = 1;
+		*node[0x56acc4375130] = 1;
+		*node[0x56acc43751c0] = ;;
+		*node[0x56acc43751f0] = return;
+		*node[0x56acc4375220] = 1;
+		*node[0x56acc4375250] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffe5118d2f0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5d700d6809a0] = ;;
+		*node[0x5d700d6809d0] = 0;
+		*node[0x5d700d680a00] = ;;
+		*node[0x5d700d680a30] = input;
+		*node[0x5d700d680a60] = 1;
+		*node[0x5d700d680a90] = ;;
+		*node[0x5d700d680b20] = =;
+		*node[0x5d700d680ac0] = 2;
+		*node[0x5d700d680af0] = 1;
+		*node[0x5d700d680b50] = ;;
+		*node[0x5d700d680b80] = if;
+		*node[0x5d700d680bb0] = op_no;
+		*node[0x5d700d680d00] = ||;
+		*node[0x5d700d680c40] = <;
+		*node[0x5d700d680be0] = 1;
+		*node[0x5d700d680c10] = 0;
+		*node[0x5d700d680cd0] = ==;
+		*node[0x5d700d680c70] = 1;
+		*node[0x5d700d680ca0] = 0;
+		*node[0x5d700d680d30] = ;;
+		*node[0x5d700d680d60] = print;
+		*node[0x5d700d680d90] = 2;
+		*node[0x5d700d680dc0] = if;
+		*node[0x5d700d680df0] = op_no;
+		*node[0x5d700d680e80] = ==;
+		*node[0x5d700d680e20] = 1;
+		*node[0x5d700d680e50] = 1;
+		*node[0x5d700d680eb0] = ;;
+		*node[0x5d700d680ee0] = print;
+		*node[0x5d700d680f10] = 1;
+		*node[0x5d700d680f40] = ;;
+		*node[0x5d700d681030] = =;
+		*node[0x5d700d680f70] = 3;
+		*node[0x5d700d681000] = 1;
+		*node[0x5d700d680fd0] = 4;
+		*node[0x5d700d681060] = ;;
+		*node[0x5d700d681090] = print;
+		*node[0x5d700d6810c0] = 3;
+		*node[0x5d700d6810f0] = ;;
+		*node[0x5d700d681120] = 4;
+		*node[0x5d700d681150] = 1;
+		*node[0x5d700d681180] = ;;
+		*node[0x5d700d6811b0] = if;
+		*node[0x5d700d6811e0] = op_no;
+		*node[0x5d700d681270] = ==;
+		*node[0x5d700d681210] = 1;
+		*node[0x5d700d681240] = 1;
+		*node[0x5d700d6812a0] = ;;
+		*node[0x5d700d6812d0] = return;
+		*node[0x5d700d681300] = 1;
+		*node[0x5d700d681330] = ;;
+		*node[0x5d700d681420] = =;
+		*node[0x5d700d681360] = 5;
+		*node[0x5d700d6813f0] = -;
+		*node[0x5d700d681390] = 1;
+		*node[0x5d700d6813c0] = 1;
+		*node[0x5d700d681450] = ;;
+		*node[0x5d700d6815a0] = =;
+		*node[0x5d700d681480] = 1;
+		*node[0x5d700d681570] = *;
+		*node[0x5d700d6814b0] = 1;
+		*node[0x5d700d681540] = 5;
+		*node[0x5d700d681510] = 4;
+		*node[0x5d700d6815d0] = ;;
+		*node[0x5d700d681600] = return;
+		*node[0x5d700d681630] = 1;
+		*node[0x5d700d681660] = ;;
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+

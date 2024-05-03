@@ -1,4 +1,90 @@
 def main()
 {
+    input(a, b, c);
 
+    solve_dispetcher(a, b, c);
+}
+
+def solve_dispetcher(a, b, c)
+{
+    if (a == 0)
+    {
+        solve_linear(b, c);
+    }
+    else
+    {
+        solve_square(a, b, c);
+    }
+}
+
+def solve_linear(a, b)
+{
+    NO_ROOTS       = 0 - 1;
+    ONE_ROOTS      = 1;
+    INFINITY_ROOTS = 1000;
+
+    if (a == 0)
+    {
+        if (b == 0)
+        {
+            print(INFINITY_ROOTS);
+        }
+        else
+        {
+            print(NO_ROOTS);
+        }
+    }
+    else
+    {
+        x_0 = (0 - b) / a;
+
+        print(ONE_ROOTS);
+        print(x_0);
+    }
+
+    return 0;
+}
+
+def solve_square(a, b, c)
+{
+    NO_ROOTS  = 0 - 1;
+    ONE_ROOTS = 1;
+    TWO_ROOTS = 2;
+
+    if (c == 0)
+    {
+        x_1 = 0;
+        x_2 = (0 - b) / a;
+
+        print(TWO_ROOTS);
+        print(x_1, x_2);
+    }
+    else
+    {
+        disc = b * b - 4 * a * c;
+
+        if (disc > 0)
+        {
+            disc_sqrt = sqrt(disc);
+
+            x_1 = (0 - b - disc_sqrt) / (2 * a);
+            x_2 = (0 - b + disc_sqrt) / (2 * a);
+
+            print(TWO_ROOTS);
+            print(x_1, x_2);
+        }
+        else if (disc == 0)
+        {
+            x_0 = (0 - b) / (2 * a);
+
+            print(ONE_ROOTS);
+            print(x_0);
+        }
+        else
+        {
+            print(NO_ROOTS);
+        }
+    }
+
+    return 0;
 }

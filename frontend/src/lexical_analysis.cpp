@@ -118,8 +118,6 @@ void token_analysis (Token *token, size_t n_token, TableName *table_name, char *
                 token[pos].type = CALL_FUNC;
                 token[pos].data.ident = table_name_add_ident(table_name, ident, &cur_ident, IDENT_FUNC, code_error);
                 ERR_RET();
-
-                my_assert(strcmp("main", ident) == 0, SYNTAX_ERROR)
             }
             else
             {

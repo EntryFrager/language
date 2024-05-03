@@ -76,7 +76,7 @@ Node *get_func (Token *token, size_t *pos, int *code_error)
 
     my_assert(IS_TYPE(IDENT_FUNC), SYNTAX_ERROR);
     Node *node = create_node(IDENT_FUNC, NULL, NULL, NULL, code_error);
-    node->data.ident = CUR_TOK.data.value;
+    node->data.ident = CUR_TOK.data.ident;
     INCREM;
 
     node->left = get_params(token, pos, code_error);
@@ -357,9 +357,7 @@ Node *get_return (Token *token, size_t *pos, int *code_error)
     Node *node = OP_(RETURN, NULL);
     INCREM;
 
-    my_assert(IS_TYPE(IDENT), SYNTAX_ERROR);
-    node->left = IDENT_(CUR_TOK.data.ident, NULL);
-    INCREM;
+    node->left = get_add_sub(token, pos, code_error);
 
     my_assert(IS_TYPE(OP) && IS_OP(END_EXPR), SYNTAX_ERROR);
     INCREM;
@@ -666,7 +664,10 @@ Node *get_var (Token *token, size_t *pos, int *code_error)
         }
         case (CALL_FUNC):
         {
-            return get_call_func(token, pos, code_error);
+            Node *node = get_call_func(token, pos, code_error);
+            (*pos)--;
+
+            return node;
         }
         case (NUM):
         {

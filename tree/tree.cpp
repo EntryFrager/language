@@ -23,6 +23,11 @@ int create_tree (Tree *tree, int argc, char *argv[], int *code_error)
         tree->info.fp_name_expr = argv[1];
         tree->info.fp_name_tree = argv[2];
     }
+    else if (argc == 2)
+    {
+        tree->info.fp_name_expr = argv[1];
+        tree->info.fp_name_tree = FP_NAME_TREE;
+    }
     else
     {
         tree->info.fp_name_expr = FP_NAME_EXPR;
