@@ -1,2 +1,32 @@
-x
-b
+12
+
+0 main
+1 a
+2 b
+3 c
+4 INFINITY_ROOTS
+5 NO_ROOTS
+6 ONE_ROOT
+7 TWO_ROOTS
+8 x
+9 disc
+10 x_1
+11 x_2
+
+2
+
+1 -1
+0 3
+
+0
+1 2
+2 2
+3 2
+4 2
+5 2
+6 2
+7 2
+8 2
+9 2
+10 2
+11 2

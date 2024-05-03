@@ -1,3 +1,6 @@
+#ifndef DIFF_CPP
+#define DIFF_CPP
+
 #include "diff.h"
 
 static NODE *add_simplific (NODE *node, int *code_error);
@@ -11,27 +14,27 @@ static void get_val_point (TREE *tree, int *code_error);
 static void check_var_diff (TREE *tree, int *code_error);
 static void check_pow_taylor (TREE *tree, int *code_error);
 
-NODE *n_diff (TREE *tree, size_t n, char *var, int *code_error)
+NODE *n_diff(TREE *tree, size_t n, char *var, int *code_error)
 {
-    my_assert (tree != NULL, ERR_PTR);
-    
+    my_assert(tree != NULL, ERR_PTR);
+
     for (size_t i = 0; i < n; i++)
     {
-        tree->root = diff (tree->root, var, code_error);
-        ERR_RET (NULL);
+        tree->root = diff(tree->root, var, code_error);
+        ERR_RET(NULL);
 
-        tree->root = tree_simplific (tree->root, code_error);
-        ERR_RET (NULL);
+        tree->root = tree_simplific(tree->root, code_error);
+        ERR_RET(NULL);
 
-        set_parent (tree->root, NULL);
+        set_parent(tree->root, NULL);
     }
-    
+
     return tree->root;
 }
 
 NODE *diff (NODE *node, char *var, int *code_error)
 {
-    IS_NODE_PTR_NULL (NULL);
+    IS_NODE_PTR_NULL(NULL);
 
     switch (node->type)
     {
@@ -41,7 +44,7 @@ NODE *diff (NODE *node, char *var, int *code_error)
         }
         case (IDENT):
         {
-            if (strcmp (node->data.ident, var) == 0)
+            if (strcmp(node->data.ident, var) == 0)
             {
                 return NUM_(1, NULL);
             }
@@ -116,22 +119,22 @@ NODE *diff (NODE *node, char *var, int *code_error)
 
 NODE *tree_simplific (NODE *node, int *code_error)
 {
-    IS_NODE_PTR_NULL (NULL);
+    IS_NODE_PTR_NULL(NULL);
 
     if (node->type != OP)
     {
         return node;
     }
 
-    node->left  = tree_simplific (node->left, code_error);
-    node->right = tree_simplific (node->right, code_error);
+    node->left  = tree_simplific(node->left, code_error);
+    node->right = tree_simplific(node->right, code_error);
 
     if (node->type == OP)
     {
         if (L_TYPE == NUM && R_TYPE == NUM)
         {
-            ELEMENT value = eval_node (node->data.types_op, L_VALUE, R_VALUE, code_error);
-            node = NUM_ (value, node->parent);
+            ELEMENT value = eval_node(node->data.types_op, L_VALUE, R_VALUE, code_error);
+            node = NUM_(value, node->parent);
         }
         else
         {
@@ -139,46 +142,39 @@ NODE *tree_simplific (NODE *node, int *code_error)
             {
                 case (ADD):
                 {
-                    node = add_simplific (node, code_error);
-                    ERR_RET (NULL);
-                    
+                    node = add_simplific(node, code_error);
+                    ERR_RET(NULL);
+
                     break;
                 }
                 case (SUB):
                 {
-                    node = sub_simplific (node, code_error);
-                    ERR_RET (NULL);
+                    node = sub_simplific(node, code_error);
+                    ERR_RET(NULL);
 
                     break;
                 }
                 case (MUL):
                 {
-                    node = mul_simplific (node, code_error);
-                    ERR_RET (NULL);
+                    node = mul_simplific(node, code_error);
+                    ERR_RET(NULL);
 
                     break;
                 }
                 case (DIV):
                 {
-                    node = div_simplific (node, code_error);
-                    ERR_RET (NULL);
+                    node = div_simplific(node, code_error);
+                    ERR_RET(NULL);
 
                     break;
                 }
                 case (POW):
                 {
-                    node = pow_simplific (node, code_error);
-                    ERR_RET (NULL);
+                    node = pow_simplific(node, code_error);
+                    ERR_RET(NULL);
 
                     break;
                 }
-                case (OP_NO):
-                case (SIN):
-                case (COS):
-                case (SQRT):
-                case (LN):
-                case (OPEN_BRACKET):
-                case (CLOSE_BRACKET):
                 default:
                 {
                     break;
@@ -194,93 +190,93 @@ NODE *tree_simplific (NODE *node, int *code_error)
 
 NODE *add_simplific (NODE *node, int *code_error)
 {
-    my_assert (node != NULL, ERR_PTR);
+    my_assert(node != NULL, ERR_PTR);
 
-    IF_NUM (L_TYPE, {if (is_zero (L_VALUE)) {R_RE_HANGING;}})
-    IF_NUM (R_TYPE, {if (is_zero (R_VALUE)) {L_RE_HANGING;}})
+    IF_NUM(L_TYPE, {if (is_zero(L_VALUE)) {R_RE_HANGING;}})
+    IF_NUM(R_TYPE, {if (is_zero(R_VALUE)) {L_RE_HANGING;}})
 
     return node;
 }
 
 NODE *sub_simplific (NODE *node, int *code_error)
 {
-    my_assert (node != NULL, ERR_PTR);
+    my_assert(node != NULL, ERR_PTR);
 
-    IF_NUM (R_TYPE, {if (is_zero (R_VALUE)) {L_RE_HANGING;}})
+    IF_NUM(R_TYPE, {if (is_zero(R_VALUE)) {L_RE_HANGING;}})
 
     return node;
 }
 
 NODE *mul_simplific (NODE *node, int *code_error)
 {
-    my_assert (node != NULL, ERR_PTR);
+    my_assert(node != NULL, ERR_PTR);
 
-    IF_NUM (L_TYPE,
-            if (is_zero (L_VALUE))
-            {
-                L_RE_HANGING;
-            }
-            else if (is_one (L_VALUE))
-            {
-                R_RE_HANGING;
-            })
-    IF_NUM (R_TYPE,
-            if (is_zero (R_VALUE))
-            {
-                R_RE_HANGING;
-            }
-            else if (is_one (R_VALUE))
-            {
-                L_RE_HANGING;
-            })
+    IF_NUM(L_TYPE,
+           if (is_zero(L_VALUE))
+           {
+               L_RE_HANGING;
+           }
+           else if (is_one(L_VALUE))
+           {
+               R_RE_HANGING;
+           })
+    IF_NUM(R_TYPE,
+          if (is_zero(R_VALUE))
+          {
+              R_RE_HANGING;
+          }
+          else if (is_one(R_VALUE))
+          {
+              L_RE_HANGING;
+          })
     return node;
 }
 
 NODE *div_simplific (NODE *node, int *code_error)
 {
-    my_assert (node != NULL, ERR_PTR);
+    my_assert(node != NULL, ERR_PTR);
 
-    IF_NUM (L_TYPE,
-            if (is_zero (L_VALUE))
-            {
-                L_RE_HANGING;
-            })
-    IF_NUM (R_TYPE,
-            if (is_one (R_VALUE))
-            {
-                R_RE_HANGING;
-            })
+    IF_NUM(L_TYPE,
+           if (is_zero(L_VALUE))
+           {
+               L_RE_HANGING;
+           })
+    IF_NUM(R_TYPE,
+          if (is_one(R_VALUE))
+          {
+              R_RE_HANGING;
+          })
 
     return node;
 }
 
 NODE *pow_simplific (NODE *node, int *code_error)
 {
-    my_assert (node != NULL, ERR_PTR);
+    my_assert(node != NULL, ERR_PTR);
 
-    IF_NUM (L_TYPE,
-            if (is_zero (L_VALUE) || is_one (L_VALUE))
-            {
-                L_RE_HANGING;
-            })
-    IF_NUM (R_TYPE,
-            if (is_zero (R_VALUE))
-            {
-                R_VALUE = 1;
-                R_RE_HANGING;
-            }
-            else if (is_one (R_VALUE))
-            {
-                L_RE_HANGING;
-            })
+    IF_NUM(L_TYPE,
+           if (is_zero(L_VALUE) || is_one(L_VALUE))
+           {
+               L_RE_HANGING;
+           })
+    IF_NUM(R_TYPE,
+           if (is_zero(R_VALUE))
+           {
+               R_VALUE = 1;
+               R_RE_HANGING;
+           }
+           else if (is_one(R_VALUE))
+           {
+               L_RE_HANGING;
+           })
 
     return node;
 }
 
 NODE *hanging_tree (NODE *node, NODE *hanging_node, NODE *parent, int *code_error)
 {
-    my_assert (node != NULL, ERR_PTR);
-    my_assert (hanging_node != NULL, ERR_PTR);
+    my_assert(node != NULL, ERR_PTR);
+    my_assert(hanging_node != NULL, ERR_PTR);
 
     if (parent != NULL)
     {
@@ -297,24 +293,24 @@ NODE *hanging_tree (NODE *node, NODE *hanging_node, NODE *parent, int *code_erro
     hanging_node->parent = parent;
 
     if (hanging_node == node->left)
-    { 
-        delete_node (node->right);
+    {
+        delete_node(node->right);
     }
     else if (hanging_node == node->right)
     {
-        delete_node (node->left);
+        delete_node(node->left);
     }
 
-    free (node);
+    free(node);
 
-    ERR_RET (NULL);
+    ERR_RET(NULL);
 
     return hanging_node;
 }
 
 ELEMENT eval_tree (NODE *node, ELEMENT var_value, int *code_error)
 {
-    IS_NODE_PTR_NULL (ERR_NO);
+    IS_NODE_PTR_NULL(ERR_NO);
 
     switch (node->type)
     {
@@ -328,12 +324,11 @@ ELEMENT eval_tree (NODE *node, ELEMENT var_value, int *code_error)
         }
         case (OP):
         {
-            return eval_node (node->data.types_op, 
-                              eval_tree (node->left, var_value, code_error), 
-                              eval_tree (node->right, var_value, code_error), 
-                              code_error);
+            return eval_node(node->data.types_op,
+                             eval_tree(node->left, var_value, code_error),
+                             eval_tree(node->right, var_value, code_error),
+                             code_error);
         }
-        case (DEF_TYPE):
         default:
         {
             break;
@@ -351,21 +346,21 @@ ELEMENT eval_node (int op, ELEMENT first_value, ELEMENT second_value, int *code_
     {
         case (ADD):
         {
-            return DEF_EVAL (+);
+            return DEF_EVAL(+);
         }
         case (SUB):
         {
-            return DEF_EVAL (-);
+            return DEF_EVAL(-);
         }
         case (MUL):
         {
-            return DEF_EVAL (*);
+            return DEF_EVAL(*);
         }
         case (DIV):
         {
-            if (!is_zero (second_value))
+            if (!is_zero(second_value))
             {
-                return DEF_EVAL (/);
+                return DEF_EVAL(/);
             }
             else
             {
@@ -374,21 +369,21 @@ ELEMENT eval_node (int op, ELEMENT first_value, ELEMENT second_value, int *code_
         }
         case (POW):
         {
-            return pow (first_value, second_value);
+            return pow(first_value, second_value);
         }
         case (SIN):
         {
-            return sin (second_value);
+            return sin(second_value);
         }
         case (COS):
         {
-            return cos (second_value);
+            return cos(second_value);
         }
         case (SQRT):
         {
             if (second_value >= 0)
             {
-                return pow (second_value, 0.5);
+                return pow second_value, 0.5);
             }
             else
             {
@@ -399,7 +394,7 @@ ELEMENT eval_node (int op, ELEMENT first_value, ELEMENT second_value, int *code_
         {
             if (second_value > 0)
             {
-                return log (second_value);
+                return log(second_value);
             }
             else
             {
@@ -414,3 +409,5 @@ ELEMENT eval_node (int op, ELEMENT first_value, ELEMENT second_value, int *code_
 
     return ERR_NO;
 }
+
+#endif // DIFF_CPP

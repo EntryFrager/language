@@ -6,29 +6,33 @@ CFLAGS = -c -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-
 	-Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wno-missing-field-initializers \
 	-Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing   \
 	-Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
-	
-INCLUDES = tree.h error.h utils.h input.h
 
-SOURCES = main.cpp error.cpp tree.cpp utils.cpp input.cpp lexical_analysis.cpp parsing.cpp dump.cpp
+INCLUDES = ../tree/tree.h ../Include_file/error/error.h ../Include_file/utilities/utils.h inc/input.h
+
+SOURCES = main.cpp input.cpp lexical_analysis.cpp parsing.cpp ../tree/tree.cpp ../tree/dump.cpp ../Include_file/error/error.cpp ../Include_file/utilities/utils.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-EXECUTABLE = frontend
+EXECUTABLE = frontend.exe
 
-VPATH = ../include/
+VPATH = ./src/
 
 all: $(SOURCES) $(INCLUDES) $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
-	$(CC) $(OBJECTS) -o $@ 
+	$(CC) $(OBJECTS) -o $@
 
 .cpp.o: $(INCLUDES) $(SOURCES)
-	$(CC) $(CFLAGS) $< -o $@ 
+	$(CC) $(CFLAGS) $< -o $@
 
 .PHONY: clean
 
 clean:
 	rm -rf *.o frontend
+	rm -rf ../tree/*.o
+	rm -rf ../Include_file/error/*.o
+	rm -rf ../Include_file/utilities/*.o
 	rm -rf frontend.exe
-	rm -rf frontend.exe.log
-	rm -rf frontend.exe.log.dmp
+
+clean_debug:
+	rm -rf ../debug/

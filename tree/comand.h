@@ -48,15 +48,15 @@ DEF_CMD(LESS, "<")
 
 DEF_CMD(NOT, "!")
 
+DEF_CMD(PRINT, "print")
+
+DEF_CMD(INPUT, "input")
+
 DEF_CMD(BREAK, "break")
 
 DEF_CMD(CONTINUE, "continue")
 
 DEF_CMD(RETURN, "return")
-
-DEF_CMD(PRINT, "print")
-
-DEF_CMD(MY_INPUT, "input")
 
 DEF_CMD(OPEN_BRACKET, "(")
 
@@ -66,4 +66,8 @@ DEF_CMD(OPEN_BRACE, "{")
 
 DEF_CMD(CLOSE_BRACE, "}")
 
-DEF_CMD(OP_NO, "no key_word")
+DEF_CMD(COMMA, ",")
+
+DEF_CMD(FUNC, "def")
+
+DEF_CMD(OP_NO, "op_no")

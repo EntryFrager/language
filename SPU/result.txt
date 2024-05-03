@@ -1,3 +1,26 @@
 This is a program that implements the functions of the processor.
 Answer: 720.000000
 Расчёт окончен.
+
+int main()
+{
+    fibon(5);
+}
+
+int fibon(int a)
+{
+    if (a == 1)
+    {
+        return a;
+    }
+
+    ret = a + fibon(a - 1);
+
+    return ret;
+}
+
+
+static int pos_operativka = 0;
+
+1   2   3   4   5   6   7
+5   4   3   2   3
