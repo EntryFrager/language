@@ -1,86 +1,78 @@
-#include "read_tree.h"
+#ifndef READ_TREE_CPP
+#define READ_TREE_CPP
 
-static NODE *split_node     (TREE *tree, NODE *parent, int *code_error);
-static NODE *read_node      (TREE *tree, NODE *parent, int *code_error);
-static NODE *read_num       (TREE *tree, NODE *parent, int *code_error);
-static NODE *read_ident     (TREE *tree, NODE *parent, int *code_error);
-static NODE *read_op        (TREE *tree, NODE *parent, int *code_error);
-static void read_table_name (TREE *tree, int *code_error);
+#include "./read_tree.h"
 
-int read_tree (TREE *tree, int *code_error)
+static Node *split_node      (Tree *tree, Node *parent, int *code_error);
+static Node *read_node       (Tree *tree, Node *parent, int *code_error);
+static Node *read_num        (Tree *tree, Node *parent, int *code_error);
+static Node *read_ident      (Tree *tree, Node *parent, int *code_error);
+static Node *read_ident_func (Tree *tree, Node *parent, int *code_error);
+static Node *read_call_func  (Tree *tree, Node *parent, int *code_error);
+static Node *read_op         (Tree *tree, Node *parent, int *code_error);
+static Node *read_param      (Tree *tree, Node *parent, int *code_error);
+static void read_table_name  (Tree *tree, int *code_error);
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wswitch-enum"
+
+void read_tree (Tree *tree, int *code_error)
 {
-    my_assert (tree != NULL, ERR_PTR);
+    my_assert(tree != NULL, ERR_PTR);
 
-    tree->info.buf = get_str_file (tree->info.fp_expr, &tree->info.size_file, code_error);
-    ERR_RET (*code_error);
+    tree->info.buf = get_file_to_str(tree->info.fp_tree, &tree->info.size_file, code_error);
+    ERR_RET();
 
-    tree->root = split_node (tree, NULL, code_error);
-    ERR_RET (*code_error);
+    tree->root = split_node(tree, NULL, code_error);
+    ERR_RET();
 
-    tree->root = set_parent (tree->root, NULL);
-    ERR_RET (*code_error);
+    tree->root = set_parent(tree->root, NULL);
+    ERR_RET();
 
-    read_table_name (tree, code_error);
-    ERR_RET (*code_error);
+    read_table_name(tree, code_error);
+    ERR_RET();
 
-    assert_tree (tree, ERR_TREE);
-
-    return ERR_NO;
+    assert_tree(tree);
 }
 
-NODE *split_node (TREE *tree, NODE *parent, int *code_error)
+Node *split_node (Tree *tree, Node *parent, int *code_error)
 {
-    my_assert (tree != NULL, ERR_PTR);
+    my_assert(tree != NULL, ERR_PTR);
 
-    while (isspace (*tree->info.buf))
+    while (isspace(*tree->info.buf) != 0 || *tree->info.buf == '(' || *tree->info.buf == ')')
     {
         tree->info.buf++;
     }
 
-    if (*tree->info.buf == ')')
+    if (strncmp(tree->info.buf, "_", 1) == 0)
     {
         tree->info.buf++;
         return NULL;
     }
-    else if (strncmp (tree->info.buf, "nil", 3) == 0)
-    {
-        tree->info.buf += 3;
-        return NULL;
-    }
 
-    while ((isdigit (*tree->info.buf) == 0 && isalpha (*tree->info.buf) == 0))
-    {
-        tree->info.buf++;
-    }
+    Node *node = read_node(tree, parent, code_error);
+    ERR_RET(NULL);
 
-    NODE *node = read_node (tree, parent, code_error);
-    ERR_RET (NULL);
+    node->left = split_node(tree, node, code_error);
+    ERR_RET(NULL);
 
-    node->left = split_node (tree, node, code_error);
-    ERR_RET (NULL);
-
-    while (*tree->info.buf == ')' || isspace (*tree->info.buf) != 0)
-    {
-        tree->info.buf++;
-    }
-
-    node->right = split_node (tree, node, code_error);
-    ERR_RET (NULL);
+    node->right = split_node(tree, node, code_error);
+    ERR_RET(NULL);
 
     return node;
 }
 
-NODE *read_node (TREE *tree, NODE *parent, int *code_error)
+Node *read_node (Tree *tree, Node *parent, int *code_error)
 {
-    my_assert (tree != NULL, ERR_PTR);
+    my_assert(tree != NULL, ERR_PTR);
 
     types type_node = DEF_TYPE;
-    size_t n_read = 0;
+    int   n_read    = 0;
 
-    sscanf (tree->info.buf, "%d%n", &type_node, &n_read);
+    sscanf(tree->info.buf, "%d%n", &type_node, &n_read);
     tree->info.buf += n_read;
 
-    while (isspace (*tree->info.buf))
+    while (isdigit(*tree->info.buf) == 0)
     {
         tree->info.buf++;
     }
@@ -89,15 +81,27 @@ NODE *read_node (TREE *tree, NODE *parent, int *code_error)
     {
         case (NUM):
         {
-            return read_num (tree, parent, code_error);
+            return read_num(tree, parent, code_error);
         }
         case (IDENT):
         {
-            return read_ident (tree, parent, code_error);
+            return read_ident(tree, parent, code_error);
+        }
+        case (IDENT_FUNC):
+        {
+            return read_ident_func(tree, parent, code_error);
+        }
+        case (CALL_FUNC):
+        {
+            return read_call_func(tree, parent, code_error);
         }
         case (OP):
         {
-            return read_op (tree, parent, code_error);
+            return read_op(tree, parent, code_error);
+        }
+        case (PARAM):
+        {
+            return read_param(tree, parent, code_error);
         }
         default:
         {
@@ -108,75 +112,149 @@ NODE *read_node (TREE *tree, NODE *parent, int *code_error)
     return NULL;
 }
 
-NODE *read_num (TREE *tree, NODE *parent, int *code_error)
+Node *read_num (Tree *tree, Node *parent, int *code_error)
 {
-    my_assert (tree != NULL, ERR_PTR);
+    my_assert(tree != NULL, ERR_PTR);
 
     double value = 0;
-    size_t n_read= 0;
+    int n_read   = 0;
 
-    sscanf (tree->info.buf, "%lf%n", &value, &n_read);
+    sscanf(tree->info.buf, "%lf%n", &value, &n_read);
     tree->info.buf += n_read;
 
-    return NUM_ (value, parent);
+    return NUM_(value, parent);
 }
 
-NODE *read_ident (TREE *tree, NODE *parent, int *code_error)
+Node *read_ident (Tree *tree, Node *parent, int *code_error)
 {
-    my_assert (tree != NULL, ERR_PTR);
+    my_assert(tree != NULL, ERR_PTR);
 
-    char *ident = read_ident (&tree->info.buf, code_error);
-    ERR_RET (NULL);
+    int ident  = 0;
+    int n_read = 0;
 
-    return IDENT_ (ident, parent);
-}
-
-NODE *read_op (TREE *tree, NODE *parent, int *code_error)
-{
-    my_assert (tree != NULL, ERR_PTR);
-
-    op_comand op = OP_NO;
-    size_t n_read = 0;
-
-    sscanf (tree->info.buf, "%d%n", &op, &n_read);
+    sscanf(tree->info.buf, "%d%n", &ident, &n_read);
     tree->info.buf += n_read;
 
-    return OP_ (op, parent);
+    return IDENT_(ident, parent);
 }
 
-void read_table_name (TREE *tree, int *code_error)
+Node *read_ident_func (Tree *tree, Node *parent, int *code_error)
 {
-    my_assert (tree != NULL, ERR_PTR);
+    my_assert(tree != NULL, ERR_PTR);
 
-    tree->info.fp_table_name = fopen (tree->info.fp_name_table_name, "a+");
-    my_assert (tree->info.fp_table_name != NULL, ERR_FOPEN);
+    int ident_func = 0;
+    int n_read     = 0;
+
+    sscanf(tree->info.buf, "%d%n", &ident_func, &n_read);
+    tree->info.buf += n_read;
+
+    return IDENT_FUNC_(ident_func, parent);
+}
+
+Node *read_call_func (Tree *tree, Node *parent, int *code_error)
+{
+    my_assert(tree != NULL, ERR_PTR);
+
+    int call_func = 0;
+    int n_read    = 0;
+
+    sscanf(tree->info.buf, "%d%n", &call_func, &n_read);
+    tree->info.buf += n_read;
+
+    return CALL_FUNC_(call_func, parent);
+}
+
+Node *read_op (Tree *tree, Node *parent, int *code_error)
+{
+    my_assert(tree != NULL, ERR_PTR);
+
+    op_command op = OP_NO;
+    int n_read    = 0;
+
+    sscanf(tree->info.buf, "%d%n", &op, &n_read);
+    tree->info.buf += n_read;
+
+    return OP_(op, parent);
+}
+
+Node *read_param (Tree *tree, Node *parent, int *code_error)
+{
+    my_assert(tree != NULL, ERR_PTR);
+
+    int ident  = 0;
+    int n_read = 0;
+
+    sscanf(tree->info.buf, "%d%n", &ident, &n_read);
+    tree->info.buf += n_read;
+
+    return PARAM_(ident, parent);
+}
+
+void read_table_name (Tree *tree, int *code_error)
+{
+    my_assert(tree != NULL, ERR_PTR);
+
+    fopen_init_(tree->info.fp_table_name, tree->info.fp_name_table_name, "a+");
 
     size_t size_file = 0;
-    char *table_name = get_str_file (tree->info.fp_table_name, &size_file, code_error);
-    ERR_RET ();
+    char *table_name_str = get_file_to_str(tree->info.fp_table_name, &size_file, code_error);
+    ERR_RET();
 
-    tree->n_ident = get_n_lines (table_name, code_error);
-    ERR_RET ();
+    int n_read = 0;
 
-    tree->table_name = (TABLE_NAME *) calloc (tree->n_ident, sizeof (TABLE_NAME));
-    my_assert (tree->table_name != NULL, ERR_MEM);
+    sscanf(table_name_str, "%ld%n", &tree->idents.n_ident, &n_read);
+    table_name_str += n_read + 2;
 
-    for (size_t i = 0; i < tree->n_ident; i++)
+    calloc_init_(tree->idents.ident, Ident *, tree->idents.n_ident, sizeof(Ident));
+
+    for (int i = 0; i < tree->idents.n_ident; i++)
     {
-        tree->table_name[i].ident = table_name;
+        tree->idents.ident[i].name_var = table_name_str;
+        tree->idents.ident[i].n_var = i;
 
-        while (isalpha (*table_name))
+        while (isalpha(*table_name_str) || *table_name_str == '_' || isdigit(*table_name_str))
         {
-            table_name++;
+            table_name_str++;
         }
 
-        *table_name = '\0';
+        *table_name_str = '\0';
 
-        while (!isalpha (*table_name))
+        while (!isalpha(*table_name_str) && *table_name_str != '_' && !isdigit(*table_name_str))
         {
-            table_name++;
+            table_name_str++;
         }
     }
 
-    FCLOSE_ (tree->info.fp_table_name);
+    sscanf(table_name_str, "%ld%n", &tree->table_name.n_scope, &n_read);
+    table_name_str += n_read;
+
+    calloc_init_(tree->table_name.scope_table_name, ScopeTableName **, tree->table_name.n_scope, sizeof(ScopeTableName *));
+
+    int code_table_name = 0;
+    size_t n_elem       = 0;
+
+    for (size_t i = 0; i < tree->table_name.n_scope; i++)
+    {
+        sscanf(table_name_str, "%ld %d%n", &n_elem, &code_table_name, &n_read);
+        table_name_str += n_read;
+
+        add_table_name(&tree->table_name, code_table_name, code_error);
+        calloc_init_(tree->table_name.scope_table_name[i]->name, Name *, n_elem, sizeof(Name));
+
+        for (size_t j = 0; j < n_elem; j++)
+        {
+            sscanf(table_name_str, "%d %d%n", &tree->table_name.scope_table_name[i]->name[j].n_var,
+                                              &tree->table_name.scope_table_name[i]->name[j].type,
+                                              &n_read);
+            table_name_str += n_read;
+        }
+    }
+
+    tree->idents.n_funcs = tree->table_name.n_scope - 1;
+
+    fclose_(tree->info.fp_table_name);
 }
+
+#pragma GCC diagnostic pop
+
+#endif // READ_TREE_CPP

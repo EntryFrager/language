@@ -16,7 +16,9 @@ void input_expr (Tree *tree, int *code_error)
     get_token(tree, code_error);
     ERR_RET();
 
-    tree->root = get_code(tree->token, code_error);
+    init_table_name(&tree->table_name, tree->idents.n_funcs + 1, code_error);
+
+    tree->root = get_code(tree, code_error);
     ERR_RET();
 
     tree->root = set_parent(tree->root, NULL);

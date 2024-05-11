@@ -7,7 +7,9 @@ static const char *FP_NAME_EXPR       = "../expr.txt";
 static const char *FP_NAME_TREE       = "../tree.txt";
 static const char *FP_NAME_TABLE_NAME = "../table_name.txt";
 
-static Node *calloc_node (Node *left, Node *right, Node *parent, int *code_error);
+static Node           *calloc_node              (Node *left, Node *right, Node *parent, int *code_error);
+static ScopeTableName *init_scope_table_name    (int code_table_name, int *code_error);
+static void            realloc_scope_table_name (ScopeTableName *scope_table_name, size_t new_size, int *code_error);
 
 int create_tree (Tree *tree, int argc, char *argv[], int *code_error)
 {
@@ -37,7 +39,7 @@ int create_tree (Tree *tree, int argc, char *argv[], int *code_error)
     tree->info.fp_name_table_name = FP_NAME_TABLE_NAME;
 
     fopen_init_(tree->info.fp_expr, tree->info.fp_name_expr, "r + b");
-    fopen_init_(tree->info.fp_tree, tree->info.fp_name_tree, "w + b");
+    fopen_init_(tree->info.fp_tree, tree->info.fp_name_tree, "r + b");
 
     return ERR_NO;
 }
@@ -64,13 +66,13 @@ Node *create_node_num (element value, Node *left, Node *right, Node *parent, int
     return node;
 }
 
-Node *create_node_ident (int ident, Node *left, Node *right, Node *parent, int *code_error)
+Node *create_node_ident (types type, int ident, Node *left, Node *right, Node *parent, int *code_error)
 {
     Node *node = calloc_node(left, right, parent, code_error);
     ERR_RET(NULL);
 
     node->data.ident = ident;
-    node->type       = IDENT;
+    node->type       = type;
 
     return node;
 }
@@ -193,19 +195,11 @@ void print_tree (Node *node, FILE *stream, int *code_error)
             break;
         }
         case (IDENT):
-        {
-            fprintf(stream, "%d %d ", node->type, node->data.ident);
-            break;
-        }
         case (IDENT_FUNC):
-        {
-            fprintf(stream, "%d %d ", node->type, node->data.ident);
-            break;
-        }
         case (CALL_FUNC):
+        case (PARAM):
         {
             fprintf(stream, "%d %d ", node->type, node->data.ident);
-            break;
         }
         default:
         {
@@ -224,46 +218,96 @@ void print_tree (Node *node, FILE *stream, int *code_error)
 
 #pragma GCC diagnostic pop
 
-#define print(str, ...) fprintf(tree->info.fp_table_name, str, __VA_ARGS__);
+void init_table_name (TableName *table_name, size_t n_scope, int *code_error)
+{
+    calloc_init_(table_name->scope_table_name, ScopeTableName **, n_scope, n_scope * sizeof(ScopeTableName *));
+
+    table_name->n_scope   = n_scope;
+    table_name->cur_scope = 0;
+
+    for (size_t i = 0; i < n_scope; i++)
+    {
+        table_name->scope_table_name[i] = NULL;
+    }
+}
+
+ScopeTableName *init_scope_table_name (int code_table_name, int *code_error)
+{
+    calloc_(scope_table_name, ScopeTableName *, 1, sizeof(ScopeTableName));
+    calloc_init_(scope_table_name->name, Name *, 1, sizeof(Name));
+
+    scope_table_name->code_table_name = code_table_name;
+
+    scope_table_name->n_elem   = 1;
+    scope_table_name->cur_elem = 0;
+
+    return scope_table_name;
+}
+
+void add_table_name (TableName *table_name, int code_table_name, int *code_error)
+{
+    my_assert(table_name != NULL, ERR_PTR);
+
+    table_name->scope_table_name[table_name->cur_scope++] = init_scope_table_name(code_table_name, code_error);
+}
+
+void add_table_name_elem (ScopeTableName *scope_table_name, int n_var, types type_var, int *code_error)
+{
+    my_assert(scope_table_name != NULL, ERR_PTR);
+
+    for (size_t i = 0; i < scope_table_name->cur_elem; i++)
+    {
+        if (n_var == scope_table_name->name[i].n_var)
+        {
+            return;
+        }
+    }
+
+    if (scope_table_name->cur_elem == scope_table_name->n_elem)
+    {
+        realloc_scope_table_name(scope_table_name, scope_table_name->n_elem * 2, code_error);
+    }
+
+    scope_table_name->name[scope_table_name->cur_elem].n_var = n_var;
+    scope_table_name->name[scope_table_name->cur_elem].type  = type_var;
+    scope_table_name->cur_elem++;
+}
+
+void realloc_scope_table_name (ScopeTableName *scope_table_name, size_t new_size, int *code_error)
+{
+    my_assert(scope_table_name != NULL, ERR_PTR);
+
+    scope_table_name->n_elem = new_size;
+
+    realloc_(scope_table_name->name, Name *, new_size * sizeof(Name));
+}
+
+#define print_name_table(str, ...) fprintf(tree->info.fp_table_name, str, __VA_ARGS__);
 
 void print_table_name (Tree *tree, int *code_error)
 {
     my_assert(tree != NULL, ERR_PTR);
 
-    size_t n_ident = tree->table_name.n_ident;
-
     fopen_init_(tree->info.fp_table_name, tree->info.fp_name_table_name, "w+");
 
-    print("%ld\n\n", n_ident);
+    print_name_table("%ld\n\n", tree->idents.n_ident);
 
-    for (size_t i = 0; i < n_ident; i++)
+    for (size_t i = 0; i < tree->idents.n_ident; i++)
     {
-        print("%d %s\n", tree->table_name.pairs_num_ident[i].number, tree->table_name.pairs_num_ident[i].ident);
+        print_name_table("%s\n", tree->idents.ident[i].name_var);
     }
 
-    print("\n%ld\n\n%ld -1\n", tree->table_name.n_ident_func + 1, tree->table_name.n_ident_func);
+    print_name_table("\n%ld\n", tree->table_name.n_scope);
 
-    for (size_t i = 0; i < n_ident; i++)
+    for (size_t cur_scope = 0; cur_scope < tree->table_name.n_scope; cur_scope++)
     {
-        if (tree->table_name.pairs_num_ident[i].type == IDENT_FUNC)
-        {
-            print("%d %d\n", tree->table_name.pairs_num_ident[i].number, tree->table_name.pairs_num_ident[i].type);
-        }
-    }
+        print_name_table("\n%ld %d\n", tree->table_name.scope_table_name[cur_scope]->cur_elem,
+                                       tree->table_name.scope_table_name[cur_scope]->code_table_name);
 
-    int id_scope = 0;
-
-    for (size_t i = 0; i < n_ident; i++)
-    {
-        if (tree->table_name.pairs_num_ident[i].type == IDENT_FUNC)
+        for (size_t cur_name = 0; cur_name < tree->table_name.scope_table_name[cur_scope]->cur_elem; cur_name++)
         {
-            print("\n%d\n", id_scope);
-
-            id_scope++;
-        }
-        else
-        {
-            print("%d %d\n", tree->table_name.pairs_num_ident[i].number, tree->table_name.pairs_num_ident[i].type);
+            print_name_table("%d %d\n", tree->table_name.scope_table_name[cur_scope]->name[cur_name].n_var,
+                                        tree->table_name.scope_table_name[cur_scope]->name[cur_name].type);
         }
     }
 
@@ -290,14 +334,26 @@ int destroy_tree (Tree *tree, int *code_error)
 
     free(tree->token);
     free(tree->info.buf);
-    free(tree->table_name.pairs_num_ident);
+    free(tree->idents.ident);
 
-    tree->token                      = NULL;
-    tree->info.buf                   = NULL;
-    tree->table_name.pairs_num_ident = NULL;
-    tree->table_name.n_ident         = 0;
-    tree->table_name.n_ident_func    = 0;
-    tree->n_token                    = 0;
+    for (size_t i = 0; i < tree->table_name.n_scope; i++)
+    {
+        free(tree->table_name.scope_table_name[i]->name);
+        free(tree->table_name.scope_table_name[i]);
+    }
+
+    free(tree->table_name.scope_table_name);
+
+    tree->token                       = NULL;
+    tree->info.buf                    = NULL;
+    tree->idents.ident                = NULL;
+    tree->table_name.scope_table_name = NULL;
+
+    tree->n_token              = 0;
+    tree->idents.n_funcs       = 0;
+    tree->idents.n_ident       = 0;
+    tree->table_name.cur_scope = 0;
+    tree->table_name.n_scope   = 0;
 
     return ERR_NO;
 }

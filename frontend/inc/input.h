@@ -10,8 +10,8 @@
 
 void input_expr (Tree *tree, int *code_error);
 
-void get_token (Tree *tree, int *code_error);
+void get_token  (Tree *tree, int *code_error);
 
-Node *get_code (Token *token, int *code_error);
+Node *get_code  (Tree *tree, int *code_error);
 
 #endif //INPUT_H

@@ -24,6 +24,8 @@ DEF_CMD(LN, "ln")
 
 DEF_CMD(IF, "if")
 
+DEF_CMD(ELSE_IF, "elseif")
+
 DEF_CMD(ELSE, "else")
 
 DEF_CMD(WHILE, "while")
@@ -55,6 +57,8 @@ DEF_CMD(INPUT, "input")
 DEF_CMD(BREAK, "break")
 
 DEF_CMD(CONTINUE, "continue")
+
+DEF_CMD(ABORT, "abort")
 
 DEF_CMD(RETURN, "return")
 

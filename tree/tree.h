@@ -10,12 +10,13 @@
 #include "../Include_file/error/error.h"
 #include "../Include_file/utilities/utils.h"
 
-#define BLACK_COLOR "\"#000000\""
-#define WHITE_COLOR "\"#FFFFFF\""
-#define DARK_GREEN_COLOR "\"#006400\""
-#define BLUE_COLOR "\"#00BFFF\""
-#define PURPLE_COLOR "\"#8B00FF\""
-#define RED_COLOR "\"#ff0000\""
+#define BLACK_COLOR       "\"#000000\""
+#define WHITE_COLOR       "\"#FFFFFF\""
+#define MAGENTA           "\"#FF00FF\""
+#define DARK_GREEN_COLOR  "\"#006400\""
+#define BLUE_COLOR        "\"#00BFFF\""
+#define PURPLE_COLOR      "\"#8B00FF\""
+#define RED_COLOR         "\"#ff0000\""
 #define LIGHT_GREEN_COLOR "\"#ccff99\""
 #define BACK_GROUND_COLOR "\"#696969\""
 
@@ -57,31 +58,33 @@ enum op_command {
     SQRT          = 10,
     LN            = 11,
     IF            = 12,
-    ELSE          = 13,
-    WHILE         = 14,
-    AND           = 15,
-    OR            = 16,
-    AE            = 17,
-    BE            = 18,
-    EQUAL         = 19,
-    NE            = 20,
-    ASSIG         = 21,
-    ABOVE         = 22,
-    LESS          = 23,
-    NOT           = 24,
-    PRINT         = 25,
-    INPUT         = 26,
-    BREAK         = 27,
-    CONTINUE      = 28,
-    RETURN        = 29,
-    OPEN_BRACKET  = 30,
-    CLOSE_BRACKET = 31,
-    OPEN_BRACE    = 32,
-    CLOSE_BRACE   = 33,
-    COMMA         = 34,
-    FUNC          = 35,
+    ELSE_IF       = 13,
+    ELSE          = 14,
+    WHILE         = 15,
+    AND           = 16,
+    OR            = 17,
+    AE            = 18,
+    BE            = 19,
+    EQUAL         = 20,
+    NE            = 21,
+    ASSIG         = 22,
+    ABOVE         = 23,
+    LESS          = 24,
+    NOT           = 25,
+    PRINT         = 26,
+    INPUT         = 27,
+    BREAK         = 28,
+    CONTINUE      = 29,
+    ABORT         = 30,
+    RETURN        = 31,
+    OPEN_BRACKET  = 32,
+    CLOSE_BRACKET = 33,
+    OPEN_BRACE    = 34,
+    CLOSE_BRACE   = 35,
+    COMMA         = 36,
+    FUNC          = 37,
 
-    OP_NO         = 36
+    OP_NO         = 38
 };
 
 enum types {
@@ -90,6 +93,7 @@ enum types {
     IDENT,
     IDENT_FUNC,
     CALL_FUNC,
+    PARAM,
     OP
 };
 
@@ -97,6 +101,8 @@ const bool LEFT  = false;
 const bool RIGHT = true;
 
 typedef double element;
+
+const int func_scope_table_name = -1;
 
 union Data {
     element value;
@@ -110,36 +116,55 @@ typedef struct Node {
     Node *parent = NULL;
 
     types type = DEF_TYPE;
-    Data data = {};
+    Data  data = {};
 } Node;
 
 typedef struct Token {
     types type = DEF_TYPE;
-    Data data  = {};
+    Data  data = {};
 } Token;
 
 typedef struct {
-    char *ident  = NULL;
-    int   number = 0;
-    types type   = DEF_TYPE;
-} PairsNumIdent;
+    int   n_var = 0;
+    types type  = DEF_TYPE;
+} Name;
 
 typedef struct {
-    size_t n_ident      = 0;
-    size_t n_ident_func = 0;
+    size_t n_elem   = 0;
+    size_t cur_elem = 0;
 
-    PairsNumIdent *pairs_num_ident = NULL;
+    int code_table_name = 0;
+
+    Name *name = NULL;
+} ScopeTableName;
+
+typedef struct {
+    size_t n_scope   = 0;
+    size_t cur_scope = 0;
+
+    ScopeTableName **scope_table_name = NULL;
 } TableName;
 
 typedef struct {
+    char *name_var = NULL;
+    int   n_var    = 0;
+} Ident;
+
+typedef struct {
+    size_t n_ident = 0;
+    size_t n_funcs = 0;
+    Ident *ident   = NULL;
+} Identificators;
+
+typedef struct {
     const char *fp_name_expr       = NULL;
-    FILE *fp_expr                  = NULL;
+    FILE       *fp_expr            = NULL;
 
     const char *fp_name_tree       = NULL;
-    FILE *fp_tree                  = NULL;
+    FILE       *fp_tree            = NULL;
 
     const char *fp_name_table_name = NULL;
-    FILE *fp_table_name            = NULL;
+    FILE       *fp_table_name      = NULL;
 
     size_t size_file = 0;
 
@@ -154,8 +179,9 @@ typedef struct {
 
     bool is_init = false;
 
-    Info info = {};
-    TableName table_name = {};
+    Info           info         = {};
+    Identificators idents       = {};
+    TableName      table_name   = {};
 } Tree;
 
 int create_tree (Tree *tree, int argc, char *argv[], int *code_error);
@@ -164,7 +190,7 @@ Node *create_node_num (element value, Node *left, Node *right, Node *parent, int
 
 Node *create_node_op (op_command types_op, Node *left, Node *right, Node *parent, int *code_error);
 
-Node *create_node_ident (int ident, Node *left, Node *right, Node *parent, int *code_error);
+Node *create_node_ident (types type, int ident, Node *left, Node *right, Node *parent, int *code_error);
 
 Node *create_node (types type, Node *left, Node *right, Node *parent, int *code_error);
 
@@ -175,6 +201,12 @@ int delete_node (Node *node);
 Node *copy_tree (Node *node, Node *parent, int *code_error);
 
 void print_tree (Node *node, FILE *stream, int *code_error);
+
+void init_table_name (TableName *table_name, size_t n_scope, int *code_error);
+
+void add_table_name (TableName *table_name, int code_table_name, int *code_error);
+
+void add_table_name_elem (ScopeTableName *scope_table_name, int n_var, types type_var, int *code_error);
 
 void print_table_name (Tree *tree, int *code_error);
 

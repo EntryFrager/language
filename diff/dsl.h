@@ -5,9 +5,12 @@
 
 #define IF_NUM(node_type, expr)      if (node_type == NUM) {expr; return node;}
 
-#define NUM_(value, parent)   create_node_num   (value,    NULL, NULL, parent, code_error)
-#define IDENT_(ident, parent) create_node_ident (ident,  NULL, NULL, parent, code_error)
-#define OP_(types_op, parent) create_node_op    (types_op, NULL, NULL, parent, code_error)
+#define NUM_(value, parent)        create_node_num        (            value,    NULL, NULL, parent, code_error)
+#define IDENT_(ident, parent)      create_node_ident      (IDENT,      ident,    NULL, NULL, parent, code_error)
+#define OP_(types_op, parent)      create_node_op         (            types_op, NULL, NULL, parent, code_error)
+#define CALL_FUNC_(ident, parent)  create_node_ident      (CALL_FUNC,  ident,    NULL, NULL, parent, code_error)
+#define IDENT_FUNC_(ident, parent) create_node_ident      (IDENT_FUNC, ident,    NULL, NULL, parent, code_error)
+#define PARAM_(ident, parent)      create_node_ident      (PARAM,      ident,    NULL, NULL, parent, code_error)
 
 #define is_zero(value)  (compare(value, 0) == 0)
 #define is_one(value)   (compare(value, 1) == 0)
@@ -17,10 +20,10 @@
 #define MUL_(node_1, node_2)  create_node_op(MUL,  node_1,        node_2, NULL, code_error)
 #define DIV_(node_1, node_2)  create_node_op(DIV,  node_1,        node_2, NULL, code_error)
 #define POW_(node_1, deg)     create_node_op(POW,  node_1,        deg,    NULL, code_error)
-#define SIN_(node)            create_node_op(SIN,  NUM_(1, NULL), node,   NULL, code_error)
-#define COS_(node)            create_node_op(COS,  NUM_(1, NULL), node,   NULL, code_error)
-#define SQRT_(node)           create_node_op(SQRT, NUM_(1, NULL), node,   NULL, code_error)
-#define LN_(node)             create_node_op(LN,   NUM_(1, NULL), node,   NULL, code_error)
+#define SIN_(node)            create_node_op(SIN,  node,          NULL,   NULL, code_error)
+#define COS_(node)            create_node_op(COS,  node,          NULL,   NULL, code_error)
+#define SQRT_(node)           create_node_op(SQRT, node,          NULL,   NULL, code_error)
+#define LN_(node)             create_node_op(LN,   node,          NULL,   NULL, code_error)
 #define AND_(node_1, node_2)  create_node_op(AND,  node_1,        node_2, NULL, code_error)
 #define OR_(node_1, node_2)   create_node_op(OR,   node_1,        node_2, NULL, code_error)
 

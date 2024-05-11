@@ -1,22 +1,60 @@
-6
+16
 
-0 main
-1 a
-2 NO_FACT
-3 result
-4 fact
-5 b
+main
+a
+b
+c
+solve_dispetcher
+solve_linear
+solve_square
+NO_ROOTS
+ONE_ROOTS
+INFINITY_ROOTS
+x_0
+TWO_ROOTS
+x_1
+x_2
+disc
+disc_sqrt
 
-3
+5
 
-2 -1
+4 -1
 0 3
 4 3
+5 3
+6 3
 
-0
+4 0
 1 2
 2 2
 3 2
+4 4
 
-1
-5 2
+5 4
+1 2
+2 2
+3 2
+5 4
+6 4
+
+6 5
+1 2
+2 2
+7 2
+8 2
+9 2
+10 2
+
+11 6
+1 2
+2 2
+3 2
+7 2
+8 2
+11 2
+12 2
+13 2
+14 2
+15 2
+10 2

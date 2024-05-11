@@ -3,10 +3,10 @@
 
 #include "../inc/input.h"
 
-static size_t    get_n_tokens         (char *str, size_t *n_ident, int *code_error);
-static void      token_analysis       (Token *token, size_t n_token, TableName *table_name, char *str, int *code_error);
-static int       table_name_add_ident (TableName *table_name, char *ident, int *cur_ident, types type, int *code_error);
-static op_command is_key_word         (char **str, int *code_error);
+static size_t     get_n_tokens         (char *str, size_t *n_ident, int *code_error);
+static void       token_analysis       (Token *token, size_t n_token, Identificators *idents, char *str, int *code_error);
+static int        table_name_add_ident (Identificators *idents, char *name_var, int *cur_ident, int *code_error);
+static op_command is_key_word          (char **str, int *code_error);
 
 void get_token (Tree *tree, int *code_error)
 {
@@ -14,17 +14,15 @@ void get_token (Tree *tree, int *code_error)
 
     char *str = tree->info.buf;
 
-    tree->n_token = get_n_tokens(str, &tree->table_name.n_ident, code_error);
+    tree->n_token = get_n_tokens(str, &tree->idents.n_ident, code_error);
     ERR_RET();
 
     calloc_init_(tree->token, Token *, tree->n_token + 1, sizeof(Token));
 
-    calloc_init_(tree->table_name.pairs_num_ident, PairsNumIdent *, tree->table_name.n_ident, sizeof(PairsNumIdent));
+    calloc_init_(tree->idents.ident, Ident *, tree->idents.n_ident, sizeof(Ident));
 
-    token_analysis(tree->token, tree->n_token, &tree->table_name, str, code_error);
+    token_analysis(tree->token, tree->n_token, &tree->idents, str, code_error);
     ERR_RET();
-
-    realloc_(tree->table_name.pairs_num_ident, PairsNumIdent *, tree->table_name.n_ident * sizeof(PairsNumIdent));
 }
 
 size_t get_n_tokens (char *str, size_t *n_ident, int *code_error)
@@ -58,11 +56,11 @@ size_t get_n_tokens (char *str, size_t *n_ident, int *code_error)
     return n_tokens;
 }
 
-void token_analysis (Token *token, size_t n_token, TableName *table_name, char *str, int *code_error)
+void token_analysis (Token *token, size_t n_token, Identificators *idents, char *str, int *code_error)
 {
-    my_assert(token      != NULL, ERR_PTR);
-    my_assert(str        != NULL, ERR_PTR);
-    my_assert(table_name != NULL, ERR_PTR);
+    my_assert(idents != NULL, ERR_PTR);
+    my_assert(token  != NULL, ERR_PTR);
+    my_assert(str    != NULL, ERR_PTR);
 
     op_command op = OP_NO;
 
@@ -79,7 +77,7 @@ void token_analysis (Token *token, size_t n_token, TableName *table_name, char *
             token[pos].type = OP;
             token[pos].data.types_op = op;
 
-            if (token[pos].type == OP && token[pos].data.types_op == FUNC)
+            if (op == FUNC)
             {
                 is_func = true;
             }
@@ -95,18 +93,18 @@ void token_analysis (Token *token, size_t n_token, TableName *table_name, char *
         }
         else if (isalpha(*str) || *str == '_')
         {
-            char *ident = read_ident(&str, code_error);
+            char *name_var = read_ident(&str, code_error);
             ERR_RET();
 
             if (is_func)
             {
                 token[pos].type = IDENT_FUNC;
-                token[pos].data.ident = table_name_add_ident(table_name, ident, &cur_ident, IDENT_FUNC, code_error);
+                token[pos].data.ident = table_name_add_ident(idents, name_var, &cur_ident, code_error);
                 ERR_RET();
 
-                table_name->n_ident_func++;
+                idents->n_funcs++;
 
-                if (strcmp("main", ident) == 0)
+                if (strcmp("main", name_var) == 0)
                 {
                     main_err += 1;
                 }
@@ -116,13 +114,13 @@ void token_analysis (Token *token, size_t n_token, TableName *table_name, char *
             else if (*str == '(')
             {
                 token[pos].type = CALL_FUNC;
-                token[pos].data.ident = table_name_add_ident(table_name, ident, &cur_ident, IDENT_FUNC, code_error);
+                token[pos].data.ident = table_name_add_ident(idents, name_var, &cur_ident, code_error);
                 ERR_RET();
             }
             else
             {
                 token[pos].type = IDENT;
-                token[pos].data.ident = table_name_add_ident(table_name, ident, &cur_ident, IDENT, code_error);
+                token[pos].data.ident = table_name_add_ident(idents, name_var, &cur_ident, code_error);
                 ERR_RET();
             }
         }
@@ -134,26 +132,25 @@ void token_analysis (Token *token, size_t n_token, TableName *table_name, char *
 
     token[n_token].type = DEF_TYPE;
 
-    table_name->n_ident = cur_ident;
+    idents->n_ident = cur_ident;
 }
 
-int table_name_add_ident (TableName *table_name, char *ident, int *cur_ident, types type, int *code_error)
+int table_name_add_ident (Identificators *idents, char *name_var, int *cur_ident, int *code_error)
 {
-    my_assert(table_name != NULL, ERR_PTR);
-    my_assert(ident      != NULL, ERR_PTR);
-    my_assert(cur_ident  != NULL, ERR_PTR);
+    my_assert(idents    != NULL, ERR_PTR);
+    my_assert(name_var  != NULL, ERR_PTR);
+    my_assert(cur_ident != NULL, ERR_PTR);
 
     for (int i = 0; i < *cur_ident; i++)
     {
-        if (strcmp(table_name->pairs_num_ident[i].ident, ident) == 0)
+        if (strcmp(idents->ident[i].name_var, name_var) == 0)
         {
             return i;
         }
     }
 
-    table_name->pairs_num_ident[*cur_ident].type   = type;
-    table_name->pairs_num_ident[*cur_ident].ident  = ident;
-    table_name->pairs_num_ident[*cur_ident].number = *cur_ident;
+    idents->ident[*cur_ident].name_var = name_var;
+    idents->ident[*cur_ident].n_var    = *cur_ident;
 
     (*cur_ident)++;
 

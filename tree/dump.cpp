@@ -25,8 +25,8 @@ static const char *TREE_FP_IMAGE             = "../debug/tree_debug/dot.svg";
 
 static const char *CMD_COMPILE_TREE_DOT_FILE = "dot -Tsvg ../debug/tree_debug/dump.dot -o ../debug/tree_debug/dot.svg";
 
-static int create_node_dot  (Node *node, FILE *stream, int ip_parent, int ip);
-static void print_tree_dump (Node *node, FILE *stream);
+static void print_tree_dump (Node *node, FILE *fp_err);
+static int  create_node_dot (Node *node, FILE *stream, int ip_parent, int ip);
 static void tree_dump_html  (int *code_error);
 
 #define DUMP_LOG(str) fprintf(fp_err, str "\n");
@@ -81,13 +81,10 @@ void tree_dump_text (Tree *tree, int *code_error,
     fclose(fp_err);
 }
 
-#undef DUMP_LOG
-#undef DUMP_LOG_PARAM
-
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wswitch-enum"
 
-void print_tree_dump (Node *node, FILE *stream)
+void print_tree_dump (Node *node, FILE *fp_err)
 {
     IS_NODE_PTR_NULL();
 
@@ -95,34 +92,41 @@ void print_tree_dump (Node *node, FILE *stream)
     {
         case (NUM):
         {
-            fprintf(stream, "\t\t*node[%p] = %lg;\n", node, node->data.value);
+            DUMP_LOG_PARAM("\t\t*node[%p] = %lg;\n", node, node->data.value);
             break;
         }
         case (OP):
         {
-            fprintf(stream, "\t\t*node[%p] = %s;\n", node, OP_NAME[node->data.types_op]);
+            DUMP_LOG_PARAM("\t\t*node[%p] = %s;\n", node, OP_NAME[node->data.types_op]);
             break;
         }
         case (IDENT):
         {
-            fprintf(stream, "\t\t*node[%p] = %d;\n", node, node->data.ident);
+            DUMP_LOG_PARAM("\t\t*node[%p] = %d;\n", node, node->data.ident);
             break;
         }
         case (IDENT_FUNC):
         {
-            fprintf(stream, "\t\t*node[%p] = %d;\n", node, node->data.ident);
+            DUMP_LOG_PARAM("\t\t*node[%p] = %d;\n", node, node->data.ident);
             break;
         }
-        case (DEF_TYPE):
+        case (PARAM):
+        {
+            DUMP_LOG_PARAM("\t\t*node[%p] = %d;\n", node, node->data.ident);
+            break;
+        }
         default:
         {
             break;
         }
     }
 
-    print_tree_dump(node->left, stream);
-    print_tree_dump(node->right, stream);
+    print_tree_dump(node->left, fp_err);
+    print_tree_dump(node->right, fp_err);
 }
+
+#undef DUMP_LOG
+#undef DUMP_LOG_PARAM
 
 #define DUMP_DOT(str) fprintf(fp_dot, str "\n");
 #define DUMP_DOT_PARAM(str, ...) fprintf(fp_dot, str "\n", __VA_ARGS__);
@@ -222,7 +226,12 @@ int create_node_dot (Node *node, FILE *stream, int ip_parent, int ip)
             DUMP_DOT("%d", node->data.ident);
             break;
         }
-        case (DEF_TYPE): {}
+        case (PARAM):
+        {
+            color = MAGENTA;
+            DUMP_DOT("%d", node->data.ident);
+            break;
+        }
         default:
         {
             break;
