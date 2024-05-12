@@ -6,16 +6,16 @@ CFLAGS = -c -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-
 	-Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wno-missing-field-initializers \
 	-Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing   \
 	-Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
-	
+
 INCLUDES = ass.h error.h func_ass.h
 
 SOURCES = main.cpp error.cpp ass.cpp func_ass.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-EXECUTABLE = assembler
+EXECUTABLE = assembler.exe
 
-VPATH = ..\include
+VPATH = ../include
 
 all: $(SOURCES) $(EXECUTABLE)
 
@@ -28,7 +28,7 @@ $(EXECUTABLE): $(OBJECTS)
 .PHONY: clean
 
 clean:
-	rm -rf *.o assembler
+	rm -rf *.o assembler.
 	rm -rf assembler.exe
 	rm -rf assembler.exe.log
 	rm -rf assembler.exe.log.dmp

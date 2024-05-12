@@ -2,8 +2,6 @@
 
 #include <stdio.h>
 #include <math.h>
-#include <TXLib.h>
-#include <windows.h>
 #include <stdlib.h>
 #include <assert.h>
 #include "error.h"

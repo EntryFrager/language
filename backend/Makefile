@@ -6,16 +6,16 @@ CFLAGS = -c -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-
 	-Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wno-missing-field-initializers \
 	-Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing   \
 	-Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
-	
-INCLUDES = backend.h tree.h error.h utils.h read_tree.h 
 
-SOURCES = main.cpp backend.cpp error.cpp tree.cpp utils.cpp dump.cpp read_tree.cpp
+INCLUDES = inc/backend.h ../tree/tree.h ../tree/read_tree.h ../Include_file/error/error.h ../Include_file/utilities/utils.h
+
+SOURCES = main.cpp backend.cpp ../tree/tree.cpp ../tree/read_tree.cpp ../tree/dump.cpp ../Include_file/error/error.cpp ../Include_file/utilities/utils.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-EXECUTABLE = backend
+EXECUTABLE = backend.exe
 
-VPATH = ../include/
+VPATH = ./src/
 
 all: $(SOURCES) $(INCLUDES) $(EXECUTABLE)
 
@@ -29,6 +29,10 @@ $(EXECUTABLE): $(OBJECTS)
 
 clean:
 	rm -rf *.o backend
+	rm -rf ../tree/*.o
+	rm -rf ../Include_file/error/*.o
+	rm -rf ../Include_file/utilities/*.o
 	rm -rf backend.exe
-	rm -rf backend.exe.log
-	rm -rf backend.exe.log.dmp
+
+clean_debug:
+	rm -rf ../debug/

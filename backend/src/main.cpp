@@ -1,4 +1,4 @@
-#include "backend.h"
+#include "../inc/backend.h"
 
 int main (int argc, char *argv[])
 {
@@ -12,7 +12,7 @@ int main (int argc, char *argv[])
 
     print_asm_code(&tree, &code_error);
 
-    PRINT_ERROR();
+    PRINT_ERROR;
 
     return 0;
 }

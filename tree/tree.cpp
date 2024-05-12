@@ -5,6 +5,7 @@
 
 static const char *FP_NAME_EXPR       = "../expr.txt";
 static const char *FP_NAME_TREE       = "../tree.txt";
+static const char *FP_NAME_ASM        = "../asm.txt";
 static const char *FP_NAME_TABLE_NAME = "../table_name.txt";
 
 static Node           *calloc_node              (Node *left, Node *right, Node *parent, int *code_error);
@@ -37,9 +38,11 @@ int create_tree (Tree *tree, int argc, char *argv[], int *code_error)
     }
 
     tree->info.fp_name_table_name = FP_NAME_TABLE_NAME;
+    tree->info.fp_name_asm        = FP_NAME_ASM;
 
     fopen_init_(tree->info.fp_expr, tree->info.fp_name_expr, "r + b");
     fopen_init_(tree->info.fp_tree, tree->info.fp_name_tree, "r + b");
+    fopen_init_(tree->info.fp_asm,  tree->info.fp_name_asm , "w");
 
     return ERR_NO;
 }
@@ -323,12 +326,14 @@ int destroy_tree (Tree *tree, int *code_error)
 
     tree->is_init = false;
 
+    tree->info.fp_name_asm  = NULL;
     tree->info.fp_name_expr = NULL;
     tree->info.fp_name_tree = NULL;
     tree->info.fp_name_table_name = NULL;
 
     fclose_(tree->info.fp_tree);
     fclose_(tree->info.fp_expr);
+    fclose_(tree->info.fp_asm);
 
     tree->info.size_file = 0;
 

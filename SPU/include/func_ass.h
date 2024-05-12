@@ -9,16 +9,16 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "..\include\error.h"                                                                   ///< Connects a file that displays errors.
+#include "./error.h"                                                                   ///< Connects a file that displays errors.
 
 #define DEBUG                                                                                   ///< Macro for program debugging.
 
 #ifdef DEBUG
-    #define CHECK_ERROR_PRINT(code_error)                                       \
-        if (code_error != ERR_NO)                                               \
-        {                                                                       \
-            fprintf (stderr, "\x1b[31m%s\x1b[0m", my_strerr (code_error));      \
-            abort ();                                                           \
+    #define CHECK_ERROR_PRINT(code_error)                       \
+        if (code_error != ERR_NO)                               \
+        {                                                       \
+            fprintf (stderr, "%s", my_strerr (code_error));     \
+            abort ();                                           \
         }
 #else
     #define CHECK_ERROR_PRINT(...)
@@ -32,7 +32,7 @@
 
 enum COMMANDS_CODE {                                                                            ///< All command codes.
     HLT,                                                                                        ///< The hlt command that stops the program.
-    OUTCOMM,                                                                                    ///< The command that prints the response.
+    OUT,                                                                                        ///< The command that prints the response.
     PUSH,                                                                                       ///< Command that adds an element to memory (stack).
     POP,                                                                                        ///< Command that removes an element from memory (stack).
     CALL,                                                                                       ///< Call command that preserves the previous position.
@@ -44,19 +44,18 @@ enum COMMANDS_CODE {                                                            
     JBE,                                                                                        ///< Jump command if the last number written to the stack is less than or equal to the second to last number written to the stack.
     JE,                                                                                         ///< Jump command if the last number written to the stack is equal to the second to last number written to the stack.
     JNE,                                                                                        ///< Jump command if the last number written to the stack is not equal to the second to last number written to the stack.
+    JFR,                                                                                        ///< Jump team that only jumps on Friday.
     OUTC,                                                                                       ///< A command that prints characters to a file by their ASCII codes from the stack.
     ADD,                                                                                        ///< Addition command.
     SUB,                                                                                        ///< Subtraction command.
     MUL,                                                                                        ///< Multiply command.
     DIV,                                                                                        ///< Division command.
     SQRT,                                                                                       ///< Sine command.
-    POW,
-    LN,
     SIN,                                                                                        ///< Cosine command.
     COS,                                                                                        ///< Root command.
-    INCOMM,                                                                                     ///< A command that allows the user to enter a number using an input device.
+    IN,                                                                                         ///< A command that allows the user to enter a number using an input device.
     DRAW,                                                                                       ///< Command that starts graphics memory.
-    FLOOR,                                                                                      ///< A command that makes the last number pushed on to the stack an integer.
+    INT,                                                                                        ///< A command that makes the last number pushed on to the stack an integer.
 };
 
 enum REG {                                                                                      ///< Register codes.

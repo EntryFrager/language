@@ -241,6 +241,9 @@ void read_table_name (Tree *tree, int *code_error)
         add_table_name(&tree->table_name, code_table_name, code_error);
         calloc_init_(tree->table_name.scope_table_name[i]->name, Name *, n_elem, sizeof(Name));
 
+        tree->table_name.scope_table_name[i]->n_elem = n_elem;
+        tree->table_name.scope_table_name[i]->code_table_name = code_table_name;
+
         for (size_t j = 0; j < n_elem; j++)
         {
             sscanf(table_name_str, "%d %d%n", &tree->table_name.scope_table_name[i]->name[j].n_var,

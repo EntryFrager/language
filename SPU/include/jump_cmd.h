@@ -3,9 +3,7 @@
 #define jump_condition(expr)                                                                            \
     ip++;                                                                                               \
     CHECK_BUF_IP (ip)                                                                                   \
-    first_arg = POP (&spu->stack);                                                                      \
-    second_arg = POP (&spu->stack);                                                                     \
-    if (first_arg expr second_arg)                                                                      \
+    if (spu->stack.data[spu->stack.position - 1] expr spu->stack.data[spu->stack.position - 2])         \
     {                                                                                                   \
         ip = (size_t) spu->buf[ip] - 1;                                                                 \
     }                                                                                                   \
@@ -86,5 +84,21 @@ DEF_CMD("jne", JNE, true,
     {
         jump_condition (!=);
     })
+
+/**
+ * Jump team that only jumps on Friday.
+*/
+
+DEF_CMD("jfr", JFR, true,
+    {
+        time_t time_now = NULL;
+        time (&time_now);
+        struct tm* local_time = localtime(&time_now);
+
+        if (local_time->tm_wday == 4)
+        {
+            ip = (size_t) spu->buf[ip] - 1;
+        }
+    }) 
 
 #undef jump_condition

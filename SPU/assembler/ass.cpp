@@ -2,13 +2,13 @@
 
 #include "ass.h"
 
-static void process_label (SPU *spu, size_t ip, size_t counter_ip);                                         ///< Label processing function.
+static void process_label (SPU *spu, size_t ip, size_t counter_ip);                                                                     ///< Label processing function.
 
-static int check_process_argc (COMMANDS *cmd, size_t cmd_len, size_t len);                                  ///< Function that checks the argument of a command.
+static int check_argc (COMMANDS *cmd, size_t cmd_len, size_t len);                                                                      ///< Function that checks the argument of a command.
 
-static int check_process_reg  (COMMANDS *cmd, size_t cmd_len, size_t len);                                  ///< Function that checks the case of a command.
+static int check_reg  (COMMANDS *cmd, size_t cmd_len, size_t len);                                                                      ///< Function that checks the case of a command.
 
-static int find_process_label  (SPU *spu, size_t ip, size_t cmd_len, size_t len);                           ///< A function that checks the label of a command.
+static int find_process_label  (SPU *spu, size_t ip, size_t cmd_len, size_t len);                                                       ///< A function that checks the label of a command.
 
 /**
  * A function that reads text from a file into one buffer.
@@ -78,14 +78,14 @@ void split_commands (SPU *spu)
 
         spu->cmd[ip].command = spu->buf_input + buf_pos_count;
 
-        while (*(spu->buf_input + buf_pos_count) != '\n' && buf_pos_count < spu->size_file)
+        while (*(spu->buf_input + buf_pos_count) != '\r' && buf_pos_count < spu->size_file)
         {
             buf_pos_count++;
             spu->cmd[ip].size_str++;
         }
 
         *(spu->buf_input + buf_pos_count) = '\0';
-        buf_pos_count += 1;
+        buf_pos_count += 2;
     }
 }
 
@@ -97,7 +97,7 @@ void split_commands (SPU *spu)
 void clean_comment (SPU *spu)
 {
     my_assert (spu != NULL);
-    
+
     for (size_t ip = 0; ip < spu->n_cmd; ip++)
     {
         int pos = 0;
@@ -115,7 +115,7 @@ void clean_comment (SPU *spu)
             {
                 pos++;
             }
-            
+
             space_count = 0;
 
             while (isspace (*(spu->cmd[ip].command + pos)) != 0)
@@ -171,7 +171,7 @@ int code_compilation (SPU *spu)
         spu->cmd[ip].cmd_code = num;                                                    \
         if (have_arg)                                                                   \
         {                                                                               \
-            code_error = process_param (spu, ip, sizeof (name) - 1);                    \
+            code_error = check_param (spu, ip, sizeof (name) - 1);                      \
             CHECK_ERROR_RETURN (code_error)                                             \
             counter_ip++;                                                               \
         }                                                                               \
@@ -203,10 +203,11 @@ int pars_command (SPU *spu)
             }
             else if (*(spu->cmd[ip].command + spu->cmd[ip].size_str - 1) != ':')
             {
-                #include "..\include\commands.h"
-                #include "..\include\jump_cmd.h"
+                #include "../include/commands.h"
+                #include "../include/jump_cmd.h"
 
                 {
+                    printf("%s\n", spu->cmd[ip].command);
                     return ERR_COMMAND;
                 }
 
@@ -266,7 +267,7 @@ int write_buf (COMMANDS *cmd, int *buf, size_t counter)
 void process_label (SPU *spu, size_t ip, size_t counter_ip)
 {
     spu->label[spu->n_label].name_label  = spu->cmd[ip].command;
-    spu->label[spu->n_label].label_ip    = counter_ip - spu->n_label;
+    spu->label[spu->n_label].label_ip = counter_ip - spu->n_label;
     spu->label[spu->n_label].size_label  = spu->cmd[ip].size_str - 1;
     spu->n_label++;
 }
@@ -279,7 +280,7 @@ void process_label (SPU *spu, size_t ip, size_t counter_ip)
  * @param[out] code_error Returns the error code
 */
 
-int process_param (SPU *spu, size_t ip, size_t cmd_len)
+int check_param (SPU *spu, size_t ip, size_t cmd_len)
 {
     my_assert (spu != NULL);
 
@@ -316,9 +317,9 @@ int get_param (SPU *spu, size_t ip, size_t cmd_len, size_t len)
 
     int code_error = 0;
 
-    if ((code_error = check_process_argc (&spu->cmd[ip], cmd_len, len)) == NO_ARGUMENT)
+    if ((code_error = check_argc (&spu->cmd[ip], cmd_len, len)) == NO_ARGUMENT)
     {
-        if ((code_error = check_process_reg  (&spu->cmd[ip], cmd_len, len)) == NO_ARGUMENT)
+        if ((code_error = check_reg  (&spu->cmd[ip], cmd_len, len)) == NO_ARGUMENT)
         {
             return find_process_label (spu, ip, cmd_len, len);
         }
@@ -343,27 +344,19 @@ int get_param (SPU *spu, size_t ip, size_t cmd_len, size_t len)
  * @param[out] code_error Returns the error code
 */
 
-static int check_process_argc (COMMANDS *cmd, size_t cmd_len, size_t len)
+static int check_argc (COMMANDS *cmd, size_t cmd_len, size_t len)
 {
     my_assert (cmd != NULL);
 
-    int point = 0;
-    char *ptr_point = NULL;
-
-    if (isdigit (*(cmd->command + cmd_len + len)) || *(cmd->command + cmd_len + len) == '-')        //TODO strtod
+    if (isdigit (*(cmd->command + cmd_len + len)) || *(cmd->command + cmd_len + len) == '-')
     {
         for (size_t ip = 1; ip < cmd->size_str - cmd_len - len - 1; ip++)
         {
-            if (*(cmd->command + cmd_len + ip) == '.' && point == 0)
-            {
-                point++;
-                ptr_point = cmd->command + cmd_len + ip + 1;
-            }
-            else if (isdigit (*(cmd->command + cmd_len + len + ip)) == 0)
+            if (isdigit (*(cmd->command + cmd_len + len + ip)) == 0)
             {
                 return ERR_ARGC;
             }
-        }        
+        }
 
         if (*(cmd->command + cmd_len + len) == '-')
         {
@@ -372,7 +365,7 @@ static int check_process_argc (COMMANDS *cmd, size_t cmd_len, size_t len)
         }
         else
         {
-            cmd->argc = atoi (cmd->command + cmd_len + len);   
+            cmd->argc = atoi (cmd->command + cmd_len + len);
         }
 
         cmd->cmd_code |= HAVE_ARG;
@@ -380,7 +373,7 @@ static int check_process_argc (COMMANDS *cmd, size_t cmd_len, size_t len)
 
         return ERR_NO;
     }
-    
+
     return NO_ARGUMENT;
 }
 
@@ -392,7 +385,7 @@ static int check_process_argc (COMMANDS *cmd, size_t cmd_len, size_t len)
  * @param[out] code_error Returns the error code
 */
 
-static int check_process_reg (COMMANDS *cmd, size_t cmd_len, size_t len)
+static int check_reg (COMMANDS *cmd, size_t cmd_len, size_t len)
 {
     my_assert (cmd != NULL);
 
@@ -437,7 +430,7 @@ static int find_process_label (SPU *spu, size_t ip, size_t cmd_len, size_t len)
                 spu->cmd[ip].argc = spu->label[pos_label].label_ip;
                 spu->cmd[ip].cmd_code |= HAVE_ARG;
                 *(spu->cmd[ip].command + cmd_len) = '\0';
-                
+
                 return ERR_NO;
             }
         }

@@ -70,21 +70,20 @@ enum op_command {
     ASSIG         = 22,
     ABOVE         = 23,
     LESS          = 24,
-    NOT           = 25,
-    PRINT         = 26,
-    INPUT         = 27,
-    BREAK         = 28,
-    CONTINUE      = 29,
-    ABORT         = 30,
-    RETURN        = 31,
-    OPEN_BRACKET  = 32,
-    CLOSE_BRACKET = 33,
-    OPEN_BRACE    = 34,
-    CLOSE_BRACE   = 35,
-    COMMA         = 36,
-    FUNC          = 37,
+    PRINT         = 25,
+    INPUT         = 26,
+    BREAK         = 27,
+    CONTINUE      = 28,
+    ABORT         = 29,
+    RETURN        = 30,
+    OPEN_BRACKET  = 31,
+    CLOSE_BRACKET = 32,
+    OPEN_BRACE    = 33,
+    CLOSE_BRACE   = 34,
+    COMMA         = 35,
+    FUNC          = 36,
 
-    OP_NO         = 38
+    OP_NO         = 37
 };
 
 enum types {
@@ -165,6 +164,9 @@ typedef struct {
 
     const char *fp_name_table_name = NULL;
     FILE       *fp_table_name      = NULL;
+
+    const char *fp_name_asm        = NULL;
+    FILE       *fp_asm             = NULL;
 
     size_t size_file = 0;
 

@@ -25,7 +25,7 @@ DEF_CMD("outc", OUTC, true,
  * The command that prints the response.
 */
 
-DEF_CMD("out", OUTCOMM, false,
+DEF_CMD("out", OUT, false,
     {
         fprintf (spu->fp_print, "Answer: %lf\n", spu->stack.data[spu->stack.position - 1]);
     })
@@ -37,12 +37,6 @@ DEF_CMD("out", OUTCOMM, false,
 DEF_CMD("push", PUSH, true,
     {
         ELEMENT *arg_pointer = get_argument (spu, ip++);
-
-        if (arg_pointer == NULL)
-        {
-            return ERR_ARGC;
-        }
-
         PUSH (&spu->stack, *arg_pointer);
 
         CHECK_BUF_IP (ip)
@@ -55,12 +49,6 @@ DEF_CMD("push", PUSH, true,
 DEF_CMD("pop", POP, true,
     {
         ELEMENT *arg_pointer = get_argument (spu, ip++);
-
-        if (arg_pointer == NULL)
-        {
-            return ERR_ARGC;
-        }
-
         *arg_pointer = POP (&spu->stack);
 
         CHECK_BUF_IP (ip)
@@ -141,25 +129,21 @@ DEF_CMD("sqrt", SQRT, false,
         PUSH (&spu->stack, (ELEMENT) sqrt (POP (&spu->stack)));
     })
 
-DEF_CMD("pow", POW, false,
+/**
+ * A command that makes the last number pushed on to the stack an integer.
+*/
+
+DEF_CMD("int", INT, false, 
     {
-        first_arg  = POP (&spu->stack);
-        second_arg = POP (&spu->stack);
-
-        PUSH (&spu->stack, (ELEMENT) pow (first_arg, second_arg));
+        int a = (int) POP (&spu->stack);
+        PUSH (&spu->stack, (ELEMENT) a);
     })
-
-DEF_CMD("ln", LN, false,
-    {
-        PUSH (&spu->stack, (ELEMENT) log (POP (&spu->stack)));
-    })
-
 
 /**
  * A command that allows the user to enter a number using an input device.
 */
 
-DEF_CMD("in", INCOMM, false,
+DEF_CMD("in", IN, false,
     {
         ELEMENT value = 0;
 
@@ -187,16 +171,4 @@ DEF_CMD("ret", RET, false,
 DEF_CMD("draw", DRAW, false,
     {
         graph_video (spu->ram_value);
-
-        video_ram (spu->ram_value);
-    })
-
-/**
- * A command that makes the last number pushed on to the stack an integer.
-*/
-
-DEF_CMD("floor", FLOOR, false, 
-    {
-        int a = (int) POP (&spu->stack);
-        PUSH (&spu->stack, (ELEMENT) a);
     })

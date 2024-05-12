@@ -1,0 +1,15 @@
+push 1
+push 2
+CALL sum
+CALL print
+hlt
+
+sum:
+    add
+    pop rax
+    ret
+
+print:
+    push rax
+    out
+    ret

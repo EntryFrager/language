@@ -48,8 +48,6 @@ DEF_CMD(ABOVE, ">")
 
 DEF_CMD(LESS, "<")
 
-DEF_CMD(NOT, "!")
-
 DEF_CMD(PRINT, "print")
 
 DEF_CMD(INPUT, "input")

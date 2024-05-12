@@ -16,8 +16,8 @@ int spu_ctor (SPU *spu, int argc, char **argv)
     {
         spu->file_name_input = (const char *) argv[1];
     }
-    spu->file_name_print_bin = "..\\ass_output.bin";
-    spu->file_name_print_txt = "..\\listing.log";
+    spu->file_name_print_bin = "../ass_output.bin";
+    spu->file_name_print_txt = "../ass_output.log";
 
     spu->fp_print_bin = fopen (spu->file_name_print_bin, "w + b");
     spu->fp_print_txt = fopen (spu->file_name_print_txt, "w");
@@ -93,7 +93,7 @@ int spu_dtor (SPU *spu)
     free (spu->buf_output);
     free (spu->cmd);
     free (spu->label);
-    
+
     spu->buf_input = NULL;
     spu->buf_output = NULL;
     spu->cmd = NULL;

@@ -8,7 +8,7 @@
 
 #define CHECK_RAM_IP(ptr) if (ptr > (SIZE_RAM - 1) || ptr < ZERO_PTR) return ERR_RAM;                                   ///< Checking that the ip of the RAM has not gone beyond the limits.
 
-#define CHECK_BUF_IP(ptr) if (ptr > spu->size_file) return ERR_BUF_IP;                                                  ///< Checks that the buffer IP has not exceeded its limits.
+#define CHECK_BUF_IP(ptr) if (ptr > spu->size_file) return ERR_BUF_IP;                                ///< Checks that the buffer IP has not exceeded its limits.
 
 /**
  * Function to initialize the spu structure.
@@ -29,7 +29,7 @@ int spu_ctor (SPU *spu)
     spu->fp_input = fopen (spu->file_name_input, "r + b");
     spu->fp_print = fopen (spu->file_name_print, "wb");
 
-    if (spu->fp_input == NULL || spu->fp_print == NULL)
+    if (spu->fp_print == NULL || spu->fp_input == NULL)
     {
         return ERR_FOPEN;
     }
@@ -103,10 +103,7 @@ ELEMENT* get_argument (SPU *spu, size_t ip)
 {
     if ((spu->buf[ip] & HAVE_RAM) && (spu->buf[ip] & HAVE_REG))
     {
-        if (spu->reg_value[spu->buf[ip + 1] - 1] <= SIZE_RAM && spu->reg_value[spu->buf[ip + 1] - 1] >= 0)
-        {
-            return &spu->ram_value[(size_t) spu->reg_value[spu->buf[++ip] - 1]];
-        }        
+        return &spu->ram_value[(size_t) spu->reg_value[spu->buf[++ip] - 1]];
     }
     else if (spu->buf[ip] & HAVE_RAM)
     {
@@ -118,9 +115,11 @@ ELEMENT* get_argument (SPU *spu, size_t ip)
     }
     else if (spu->buf[ip] & HAVE_ARG)
     {
-        ELEMENT arg = (ELEMENT) spu->buf[++ip];
-        return &arg;
+        ELEMENT a = (ELEMENT) spu->buf[++ip];
+        return &a;
     }
+
+    return NULL;
 }
 
 /**
@@ -158,7 +157,7 @@ void graph_video (ELEMENT *ram)
 
     for (size_t ram_pos = 0; ram_pos < SIZE_RAM; ram_pos++)
     {
-        if (ram_pos % 100 != 0)
+        if (ram_pos % 20 != 0)
         {
             if (ram[ram_pos] == 0)
             {
@@ -176,24 +175,6 @@ void graph_video (ELEMENT *ram)
     }
 }
 
-void video_ram (ELEMENT *ram)
-{
-    my_assert (ram != NULL);
-
-    txCreateWindow (WINDOWS_SIZE_X, WINDOWS_SIZE_Y, false);
-    txSetColor (TX_BLACK);
-    
-    for (size_t ram_pos = 0;  ram_pos < SIZE_RAM; ram_pos++)
-    {
-        txSetFillColor (ram[ram_pos]);
- 
-        int x = ram_pos % 100;
-        int y = ram_pos / 100;
-
-        txRectangle (x * 10, y * 10, (x + 1) * 10, (y + 1) * 10);
-    }
-}
-
 /**
  * Function that clears all variables.
  * @param[in] spu Structure containing all information
@@ -204,7 +185,7 @@ int spu_dtor(SPU *spu)
 {
     my_assert (spu != NULL)
 
-    if (fclose (spu->fp_input) != 0 || fclose (spu->fp_print) != 0)
+    if (fclose (spu->fp_print) != 0 || fclose (spu->fp_input) != 0)
     {
         return ERR_FCLOSE;
     }

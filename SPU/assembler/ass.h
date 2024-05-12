@@ -3,7 +3,7 @@
 #ifndef ASS_H
 #define ASS_H
 
-#include "..\include\func_ass.h"                                                                    ///< Connects a file that reads text from a file.
+#include "../include/func_ass.h"                                                                    ///< Connects a file that reads text from a file.
 
 int input_text (SPU *spu);                                                                          ///< A function that reads text from a file into one buffer.
 
@@ -17,7 +17,7 @@ int pars_command (SPU *spu);                                                    
 
 int write_buf (COMMANDS *cmd, int *buf, size_t counter);                                            ///< A function that writes the converted command to the buffer.
 
-int process_param (SPU *spu, size_t ip, size_t cmd_len);                                            ///< A function that checks whether a command has a parameter.
+int check_param (SPU *spu, size_t ip, size_t cmd_len);                                              ///< A function that checks whether a command has a parameter.
 
 int get_param (SPU *spu, size_t ip, size_t cmd_len, size_t len);                                    ///< Function that finds a parameter for a command.
 
