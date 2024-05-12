@@ -6,18 +6,18 @@ CFLAGS = -c -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-
 	-Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wno-missing-field-initializers \
 	-Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing   \
 	-Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
-	
-INCLUDES = spu.h stack.h error.h func.h commands.h
 
-SOURCES = main.cpp spu.cpp stack.cpp error.cpp func.cpp
+INCLUDES = ./inc/spu.h ../../Include_file/error/error.h ../../Include_file/utilities/utils.h ../include/func.h ../include/stack.h
+
+SOURCES = main.cpp ../../Include_file/error/error.cpp ../../Include_file/utilities/utils.cpp spu.cpp ../include/func.cpp ../include/stack.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
-EXECUTABLE = spu
+EXECUTABLE = spu.exe
 
-VPATH = ..\include
+VPATH = ./src/
 
-all: $(SOURCES) $(EXECUTABLE)
+all: $(SOURCES) $(INCLUDES) $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(OBJECTS) -o $@
@@ -28,7 +28,8 @@ $(EXECUTABLE): $(OBJECTS)
 .PHONY: clean
 
 clean:
-	rm -rf *.o spu
 	rm -rf spu.exe
-	rm -rf spu.exe.log
-	rm -rf spu.exe.log.dmp
+	rm -rf *.o spu
+	rm -rf ../include/*.o
+	rm -rf ../Include_file/error/*.o
+	rm -rf ../Include_file/utilities/*.o

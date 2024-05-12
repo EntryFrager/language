@@ -1,15 +1,9 @@
+push 0
+pop rbx
 call main
 hlt
-
-;--------------------------------------------------------------------------------------------
-;------------function-main------------
-;--------------------------------------------------------------------------------------------
-
 main:
 		in
-
-;---pop-ident---
-
 		push rbx
 		push 1
 		add
@@ -19,13 +13,7 @@ main:
 		push 1
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
 		in
-
-;---pop-ident---
-
 		push rbx
 		push 2
 		add
@@ -35,13 +23,7 @@ main:
 		push 2
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
 		in
-
-;---pop-ident---
-
 		push rbx
 		push 3
 		add
@@ -51,15 +33,6 @@ main:
 		push 3
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---call-function---
-
-
-;---push-ident---
-
 		push rbx
 		push 1
 		add
@@ -69,12 +42,6 @@ main:
 		push 1
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---pop-ident---
-
 		push rbx
 		push 5
 		add
@@ -84,12 +51,6 @@ main:
 		push 5
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---push-ident---
-
 		push rbx
 		push 2
 		add
@@ -99,12 +60,6 @@ main:
 		push 2
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---pop-ident---
-
 		push rbx
 		push 6
 		add
@@ -114,12 +69,6 @@ main:
 		push 6
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---push-ident---
-
 		push rbx
 		push 3
 		add
@@ -129,12 +78,6 @@ main:
 		push 3
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---pop-ident---
-
 		push rbx
 		push 7
 		add
@@ -144,9 +87,6 @@ main:
 		push 7
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
 		push rbx
 		push rbx
 		push 4
@@ -154,23 +94,9 @@ main:
 		pop rbx
 		call solve_dispetcher
 		pop rbx
-		push rax			; save ret value in stack
-
-;---end-call-function---
-
+		push rax
 		ret
-
-;--------------------------------------------------------------------------------------------
-;------------function-solve_dispetcher------------
-;--------------------------------------------------------------------------------------------
-
 solve_dispetcher:
-
-;---if-instructions---
-
-
-;---push-ident---
-
 		push rbx
 		push 1
 		add
@@ -180,18 +106,8 @@ solve_dispetcher:
 		push 1
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		push 0
-		jne if_2
-	if_1:
-
-;---call-function---
-
-
-;---push-ident---
-
+		jne if_1
 		push rbx
 		push 2
 		add
@@ -201,12 +117,6 @@ solve_dispetcher:
 		push 2
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---pop-ident---
-
 		push rbx
 		push 6
 		add
@@ -216,12 +126,6 @@ solve_dispetcher:
 		push 6
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---push-ident---
-
 		push rbx
 		push 3
 		add
@@ -231,12 +135,6 @@ solve_dispetcher:
 		push 3
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---pop-ident---
-
 		push rbx
 		push 7
 		add
@@ -246,9 +144,6 @@ solve_dispetcher:
 		push 7
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
 		push rbx
 		push rbx
 		push 5
@@ -256,18 +151,9 @@ solve_dispetcher:
 		pop rbx
 		call solve_linear
 		pop rbx
-		push rax			; save ret value in stack
-
-;---end-call-function---
-
+		push rax
 		jmp end_if_0
-	if_2:
-
-;---call-function---
-
-
-;---push-ident---
-
+	if_1:
 		push rbx
 		push 1
 		add
@@ -277,12 +163,6 @@ solve_dispetcher:
 		push 1
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---pop-ident---
-
 		push rbx
 		push 6
 		add
@@ -292,12 +172,6 @@ solve_dispetcher:
 		push 6
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---push-ident---
-
 		push rbx
 		push 2
 		add
@@ -307,12 +181,6 @@ solve_dispetcher:
 		push 2
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---pop-ident---
-
 		push rbx
 		push 7
 		add
@@ -322,12 +190,6 @@ solve_dispetcher:
 		push 7
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---push-ident---
-
 		push rbx
 		push 3
 		add
@@ -337,12 +199,6 @@ solve_dispetcher:
 		push 3
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---pop-ident---
-
 		push rbx
 		push 8
 		add
@@ -352,9 +208,6 @@ solve_dispetcher:
 		push 8
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
 		push rbx
 		push rbx
 		push 5
@@ -362,279 +215,15 @@ solve_dispetcher:
 		pop rbx
 		call solve_square
 		pop rbx
-		push rax			; save ret value in stack
-
-;---end-call-function---
-
+		push rax
 	end_if_0:
-
-;---end-if-instructions---
-
-		ret
-
-;--------------------------------------------------------------------------------------------
-;------------function-solve_linear------------
-;--------------------------------------------------------------------------------------------
-
-solve_linear:
-
-;---start-of-expression---
-
-		push 0
-		push 1
-		sub
-
-;---pop-ident---
-
-		push rbx
-		push 7
-		add
-		pop rbx
-		pop [rbx]
-		push rbx
-		push 7
-		sub
-		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---start-of-expression---
-
-		push 1
-
-;---pop-ident---
-
-		push rbx
-		push 8
-		add
-		pop rbx
-		pop [rbx]
-		push rbx
-		push 8
-		sub
-		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---start-of-expression---
-
-		push 1000
-
-;---pop-ident---
-
-		push rbx
-		push 9
-		add
-		pop rbx
-		pop [rbx]
-		push rbx
-		push 9
-		sub
-		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---if-instructions---
-
-
-;---push-ident---
-
-		push rbx
-		push 1
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 1
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-		push 0
-		jne if_5
-	if_4:
-
-;---if-instructions---
-
-
-;---push-ident---
-
-		push rbx
-		push 2
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 2
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-		push 0
-		jne if_8
-	if_7:
-
-;---push-ident---
-
-		push rbx
-		push 9
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 9
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-		out
-		jmp end_if_6
-	if_8:
-
-;---push-ident---
-
-		push rbx
-		push 7
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 7
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-		out
-	end_if_6:
-
-;---end-if-instructions---
-
-		jmp end_if_3
-	if_5:
-
-;---start-of-expression---
-
-		push 0
-
-;---push-ident---
-
-		push rbx
-		push 2
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 2
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-
-;---push-ident---
-
-		push rbx
-		push 1
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 1
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-		div
-		sub
-
-;---pop-ident---
-
-		push rbx
-		push 10
-		add
-		pop rbx
-		pop [rbx]
-		push rbx
-		push 10
-		sub
-		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---push-ident---
-
-		push rbx
-		push 8
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 8
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-		out
-
-;---push-ident---
-
-		push rbx
-		push 10
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 10
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-		out
-	end_if_3:
-
-;---end-if-instructions---
-
 		push 0
 		pop rax
 		ret
-
-;--------------------------------------------------------------------------------------------
-;------------function-solve_square------------
-;--------------------------------------------------------------------------------------------
-
-solve_square:
-
-;---start-of-expression---
-
+solve_linear:
 		push 0
 		push 1
 		sub
-
-;---pop-ident---
-
 		push rbx
 		push 7
 		add
@@ -644,19 +233,7 @@ solve_square:
 		push 7
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---start-of-expression---
-
 		push 1
-
-;---pop-ident---
-
 		push rbx
 		push 8
 		add
@@ -666,99 +243,16 @@ solve_square:
 		push 8
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---start-of-expression---
-
-		push 2
-
-;---pop-ident---
-
+		push 1000
 		push rbx
-		push 11
+		push 9
 		add
 		pop rbx
 		pop [rbx]
 		push rbx
-		push 11
+		push 9
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---if-instructions---
-
-
-;---push-ident---
-
-		push rbx
-		push 3
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 3
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-		push 0
-		jne if_11
-	if_10:
-
-;---start-of-expression---
-
-		push 0
-
-;---pop-ident---
-
-		push rbx
-		push 12
-		add
-		pop rbx
-		pop [rbx]
-		push rbx
-		push 12
-		sub
-		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---start-of-expression---
-
-		push 0
-
-;---push-ident---
-
-		push rbx
-		push 2
-		add
-		pop rbx
-		push [rbx]
-		push rbx
-		push 2
-		sub
-		pop rbx
-
-;---end-push-ident---
-
-
-;---push-ident---
-
 		push rbx
 		push 1
 		add
@@ -768,14 +262,173 @@ solve_square:
 		push 1
 		sub
 		pop rbx
-
-;---end-push-ident---
-
+		push 0
+		jne if_3
+		push rbx
+		push 2
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 2
+		sub
+		pop rbx
+		push 0
+		jne if_5
+		push rbx
+		push 9
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 9
+		sub
+		pop rbx
+		out
+		jmp end_if_4
+	if_5:
+		push rbx
+		push 7
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 7
+		sub
+		pop rbx
+		out
+	end_if_4:
+		jmp end_if_2
+	if_3:
+		push 0
+		push rbx
+		push 2
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 2
+		sub
+		pop rbx
+		push rbx
+		push 1
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 1
+		sub
+		pop rbx
 		div
 		sub
-
-;---pop-ident---
-
+		push rbx
+		push 10
+		add
+		pop rbx
+		pop [rbx]
+		push rbx
+		push 10
+		sub
+		pop rbx
+		push rbx
+		push 8
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 8
+		sub
+		pop rbx
+		out
+		push rbx
+		push 10
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 10
+		sub
+		pop rbx
+		out
+	end_if_2:
+		push 0
+		pop rax
+		ret
+solve_square:
+		push 0
+		push 1
+		sub
+		push rbx
+		push 7
+		add
+		pop rbx
+		pop [rbx]
+		push rbx
+		push 7
+		sub
+		pop rbx
+		push 1
+		push rbx
+		push 8
+		add
+		pop rbx
+		pop [rbx]
+		push rbx
+		push 8
+		sub
+		pop rbx
+		push 2
+		push rbx
+		push 11
+		add
+		pop rbx
+		pop [rbx]
+		push rbx
+		push 11
+		sub
+		pop rbx
+		push rbx
+		push 3
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 3
+		sub
+		pop rbx
+		push 0
+		jne if_7
+		push 0
+		push rbx
+		push 12
+		add
+		pop rbx
+		pop [rbx]
+		push rbx
+		push 12
+		sub
+		pop rbx
+		push 0
+		push rbx
+		push 2
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 2
+		sub
+		pop rbx
+		push rbx
+		push 1
+		add
+		pop rbx
+		push [rbx]
+		push rbx
+		push 1
+		sub
+		pop rbx
+		div
+		sub
 		push rbx
 		push 13
 		add
@@ -785,15 +438,6 @@ solve_square:
 		push 13
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---push-ident---
-
 		push rbx
 		push 11
 		add
@@ -803,13 +447,7 @@ solve_square:
 		push 11
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-
-;---push-ident---
-
 		push rbx
 		push 12
 		add
@@ -819,13 +457,7 @@ solve_square:
 		push 12
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-
-;---push-ident---
-
 		push rbx
 		push 13
 		add
@@ -835,18 +467,9 @@ solve_square:
 		push 13
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-		jmp end_if_9
-	if_11:
-
-;---start-of-expression---
-
-
-;---push-ident---
-
+		jmp end_if_6
+	if_7:
 		push rbx
 		push 2
 		add
@@ -856,12 +479,6 @@ solve_square:
 		push 2
 		sub
 		pop rbx
-
-;---end-push-ident---
-
-
-;---push-ident---
-
 		push rbx
 		push 2
 		add
@@ -871,14 +488,8 @@ solve_square:
 		push 2
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		mul
 		push 4
-
-;---push-ident---
-
 		push rbx
 		push 1
 		add
@@ -888,13 +499,7 @@ solve_square:
 		push 1
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		mul
-
-;---push-ident---
-
 		push rbx
 		push 3
 		add
@@ -904,14 +509,8 @@ solve_square:
 		push 3
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		mul
 		sub
-
-;---pop-ident---
-
 		push rbx
 		push 14
 		add
@@ -921,18 +520,6 @@ solve_square:
 		push 14
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---if-instructions---
-
-
-;---push-ident---
-
 		push rbx
 		push 14
 		add
@@ -942,19 +529,9 @@ solve_square:
 		push 14
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		push 0
-		jbe if_14
-	if_13:
-
-;---start-of-expression---
-
+		jbe if_9
 		sqrt
-
-;---pop-ident---
-
 		push rbx
 		push 15
 		add
@@ -964,19 +541,7 @@ solve_square:
 		push 15
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---start-of-expression---
-
 		push 0
-
-;---push-ident---
-
 		push rbx
 		push 2
 		add
@@ -986,13 +551,7 @@ solve_square:
 		push 2
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		sub
-
-;---push-ident---
-
 		push rbx
 		push 15
 		add
@@ -1002,14 +561,8 @@ solve_square:
 		push 15
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		push 2
 		div
-
-;---push-ident---
-
 		push rbx
 		push 1
 		add
@@ -1019,14 +572,8 @@ solve_square:
 		push 1
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		mul
 		sub
-
-;---pop-ident---
-
 		push rbx
 		push 12
 		add
@@ -1036,19 +583,7 @@ solve_square:
 		push 12
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---start-of-expression---
-
 		push 0
-
-;---push-ident---
-
 		push rbx
 		push 2
 		add
@@ -1058,13 +593,7 @@ solve_square:
 		push 2
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		sub
-
-;---push-ident---
-
 		push rbx
 		push 15
 		add
@@ -1074,14 +603,8 @@ solve_square:
 		push 15
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		push 2
 		div
-
-;---push-ident---
-
 		push rbx
 		push 1
 		add
@@ -1091,14 +614,8 @@ solve_square:
 		push 1
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		mul
 		add
-
-;---pop-ident---
-
 		push rbx
 		push 13
 		add
@@ -1108,15 +625,6 @@ solve_square:
 		push 13
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---push-ident---
-
 		push rbx
 		push 11
 		add
@@ -1126,13 +634,7 @@ solve_square:
 		push 11
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-
-;---push-ident---
-
 		push rbx
 		push 12
 		add
@@ -1142,13 +644,7 @@ solve_square:
 		push 12
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-
-;---push-ident---
-
 		push rbx
 		push 13
 		add
@@ -1158,15 +654,9 @@ solve_square:
 		push 13
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-		jmp end_if_12
-	if_14:
-
-;---push-ident---
-
+		jmp end_if_8
+	if_9:
 		push rbx
 		push 14
 		add
@@ -1176,19 +666,9 @@ solve_square:
 		push 14
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		push 0
-		jne if_16
-	if_15:
-
-;---start-of-expression---
-
+		jne if_10
 		push 0
-
-;---push-ident---
-
 		push rbx
 		push 2
 		add
@@ -1198,14 +678,8 @@ solve_square:
 		push 2
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		push 2
 		div
-
-;---push-ident---
-
 		push rbx
 		push 1
 		add
@@ -1215,14 +689,8 @@ solve_square:
 		push 1
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		mul
 		sub
-
-;---pop-ident---
-
 		push rbx
 		push 10
 		add
@@ -1232,15 +700,6 @@ solve_square:
 		push 10
 		sub
 		pop rbx
-
-;---end-pop-ident---
-
-
-;---end-of-expression---
-
-
-;---push-ident---
-
 		push rbx
 		push 8
 		add
@@ -1250,13 +709,7 @@ solve_square:
 		push 8
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-
-;---push-ident---
-
 		push rbx
 		push 10
 		add
@@ -1266,15 +719,9 @@ solve_square:
 		push 10
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-		jmp end_if_12
-	if_16:
-
-;---push-ident---
-
+		jmp end_if_8
+	if_10:
 		push rbx
 		push 7
 		add
@@ -1284,18 +731,9 @@ solve_square:
 		push 7
 		sub
 		pop rbx
-
-;---end-push-ident---
-
 		out
-	end_if_12:
-
-;---end-if-instructions---
-
-	end_if_9:
-
-;---end-if-instructions---
-
+	end_if_8:
+	end_if_6:
 		push 0
 		pop rax
 		ret

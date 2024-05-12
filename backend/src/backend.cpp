@@ -17,7 +17,7 @@ static void asm_params      (Tree *tree, Node *node, ScopeTableName *cur_table, 
 static void asm_op          (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error);
 static void asm_if_else     (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error);
 static void asm_while       (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error);
-static void asm_condition   (Tree *tree, Node *node, ScopeTableName *cur_table, op_command mode, LabelBody *label_body, int *code_error);
+static void asm_condition   (Tree *tree, Node *node, ScopeTableName *cur_table, op_command mode, int n_label, int *code_error);
 static void asm_compare     (Tree *tree, Node *node, op_command mode, int label, int *code_error);
 static void asm_opp_compare (Tree *tree, Node *node, op_command mode, int label, int *code_error);
 static void asm_print       (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error);
@@ -33,7 +33,6 @@ static void asm_return      (Tree *tree, Node *node, ScopeTableName *cur_table, 
 
 #define push_ptr(ident)                             \
     {                                               \
-        PRINT_ASM("\n;---push-ident---\n\n")        \
         PRINT_ASM("\t\tpush rbx\n");                \
         PRINT_ASM_PARAM("\t\tpush %d\n", ident);    \
         PRINT_ASM("\t\tadd\n");                     \
@@ -43,12 +42,10 @@ static void asm_return      (Tree *tree, Node *node, ScopeTableName *cur_table, 
         PRINT_ASM_PARAM("\t\tpush %d\n", ident);    \
         PRINT_ASM("\t\tsub\n");                     \
         PRINT_ASM("\t\tpop rbx\n");                 \
-        PRINT_ASM("\n;---end-push-ident---\n\n")    \
     }
 
 #define pop_ptr(ident)                              \
     {                                               \
-        PRINT_ASM("\n;---pop-ident---\n\n")         \
         PRINT_ASM("\t\tpush rbx\n");                \
         PRINT_ASM_PARAM("\t\tpush %d\n", ident);    \
         PRINT_ASM("\t\tadd\n");                     \
@@ -58,14 +55,15 @@ static void asm_return      (Tree *tree, Node *node, ScopeTableName *cur_table, 
         PRINT_ASM_PARAM("\t\tpush %d\n", ident);    \
         PRINT_ASM("\t\tsub\n");                     \
         PRINT_ASM("\t\tpop rbx\n");                 \
-        PRINT_ASM("\n;---end-pop-ident---\n\n")     \
     }
 
 void print_asm_code (Tree *tree, int *code_error)
 {
     my_assert(tree != NULL, ERR_PTR);
 
-    PRINT_ASM("call main\n"
+    PRINT_ASM("push 0\n"
+              "pop rbx\n"
+              "call main\n"
               "hlt\n");
 
     asm_funcs(tree, tree->root, code_error);
@@ -92,10 +90,6 @@ void asm_func (Tree *tree, Node *node, int *code_error)
     my_assert(tree != NULL, ERR_PTR);
 
     IS_NODE_PTR_NULL();
-
-    PRINT_ASM("\n;;--------------------------------------------------------------------------------------------\n");
-    PRINT_ASM_PARAM(";;------------function-%s------------\n", tree->idents.ident[node->data.ident].name_var);
-    PRINT_ASM(";;--------------------------------------------------------------------------------------------\n\n");
 
     PRINT_ASM_PARAM("%s:\n", tree->idents.ident[node->data.ident].name_var);
 
@@ -183,8 +177,6 @@ void asm_call_func (Tree *tree, Node *node, ScopeTableName *cur_table, int *code
     my_assert(cur_table != NULL, ERR_PTR);
     my_assert(node      != NULL, ERR_PTR);
 
-    PRINT_ASM("\n;;---call-function---\n\n");
-
     asm_params(tree, node->left, cur_table, code_error);
 
     PRINT_ASM_PARAM("\t\tpush rbx\n"
@@ -196,9 +188,7 @@ void asm_call_func (Tree *tree, Node *node, ScopeTableName *cur_table, int *code
     PRINT_ASM_PARAM("\t\tcall %s\n", tree->idents.ident[node->data.ident].name_var);
 
     PRINT_ASM("\t\tpop rbx\n"
-              "\t\tpush rax\t\t\t; save ret value in stack\n");
-
-    PRINT_ASM("\n;;---end-call-function---\n\n");
+              "\t\tpush rax\n");
 }
 
 void asm_params (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
@@ -297,15 +287,10 @@ void asm_op (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
         {
             int item_ident = node->left->data.ident;
 
-            PRINT_ASM("\n;---start-of-expression---\n\n");
-
             asm_node(tree, node->right, cur_table, code_error);
 
             pop_ptr(item_ident);
-
             // PRINT_ASM_PARAM("\t\tpop [rbx + %d]\n", item_ident);
-
-            PRINT_ASM("\n;---end-of-expression---\n\n");
 
             break;
         }
@@ -369,21 +354,14 @@ void asm_if_else (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_e
 
     int end_if = if_label++;
 
-    LabelBody label_body = {};
-
-    PRINT_ASM("\n;;---if-instructions---\n\n");
+    int end_label_body = 0;
 
     while (temp_node != NULL)
     {
         if (temp_node->data.types_op != ELSE)
         {
-            label_body = {(if_label++), (if_label++)};
-            asm_condition(tree, temp_node->left->left, cur_table, IF, &label_body, code_error);
-        }
-
-        if (temp_node->data.types_op != ELSE)
-        {
-            PRINT_ASM_PARAM("\tif_%d:\n", label_body.start_label_body);
+            end_label_body = if_label++;
+            asm_condition(tree, temp_node->left->left, cur_table, IF, end_label_body, code_error);
         }
 
         asm_node(tree, temp_node->left->right, cur_table, code_error);
@@ -391,15 +369,13 @@ void asm_if_else (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_e
         if (temp_node->data.types_op != ELSE)
         {
             PRINT_ASM_PARAM("\t\tjmp end_if_%d\n", end_if);
-            PRINT_ASM_PARAM("\tif_%d:\n", label_body.end_label_body)
+            PRINT_ASM_PARAM("\tif_%d:\n", end_label_body)
         }
 
         temp_node = temp_node->right;
     }
 
     PRINT_ASM_PARAM("\tend_if_%d:\n", end_if);
-
-    PRINT_ASM("\n;;---end-if-instructions---\n\n");
 }
 
 void asm_while (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
@@ -408,25 +384,22 @@ void asm_while (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_err
     my_assert(tree      != NULL, ERR_PTR);
     my_assert(cur_table != NULL, ERR_PTR);
 
-    PRINT_ASM("\n;;---while-instructions---\n\n");
+    int start_label_body = while_label++;
+    int end_label_body   = while_label;
 
-    LabelBody label_body = {while_label, (++while_label)};
+    PRINT_ASM_PARAM("\twhile_%d:\n", start_label_body);
 
-    PRINT_ASM_PARAM("\twhile_%d:\n", label_body.start_label_body);
-
-    asm_condition(tree, node->left, cur_table, WHILE, &label_body, code_error);
+    asm_condition(tree, node->left, cur_table, WHILE, end_label_body, code_error);
 
     while_label++;
 
     asm_node(tree, node->right, cur_table, code_error);
 
-    PRINT_ASM_PARAM("\t\tjmp while_%d\n", label_body.start_label_body);
-    PRINT_ASM_PARAM("\twhile_%d:\n", label_body.end_label_body);
-
-    PRINT_ASM("\n;;---end-while-instructions---\n\n");
+    PRINT_ASM_PARAM("\t\tjmp while_%d\n", end_label_body);
+    PRINT_ASM_PARAM("\twhile_%d:\n", end_label_body);
 }
 
-void asm_condition (Tree *tree, Node *node, ScopeTableName *cur_table, op_command mode, LabelBody *label_body, int *code_error)
+void asm_condition (Tree *tree, Node *node, ScopeTableName *cur_table, op_command mode, int n_label, int *code_error)
 {
     my_assert(tree      != NULL, ERR_PTR);
     my_assert(cur_table != NULL, ERR_PTR);
@@ -437,22 +410,22 @@ void asm_condition (Tree *tree, Node *node, ScopeTableName *cur_table, op_comman
 
     if (node->type == OP && (node->data.types_op == AND || node->data.types_op == OR))
     {
-        asm_condition(tree, node->left, cur_table, mode, label_body, code_error);
+        asm_condition(tree, node->left, cur_table, mode, n_label, code_error);
 
         if (node->data.types_op == AND)
         {
-            asm_opp_compare(tree, node, mode, label_body->end_label_body, code_error);
+            asm_opp_compare(tree, node->left, mode, n_label, code_error);
         }
         else if (node->data.types_op == OR)
         {
-            asm_compare(tree, node, mode, if_label, code_error);
+            asm_compare(tree, node->left, mode, if_label, code_error);
 
             cur_label = if_label++;
         }
 
-        asm_condition(tree, node->right, cur_table, mode, label_body, code_error);
+        asm_condition(tree, node->right, cur_table, mode, n_label, code_error);
 
-        asm_opp_compare(tree, node, mode, label_body->end_label_body, code_error);
+        asm_opp_compare(tree, node->right, mode, n_label, code_error);
 
         if (node->data.types_op == OR)
         {
@@ -466,7 +439,7 @@ void asm_condition (Tree *tree, Node *node, ScopeTableName *cur_table, op_comman
 
         if (node->parent->data.types_op == OP_NO)
         {
-            asm_opp_compare(tree, node, mode, label_body->end_label_body, code_error);
+            asm_opp_compare(tree, node, mode, n_label, code_error);
         }
     }
 }
@@ -484,8 +457,8 @@ void asm_condition (Tree *tree, Node *node, ScopeTableName *cur_table, op_comman
 
 void asm_compare (Tree *tree, Node *node, op_command mode, int label, int *code_error)
 {
-    my_assert(tree      != NULL, ERR_PTR);
-    my_assert(node      != NULL, ERR_PTR);
+    my_assert(tree != NULL, ERR_PTR);
+    my_assert(node != NULL, ERR_PTR);
 
     switch (node->data.types_op)
     {
@@ -517,6 +490,10 @@ void asm_compare (Tree *tree, Node *node, op_command mode, int label, int *code_
         case (NE):
         {
             PRINT_LABEL("jne");
+            break;
+        }
+        default:
+        {
             break;
         }
     }
@@ -557,6 +534,10 @@ void asm_opp_compare (Tree *tree, Node *node, op_command mode, int label, int *c
         case (NE):
         {
             PRINT_LABEL("je");
+            break;
+        }
+        default:
+        {
             break;
         }
     }

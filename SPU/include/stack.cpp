@@ -1,12 +1,11 @@
-/// @file stack.cpp
+#ifndef STACK_CPP
+#define STACK_CPP
 
 #include "stack.h"
 
-/**
- * types of errors
-*/
+static const char *fp_err_name = "file_err.txt";
 
-static const char *err_msgs_arr[] = {                                                                                   ///< Constant containing error messages.
+static const char *err_msgs_arr[] = {
     "NO ERROR.\n",
     "ERROR: null pointer to stack.\n",
     "ERROR: null pointer to stack data.\n",
@@ -27,142 +26,116 @@ static const char *err_msgs_arr[] = {                                           
     "ERROR: error when allocating memory in stack_realloc.\n"
 };
 
-static const char *fp_err_name = "file_err.txt";                                                                        ///< Variable storing the file name for error output.
-
 static const int UP = 1;
 static const int DOWN = 2;
 
 static const int HST_UP = 2;
 static const int HST_DOWN = 4;
 
-static int CODE_ERROR = 0;                                                                                              ///< Variable for error codes.
+static int CODE_ERROR = 0;
 
-/**
- * Function to create a stack.
- * @param[in] stk pointer to the stack to be created
- * @param[in] capacity amount of memory allocated for stack storage
-*/
+static void stack_realloc(STACK *stk, const int size, int *code_error);
 
-void stack_ctor (STACK *stk, const size_t capacity)
+#ifdef HASH_CHECK
+static HASH_TYPE hash_control_data (STACK *stk, int *code_error);
+
+static HASH_TYPE hash_control_struct (STACK *stk, int *code_error);
+
+static HASH_TYPE hash_djb (int str);
+#endif
+
+void stack_ctor (STACK *stk, const size_t capacity, int *code_error)
 {
-    my_assert (stk != NULL);
-    my_assert (stk->data == NULL);
+    my_assert(stk != NULL, ERR_PTR);
+    my_assert(stk->data == NULL, ERR_PTR);
 
 #ifdef CANARIES_CHECK
-    stk->data = (ELEMENT *) calloc (capacity * sizeof (ELEMENT) + 2 * sizeof (CANARY_TYPE), sizeof (char));
-    my_assert (stk->data != NULL)
+    calloc_init_(stk->data, ELEMENT *, capacity * sizeof(ELEMENT) + 2 * sizeof(CANARY_TYPE), sizeof(char));
 
     *((CANARY_TYPE *) stk->data) = CANARY;
 
-    *((CANARY_TYPE *)(stk->data + capacity + sizeof (CANARY_TYPE) / sizeof (ELEMENT))) = CANARY;
-    stk->data += sizeof (CANARY_TYPE) / sizeof (ELEMENT);
+    *((CANARY_TYPE *)(stk->data + capacity + sizeof(CANARY_TYPE) / sizeof(ELEMENT))) = CANARY;
+    stk->data += sizeof(CANARY_TYPE) / sizeof(ELEMENT);
 
     stk->left_canary  = CANARY;
     stk->right_canary = CANARY;
 #else
-    stk->data = (ELEMENT *) calloc  (capacity * sizeof (ELEMENT), sizeof (char));
-    my_assert (stk->data != NULL);
+    calloc_init_(stk->data, ELEMENT *, capacity * sizeof(ELEMENT), sizeof(char));
 #endif
 
-    memset (stk->data, 0, capacity * sizeof (ELEMENT));
+    memset(stk->data, 0, capacity * sizeof(ELEMENT));
 
     stk->size = capacity;
     stk->position = 0;
 
-    ON_DEBUG (stk->hash_data   = hash_control_data   (stk),
-              stk->hash_struct = hash_control_struct (stk));
+    ON_DEBUG(stk->hash_data   = hash_control_data(stk),
+             stk->hash_struct = hash_control_struct(stk));
 
-    assert_stack (stk);
+    assert_stack(stk);
 }
 
-/**
- * Stack cleaning function.
- * @param[in] stk pointer to the stack to be removed
-*/
-
-void stack_dtor (STACK *stk)
+void stack_dtor(STACK *stk, int *code_error)
 {
-    my_assert (stk->data != NULL);
-    assert_stack (stk);
-
-    free (stk->data - sizeof (CANARY_TYPE) / sizeof (ELEMENT));
+    my_assert(stk->data != NULL, ERR_PTR);
+    assert_stack(stk);
 
 #ifdef CANARIES_CHECK
+    free(stk->data - sizeof(CANARY_TYPE) / sizeof(ELEMENT));
     stk->left_canary  = (CANARY_TYPE) STACK_VALUE_VENOM;
     stk->right_canary = (CANARY_TYPE) STACK_VALUE_VENOM;
+#else
+    free(stk->data);
 #endif
 
-    ON_DEBUG (stk->hash_data   = STACK_VALUE_VENOM,
-              stk->hash_struct = STACK_VALUE_VENOM);
+    ON_DEBUG(stk->hash_data   = STACK_VALUE_VENOM,
+             stk->hash_struct = STACK_VALUE_VENOM);
 
     stk->data = NULL;
     stk->size = STACK_VALUE_VENOM;
     stk->position = STACK_VALUE_VENOM;
 }
 
-/**
- * Function to add a new element to the stack.
- * @param[in] stk pointer to the stack to which the element should be added
- * @param[in] value element to be added
-*/
-
-void stack_push (STACK *stk, const ELEMENT value)
+void stack_push (STACK *stk, const ELEMENT value, int *code_error)
 {
-    assert_stack (stk);
+    assert_stack(stk);
 
     if (stk->size == stk->position)
     {
-        int code_error = stack_realloc (stk, UP);
-
-        my_assert (code_error != ERR_STACK_REALLOC);
+        stack_realloc(stk, UP, code_error);
     }
 
     stk->data[stk->position++] = value;
 
-    ON_DEBUG (stk->hash_data   = hash_control_data   (stk),
-              stk->hash_struct = hash_control_struct (stk));
+    ON_DEBUG(stk->hash_data   = hash_control_data(stk, code_error),
+             stk->hash_struct = hash_control_struct(stk, code_error));
 
-    assert_stack (stk);
+    assert_stack(stk);
 }
 
-/**
- * Function that returns the last element added.
- * @param[in] stk pointer to the stack from which one element must be retrieved
-*/
-
-ELEMENT stack_pop (STACK *stk)
+ELEMENT stack_pop (STACK *stk, int *code_error)
 {
-    assert_stack (stk);
-    my_assert (stk->position > 0);
-    
-    if (stk->position < stk->size / HST_DOWN)
-    {        
-        int code_error = stack_realloc (stk, DOWN);
+    assert_stack(stk);
 
-        my_assert (code_error != ERR_STACK_REALLOC);
+    if (stk->position < stk->size / HST_DOWN)
+    {
+        stack_realloc(stk, DOWN, code_error);
     }
 
     ELEMENT elem_pop = stk->data[--stk->position];
 
     stk->data[stk->position] = 0;
 
-    ON_DEBUG (stk->hash_data   = hash_control_data   (stk),
-              stk->hash_struct = hash_control_struct (stk));
+    ON_DEBUG(stk->hash_data   = hash_control_data(stk, code_error),
+             stk->hash_struct = hash_control_struct(stk, code_error));
 
-    assert_stack (stk);
+    assert_stack(stk);
 
     return elem_pop;
 }
 
-/**
- * A function that changes the stack size.
- * @param[in] stk pointer to the stack whose size needs to be changed
- * @param[in] size size to be allocated
-*/
-
-int stack_realloc (STACK *stk, const int type_mode)
+void stack_realloc (STACK *stk, const int type_mode, int *code_error)
 {
-    assert_stack (stk);
+    assert_stack(stk);
 
     int size = 0;
 
@@ -174,69 +147,50 @@ int stack_realloc (STACK *stk, const int type_mode)
     {
         size = stk->size / HST_DOWN;
     }
-    else
-    {
-        return ERR_STACK_REALLOC;
-    }
 
 #ifdef CANARIES_CHECK
-    stk->data = (ELEMENT *) realloc (stk->data - sizeof (CANARY_TYPE) / sizeof (ELEMENT), size * sizeof (ELEMENT) + 2 * sizeof (CANARY_TYPE));
-    my_assert (stk->data != NULL);
+    stk->data = (ELEMENT *) realloc(stk->data - sizeof(CANARY_TYPE) / sizeof(ELEMENT), size * sizeof(ELEMENT) + 2 * sizeof(CANARY_TYPE));
+    my_assert(stk->data != NULL, ERR_MEM);
 
-    *((CANARY_TYPE *)(stk->data + size + sizeof (CANARY_TYPE) / sizeof (ELEMENT))) = CANARY;
+    *((CANARY_TYPE *)(stk->data + size + sizeof(CANARY_TYPE) / sizeof(ELEMENT))) = CANARY;
 
-    stk->data += sizeof (CANARY_TYPE) / sizeof (ELEMENT);
+    stk->data += sizeof(CANARY_TYPE) / sizeof(ELEMENT);
 #else
-    stk->data = (ELEMENT *) realloc (stk->data, size * sizeof (ELEMENT));
-    my_assert (stk->data != NULL);
+    realloc_(stk->data, ELEMENT *, size * sizeof(ELEMENT));
 #endif
 
     if (size - stk->size > 0)
     {
-        memset (stk->data + stk->size, 0, (size - stk->size) * sizeof (ELEMENT));
+        memset(stk->data + stk->size, 0, (size - stk->size) * sizeof(ELEMENT));
     }
 
     stk->size = size;
 
-    ON_DEBUG (stk->hash_data   = hash_control_data   (stk),
-              stk->hash_struct = hash_control_struct (stk));
+    ON_DEBUG(stk->hash_data   = hash_control_data(stk, code_error),
+             stk->hash_struct = hash_control_struct(stk), code_error);
 
-    assert_stack (stk);
-
-    return ERR_NO;
+    assert_stack(stk);
 }
 
 #ifdef HASH_CHECK
 
-/**
- * Function that creates a hash of an array of stack elements.
- * @param[in] stk pointer to the stack whose hash must be calculated
- * @param[out] hash_data hash value data
-*/
-
-HASH_TYPE hash_control_data (STACK *stk)
+HASH_TYPE hash_control_data (STACK *stk, int *code_error)
 {
-    my_assert (stk != NULL);
+    my_assert(stk != NULL, ERR_PTR);
 
     HASH_TYPE hash_data = 0;
 
     for (int i = 0; i < stk->position; i++)
     {
-        hash_data += hash_djb (stk->data[i]);
+        hash_data += hash_djb(stk->data[i]);
     }
 
     return hash_data;
 }
 
-/**
- * Function that creates a hash of a structure.
- * @param[in] stk pointer to the stack whose hash must be calculated
- * @param[out] hash hash value
-*/
-
-HASH_TYPE hash_control_struct (STACK *stk)
+HASH_TYPE hash_control_struct (STACK *stk, int *code_error)
 {
-    my_assert (stk != NULL);
+    my_assert(stk != NULL, ERR_PTR);
 
     int data = 0;
 
@@ -245,17 +199,10 @@ HASH_TYPE hash_control_struct (STACK *stk)
         data += stk->data[i];
     }
 
-    HASH_TYPE hash = hash_djb (data + stk->position + stk->size);
+    HASH_TYPE hash = hash_djb(data + stk->position + stk->size);
 
     return hash;
 }
-
-/**
- * Hash generating function.
- * Formula: ((hash << 5) + hash) + i
- * @param[in] str pointer to the stack whose hash must be calculated
- * @param[out] hash hash value
-*/
 
 HASH_TYPE hash_djb(int str)
 {
@@ -268,13 +215,10 @@ HASH_TYPE hash_djb(int str)
 
     return hash;
 }
+
 #endif
 
-/**
- * Function that checks the stack for errors.
- * @param[in] stk pointer to the stack to be checked
- * @param[out] code_error error code
-*/
+#ifdef DEBUG
 
 int stack_verification (STACK *stk)
 {
@@ -353,19 +297,10 @@ int stack_verification (STACK *stk)
         return STACK_DATA_RIGHT_CANARY_ERR;
     }
 #endif
-    
+
 
     return STACK_OK;
 }
-
-/**
- * Function that prints error and stack information.
- * @param[in] stk pointer to the stack whose information is to be printed
- * @param[in] code_error error code
- * @param[in] file_err name of the file where the error was made
- * @param[in] func_err name of the function where the error was made
- * @param[in] line_errline number where the error was made
-*/
 
 void stack_dump (STACK *stk, const int code_error, const char *file_err, const char *func_err, const int line_err)
 {
@@ -375,7 +310,7 @@ void stack_dump (STACK *stk, const int code_error, const char *file_err, const c
     {
         fprintf (stderr, "%s", err_msgs_arr[FILE_OPEN_ERR]);
     }
-    
+
     if (stk != NULL)
     {
         if (code_error < STACK_ERROR_CNT)
@@ -428,7 +363,7 @@ void stack_dump (STACK *stk, const int code_error, const char *file_err, const c
 
             fprintf (fp_err, "\t}\n");
         }
-        else 
+        else
         {
             fprintf (fp_err, "\tdata[NULL]\n");
         }
@@ -449,7 +384,7 @@ void stack_dump (STACK *stk, const int code_error, const char *file_err, const c
     }
     else
     {
-        if (code_error < ERROR_CNT)
+        if (code_error < STACK_ERROR_CNT)
         {
             fprintf (fp_err, "%s\n", err_msgs_arr[code_error]);
         }
@@ -461,3 +396,7 @@ void stack_dump (STACK *stk, const int code_error, const char *file_err, const c
         fprintf (fp_err, "stack[NULL] \"stk\" called from %s(%d) %s\n", file_err, line_err, func_err);
     }
 }
+
+#endif
+
+#endif // STACK_CPP

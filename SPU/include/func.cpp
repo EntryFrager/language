@@ -1,46 +1,20 @@
-/// @file func.cpp
+#ifndef FUNC_CPP
+#define FUNC_CPP
 
 #include "func.h"
 
-/**
- * Function that reads information from a file.
- * @param[in] spu Structure containing all information
- * @param[out] code_error Returns the error code
-*/
-
-int input_text (SPU* spu)
+int input_text (SPU* spu, int *code_error)
 {
-    my_assert (spu != NULL);
+    my_assert(spu != NULL, ERR_PTR);
 
-    spu->size_file = get_file_size (spu->fp_input) / 4;
+    spu->size_file = get_file_size(spu->fp_input, code_error) / 4;
 
-    spu->buf = (int *) calloc (spu->size_file * sizeof (int), sizeof (char));
-    my_assert (spu->buf != NULL);
+    calloc_init_(spu->buf, int *, spu->size_file * sizeof(int), sizeof(char));
 
-    size_t read_size = fread (spu->buf, sizeof (int), spu->size_file, spu->fp_input);
-
-    if (read_size != spu->size_file)
-    {
-        return ERR_FREAD;
-    }
+    size_t read_size = fread(spu->buf, sizeof (int), spu->size_file, spu->fp_input);
+    my_assert (read_size == spu->size_file, ERR_FREAD);
 
     return ERR_NO;
 }
 
-/**
- * Function returning file size.
- * @param[in] stream Pointer to file
- * @param[out] size_file File size
-*/
-
-size_t get_file_size (FILE *stream)
-{
-    my_assert (stream != NULL);
-
-    size_t start = ftell (stream);
-    fseek (stream, start, SEEK_END);
-    size_t size_file = ftell (stream);
-    rewind (stream);
-
-    return size_file;
-}
+#endif // FUNC_CPP

@@ -44715,3 +44715,2419 @@ tree[0x7ffe72e88b30] "tree" called from ./src/main.cpp(14) main
 --------------------------------------------------------------------------------------------------------
 
 
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffd91ecd430] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5e1679778510] = ;;
+
+		*node[0x5e1679778590] = 0;
+
+		*node[0x5e16797785c0] = ;;
+
+		*node[0x5e16797785f0] = input;
+
+		*node[0x5e1679778620] = 1;
+
+		*node[0x5e1679778650] = 2;
+
+		*node[0x5e1679778680] = 3;
+
+		*node[0x5e16797786e0] = ;;
+
+		*node[0x5e1679778740] = 1;
+
+		*node[0x5e1679778770] = 2;
+
+		*node[0x5e16797787a0] = 3;
+
+		*node[0x5e16797787d0] = ;;
+
+		*node[0x5e1679778850] = 4;
+
+		*node[0x5e1679778880] = 1;
+
+		*node[0x5e16797788b0] = 2;
+
+		*node[0x5e16797788e0] = 3;
+
+		*node[0x5e1679778940] = ;;
+
+		*node[0x5e1679778970] = if;
+
+		*node[0x5e16797789a0] = op_no;
+
+		*node[0x5e1679778a30] = ==;
+
+		*node[0x5e16797789d0] = 1;
+
+		*node[0x5e1679778a00] = 0;
+
+		*node[0x5e1679778a60] = ;;
+
+		*node[0x5e1679778ac0] = 2;
+
+		*node[0x5e1679778af0] = 3;
+
+		*node[0x5e1679778b20] = else;
+
+		*node[0x5e1679778b50] = op_no;
+
+		*node[0x5e1679778b80] = ;;
+
+		*node[0x5e1679778c30] = 1;
+
+		*node[0x5e1679778c60] = 2;
+
+		*node[0x5e1679778c90] = 3;
+
+		*node[0x5e1679778cc0] = ;;
+
+		*node[0x5e1679778d40] = 5;
+
+		*node[0x5e1679778da0] = 1;
+
+		*node[0x5e1679778dd0] = 2;
+
+		*node[0x5e1679778e00] = ;;
+
+		*node[0x5e1679778f20] = =;
+
+		*node[0x5e1679778e30] = 7;
+
+		*node[0x5e1679778ef0] = -;
+
+		*node[0x5e1679778e90] = 0;
+
+		*node[0x5e1679778ec0] = 1;
+
+		*node[0x5e1679778f50] = ;;
+
+		*node[0x5e1679778fe0] = =;
+
+		*node[0x5e1679778f80] = 8;
+
+		*node[0x5e1679778fb0] = 1;
+
+		*node[0x5e1679779010] = ;;
+
+		*node[0x5e16797790f0] = =;
+
+		*node[0x5e1679779040] = 9;
+
+		*node[0x5e16797790c0] = 1000;
+
+		*node[0x5e1679779120] = ;;
+
+		*node[0x5e1679779150] = if;
+
+		*node[0x5e1679779180] = op_no;
+
+		*node[0x5e1679779210] = ==;
+
+		*node[0x5e16797791b0] = 1;
+
+		*node[0x5e16797791e0] = 0;
+
+		*node[0x5e1679779240] = ;;
+
+		*node[0x5e1679779270] = if;
+
+		*node[0x5e16797792a0] = op_no;
+
+		*node[0x5e1679779330] = ==;
+
+		*node[0x5e16797792d0] = 2;
+
+		*node[0x5e1679779300] = 0;
+
+		*node[0x5e1679779360] = ;;
+
+		*node[0x5e1679779390] = print;
+
+		*node[0x5e16797793c0] = 9;
+
+		*node[0x5e16797793f0] = else;
+
+		*node[0x5e1679779420] = op_no;
+
+		*node[0x5e1679779450] = ;;
+
+		*node[0x5e1679779480] = print;
+
+		*node[0x5e16797794b0] = 7;
+
+		*node[0x5e16797794e0] = else;
+
+		*node[0x5e1679779510] = op_no;
+
+		*node[0x5e1679779540] = ;;
+
+		*node[0x5e1679779690] = =;
+
+		*node[0x5e1679779570] = 10;
+
+		*node[0x5e1679779660] = -;
+
+		*node[0x5e16797795a0] = 0;
+
+		*node[0x5e1679779630] = /;
+
+		*node[0x5e16797795d0] = 2;
+
+		*node[0x5e1679779600] = 1;
+
+		*node[0x5e16797796c0] = ;;
+
+		*node[0x5e16797796f0] = print;
+
+		*node[0x5e1679779720] = 8;
+
+		*node[0x5e1679779750] = ;;
+
+		*node[0x5e1679779780] = print;
+
+		*node[0x5e16797797b0] = 10;
+
+		*node[0x5e16797797e0] = ;;
+
+		*node[0x5e1679779810] = return;
+
+		*node[0x5e1679779840] = 0;
+
+		*node[0x5e1679779870] = ;;
+
+		*node[0x5e16797798f0] = 6;
+
+		*node[0x5e1679779920] = 1;
+
+		*node[0x5e1679779950] = 2;
+
+		*node[0x5e1679779980] = 3;
+
+		*node[0x5e16797799e0] = ;;
+
+		*node[0x5e1679779ad0] = =;
+
+		*node[0x5e1679779a10] = 7;
+
+		*node[0x5e1679779aa0] = -;
+
+		*node[0x5e1679779a40] = 0;
+
+		*node[0x5e1679779a70] = 1;
+
+		*node[0x5e1679779b00] = ;;
+
+		*node[0x5e1679779be0] = =;
+
+		*node[0x5e1679779b30] = 8;
+
+		*node[0x5e1679779bb0] = 1;
+
+		*node[0x5e1679779c10] = ;;
+
+		*node[0x5e1679779ca0] = =;
+
+		*node[0x5e1679779c40] = 11;
+
+		*node[0x5e1679779c70] = 2;
+
+		*node[0x5e1679779cd0] = ;;
+
+		*node[0x5e1679779d00] = if;
+
+		*node[0x5e1679779d30] = op_no;
+
+		*node[0x5e1679779dc0] = ==;
+
+		*node[0x5e1679779d60] = 3;
+
+		*node[0x5e1679779d90] = 0;
+
+		*node[0x5e1679779df0] = ;;
+
+		*node[0x5e1679779e80] = =;
+
+		*node[0x5e1679779e20] = 12;
+
+		*node[0x5e1679779e50] = 0;
+
+		*node[0x5e1679779eb0] = ;;
+
+		*node[0x5e167977a000] = =;
+
+		*node[0x5e1679779ee0] = 13;
+
+		*node[0x5e1679779fd0] = -;
+
+		*node[0x5e1679779f10] = 0;
+
+		*node[0x5e1679779fa0] = /;
+
+		*node[0x5e1679779f40] = 2;
+
+		*node[0x5e1679779f70] = 1;
+
+		*node[0x5e167977a030] = ;;
+
+		*node[0x5e167977a060] = print;
+
+		*node[0x5e167977a090] = 11;
+
+		*node[0x5e167977a0c0] = ;;
+
+		*node[0x5e167977a0f0] = print;
+
+		*node[0x5e167977a120] = 12;
+
+		*node[0x5e167977a150] = 13;
+
+		*node[0x5e167977a180] = else;
+
+		*node[0x5e167977a1b0] = op_no;
+
+		*node[0x5e167977a1e0] = ;;
+
+		*node[0x5e167977a480] = =;
+
+		*node[0x5e167977a210] = 14;
+
+		*node[0x5e167977a450] = -;
+
+		*node[0x5e167977a330] = *;
+
+		*node[0x5e167977a2d0] = 2;
+
+		*node[0x5e167977a300] = 2;
+
+		*node[0x5e167977a420] = *;
+
+		*node[0x5e167977a3c0] = *;
+
+		*node[0x5e167977a360] = 4;
+
+		*node[0x5e167977a390] = 1;
+
+		*node[0x5e167977a3f0] = 3;
+
+		*node[0x5e167977a4b0] = ;;
+
+		*node[0x5e167977a4e0] = print;
+
+		*node[0x5e167977a510] = 14;
+
+		*node[0x5e167977a540] = ;;
+
+		*node[0x5e167977a570] = if;
+
+		*node[0x5e167977a5a0] = op_no;
+
+		*node[0x5e167977a630] = >;
+
+		*node[0x5e167977a5d0] = 14;
+
+		*node[0x5e167977a600] = 0;
+
+		*node[0x5e167977a660] = ;;
+
+		*node[0x5e167977a720] = =;
+
+		*node[0x5e167977a690] = 15;
+
+		*node[0x5e167977a6f0] = sqrt;
+
+		*node[0x5e167977a6c0] = 14;
+
+		*node[0x5e167977a750] = ;;
+
+		*node[0x5e167977a960] = =;
+
+		*node[0x5e167977a780] = 12;
+
+		*node[0x5e167977a930] = -;
+
+		*node[0x5e167977a810] = -;
+
+		*node[0x5e167977a7b0] = 0;
+
+		*node[0x5e167977a7e0] = 2;
+
+		*node[0x5e167977a900] = *;
+
+		*node[0x5e167977a8a0] = /;
+
+		*node[0x5e167977a840] = 15;
+
+		*node[0x5e167977a870] = 2;
+
+		*node[0x5e167977a8d0] = 1;
+
+		*node[0x5e167977a990] = ;;
+
+		*node[0x5e167977aba0] = =;
+
+		*node[0x5e167977a9c0] = 13;
+
+		*node[0x5e167977ab70] = +;
+
+		*node[0x5e167977aa50] = -;
+
+		*node[0x5e167977a9f0] = 0;
+
+		*node[0x5e167977aa20] = 2;
+
+		*node[0x5e167977ab40] = *;
+
+		*node[0x5e167977aae0] = /;
+
+		*node[0x5e167977aa80] = 15;
+
+		*node[0x5e167977aab0] = 2;
+
+		*node[0x5e167977ab10] = 1;
+
+		*node[0x5e167977abd0] = ;;
+
+		*node[0x5e167977ac00] = print;
+
+		*node[0x5e167977ac30] = 11;
+
+		*node[0x5e167977ac60] = ;;
+
+		*node[0x5e167977ac90] = print;
+
+		*node[0x5e167977acc0] = 12;
+
+		*node[0x5e167977acf0] = 13;
+
+		*node[0x5e167977ad20] = elseif;
+
+		*node[0x5e167977ad50] = op_no;
+
+		*node[0x5e167977ade0] = ==;
+
+		*node[0x5e167977ad80] = 14;
+
+		*node[0x5e167977adb0] = 0;
+
+		*node[0x5e167977ae10] = ;;
+
+		*node[0x5e167977afc0] = =;
+
+		*node[0x5e167977ae40] = 10;
+
+		*node[0x5e167977af90] = -;
+
+		*node[0x5e167977ae70] = 0;
+
+		*node[0x5e167977af60] = *;
+
+		*node[0x5e167977af00] = /;
+
+		*node[0x5e167977aea0] = 2;
+
+		*node[0x5e167977aed0] = 2;
+
+		*node[0x5e167977af30] = 1;
+
+		*node[0x5e167977aff0] = ;;
+
+		*node[0x5e167977b020] = print;
+
+		*node[0x5e167977b050] = 8;
+
+		*node[0x5e167977b080] = ;;
+
+		*node[0x5e167977b0b0] = print;
+
+		*node[0x5e167977b0e0] = 10;
+
+		*node[0x5e167977b110] = else;
+
+		*node[0x5e167977b140] = op_no;
+
+		*node[0x5e167977b170] = ;;
+
+		*node[0x5e167977b1a0] = print;
+
+		*node[0x5e167977b1d0] = 7;
+
+		*node[0x5e167977b200] = ;;
+
+		*node[0x5e167977b230] = return;
+
+		*node[0x5e167977b260] = 0;
+
+		*node[0x5e167977b290] = ;;
+
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffeddc6ccd0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x57878e24a610] = ;;
+
+		*node[0x57878e24a690] = 0;
+
+		*node[0x57878e24a6c0] = ;;
+
+		*node[0x57878e24a6f0] = input;
+
+		*node[0x57878e24a720] = 1;
+
+		*node[0x57878e24a750] = 2;
+
+		*node[0x57878e24a780] = 3;
+
+		*node[0x57878e24a7e0] = ;;
+
+		*node[0x57878e24a840] = 1;
+
+		*node[0x57878e24a870] = 2;
+
+		*node[0x57878e24a8a0] = 3;
+
+		*node[0x57878e24a8d0] = ;;
+
+		*node[0x57878e24a950] = 4;
+
+		*node[0x57878e24a980] = 1;
+
+		*node[0x57878e24a9b0] = 2;
+
+		*node[0x57878e24a9e0] = 3;
+
+		*node[0x57878e24aa40] = ;;
+
+		*node[0x57878e24aa70] = if;
+
+		*node[0x57878e24aaa0] = op_no;
+
+		*node[0x57878e24ab30] = ==;
+
+		*node[0x57878e24aad0] = 1;
+
+		*node[0x57878e24ab00] = 0;
+
+		*node[0x57878e24ab60] = ;;
+
+		*node[0x57878e24abc0] = 2;
+
+		*node[0x57878e24abf0] = 3;
+
+		*node[0x57878e24ac20] = else;
+
+		*node[0x57878e24ac50] = op_no;
+
+		*node[0x57878e24ac80] = ;;
+
+		*node[0x57878e24ad30] = 1;
+
+		*node[0x57878e24ad60] = 2;
+
+		*node[0x57878e24ad90] = 3;
+
+		*node[0x57878e24adc0] = ;;
+
+		*node[0x57878e24adf0] = return;
+
+		*node[0x57878e24ae20] = 0;
+
+		*node[0x57878e24ae50] = ;;
+
+		*node[0x57878e24aed0] = 5;
+
+		*node[0x57878e24af30] = 1;
+
+		*node[0x57878e24af60] = 2;
+
+		*node[0x57878e24af90] = ;;
+
+		*node[0x57878e24b0b0] = =;
+
+		*node[0x57878e24afc0] = 7;
+
+		*node[0x57878e24b080] = -;
+
+		*node[0x57878e24b020] = 0;
+
+		*node[0x57878e24b050] = 1;
+
+		*node[0x57878e24b0e0] = ;;
+
+		*node[0x57878e24b170] = =;
+
+		*node[0x57878e24b110] = 8;
+
+		*node[0x57878e24b140] = 1;
+
+		*node[0x57878e24b1a0] = ;;
+
+		*node[0x57878e24b280] = =;
+
+		*node[0x57878e24b1d0] = 9;
+
+		*node[0x57878e24b250] = 1000;
+
+		*node[0x57878e24b2b0] = ;;
+
+		*node[0x57878e24b2e0] = if;
+
+		*node[0x57878e24b310] = op_no;
+
+		*node[0x57878e24b3a0] = ==;
+
+		*node[0x57878e24b340] = 1;
+
+		*node[0x57878e24b370] = 0;
+
+		*node[0x57878e24b3d0] = ;;
+
+		*node[0x57878e24b400] = if;
+
+		*node[0x57878e24b430] = op_no;
+
+		*node[0x57878e24b4c0] = ==;
+
+		*node[0x57878e24b460] = 2;
+
+		*node[0x57878e24b490] = 0;
+
+		*node[0x57878e24b4f0] = ;;
+
+		*node[0x57878e24b520] = print;
+
+		*node[0x57878e24b550] = 9;
+
+		*node[0x57878e24b580] = else;
+
+		*node[0x57878e24b5b0] = op_no;
+
+		*node[0x57878e24b5e0] = ;;
+
+		*node[0x57878e24b610] = print;
+
+		*node[0x57878e24b640] = 7;
+
+		*node[0x57878e24b670] = else;
+
+		*node[0x57878e24b6a0] = op_no;
+
+		*node[0x57878e24b6d0] = ;;
+
+		*node[0x57878e24b820] = =;
+
+		*node[0x57878e24b700] = 10;
+
+		*node[0x57878e24b7f0] = -;
+
+		*node[0x57878e24b730] = 0;
+
+		*node[0x57878e24b7c0] = /;
+
+		*node[0x57878e24b760] = 2;
+
+		*node[0x57878e24b790] = 1;
+
+		*node[0x57878e24b850] = ;;
+
+		*node[0x57878e24b880] = print;
+
+		*node[0x57878e24b8b0] = 8;
+
+		*node[0x57878e24b8e0] = ;;
+
+		*node[0x57878e24b910] = print;
+
+		*node[0x57878e24b940] = 10;
+
+		*node[0x57878e24b970] = ;;
+
+		*node[0x57878e24b9a0] = return;
+
+		*node[0x57878e24b9d0] = 0;
+
+		*node[0x57878e24ba00] = ;;
+
+		*node[0x57878e24ba80] = 6;
+
+		*node[0x57878e24bab0] = 1;
+
+		*node[0x57878e24bae0] = 2;
+
+		*node[0x57878e24bb10] = 3;
+
+		*node[0x57878e24bb70] = ;;
+
+		*node[0x57878e24bc60] = =;
+
+		*node[0x57878e24bba0] = 7;
+
+		*node[0x57878e24bc30] = -;
+
+		*node[0x57878e24bbd0] = 0;
+
+		*node[0x57878e24bc00] = 1;
+
+		*node[0x57878e24bc90] = ;;
+
+		*node[0x57878e24bd70] = =;
+
+		*node[0x57878e24bcc0] = 8;
+
+		*node[0x57878e24bd40] = 1;
+
+		*node[0x57878e24bda0] = ;;
+
+		*node[0x57878e24be30] = =;
+
+		*node[0x57878e24bdd0] = 11;
+
+		*node[0x57878e24be00] = 2;
+
+		*node[0x57878e24be60] = ;;
+
+		*node[0x57878e24be90] = if;
+
+		*node[0x57878e24bec0] = op_no;
+
+		*node[0x57878e24bf50] = ==;
+
+		*node[0x57878e24bef0] = 3;
+
+		*node[0x57878e24bf20] = 0;
+
+		*node[0x57878e24bf80] = ;;
+
+		*node[0x57878e24c010] = =;
+
+		*node[0x57878e24bfb0] = 12;
+
+		*node[0x57878e24bfe0] = 0;
+
+		*node[0x57878e24c040] = ;;
+
+		*node[0x57878e24c190] = =;
+
+		*node[0x57878e24c070] = 13;
+
+		*node[0x57878e24c160] = -;
+
+		*node[0x57878e24c0a0] = 0;
+
+		*node[0x57878e24c130] = /;
+
+		*node[0x57878e24c0d0] = 2;
+
+		*node[0x57878e24c100] = 1;
+
+		*node[0x57878e24c1c0] = ;;
+
+		*node[0x57878e24c1f0] = print;
+
+		*node[0x57878e24c220] = 11;
+
+		*node[0x57878e24c250] = ;;
+
+		*node[0x57878e24c280] = print;
+
+		*node[0x57878e24c2b0] = 12;
+
+		*node[0x57878e24c2e0] = 13;
+
+		*node[0x57878e24c310] = else;
+
+		*node[0x57878e24c340] = op_no;
+
+		*node[0x57878e24c370] = ;;
+
+		*node[0x57878e24c610] = =;
+
+		*node[0x57878e24c3a0] = 14;
+
+		*node[0x57878e24c5e0] = -;
+
+		*node[0x57878e24c4c0] = *;
+
+		*node[0x57878e24c460] = 2;
+
+		*node[0x57878e24c490] = 2;
+
+		*node[0x57878e24c5b0] = *;
+
+		*node[0x57878e24c550] = *;
+
+		*node[0x57878e24c4f0] = 4;
+
+		*node[0x57878e24c520] = 1;
+
+		*node[0x57878e24c580] = 3;
+
+		*node[0x57878e24c640] = ;;
+
+		*node[0x57878e24c670] = print;
+
+		*node[0x57878e24c6a0] = 14;
+
+		*node[0x57878e24c6d0] = ;;
+
+		*node[0x57878e24c700] = if;
+
+		*node[0x57878e24c730] = op_no;
+
+		*node[0x57878e24c7c0] = >;
+
+		*node[0x57878e24c760] = 14;
+
+		*node[0x57878e24c790] = 0;
+
+		*node[0x57878e24c7f0] = ;;
+
+		*node[0x57878e24c8b0] = =;
+
+		*node[0x57878e24c820] = 15;
+
+		*node[0x57878e24c880] = sqrt;
+
+		*node[0x57878e24c850] = 14;
+
+		*node[0x57878e24c8e0] = ;;
+
+		*node[0x57878e24caf0] = =;
+
+		*node[0x57878e24c910] = 12;
+
+		*node[0x57878e24cac0] = -;
+
+		*node[0x57878e24c9a0] = -;
+
+		*node[0x57878e24c940] = 0;
+
+		*node[0x57878e24c970] = 2;
+
+		*node[0x57878e24ca90] = *;
+
+		*node[0x57878e24ca30] = /;
+
+		*node[0x57878e24c9d0] = 15;
+
+		*node[0x57878e24ca00] = 2;
+
+		*node[0x57878e24ca60] = 1;
+
+		*node[0x57878e24cb20] = ;;
+
+		*node[0x57878e24cd30] = =;
+
+		*node[0x57878e24cb50] = 13;
+
+		*node[0x57878e24cd00] = +;
+
+		*node[0x57878e24cbe0] = -;
+
+		*node[0x57878e24cb80] = 0;
+
+		*node[0x57878e24cbb0] = 2;
+
+		*node[0x57878e24ccd0] = *;
+
+		*node[0x57878e24cc70] = /;
+
+		*node[0x57878e24cc10] = 15;
+
+		*node[0x57878e24cc40] = 2;
+
+		*node[0x57878e24cca0] = 1;
+
+		*node[0x57878e24cd60] = ;;
+
+		*node[0x57878e24cd90] = print;
+
+		*node[0x57878e24cdc0] = 11;
+
+		*node[0x57878e24cdf0] = ;;
+
+		*node[0x57878e24ce20] = print;
+
+		*node[0x57878e24ce50] = 12;
+
+		*node[0x57878e24ce80] = 13;
+
+		*node[0x57878e24ceb0] = elseif;
+
+		*node[0x57878e24cee0] = op_no;
+
+		*node[0x57878e24cf70] = ==;
+
+		*node[0x57878e24cf10] = 14;
+
+		*node[0x57878e24cf40] = 0;
+
+		*node[0x57878e24cfa0] = ;;
+
+		*node[0x57878e24d150] = =;
+
+		*node[0x57878e24cfd0] = 10;
+
+		*node[0x57878e24d120] = -;
+
+		*node[0x57878e24d000] = 0;
+
+		*node[0x57878e24d0f0] = *;
+
+		*node[0x57878e24d090] = /;
+
+		*node[0x57878e24d030] = 2;
+
+		*node[0x57878e24d060] = 2;
+
+		*node[0x57878e24d0c0] = 1;
+
+		*node[0x57878e24d180] = ;;
+
+		*node[0x57878e24d1b0] = print;
+
+		*node[0x57878e24d1e0] = 8;
+
+		*node[0x57878e24d210] = ;;
+
+		*node[0x57878e24d240] = print;
+
+		*node[0x57878e24d270] = 10;
+
+		*node[0x57878e24d2a0] = else;
+
+		*node[0x57878e24d2d0] = op_no;
+
+		*node[0x57878e24d300] = ;;
+
+		*node[0x57878e24d330] = print;
+
+		*node[0x57878e24d360] = 7;
+
+		*node[0x57878e24d390] = ;;
+
+		*node[0x57878e24d3c0] = return;
+
+		*node[0x57878e24d3f0] = 0;
+
+		*node[0x57878e24d420] = ;;
+
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffcc7477ec0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5d4a72aafa30] = ;;
+
+		*node[0x5d4a72aafab0] = 0;
+
+		*node[0x5d4a72aafae0] = ;;
+
+		*node[0x5d4a72aafb10] = input;
+
+		*node[0x5d4a72aafb40] = 1;
+
+		*node[0x5d4a72aafb70] = ;;
+
+		*node[0x5d4a72aafc00] = =;
+
+		*node[0x5d4a72aafba0] = 2;
+
+		*node[0x5d4a72aafbd0] = 1;
+
+		*node[0x5d4a72aafc30] = ;;
+
+		*node[0x5d4a72aafc60] = if;
+
+		*node[0x5d4a72aafc90] = op_no;
+
+		*node[0x5d4a72aafde0] = ||;
+
+		*node[0x5d4a72aafd20] = <;
+
+		*node[0x5d4a72aafcc0] = 1;
+
+		*node[0x5d4a72aafcf0] = 0;
+
+		*node[0x5d4a72aafdb0] = ==;
+
+		*node[0x5d4a72aafd50] = 1;
+
+		*node[0x5d4a72aafd80] = 0;
+
+		*node[0x5d4a72aafe10] = ;;
+
+		*node[0x5d4a72aafe40] = print;
+
+		*node[0x5d4a72aafe70] = 2;
+
+		*node[0x5d4a72aafea0] = elseif;
+
+		*node[0x5d4a72aafed0] = op_no;
+
+		*node[0x5d4a72aaff60] = ==;
+
+		*node[0x5d4a72aaff00] = 1;
+
+		*node[0x5d4a72aaff30] = 1;
+
+		*node[0x5d4a72aaff90] = ;;
+
+		*node[0x5d4a72aaffc0] = print;
+
+		*node[0x5d4a72aafff0] = 1;
+
+		*node[0x5d4a72ab0020] = else;
+
+		*node[0x5d4a72ab0050] = op_no;
+
+		*node[0x5d4a72ab0080] = ;;
+
+		*node[0x5d4a72ab0170] = =;
+
+		*node[0x5d4a72ab00b0] = 3;
+
+		*node[0x5d4a72ab0140] = 1;
+
+		*node[0x5d4a72ab01a0] = ;;
+
+		*node[0x5d4a72ab01d0] = print;
+
+		*node[0x5d4a72ab0200] = 3;
+
+		*node[0x5d4a72ab0230] = ;;
+
+		*node[0x5d4a72ab02b0] = 4;
+
+		*node[0x5d4a72ab02e0] = 1;
+
+		*node[0x5d4a72ab0310] = ;;
+
+		*node[0x5d4a72ab0340] = if;
+
+		*node[0x5d4a72ab0370] = op_no;
+
+		*node[0x5d4a72ab0400] = ==;
+
+		*node[0x5d4a72ab03a0] = 1;
+
+		*node[0x5d4a72ab03d0] = 1;
+
+		*node[0x5d4a72ab0430] = ;;
+
+		*node[0x5d4a72ab0460] = return;
+
+		*node[0x5d4a72ab0490] = 1;
+
+		*node[0x5d4a72ab04c0] = ;;
+
+		*node[0x5d4a72ab05b0] = =;
+
+		*node[0x5d4a72ab04f0] = 5;
+
+		*node[0x5d4a72ab0580] = -;
+
+		*node[0x5d4a72ab0520] = 1;
+
+		*node[0x5d4a72ab0550] = 1;
+
+		*node[0x5d4a72ab05e0] = ;;
+
+		*node[0x5d4a72ab0730] = =;
+
+		*node[0x5d4a72ab0610] = 1;
+
+		*node[0x5d4a72ab0700] = *;
+
+		*node[0x5d4a72ab0640] = 1;
+
+		*node[0x5d4a72ab06d0] = 5;
+
+		*node[0x5d4a72ab0760] = ;;
+
+		*node[0x5d4a72ab0790] = return;
+
+		*node[0x5d4a72ab07c0] = 1;
+
+		*node[0x5d4a72ab07f0] = ;;
+
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7ffd75b5dd10] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x58bfbb510610] = ;;
+
+		*node[0x58bfbb510690] = 0;
+
+		*node[0x58bfbb5106c0] = ;;
+
+		*node[0x58bfbb5106f0] = input;
+
+		*node[0x58bfbb510720] = 1;
+
+		*node[0x58bfbb510750] = 2;
+
+		*node[0x58bfbb510780] = 3;
+
+		*node[0x58bfbb5107e0] = ;;
+
+		*node[0x58bfbb510840] = 1;
+
+		*node[0x58bfbb510870] = 2;
+
+		*node[0x58bfbb5108a0] = 3;
+
+		*node[0x58bfbb5108d0] = ;;
+
+		*node[0x58bfbb510950] = 4;
+
+		*node[0x58bfbb510980] = 1;
+
+		*node[0x58bfbb5109b0] = 2;
+
+		*node[0x58bfbb5109e0] = 3;
+
+		*node[0x58bfbb510a40] = ;;
+
+		*node[0x58bfbb510a70] = if;
+
+		*node[0x58bfbb510aa0] = op_no;
+
+		*node[0x58bfbb510b30] = ==;
+
+		*node[0x58bfbb510ad0] = 1;
+
+		*node[0x58bfbb510b00] = 0;
+
+		*node[0x58bfbb510b60] = ;;
+
+		*node[0x58bfbb510bc0] = 2;
+
+		*node[0x58bfbb510bf0] = 3;
+
+		*node[0x58bfbb510c20] = else;
+
+		*node[0x58bfbb510c50] = op_no;
+
+		*node[0x58bfbb510c80] = ;;
+
+		*node[0x58bfbb510d30] = 1;
+
+		*node[0x58bfbb510d60] = 2;
+
+		*node[0x58bfbb510d90] = 3;
+
+		*node[0x58bfbb510dc0] = ;;
+
+		*node[0x58bfbb510df0] = return;
+
+		*node[0x58bfbb510e20] = 0;
+
+		*node[0x58bfbb510e50] = ;;
+
+		*node[0x58bfbb510ed0] = 5;
+
+		*node[0x58bfbb510f30] = 1;
+
+		*node[0x58bfbb510f60] = 2;
+
+		*node[0x58bfbb510f90] = ;;
+
+		*node[0x58bfbb5110b0] = =;
+
+		*node[0x58bfbb510fc0] = 7;
+
+		*node[0x58bfbb511080] = -;
+
+		*node[0x58bfbb511020] = 0;
+
+		*node[0x58bfbb511050] = 1;
+
+		*node[0x58bfbb5110e0] = ;;
+
+		*node[0x58bfbb511170] = =;
+
+		*node[0x58bfbb511110] = 8;
+
+		*node[0x58bfbb511140] = 1;
+
+		*node[0x58bfbb5111a0] = ;;
+
+		*node[0x58bfbb511280] = =;
+
+		*node[0x58bfbb5111d0] = 9;
+
+		*node[0x58bfbb511250] = 1000;
+
+		*node[0x58bfbb5112b0] = ;;
+
+		*node[0x58bfbb5112e0] = if;
+
+		*node[0x58bfbb511310] = op_no;
+
+		*node[0x58bfbb5113a0] = ==;
+
+		*node[0x58bfbb511340] = 1;
+
+		*node[0x58bfbb511370] = 0;
+
+		*node[0x58bfbb5113d0] = ;;
+
+		*node[0x58bfbb511400] = if;
+
+		*node[0x58bfbb511430] = op_no;
+
+		*node[0x58bfbb5114c0] = ==;
+
+		*node[0x58bfbb511460] = 2;
+
+		*node[0x58bfbb511490] = 0;
+
+		*node[0x58bfbb5114f0] = ;;
+
+		*node[0x58bfbb511520] = print;
+
+		*node[0x58bfbb511550] = 9;
+
+		*node[0x58bfbb511580] = else;
+
+		*node[0x58bfbb5115b0] = op_no;
+
+		*node[0x58bfbb5115e0] = ;;
+
+		*node[0x58bfbb511610] = print;
+
+		*node[0x58bfbb511640] = 7;
+
+		*node[0x58bfbb511670] = else;
+
+		*node[0x58bfbb5116a0] = op_no;
+
+		*node[0x58bfbb5116d0] = ;;
+
+		*node[0x58bfbb511820] = =;
+
+		*node[0x58bfbb511700] = 10;
+
+		*node[0x58bfbb5117f0] = -;
+
+		*node[0x58bfbb511730] = 0;
+
+		*node[0x58bfbb5117c0] = /;
+
+		*node[0x58bfbb511760] = 2;
+
+		*node[0x58bfbb511790] = 1;
+
+		*node[0x58bfbb511850] = ;;
+
+		*node[0x58bfbb511880] = print;
+
+		*node[0x58bfbb5118b0] = 8;
+
+		*node[0x58bfbb5118e0] = ;;
+
+		*node[0x58bfbb511910] = print;
+
+		*node[0x58bfbb511940] = 10;
+
+		*node[0x58bfbb511970] = ;;
+
+		*node[0x58bfbb5119a0] = return;
+
+		*node[0x58bfbb5119d0] = 0;
+
+		*node[0x58bfbb511a00] = ;;
+
+		*node[0x58bfbb511a80] = 6;
+
+		*node[0x58bfbb511ab0] = 1;
+
+		*node[0x58bfbb511ae0] = 2;
+
+		*node[0x58bfbb511b10] = 3;
+
+		*node[0x58bfbb511b70] = ;;
+
+		*node[0x58bfbb511c60] = =;
+
+		*node[0x58bfbb511ba0] = 7;
+
+		*node[0x58bfbb511c30] = -;
+
+		*node[0x58bfbb511bd0] = 0;
+
+		*node[0x58bfbb511c00] = 1;
+
+		*node[0x58bfbb511c90] = ;;
+
+		*node[0x58bfbb511d70] = =;
+
+		*node[0x58bfbb511cc0] = 8;
+
+		*node[0x58bfbb511d40] = 1;
+
+		*node[0x58bfbb511da0] = ;;
+
+		*node[0x58bfbb511e30] = =;
+
+		*node[0x58bfbb511dd0] = 11;
+
+		*node[0x58bfbb511e00] = 2;
+
+		*node[0x58bfbb511e60] = ;;
+
+		*node[0x58bfbb511e90] = if;
+
+		*node[0x58bfbb511ec0] = op_no;
+
+		*node[0x58bfbb511f50] = ==;
+
+		*node[0x58bfbb511ef0] = 3;
+
+		*node[0x58bfbb511f20] = 0;
+
+		*node[0x58bfbb511f80] = ;;
+
+		*node[0x58bfbb512010] = =;
+
+		*node[0x58bfbb511fb0] = 12;
+
+		*node[0x58bfbb511fe0] = 0;
+
+		*node[0x58bfbb512040] = ;;
+
+		*node[0x58bfbb512190] = =;
+
+		*node[0x58bfbb512070] = 13;
+
+		*node[0x58bfbb512160] = -;
+
+		*node[0x58bfbb5120a0] = 0;
+
+		*node[0x58bfbb512130] = /;
+
+		*node[0x58bfbb5120d0] = 2;
+
+		*node[0x58bfbb512100] = 1;
+
+		*node[0x58bfbb5121c0] = ;;
+
+		*node[0x58bfbb5121f0] = print;
+
+		*node[0x58bfbb512220] = 11;
+
+		*node[0x58bfbb512250] = ;;
+
+		*node[0x58bfbb512280] = print;
+
+		*node[0x58bfbb5122b0] = 12;
+
+		*node[0x58bfbb5122e0] = 13;
+
+		*node[0x58bfbb512310] = else;
+
+		*node[0x58bfbb512340] = op_no;
+
+		*node[0x58bfbb512370] = ;;
+
+		*node[0x58bfbb512610] = =;
+
+		*node[0x58bfbb5123a0] = 14;
+
+		*node[0x58bfbb5125e0] = -;
+
+		*node[0x58bfbb5124c0] = *;
+
+		*node[0x58bfbb512460] = 2;
+
+		*node[0x58bfbb512490] = 2;
+
+		*node[0x58bfbb5125b0] = *;
+
+		*node[0x58bfbb512550] = *;
+
+		*node[0x58bfbb5124f0] = 4;
+
+		*node[0x58bfbb512520] = 1;
+
+		*node[0x58bfbb512580] = 3;
+
+		*node[0x58bfbb512640] = ;;
+
+		*node[0x58bfbb512670] = print;
+
+		*node[0x58bfbb5126a0] = 14;
+
+		*node[0x58bfbb5126d0] = ;;
+
+		*node[0x58bfbb512700] = if;
+
+		*node[0x58bfbb512730] = op_no;
+
+		*node[0x58bfbb5127c0] = >;
+
+		*node[0x58bfbb512760] = 14;
+
+		*node[0x58bfbb512790] = 0;
+
+		*node[0x58bfbb5127f0] = ;;
+
+		*node[0x58bfbb5128b0] = =;
+
+		*node[0x58bfbb512820] = 15;
+
+		*node[0x58bfbb512880] = sqrt;
+
+		*node[0x58bfbb512850] = 14;
+
+		*node[0x58bfbb5128e0] = ;;
+
+		*node[0x58bfbb512af0] = =;
+
+		*node[0x58bfbb512910] = 12;
+
+		*node[0x58bfbb512ac0] = -;
+
+		*node[0x58bfbb5129a0] = -;
+
+		*node[0x58bfbb512940] = 0;
+
+		*node[0x58bfbb512970] = 2;
+
+		*node[0x58bfbb512a90] = *;
+
+		*node[0x58bfbb512a30] = /;
+
+		*node[0x58bfbb5129d0] = 15;
+
+		*node[0x58bfbb512a00] = 2;
+
+		*node[0x58bfbb512a60] = 1;
+
+		*node[0x58bfbb512b20] = ;;
+
+		*node[0x58bfbb512d30] = =;
+
+		*node[0x58bfbb512b50] = 13;
+
+		*node[0x58bfbb512d00] = +;
+
+		*node[0x58bfbb512be0] = -;
+
+		*node[0x58bfbb512b80] = 0;
+
+		*node[0x58bfbb512bb0] = 2;
+
+		*node[0x58bfbb512cd0] = *;
+
+		*node[0x58bfbb512c70] = /;
+
+		*node[0x58bfbb512c10] = 15;
+
+		*node[0x58bfbb512c40] = 2;
+
+		*node[0x58bfbb512ca0] = 1;
+
+		*node[0x58bfbb512d60] = ;;
+
+		*node[0x58bfbb512d90] = print;
+
+		*node[0x58bfbb512dc0] = 11;
+
+		*node[0x58bfbb512df0] = ;;
+
+		*node[0x58bfbb512e20] = print;
+
+		*node[0x58bfbb512e50] = 12;
+
+		*node[0x58bfbb512e80] = 13;
+
+		*node[0x58bfbb512eb0] = elseif;
+
+		*node[0x58bfbb512ee0] = op_no;
+
+		*node[0x58bfbb512f70] = ==;
+
+		*node[0x58bfbb512f10] = 14;
+
+		*node[0x58bfbb512f40] = 0;
+
+		*node[0x58bfbb512fa0] = ;;
+
+		*node[0x58bfbb513150] = =;
+
+		*node[0x58bfbb512fd0] = 10;
+
+		*node[0x58bfbb513120] = -;
+
+		*node[0x58bfbb513000] = 0;
+
+		*node[0x58bfbb5130f0] = *;
+
+		*node[0x58bfbb513090] = /;
+
+		*node[0x58bfbb513030] = 2;
+
+		*node[0x58bfbb513060] = 2;
+
+		*node[0x58bfbb5130c0] = 1;
+
+		*node[0x58bfbb513180] = ;;
+
+		*node[0x58bfbb5131b0] = print;
+
+		*node[0x58bfbb5131e0] = 8;
+
+		*node[0x58bfbb513210] = ;;
+
+		*node[0x58bfbb513240] = print;
+
+		*node[0x58bfbb513270] = 10;
+
+		*node[0x58bfbb5132a0] = else;
+
+		*node[0x58bfbb5132d0] = op_no;
+
+		*node[0x58bfbb513300] = ;;
+
+		*node[0x58bfbb513330] = print;
+
+		*node[0x58bfbb513360] = 7;
+
+		*node[0x58bfbb513390] = ;;
+
+		*node[0x58bfbb5133c0] = return;
+
+		*node[0x58bfbb5133f0] = 0;
+
+		*node[0x58bfbb513420] = ;;
+
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7fffd1017c70] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5ef73c659200] = ;;
+
+		*node[0x5ef73c659280] = 0;
+
+		*node[0x5ef73c6592b0] = ;;
+
+		*node[0x5ef73c6592e0] = input;
+
+		*node[0x5ef73c659310] = 1;
+
+		*node[0x5ef73c659340] = 2;
+
+		*node[0x5ef73c659370] = 3;
+
+		*node[0x5ef73c6593d0] = ;;
+
+		*node[0x5ef73c659430] = 1;
+
+		*node[0x5ef73c659460] = 2;
+
+		*node[0x5ef73c659490] = 3;
+
+		*node[0x5ef73c6594c0] = ;;
+
+		*node[0x5ef73c659540] = 4;
+
+		*node[0x5ef73c659570] = 1;
+
+		*node[0x5ef73c6595a0] = 2;
+
+		*node[0x5ef73c6595d0] = 3;
+
+		*node[0x5ef73c659630] = ;;
+
+		*node[0x5ef73c659660] = if;
+
+		*node[0x5ef73c659690] = op_no;
+
+		*node[0x5ef73c659720] = ==;
+
+		*node[0x5ef73c6596c0] = 1;
+
+		*node[0x5ef73c6596f0] = 0;
+
+		*node[0x5ef73c659750] = ;;
+
+		*node[0x5ef73c6597b0] = 2;
+
+		*node[0x5ef73c6597e0] = 3;
+
+		*node[0x5ef73c659810] = else;
+
+		*node[0x5ef73c659840] = op_no;
+
+		*node[0x5ef73c659870] = ;;
+
+		*node[0x5ef73c659920] = 1;
+
+		*node[0x5ef73c659950] = 2;
+
+		*node[0x5ef73c659980] = 3;
+
+		*node[0x5ef73c6599b0] = ;;
+
+		*node[0x5ef73c6599e0] = return;
+
+		*node[0x5ef73c659a10] = 0;
+
+		*node[0x5ef73c659a40] = ;;
+
+		*node[0x5ef73c659ac0] = 5;
+
+		*node[0x5ef73c659b20] = 1;
+
+		*node[0x5ef73c659b50] = 2;
+
+		*node[0x5ef73c659b80] = ;;
+
+		*node[0x5ef73c659ca0] = =;
+
+		*node[0x5ef73c659bb0] = 7;
+
+		*node[0x5ef73c659c70] = -;
+
+		*node[0x5ef73c659c10] = 0;
+
+		*node[0x5ef73c659c40] = 1;
+
+		*node[0x5ef73c659cd0] = ;;
+
+		*node[0x5ef73c659d60] = =;
+
+		*node[0x5ef73c659d00] = 8;
+
+		*node[0x5ef73c659d30] = 1;
+
+		*node[0x5ef73c659d90] = ;;
+
+		*node[0x5ef73c659e70] = =;
+
+		*node[0x5ef73c659dc0] = 9;
+
+		*node[0x5ef73c659e40] = 1000;
+
+		*node[0x5ef73c659ea0] = ;;
+
+		*node[0x5ef73c659ed0] = if;
+
+		*node[0x5ef73c659f00] = op_no;
+
+		*node[0x5ef73c659f90] = ==;
+
+		*node[0x5ef73c659f30] = 1;
+
+		*node[0x5ef73c659f60] = 0;
+
+		*node[0x5ef73c659fc0] = ;;
+
+		*node[0x5ef73c659ff0] = if;
+
+		*node[0x5ef73c65a020] = op_no;
+
+		*node[0x5ef73c65a0b0] = ==;
+
+		*node[0x5ef73c65a050] = 2;
+
+		*node[0x5ef73c65a080] = 0;
+
+		*node[0x5ef73c65a0e0] = ;;
+
+		*node[0x5ef73c65a110] = print;
+
+		*node[0x5ef73c65a140] = 9;
+
+		*node[0x5ef73c65a170] = else;
+
+		*node[0x5ef73c65a1a0] = op_no;
+
+		*node[0x5ef73c65a1d0] = ;;
+
+		*node[0x5ef73c65a200] = print;
+
+		*node[0x5ef73c65a230] = 7;
+
+		*node[0x5ef73c65a260] = else;
+
+		*node[0x5ef73c65a290] = op_no;
+
+		*node[0x5ef73c65a2c0] = ;;
+
+		*node[0x5ef73c65a410] = =;
+
+		*node[0x5ef73c65a2f0] = 10;
+
+		*node[0x5ef73c65a3e0] = -;
+
+		*node[0x5ef73c65a320] = 0;
+
+		*node[0x5ef73c65a3b0] = /;
+
+		*node[0x5ef73c65a350] = 2;
+
+		*node[0x5ef73c65a380] = 1;
+
+		*node[0x5ef73c65a440] = ;;
+
+		*node[0x5ef73c65a470] = print;
+
+		*node[0x5ef73c65a4a0] = 8;
+
+		*node[0x5ef73c65a4d0] = ;;
+
+		*node[0x5ef73c65a500] = print;
+
+		*node[0x5ef73c65a530] = 10;
+
+		*node[0x5ef73c65a560] = ;;
+
+		*node[0x5ef73c65a590] = return;
+
+		*node[0x5ef73c65a5c0] = 0;
+
+		*node[0x5ef73c65a5f0] = ;;
+
+		*node[0x5ef73c65a670] = 6;
+
+		*node[0x5ef73c65a6a0] = 1;
+
+		*node[0x5ef73c65a6d0] = 2;
+
+		*node[0x5ef73c65a700] = 3;
+
+		*node[0x5ef73c65a760] = ;;
+
+		*node[0x5ef73c65a850] = =;
+
+		*node[0x5ef73c65a790] = 7;
+
+		*node[0x5ef73c65a820] = -;
+
+		*node[0x5ef73c65a7c0] = 0;
+
+		*node[0x5ef73c65a7f0] = 1;
+
+		*node[0x5ef73c65a880] = ;;
+
+		*node[0x5ef73c65a960] = =;
+
+		*node[0x5ef73c65a8b0] = 8;
+
+		*node[0x5ef73c65a930] = 1;
+
+		*node[0x5ef73c65a990] = ;;
+
+		*node[0x5ef73c65aa20] = =;
+
+		*node[0x5ef73c65a9c0] = 11;
+
+		*node[0x5ef73c65a9f0] = 2;
+
+		*node[0x5ef73c65aa50] = ;;
+
+		*node[0x5ef73c65aa80] = if;
+
+		*node[0x5ef73c65aab0] = op_no;
+
+		*node[0x5ef73c65ab40] = ==;
+
+		*node[0x5ef73c65aae0] = 3;
+
+		*node[0x5ef73c65ab10] = 0;
+
+		*node[0x5ef73c65ab70] = ;;
+
+		*node[0x5ef73c65ac00] = =;
+
+		*node[0x5ef73c65aba0] = 12;
+
+		*node[0x5ef73c65abd0] = 0;
+
+		*node[0x5ef73c65ac30] = ;;
+
+		*node[0x5ef73c65ad80] = =;
+
+		*node[0x5ef73c65ac60] = 13;
+
+		*node[0x5ef73c65ad50] = -;
+
+		*node[0x5ef73c65ac90] = 0;
+
+		*node[0x5ef73c65ad20] = /;
+
+		*node[0x5ef73c65acc0] = 2;
+
+		*node[0x5ef73c65acf0] = 1;
+
+		*node[0x5ef73c65adb0] = ;;
+
+		*node[0x5ef73c65ade0] = print;
+
+		*node[0x5ef73c65ae10] = 11;
+
+		*node[0x5ef73c65ae40] = ;;
+
+		*node[0x5ef73c65ae70] = print;
+
+		*node[0x5ef73c65aea0] = 12;
+
+		*node[0x5ef73c65aed0] = 13;
+
+		*node[0x5ef73c65af00] = else;
+
+		*node[0x5ef73c65af30] = op_no;
+
+		*node[0x5ef73c65af60] = ;;
+
+		*node[0x5ef73c65b200] = =;
+
+		*node[0x5ef73c65af90] = 14;
+
+		*node[0x5ef73c65b1d0] = -;
+
+		*node[0x5ef73c65b0b0] = *;
+
+		*node[0x5ef73c65b050] = 2;
+
+		*node[0x5ef73c65b080] = 2;
+
+		*node[0x5ef73c65b1a0] = *;
+
+		*node[0x5ef73c65b140] = *;
+
+		*node[0x5ef73c65b0e0] = 4;
+
+		*node[0x5ef73c65b110] = 1;
+
+		*node[0x5ef73c65b170] = 3;
+
+		*node[0x5ef73c65b230] = ;;
+
+		*node[0x5ef73c65b260] = if;
+
+		*node[0x5ef73c65b290] = op_no;
+
+		*node[0x5ef73c65b320] = >;
+
+		*node[0x5ef73c65b2c0] = 14;
+
+		*node[0x5ef73c65b2f0] = 0;
+
+		*node[0x5ef73c65b350] = ;;
+
+		*node[0x5ef73c65b410] = =;
+
+		*node[0x5ef73c65b380] = 15;
+
+		*node[0x5ef73c65b3e0] = sqrt;
+
+		*node[0x5ef73c65b3b0] = 14;
+
+		*node[0x5ef73c65b440] = ;;
+
+		*node[0x5ef73c65b650] = =;
+
+		*node[0x5ef73c65b470] = 12;
+
+		*node[0x5ef73c65b620] = -;
+
+		*node[0x5ef73c65b500] = -;
+
+		*node[0x5ef73c65b4a0] = 0;
+
+		*node[0x5ef73c65b4d0] = 2;
+
+		*node[0x5ef73c65b5f0] = *;
+
+		*node[0x5ef73c65b590] = /;
+
+		*node[0x5ef73c65b530] = 15;
+
+		*node[0x5ef73c65b560] = 2;
+
+		*node[0x5ef73c65b5c0] = 1;
+
+		*node[0x5ef73c65b680] = ;;
+
+		*node[0x5ef73c65b890] = =;
+
+		*node[0x5ef73c65b6b0] = 13;
+
+		*node[0x5ef73c65b860] = +;
+
+		*node[0x5ef73c65b740] = -;
+
+		*node[0x5ef73c65b6e0] = 0;
+
+		*node[0x5ef73c65b710] = 2;
+
+		*node[0x5ef73c65b830] = *;
+
+		*node[0x5ef73c65b7d0] = /;
+
+		*node[0x5ef73c65b770] = 15;
+
+		*node[0x5ef73c65b7a0] = 2;
+
+		*node[0x5ef73c65b800] = 1;
+
+		*node[0x5ef73c65b8c0] = ;;
+
+		*node[0x5ef73c65b8f0] = print;
+
+		*node[0x5ef73c65b920] = 11;
+
+		*node[0x5ef73c65b950] = ;;
+
+		*node[0x5ef73c65b980] = print;
+
+		*node[0x5ef73c65b9b0] = 12;
+
+		*node[0x5ef73c65b9e0] = 13;
+
+		*node[0x5ef73c65ba10] = elseif;
+
+		*node[0x5ef73c65ba40] = op_no;
+
+		*node[0x5ef73c65bad0] = ==;
+
+		*node[0x5ef73c65ba70] = 14;
+
+		*node[0x5ef73c65baa0] = 0;
+
+		*node[0x5ef73c65bb00] = ;;
+
+		*node[0x5ef73c65bcb0] = =;
+
+		*node[0x5ef73c65bb30] = 10;
+
+		*node[0x5ef73c65bc80] = -;
+
+		*node[0x5ef73c65bb60] = 0;
+
+		*node[0x5ef73c65bc50] = *;
+
+		*node[0x5ef73c65bbf0] = /;
+
+		*node[0x5ef73c65bb90] = 2;
+
+		*node[0x5ef73c65bbc0] = 2;
+
+		*node[0x5ef73c65bc20] = 1;
+
+		*node[0x5ef73c65bce0] = ;;
+
+		*node[0x5ef73c65bd10] = print;
+
+		*node[0x5ef73c65bd40] = 8;
+
+		*node[0x5ef73c65bd70] = ;;
+
+		*node[0x5ef73c65bda0] = print;
+
+		*node[0x5ef73c65bdd0] = 10;
+
+		*node[0x5ef73c65be00] = else;
+
+		*node[0x5ef73c65be30] = op_no;
+
+		*node[0x5ef73c65be60] = ;;
+
+		*node[0x5ef73c65be90] = print;
+
+		*node[0x5ef73c65bec0] = 7;
+
+		*node[0x5ef73c65bef0] = ;;
+
+		*node[0x5ef73c65bf20] = return;
+
+		*node[0x5ef73c65bf50] = 0;
+
+		*node[0x5ef73c65bf80] = ;;
+
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------
+tree[0x7fff453260e0] "tree" called from ./src/main.cpp(14) main
+{
+	is_init = 1
+	{
+		*node[0x5fae2c653200] = ;;
+
+		*node[0x5fae2c653280] = 0;
+
+		*node[0x5fae2c6532b0] = ;;
+
+		*node[0x5fae2c6532e0] = input;
+
+		*node[0x5fae2c653310] = 1;
+
+		*node[0x5fae2c653340] = 2;
+
+		*node[0x5fae2c653370] = 3;
+
+		*node[0x5fae2c6533d0] = ;;
+
+		*node[0x5fae2c653430] = 1;
+
+		*node[0x5fae2c653460] = 2;
+
+		*node[0x5fae2c653490] = 3;
+
+		*node[0x5fae2c6534c0] = ;;
+
+		*node[0x5fae2c653540] = 4;
+
+		*node[0x5fae2c653570] = 1;
+
+		*node[0x5fae2c6535a0] = 2;
+
+		*node[0x5fae2c6535d0] = 3;
+
+		*node[0x5fae2c653630] = ;;
+
+		*node[0x5fae2c653660] = if;
+
+		*node[0x5fae2c653690] = op_no;
+
+		*node[0x5fae2c653720] = ==;
+
+		*node[0x5fae2c6536c0] = 1;
+
+		*node[0x5fae2c6536f0] = 0;
+
+		*node[0x5fae2c653750] = ;;
+
+		*node[0x5fae2c6537b0] = 2;
+
+		*node[0x5fae2c6537e0] = 3;
+
+		*node[0x5fae2c653810] = else;
+
+		*node[0x5fae2c653840] = op_no;
+
+		*node[0x5fae2c653870] = ;;
+
+		*node[0x5fae2c653920] = 1;
+
+		*node[0x5fae2c653950] = 2;
+
+		*node[0x5fae2c653980] = 3;
+
+		*node[0x5fae2c6539b0] = ;;
+
+		*node[0x5fae2c6539e0] = return;
+
+		*node[0x5fae2c653a10] = 0;
+
+		*node[0x5fae2c653a40] = ;;
+
+		*node[0x5fae2c653ac0] = 5;
+
+		*node[0x5fae2c653b20] = 1;
+
+		*node[0x5fae2c653b50] = 2;
+
+		*node[0x5fae2c653b80] = ;;
+
+		*node[0x5fae2c653ca0] = =;
+
+		*node[0x5fae2c653bb0] = 7;
+
+		*node[0x5fae2c653c70] = -;
+
+		*node[0x5fae2c653c10] = 0;
+
+		*node[0x5fae2c653c40] = 1;
+
+		*node[0x5fae2c653cd0] = ;;
+
+		*node[0x5fae2c653d60] = =;
+
+		*node[0x5fae2c653d00] = 8;
+
+		*node[0x5fae2c653d30] = 1;
+
+		*node[0x5fae2c653d90] = ;;
+
+		*node[0x5fae2c653e70] = =;
+
+		*node[0x5fae2c653dc0] = 9;
+
+		*node[0x5fae2c653e40] = 1000;
+
+		*node[0x5fae2c653ea0] = ;;
+
+		*node[0x5fae2c653ed0] = if;
+
+		*node[0x5fae2c653f00] = op_no;
+
+		*node[0x5fae2c653f90] = ==;
+
+		*node[0x5fae2c653f30] = 1;
+
+		*node[0x5fae2c653f60] = 0;
+
+		*node[0x5fae2c653fc0] = ;;
+
+		*node[0x5fae2c653ff0] = if;
+
+		*node[0x5fae2c654020] = op_no;
+
+		*node[0x5fae2c6540b0] = ==;
+
+		*node[0x5fae2c654050] = 2;
+
+		*node[0x5fae2c654080] = 0;
+
+		*node[0x5fae2c6540e0] = ;;
+
+		*node[0x5fae2c654110] = print;
+
+		*node[0x5fae2c654140] = 9;
+
+		*node[0x5fae2c654170] = else;
+
+		*node[0x5fae2c6541a0] = op_no;
+
+		*node[0x5fae2c6541d0] = ;;
+
+		*node[0x5fae2c654200] = print;
+
+		*node[0x5fae2c654230] = 7;
+
+		*node[0x5fae2c654260] = else;
+
+		*node[0x5fae2c654290] = op_no;
+
+		*node[0x5fae2c6542c0] = ;;
+
+		*node[0x5fae2c654410] = =;
+
+		*node[0x5fae2c6542f0] = 10;
+
+		*node[0x5fae2c6543e0] = -;
+
+		*node[0x5fae2c654320] = 0;
+
+		*node[0x5fae2c6543b0] = /;
+
+		*node[0x5fae2c654350] = 2;
+
+		*node[0x5fae2c654380] = 1;
+
+		*node[0x5fae2c654440] = ;;
+
+		*node[0x5fae2c654470] = print;
+
+		*node[0x5fae2c6544a0] = 8;
+
+		*node[0x5fae2c6544d0] = ;;
+
+		*node[0x5fae2c654500] = print;
+
+		*node[0x5fae2c654530] = 10;
+
+		*node[0x5fae2c654560] = ;;
+
+		*node[0x5fae2c654590] = return;
+
+		*node[0x5fae2c6545c0] = 0;
+
+		*node[0x5fae2c6545f0] = ;;
+
+		*node[0x5fae2c654670] = 6;
+
+		*node[0x5fae2c6546a0] = 1;
+
+		*node[0x5fae2c6546d0] = 2;
+
+		*node[0x5fae2c654700] = 3;
+
+		*node[0x5fae2c654760] = ;;
+
+		*node[0x5fae2c654850] = =;
+
+		*node[0x5fae2c654790] = 7;
+
+		*node[0x5fae2c654820] = -;
+
+		*node[0x5fae2c6547c0] = 0;
+
+		*node[0x5fae2c6547f0] = 1;
+
+		*node[0x5fae2c654880] = ;;
+
+		*node[0x5fae2c654960] = =;
+
+		*node[0x5fae2c6548b0] = 8;
+
+		*node[0x5fae2c654930] = 1;
+
+		*node[0x5fae2c654990] = ;;
+
+		*node[0x5fae2c654a20] = =;
+
+		*node[0x5fae2c6549c0] = 11;
+
+		*node[0x5fae2c6549f0] = 2;
+
+		*node[0x5fae2c654a50] = ;;
+
+		*node[0x5fae2c654a80] = if;
+
+		*node[0x5fae2c654ab0] = op_no;
+
+		*node[0x5fae2c654b40] = ==;
+
+		*node[0x5fae2c654ae0] = 3;
+
+		*node[0x5fae2c654b10] = 0;
+
+		*node[0x5fae2c654b70] = ;;
+
+		*node[0x5fae2c654c00] = =;
+
+		*node[0x5fae2c654ba0] = 12;
+
+		*node[0x5fae2c654bd0] = 0;
+
+		*node[0x5fae2c654c30] = ;;
+
+		*node[0x5fae2c654d80] = =;
+
+		*node[0x5fae2c654c60] = 13;
+
+		*node[0x5fae2c654d50] = -;
+
+		*node[0x5fae2c654c90] = 0;
+
+		*node[0x5fae2c654d20] = /;
+
+		*node[0x5fae2c654cc0] = 2;
+
+		*node[0x5fae2c654cf0] = 1;
+
+		*node[0x5fae2c654db0] = ;;
+
+		*node[0x5fae2c654de0] = print;
+
+		*node[0x5fae2c654e10] = 11;
+
+		*node[0x5fae2c654e40] = ;;
+
+		*node[0x5fae2c654e70] = print;
+
+		*node[0x5fae2c654ea0] = 12;
+
+		*node[0x5fae2c654ed0] = 13;
+
+		*node[0x5fae2c654f00] = else;
+
+		*node[0x5fae2c654f30] = op_no;
+
+		*node[0x5fae2c654f60] = ;;
+
+		*node[0x5fae2c655200] = =;
+
+		*node[0x5fae2c654f90] = 14;
+
+		*node[0x5fae2c6551d0] = -;
+
+		*node[0x5fae2c6550b0] = *;
+
+		*node[0x5fae2c655050] = 2;
+
+		*node[0x5fae2c655080] = 2;
+
+		*node[0x5fae2c6551a0] = *;
+
+		*node[0x5fae2c655140] = *;
+
+		*node[0x5fae2c6550e0] = 4;
+
+		*node[0x5fae2c655110] = 1;
+
+		*node[0x5fae2c655170] = 3;
+
+		*node[0x5fae2c655230] = ;;
+
+		*node[0x5fae2c655260] = if;
+
+		*node[0x5fae2c655290] = op_no;
+
+		*node[0x5fae2c655320] = >;
+
+		*node[0x5fae2c6552c0] = 14;
+
+		*node[0x5fae2c6552f0] = 0;
+
+		*node[0x5fae2c655350] = ;;
+
+		*node[0x5fae2c655410] = =;
+
+		*node[0x5fae2c655380] = 15;
+
+		*node[0x5fae2c6553e0] = sqrt;
+
+		*node[0x5fae2c6553b0] = 14;
+
+		*node[0x5fae2c655440] = ;;
+
+		*node[0x5fae2c655650] = =;
+
+		*node[0x5fae2c655470] = 12;
+
+		*node[0x5fae2c655620] = -;
+
+		*node[0x5fae2c655500] = -;
+
+		*node[0x5fae2c6554a0] = 0;
+
+		*node[0x5fae2c6554d0] = 2;
+
+		*node[0x5fae2c6555f0] = *;
+
+		*node[0x5fae2c655590] = /;
+
+		*node[0x5fae2c655530] = 15;
+
+		*node[0x5fae2c655560] = 2;
+
+		*node[0x5fae2c6555c0] = 1;
+
+		*node[0x5fae2c655680] = ;;
+
+		*node[0x5fae2c655890] = =;
+
+		*node[0x5fae2c6556b0] = 13;
+
+		*node[0x5fae2c655860] = +;
+
+		*node[0x5fae2c655740] = -;
+
+		*node[0x5fae2c6556e0] = 0;
+
+		*node[0x5fae2c655710] = 2;
+
+		*node[0x5fae2c655830] = *;
+
+		*node[0x5fae2c6557d0] = /;
+
+		*node[0x5fae2c655770] = 15;
+
+		*node[0x5fae2c6557a0] = 2;
+
+		*node[0x5fae2c655800] = 1;
+
+		*node[0x5fae2c6558c0] = ;;
+
+		*node[0x5fae2c6558f0] = print;
+
+		*node[0x5fae2c655920] = 11;
+
+		*node[0x5fae2c655950] = ;;
+
+		*node[0x5fae2c655980] = print;
+
+		*node[0x5fae2c6559b0] = 12;
+
+		*node[0x5fae2c6559e0] = 13;
+
+		*node[0x5fae2c655a10] = elseif;
+
+		*node[0x5fae2c655a40] = op_no;
+
+		*node[0x5fae2c655ad0] = ==;
+
+		*node[0x5fae2c655a70] = 14;
+
+		*node[0x5fae2c655aa0] = 0;
+
+		*node[0x5fae2c655b00] = ;;
+
+		*node[0x5fae2c655cb0] = =;
+
+		*node[0x5fae2c655b30] = 10;
+
+		*node[0x5fae2c655c80] = -;
+
+		*node[0x5fae2c655b60] = 0;
+
+		*node[0x5fae2c655c50] = *;
+
+		*node[0x5fae2c655bf0] = /;
+
+		*node[0x5fae2c655b90] = 2;
+
+		*node[0x5fae2c655bc0] = 2;
+
+		*node[0x5fae2c655c20] = 1;
+
+		*node[0x5fae2c655ce0] = ;;
+
+		*node[0x5fae2c655d10] = print;
+
+		*node[0x5fae2c655d40] = 8;
+
+		*node[0x5fae2c655d70] = ;;
+
+		*node[0x5fae2c655da0] = print;
+
+		*node[0x5fae2c655dd0] = 10;
+
+		*node[0x5fae2c655e00] = else;
+
+		*node[0x5fae2c655e30] = op_no;
+
+		*node[0x5fae2c655e60] = ;;
+
+		*node[0x5fae2c655e90] = print;
+
+		*node[0x5fae2c655ec0] = 7;
+
+		*node[0x5fae2c655ef0] = ;;
+
+		*node[0x5fae2c655f20] = return;
+
+		*node[0x5fae2c655f50] = 0;
+
+		*node[0x5fae2c655f80] = ;;
+
+	}
+}
+--------------------------------------------------------------------------------------------------------
+
+

@@ -7,17 +7,17 @@ CFLAGS = -c -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-
 	-Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing   \
 	-Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
 
-INCLUDES = ass.h error.h func_ass.h
+INCLUDES = ./inc/ass.h ../../Include_file/error/error.h ../../Include_file/utilities/utils.h ../include/func_ass.h
 
-SOURCES = main.cpp error.cpp ass.cpp func_ass.cpp
+SOURCES = main.cpp ../../Include_file/error/error.cpp ../../Include_file/utilities/utils.cpp ass.cpp ../include/func_ass.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 
 EXECUTABLE = assembler.exe
 
-VPATH = ../include
+VPATH = ./src/
 
-all: $(SOURCES) $(EXECUTABLE)
+all: $(SOURCES) $(INCLUDES) $(EXECUTABLE)
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CC) $(OBJECTS) -o $@
@@ -28,7 +28,8 @@ $(EXECUTABLE): $(OBJECTS)
 .PHONY: clean
 
 clean:
-	rm -rf *.o assembler.
 	rm -rf assembler.exe
-	rm -rf assembler.exe.log
-	rm -rf assembler.exe.log.dmp
+	rm -rf *.o assembler
+	rm -rf ../include/*.o
+	rm -rf ../Include_file/error/*.o
+	rm -rf ../Include_file/utilities/*.o
