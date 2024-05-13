@@ -11,7 +11,7 @@
 
 #define CHECK_BUF_IP(ptr) if (ptr > spu->size_file) {*code_error |= ERR_BUF_IP;}
 
-static ELEMENT* get_argument (SPU *spu, size_t ip, int *code_error);
+static ELEMENT* get_argument (SPU *spu, size_t *ip, int *code_error);
 static void print_text (SPU *spu, size_t ip, int *code_error);
 
 void spu_ctor (SPU *spu, int *code_error)
@@ -58,44 +58,47 @@ void spu_run (SPU *spu, int *code_error)
                 *code_error |= ERR_COMMAND;
         }
 
-        CHECK_BUF_IP(ip)
+        CHECK_BUF_IP(ip);
     }
 }
 
 #undef DEF_CMD
 
-ELEMENT* get_argument (SPU *spu, size_t ip, int *code_error)
+ELEMENT* get_argument (SPU *spu, size_t *ip, int *code_error)
 {
     my_assert(spu != NULL, ERR_PTR);
+    my_assert(ip  != NULL, ERR_PTR);
 
-    if ((spu->buf[ip] & HAVE_RAM) && (spu->buf[ip] & HAVE_REG) && (spu->buf[ip] & HAVE_RAM))
+    if ((spu->buf[*ip] & HAVE_RAM) && (spu->buf[*ip] & HAVE_REG) && (spu->buf[*ip] & HAVE_ARG))
     {
-        if (spu->reg_value[spu->buf[ip + 1] - 1] <= SIZE_RAM && spu->reg_value[spu->buf[ip + 1] - 1] >= 0)
+        if (spu->reg_value[spu->buf[(*ip) + 1] - 1] <= SIZE_RAM && spu->reg_value[spu->buf[(*ip) + 1] - 1] >= 0)
         {
-            return &spu->ram_value[(size_t) spu->reg_value[spu->buf[++ip] - 1] + spu->buf[++ip]];
+            return &spu->ram_value[(size_t) spu->reg_value[spu->buf[++(*ip)] - 1] + spu->buf[++(*ip)]];
         }
     }
-    else if ((spu->buf[ip] & HAVE_RAM) && (spu->buf[ip] & HAVE_REG))
+    else if ((spu->buf[*ip] & HAVE_RAM) && (spu->buf[*ip] & HAVE_REG))
     {
-        if (spu->reg_value[spu->buf[ip + 1] - 1] <= SIZE_RAM && spu->reg_value[spu->buf[ip + 1] - 1] >= 0)
+        if (spu->reg_value[spu->buf[(*ip) + 1] - 1] <= SIZE_RAM && spu->reg_value[spu->buf[(*ip) + 1] - 1] >= 0)
         {
-            return &spu->ram_value[(size_t) spu->reg_value[spu->buf[++ip] - 1]];
+            return &spu->ram_value[(size_t) spu->reg_value[spu->buf[++(*ip)] - 1]];
         }
     }
-    else if (spu->buf[ip] & HAVE_RAM)
+    else if (spu->buf[*ip] & HAVE_RAM)
     {
-        return &spu->ram_value[spu->buf[++ip]];
+        return &spu->ram_value[spu->buf[++(*ip)]];
     }
-    else if (spu->buf[ip] & HAVE_REG)
+    else if (spu->buf[*ip] & HAVE_REG)
     {
-        return &spu->reg_value[spu->buf[++ip] - 1];
+        return &spu->reg_value[spu->buf[++(*ip)] - 1];
     }
-    else if (spu->buf[ip] & HAVE_ARG)
+    else if (spu->buf[*ip] & HAVE_ARG)
     {
         calloc_(arg, ELEMENT *, 1, sizeof(ELEMENT));
-        *arg = (ELEMENT) spu->buf[++ip];
+        *arg = (ELEMENT) spu->buf[++(*ip)];
         return arg;
     }
+
+    return NULL;
 }
 
 void print_text (SPU *spu, size_t ip, int *code_error)

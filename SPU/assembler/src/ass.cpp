@@ -131,16 +131,16 @@ void code_compilation (Spu *spu, int *code_error)
     print_listing(spu, code_error);
 }
 
-#define DEF_CMD(name, num, have_arg, ...)                               \
-    if (strncasecmp(spu->cmd[ip].command, name, sizeof(name) - 1) == 0) \
-    {                                                                   \
-        spu->cmd[ip].cmd_code = num;                                    \
-        if (have_arg)                                                   \
-        {                                                               \
-            process_param(spu, ip, sizeof(name) - 1, code_error);       \
-            counter_ip++;                                               \
-        }                                                               \
-    }                                                                   \
+#define DEF_CMD(name, num, have_arg, ...)                                                   \
+    if (strncasecmp(spu->cmd[ip].command, name, sizeof(name) - 1) == 0)                     \
+    {                                                                                       \
+        spu->cmd[ip].cmd_code = num;                                                        \
+        if (have_arg)                                                                       \
+        {                                                                                   \
+            counter_ip++;                                                                   \
+            process_param(spu, ip, sizeof(name) - 1, code_error);                           \
+        }                                                                                   \
+    }                                                                                       \
     else
 
 void pars_command (Spu *spu, int *code_error)
@@ -165,6 +165,11 @@ void pars_command (Spu *spu, int *code_error)
 
                 {
                     *code_error |= ERR_COMMAND;
+                }
+
+                if ((spu->cmd[ip].cmd_code & HAVE_ARG) && (spu->cmd[ip].cmd_code & HAVE_REG))
+                {
+                    counter_ip++;
                 }
 
                 if (spu->buf_output != NULL)
@@ -192,7 +197,12 @@ int write_buf (Commands *cmd, int *buf, size_t counter, int *code_error)
 
     buf[counter++] = cmd->cmd_code;
 
-    if (cmd->cmd_code & HAVE_REG)
+    if ((cmd->cmd_code & HAVE_REG) && (cmd->cmd_code & HAVE_ARG))
+    {
+        buf[counter++] = cmd->reg;
+        buf[counter++] = cmd->argc;
+    }
+    else if (cmd->cmd_code & HAVE_REG)
     {
         buf[counter++] = cmd->reg;
     }
@@ -208,9 +218,9 @@ void process_label (Spu *spu, size_t ip, size_t counter_ip, int *code_error)
 {
     my_assert(spu != NULL, ERR_PTR);
 
-    spu->label[spu->n_label].name_label  = spu->cmd[ip].command;
-    spu->label[spu->n_label].label_ip    = counter_ip - spu->n_label;
-    spu->label[spu->n_label].size_label  = spu->cmd[ip].size_str - 1;
+    spu->label[spu->n_label].name_label = spu->cmd[ip].command;
+    spu->label[spu->n_label].label_ip   = counter_ip - spu->n_label;
+    spu->label[spu->n_label].size_label = spu->cmd[ip].size_str - 1;
     spu->n_label++;
 }
 

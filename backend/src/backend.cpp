@@ -31,32 +31,6 @@ static void asm_return      (Tree *tree, Node *node, ScopeTableName *cur_table, 
 #define PRINT_ASM(str) fprintf(tree->info.fp_asm, str);
 #define PRINT_ASM_PARAM(str, ...) fprintf(tree->info.fp_asm, str, __VA_ARGS__);
 
-#define push_ptr(ident)                             \
-    {                                               \
-        PRINT_ASM("\t\tpush rbx\n");                \
-        PRINT_ASM_PARAM("\t\tpush %d\n", ident);    \
-        PRINT_ASM("\t\tadd\n");                     \
-        PRINT_ASM("\t\tpop rbx\n");                 \
-        PRINT_ASM("\t\tpush [rbx]\n");              \
-        PRINT_ASM("\t\tpush rbx\n");                \
-        PRINT_ASM_PARAM("\t\tpush %d\n", ident);    \
-        PRINT_ASM("\t\tsub\n");                     \
-        PRINT_ASM("\t\tpop rbx\n");                 \
-    }
-
-#define pop_ptr(ident)                              \
-    {                                               \
-        PRINT_ASM("\t\tpush rbx\n");                \
-        PRINT_ASM_PARAM("\t\tpush %d\n", ident);    \
-        PRINT_ASM("\t\tadd\n");                     \
-        PRINT_ASM("\t\tpop rbx\n");                 \
-        PRINT_ASM("\t\tpop [rbx]\n");               \
-        PRINT_ASM("\t\tpush rbx\n");                \
-        PRINT_ASM_PARAM("\t\tpush %d\n", ident);    \
-        PRINT_ASM("\t\tsub\n");                     \
-        PRINT_ASM("\t\tpop rbx\n");                 \
-    }
-
 void print_asm_code (Tree *tree, int *code_error)
 {
     my_assert(tree != NULL, ERR_PTR);
@@ -144,8 +118,7 @@ void asm_node (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_erro
         }
         case (IDENT):
         {
-            push_ptr(node->data.ident);
-            // PRINT_ASM_PARAM("\t\tpush [rbx + %d]\n", node->data.ident);
+            PRINT_ASM_PARAM("\t\tpush [rbx + %d]\n", node->data.ident);
             break;
         }
         case (CALL_FUNC):
@@ -155,8 +128,7 @@ void asm_node (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_erro
         }
         case (PARAM):
         {
-            push_ptr(node->data.ident);
-            // PRINT_ASM_PARAM("\t\tpush [rbx + %d]\n", node->data.ident);
+            PRINT_ASM_PARAM("\t\tpush [rbx + %d]\n", node->data.ident);
             break;
         }
         case (OP):
@@ -202,8 +174,7 @@ void asm_params (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_er
     {
         asm_node(tree, temp_node, cur_table, code_error);
 
-        pop_ptr(cur_table->n_elem + i + 1);
-        // PRINT_ASM_PARAM("\t\tpop [rbx + %ld]\n", cur_table->n_elem + i + 1);
+        PRINT_ASM_PARAM("\t\tpop [rbx + %ld]\n", cur_table->n_elem + i + 1);
 
         temp_node = temp_node->left;
     }
@@ -215,7 +186,7 @@ void asm_params (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_er
     PRINT_ASM(str);
 
 #define EXPR_ASM_SIDE(str)                              \
-    asm_node(tree, node->right, cur_table, code_error); \
+    asm_node(tree, node->left, cur_table, code_error);  \
     PRINT_ASM(str);
 
 void asm_op (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
@@ -289,8 +260,7 @@ void asm_op (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
 
             asm_node(tree, node->right, cur_table, code_error);
 
-            pop_ptr(item_ident);
-            // PRINT_ASM_PARAM("\t\tpop [rbx + %d]\n", item_ident);
+            PRINT_ASM_PARAM("\t\tpop [rbx + %d]\n", item_ident);
 
             break;
         }
@@ -571,8 +541,7 @@ void asm_input (Tree *tree, Node *node, int *code_error)
     while (temp_node != NULL)
     {
         PRINT_ASM("\t\tin\n");
-        pop_ptr(temp_node->data.ident);
-        // PRINT_ASM_PARAM("\t\tpop [rbx + %d]\n", temp_node->data.ident);
+        PRINT_ASM_PARAM("\t\tpop [rbx + %d]\n", temp_node->data.ident);
 
         temp_node = temp_node->left;
     }

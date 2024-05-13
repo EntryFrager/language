@@ -49,3 +49,324 @@ stack[0x7ffd1e22fc30] "stk" called from ../include/stack.cpp(131) stack_pop
 }
 
 -----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffc174f1010] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x5741457682a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffd228189f0] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x5acfdeb4b2a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffc438e3f40] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x5bc9dfa312a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffe97c20cb0] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x580ff645c2a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffc5436c600] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x6538ffdef2a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffd906c5430] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x624aaa2b32a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffe4eb0b330] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x5724a58182a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7fff3eece3f0] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x61398444b2a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffc19fbbe10] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x58f6434f22a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7fffcd11f1e0] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x5fd9a3b3c2a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7fffc01ed2b0] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x60a381eea2a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffd45de8160] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x566ee7f212a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffe7b196410] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x650eb7f6a2a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7fff21aa3e80] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x5718c217b2a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffebacccc30] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 2
+	data[0x5e11325642a8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		*[1] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7fff97ccc900] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 1
+	data[0x5accfeec7fb8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7ffe9e6c3a30] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 1
+	data[0x638067410fb8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------
+ERROR: wrong stack position.
+
+stack[0x7fff73d5d460] "stk" called from ../include/stack.cpp(131) stack_pop
+{
+	stack->left_canary = dededededededede
+	position = -1
+	size = 1
+	data[0x5d3af48d9ff8]
+	{
+		data->left_canary = 0
+		*[0] = 0.000000
+		data->right_canary = dededededededede
+	}
+	stack->right_canary = dededededededede
+}
+
+-----------------------------------------------------------

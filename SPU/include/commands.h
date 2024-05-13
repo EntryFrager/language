@@ -18,11 +18,12 @@ DEF_CMD("out", OUTCOMM, false,
 
 DEF_CMD("push", PUSH, true,
     {
-        ELEMENT *arg_pointer = get_argument(spu, ip++, code_error);
+        ELEMENT *arg_pointer = get_argument(spu, &ip, code_error);
 
         if (arg_pointer == NULL)
         {
             *code_error |= ERR_ARGC;
+            return;
         }
 
         PUSH(&spu->stack, *arg_pointer);
@@ -37,11 +38,12 @@ DEF_CMD("push", PUSH, true,
 
 DEF_CMD("pop", POP, true,
     {
-        ELEMENT *arg_pointer = get_argument(spu, ip++, code_error);
+        ELEMENT *arg_pointer = get_argument(spu, &ip, code_error);
 
         if (arg_pointer == NULL)
         {
             *code_error |= ERR_ARGC;
+            return;
         }
 
         *arg_pointer = POP(&spu->stack);
