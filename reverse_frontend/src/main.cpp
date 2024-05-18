@@ -9,6 +9,8 @@ int main (int argc, char *argv[])
 
     read_tree(&tree, &code_error);
 
+    print_table_name(&tree, &code_error);
+
     tree_log(&tree, &code_error);
 
     print_reverse_frontend(&tree, &code_error);

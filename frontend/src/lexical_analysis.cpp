@@ -2,11 +2,14 @@
 #define LEXICAL_ANALYSIS_CPP
 
 #include "../inc/input.h"
+#include "../inc/syntax_error.h"
 
-static size_t     get_n_tokens         (char *str, size_t *n_ident, int *code_error);
+static size_t     get_n_tokens         (char *str, size_t *n_ident, size_t *n_funcs, int *code_error);
 static void       token_analysis       (Token *token, size_t n_token, Identificators *idents, char *str, int *code_error);
-static int        table_name_add_ident (Identificators *idents, char *name_var, int *cur_ident, int *code_error);
-static op_command is_key_word          (char **str, int *code_error);
+static int        add_name_ident       (Identificators *idents, char *name_var, int n_scope, int *cur_ident, int *code_error);
+static op_command token_is_key_word    (char **str, int *code_error);
+static bool       token_is_number      (char *str, int *code_error);
+static bool       token_is_ident       (char *str, int *code_error);
 
 void get_token (Tree *tree, int *code_error)
 {
@@ -14,7 +17,7 @@ void get_token (Tree *tree, int *code_error)
 
     char *str = tree->info.buf;
 
-    tree->n_token = get_n_tokens(str, &tree->idents.n_ident, code_error);
+    tree->n_token = get_n_tokens(str, &tree->idents.n_ident, &tree->idents.n_funcs, code_error);
     ERR_RET();
 
     calloc_init_(tree->token, Token *, tree->n_token + 1, sizeof(Token));
@@ -25,31 +28,47 @@ void get_token (Tree *tree, int *code_error)
     ERR_RET();
 }
 
-size_t get_n_tokens (char *str, size_t *n_ident, int *code_error)
+size_t get_n_tokens (char *str, size_t *n_ident, size_t *n_funcs, int *code_error)
 {
     my_assert(str != NULL, ERR_PTR);
 
     size_t n_tokens = 0;
 
+    op_command op = OP_NO;
+
     while (*str != '\0')
     {
-        if (is_key_word(&str, code_error) != OP_NO)
+        if ((op = token_is_key_word(&str, code_error)) != OP_NO)
         {
             n_tokens++;
-        }
-        else if (isdigit(*str) || isalpha(*str) || *str == '-' || *str == '_')
-        {
-            if (isalpha(*str) || *str == '_')
+
+            if (op == FUNC)
             {
-                (*n_ident)++;
+                (*n_funcs)++;
             }
+        }
+        else if (token_is_number(str, code_error))
+        {
+            str++;
 
-            n_tokens++;
-
-            while (isdigit(*str) || isalpha(*str) || *str == '_')
+            while (isdigit(*str))
             {
                 str++;
             }
+
+            n_tokens++;
+        }
+        else if (isalpha(*str) || *str == '_')
+        {
+            str++;
+
+            while (isalpha(*str) || *str == '_' || isdigit(*str))
+            {
+                str++;
+            }
+
+            (*n_ident)++;
+            n_tokens++;
         }
     }
 
@@ -64,7 +83,9 @@ void token_analysis (Token *token, size_t n_token, Identificators *idents, char 
 
     op_command op = OP_NO;
 
-    int cur_ident = 0;
+    int ident_code = 0;
+    int ident_func_code = 0;
+    int n_scope = -1;
 
     bool is_func = false;
 
@@ -72,7 +93,7 @@ void token_analysis (Token *token, size_t n_token, Identificators *idents, char 
 
     for (size_t pos = 0; pos < n_token; pos++)
     {
-        if ((op = is_key_word(&str, code_error)) != OP_NO)
+        if ((op = token_is_key_word(&str, code_error)) != OP_NO)
         {
             token[pos].type = OP;
             token[pos].data.types_op = op;
@@ -80,9 +101,11 @@ void token_analysis (Token *token, size_t n_token, Identificators *idents, char 
             if (op == FUNC)
             {
                 is_func = true;
+                ident_code = 0;
+                n_scope++;
             }
         }
-        else if (isdigit(*str) || *str == '-')
+        else if (token_is_number(str, code_error))
         {
             token[pos].type = NUM;
 
@@ -91,7 +114,7 @@ void token_analysis (Token *token, size_t n_token, Identificators *idents, char 
 
             str += n_read;
         }
-        else if (isalpha(*str) || *str == '_')
+        else if (token_is_ident(str, code_error))
         {
             char *name_var = read_ident(&str, code_error);
             ERR_RET();
@@ -99,10 +122,8 @@ void token_analysis (Token *token, size_t n_token, Identificators *idents, char 
             if (is_func)
             {
                 token[pos].type = IDENT_FUNC;
-                token[pos].data.ident = table_name_add_ident(idents, name_var, &cur_ident, code_error);
+                token[pos].data.ident = add_name_ident(idents, name_var, -1, &ident_func_code, code_error);
                 ERR_RET();
-
-                idents->n_funcs++;
 
                 if (strcmp("main", name_var) == 0)
                 {
@@ -114,13 +135,13 @@ void token_analysis (Token *token, size_t n_token, Identificators *idents, char 
             else if (*str == '(')
             {
                 token[pos].type = CALL_FUNC;
-                token[pos].data.ident = table_name_add_ident(idents, name_var, &cur_ident, code_error);
+                token[pos].data.ident = add_name_ident(idents, name_var, -1, &ident_func_code, code_error);
                 ERR_RET();
             }
             else
             {
                 token[pos].type = IDENT;
-                token[pos].data.ident = table_name_add_ident(idents, name_var, &cur_ident, code_error);
+                token[pos].data.ident = add_name_ident(idents, name_var, n_scope, &ident_code, code_error);
                 ERR_RET();
             }
         }
@@ -128,33 +149,34 @@ void token_analysis (Token *token, size_t n_token, Identificators *idents, char 
 
     my_assert(*str == '\0', SYNTAX_ERROR);
 
-    my_assert(main_err == 1, SYNTAX_ERROR);
+    syntax_assert(main_err == 1, NOT_MAIN_DEF);
 
     token[n_token].type = DEF_TYPE;
 
-    idents->n_ident = cur_ident;
+    idents->n_ident = idents->cur_ident;
 }
 
-int table_name_add_ident (Identificators *idents, char *name_var, int *cur_ident, int *code_error)
+int add_name_ident (Identificators *idents, char *name_var, int n_scope, int *ident_code, int *code_error)
 {
-    my_assert(idents    != NULL, ERR_PTR);
-    my_assert(name_var  != NULL, ERR_PTR);
-    my_assert(cur_ident != NULL, ERR_PTR);
+    my_assert(idents     != NULL, ERR_PTR);
+    my_assert(name_var   != NULL, ERR_PTR);
+    my_assert(ident_code != NULL, ERR_PTR);
 
-    for (int i = 0; i < *cur_ident; i++)
+    for (size_t i = 0; i < idents->cur_ident; i++)
     {
-        if (strcmp(idents->ident[i].name_var, name_var) == 0)
+        if (strcmp(idents->ident[i].name_var, name_var) == 0 && idents->ident[i].n_scope == n_scope)
         {
-            return i;
+            return idents->ident[i].n_var;
         }
     }
 
-    idents->ident[*cur_ident].name_var = name_var;
-    idents->ident[*cur_ident].n_var    = *cur_ident;
+    idents->ident[idents->cur_ident].name_var = name_var;
+    idents->ident[idents->cur_ident].n_var    = *ident_code;
+    idents->ident[idents->cur_ident].n_scope  = n_scope;
+    idents->cur_ident++;
+    (*ident_code)++;
 
-    (*cur_ident)++;
-
-    return (*cur_ident) - 1;
+    return (*ident_code) - 1;
 }
 
 #define DEF_CMD(func_code, name)                  \
@@ -164,7 +186,7 @@ int table_name_add_ident (Identificators *idents, char *name_var, int *cur_ident
         return func_code;                         \
     } else
 
-op_command is_key_word (char **str, int *code_error)
+op_command token_is_key_word (char **str, int *code_error)
 {
     my_assert(str != NULL, ERR_PTR);
 
@@ -174,6 +196,18 @@ op_command is_key_word (char **str, int *code_error)
     return OP_NO;
 }
 
-#undef DEF_CMD
+bool token_is_number (char *str, int *code_error)
+{
+    my_assert(str != NULL, ERR_PTR);
+
+    return (bool) (isdigit(*str) || *str == '-');
+}
+
+bool token_is_ident (char *str, int *code_error)
+{
+    my_assert(str != NULL, ERR_PTR);
+
+    return (bool) (isalpha(*str) || *str == '_');
+}
 
 #endif // LEXICAL_ANALYSIS_CPP

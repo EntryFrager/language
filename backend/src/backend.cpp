@@ -65,7 +65,7 @@ void asm_func (Tree *tree, Node *node, int *code_error)
 
     IS_NODE_PTR_NULL();
 
-    PRINT_ASM_PARAM("%s:\n", tree->idents.ident[node->data.ident].name_var);
+    PRINT_ASM_PARAM("\n%s:\n", tree->idents.ident[node->data.ident].name_var);
 
     ScopeTableName *func_table_name = NULL;
 
@@ -76,8 +76,6 @@ void asm_func (Tree *tree, Node *node, int *code_error)
             func_table_name = tree->table_name.scope_table_name[i];
         }
     }
-
-    Node *params = node->left;
 
     asm_body(tree, node->right, func_table_name, code_error);
 
@@ -155,7 +153,7 @@ void asm_call_func (Tree *tree, Node *node, ScopeTableName *cur_table, int *code
                     "\t\tpush rbx\n"
                     "\t\tpush %ld\n"
                     "\t\tadd\n"
-                    "\t\tpop rbx\n", cur_table->n_elem);
+                    "\t\tpop rbx\n", cur_table->n_elem - cur_table->n_call_func);
 
     PRINT_ASM_PARAM("\t\tcall %s\n", tree->idents.ident[node->data.ident].name_var);
 
@@ -174,7 +172,7 @@ void asm_params (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_er
     {
         asm_node(tree, temp_node, cur_table, code_error);
 
-        PRINT_ASM_PARAM("\t\tpop [rbx + %ld]\n", cur_table->n_elem + i + 1);
+        PRINT_ASM_PARAM("\t\tpop [rbx + %ld]\n", cur_table->n_elem + i - cur_table->n_call_func);
 
         temp_node = temp_node->left;
     }
@@ -257,9 +255,7 @@ void asm_op (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
         case (ASSIG):
         {
             int item_ident = node->left->data.ident;
-
             asm_node(tree, node->right, cur_table, code_error);
-
             PRINT_ASM_PARAM("\t\tpop [rbx + %d]\n", item_ident);
 
             break;
@@ -331,6 +327,7 @@ void asm_if_else (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_e
         if (temp_node->data.types_op != ELSE)
         {
             end_label_body = if_label++;
+
             asm_condition(tree, temp_node->left->left, cur_table, IF, end_label_body, code_error);
         }
 

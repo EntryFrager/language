@@ -207,7 +207,7 @@ void read_table_name (Tree *tree, int *code_error)
 
     calloc_init_(tree->idents.ident, Ident *, tree->idents.n_ident, sizeof(Ident));
 
-    for (int i = 0; i < tree->idents.n_ident; i++)
+    for (size_t i = 0; i < tree->idents.n_ident; i++)
     {
         tree->idents.ident[i].name_var = table_name_str;
         tree->idents.ident[i].n_var = i;
@@ -218,6 +218,10 @@ void read_table_name (Tree *tree, int *code_error)
         }
 
         *table_name_str = '\0';
+        table_name_str++;
+
+        sscanf(table_name_str, "%d %d%n", &tree->idents.ident[i].n_scope, &tree->idents.ident[i].n_var, &n_read);
+        table_name_str += n_read;
 
         while (!isalpha(*table_name_str) && *table_name_str != '_' && !isdigit(*table_name_str))
         {
@@ -250,6 +254,11 @@ void read_table_name (Tree *tree, int *code_error)
                                               &tree->table_name.scope_table_name[i]->name[j].type,
                                               &n_read);
             table_name_str += n_read;
+
+            if (tree->table_name.scope_table_name[i]->name[j].type == CALL_FUNC)
+            {
+                tree->table_name.scope_table_name[i]->n_call_func++;
+            }
         }
     }
 

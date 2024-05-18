@@ -21,8 +21,8 @@ void spu_ctor (SPU *spu, int *code_error)
     stack_ctor(&spu->stack, STACK_DEFAULT_SIZE, code_error);
     stack_ctor(&spu->stack_call, LABEL_CNT, code_error);
 
-    spu->file_name_input = (const char *) "../ass_output.bin";
-    spu->file_name_print = "../result.txt";
+    spu->file_name_input = (const char *) "../../files/ass_output.bin";
+    spu->file_name_print = "../../files/result.txt";
 
     fopen_init_(spu->fp_input, spu->file_name_input, "r + b");
     fopen_init_(spu->fp_print, spu->file_name_print, "w");

@@ -129,8 +129,9 @@ typedef struct {
 } Name;
 
 typedef struct {
-    size_t n_elem   = 0;
-    size_t cur_elem = 0;
+    size_t n_elem       = 0;
+    size_t cur_elem     = 0;
+    size_t n_call_func  = 0;
 
     int code_table_name = 0;
 
@@ -147,11 +148,14 @@ typedef struct {
 typedef struct {
     char *name_var = NULL;
     int   n_var    = 0;
+    int   n_scope  = 0;
 } Ident;
 
 typedef struct {
-    size_t n_ident = 0;
-    size_t n_funcs = 0;
+    size_t n_ident   = 0;
+    size_t n_funcs   = 0;
+    size_t cur_ident = 0;
+
     Ident *ident   = NULL;
 } Identificators;
 

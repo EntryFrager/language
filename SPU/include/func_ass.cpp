@@ -13,11 +13,11 @@ void spu_ctor (Spu *spu, int argc, char **argv, int *code_error)
     }
     else
     {
-        spu->file_name_input = "../../asm.txt";
+        spu->file_name_input = "../../files/asm.txt";
     }
 
-    spu->file_name_print_bin = "../ass_output.bin";
-    spu->file_name_print_txt = "../ass_output.log";
+    spu->file_name_print_bin = "../../files/ass_output.bin";
+    spu->file_name_print_txt = "../../files/ass_output.log";
 
     fopen_init_(spu->fp_print_bin, spu->file_name_print_bin, "w + b");
     fopen_init_(spu->fp_print_txt, spu->file_name_print_txt, "w");

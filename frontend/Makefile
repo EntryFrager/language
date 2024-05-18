@@ -7,7 +7,7 @@ CFLAGS = -c -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-
 	-Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing   \
 	-Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
 
-INCLUDES = ../tree/tree.h ../Include_file/error/error.h ../Include_file/utilities/utils.h inc/input.h
+INCLUDES = ../tree/tree.h ../Include_file/error/error.h ../Include_file/utilities/utils.h inc/input.h inc/syntax_error.h
 
 SOURCES = main.cpp input.cpp lexical_analysis.cpp parsing.cpp ../tree/tree.cpp ../tree/dump.cpp ../Include_file/error/error.cpp ../Include_file/utilities/utils.cpp
 

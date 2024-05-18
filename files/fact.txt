@@ -8,16 +8,32 @@ def main()
     {
         print(NO_FACT);
     }
-    else if (a == 1)
-    {
-        print(a);
-    }
     else
     {
         result = fact(a);
 
         print(result);
+
+        result = fibon(a);
+
+        print(result);
     }
+}
+
+def fibon(a)
+{
+    if (a == 2 || a == 1)
+    {
+        return a;
+    }
+
+    b = a - 1;
+    c = a - 2;
+
+    b = fibon(b);
+    c = fibon(c);
+
+    return (c + b);
 }
 
 def fact(a)

@@ -5,12 +5,12 @@
 
 #define IF_NUM(node_type, expr)      if (node_type == NUM) {expr; return node;}
 
-#define NUM_(value, parent)        create_node_num        (            value,    NULL, NULL, parent, code_error)
-#define IDENT_(ident, parent)      create_node_ident      (IDENT,      ident,    NULL, NULL, parent, code_error)
-#define OP_(types_op, parent)      create_node_op         (            types_op, NULL, NULL, parent, code_error)
-#define CALL_FUNC_(ident, parent)  create_node_ident      (CALL_FUNC,  ident,    NULL, NULL, parent, code_error)
-#define IDENT_FUNC_(ident, parent) create_node_ident      (IDENT_FUNC, ident,    NULL, NULL, parent, code_error)
-#define PARAM_(ident, parent)      create_node_ident      (PARAM,      ident,    NULL, NULL, parent, code_error)
+#define NUM_(value, parent)        create_node_num  (            value,    NULL, NULL, parent, code_error)
+#define IDENT_(ident, parent)      create_node_ident(IDENT,      ident,    NULL, NULL, parent, code_error)
+#define OP_(types_op, parent)      create_node_op   (            types_op, NULL, NULL, parent, code_error)
+#define CALL_FUNC_(ident, parent)  create_node_ident(CALL_FUNC,  ident,    NULL, NULL, parent, code_error)
+#define IDENT_FUNC_(ident, parent) create_node_ident(IDENT_FUNC, ident,    NULL, NULL, parent, code_error)
+#define PARAM_(ident, parent)      create_node_ident(PARAM,      ident,    NULL, NULL, parent, code_error)
 
 #define is_zero(value)  (compare(value, 0) == 0)
 #define is_one(value)   (compare(value, 1) == 0)

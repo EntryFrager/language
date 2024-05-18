@@ -2,33 +2,35 @@
 #define PARSING_CPP
 
 #include "../inc/input.h"
+#include "../inc/syntax_error.h"
 
 static int n_scope = 0;
 
-static Node *get_funcs      (Token *token, size_t *pos, TableName *table_name, int *code_error);
-static Node *get_func       (Token *token, size_t *pos, TableName *table_name, int *code_error);
-static Node *get_params     (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_param      (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_body_scope (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_operators  (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_op         (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_if_else    (Token *token, size_t *pos, ScopeTableName *cur_scope, op_command op_type, int *code_error);
-static Node *get_if         (Token *token, size_t *pos, ScopeTableName *cur_scope, op_command op_type, int *code_error);
-static Node *get_while      (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_stdin      (Token *token, size_t *pos, ScopeTableName *cur_scope, op_command op_type, int *code_error);
-static Node *get_abc        (Token *token, size_t *pos,                            op_command op_type, int *code_error);
-static Node *get_return     (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_condition  (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_compare    (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_call_func  (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_expr       (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_add_sub    (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_mul_div    (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_pow        (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_bracket    (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_trig       (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_var        (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
-static Node *get_num        (Token *token, size_t *pos, int *code_error);
+static Node *get_funcs        (Token *token, size_t *pos, TableName *table_name, int *code_error);
+static Node *get_func         (Token *token, size_t *pos, TableName *table_name, int *code_error);
+static Node *get_params       (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_param        (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_body_scope   (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_instructions (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_node         (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_op           (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_if_else      (Token *token, size_t *pos, ScopeTableName *cur_scope, op_command op_type, int *code_error);
+static Node *get_if           (Token *token, size_t *pos, ScopeTableName *cur_scope, op_command op_type, int *code_error);
+static Node *get_while        (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_stdin        (Token *token, size_t *pos, ScopeTableName *cur_scope, op_command op_type, int *code_error);
+static Node *get_abc          (Token *token, size_t *pos,                            op_command op_type, int *code_error);  // this function creates nodes like abort, break and continue
+static Node *get_return       (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_condition    (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_compare      (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_call_func    (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_expr         (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_add_sub      (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_mul_div      (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_pow          (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_bracket      (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_trig         (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_var          (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error);
+static Node *get_num          (Token *token, size_t *pos, int *code_error);
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wswitch-enum"
@@ -44,7 +46,7 @@ Node *get_code (Tree *tree, int *code_error)
 
     Node *node = get_funcs(tree->token, &pos, &tree->table_name, code_error);
 
-    my_assert(tree->token[pos].type == DEF_TYPE, SYNTAX_ERROR);
+    syntax_assert(tree->token[pos].type == DEF_TYPE, UNKNOWN_ERROR);
 
     ERR_RET(NULL);
 
@@ -77,10 +79,10 @@ Node *get_func (Token *token, size_t *pos, TableName *table_name, int *code_erro
     my_assert(token != NULL, ERR_PTR);
     my_assert(pos   != NULL, ERR_PTR);
 
-    my_assert(IS_TYPE(OP) && IS_OP(FUNC), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(FUNC), NOT_FUNC_DEF);
     INCREM;
 
-    my_assert(IS_TYPE(IDENT_FUNC), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(IDENT_FUNC), NOT_IDENT_FUNC);
 
     add_table_name(table_name, CUR_TOK.data.ident, code_error);
 
@@ -94,6 +96,8 @@ Node *get_func (Token *token, size_t *pos, TableName *table_name, int *code_erro
     node->right = get_body_scope(token, pos, table_name->scope_table_name[n_scope], code_error);
     ERR_RET(NULL);
 
+    table_name->scope_table_name[n_scope]->n_elem = table_name->scope_table_name[n_scope]->cur_elem;
+
     return node;
 }
 
@@ -102,12 +106,12 @@ Node *get_params (Token *token, size_t *pos, ScopeTableName *cur_scope, int *cod
     my_assert(token != NULL, ERR_PTR);
     my_assert(pos   != NULL, ERR_PTR);
 
-    my_assert(IS_TYPE(OP) && IS_OP(OPEN_BRACKET), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(OPEN_BRACKET), NOT_OPEN_BRACKET);
     INCREM;
 
     Node *node = get_param(token, pos, cur_scope, code_error);
 
-    my_assert(IS_TYPE(OP) && IS_OP(CLOSE_BRACKET), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(CLOSE_BRACKET), NOT_CLOSE_BRACKET);
     INCREM;
 
     return node;
@@ -141,16 +145,16 @@ Node *get_body_scope (Token *token, size_t *pos, ScopeTableName *cur_scope, int 
     my_assert(token != NULL, ERR_PTR);
     my_assert(pos   != NULL, ERR_PTR);
 
-    my_assert(IS_TYPE(OP) && IS_OP(OPEN_BRACE), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(OPEN_BRACE), NOT_OPEN_BRACE);
     INCREM;
 
-    Node *node = get_operators(token, pos, cur_scope, code_error);
+    Node *node = get_instructions(token, pos, cur_scope, code_error);
     ERR_RET(NULL);
 
     return node;
 }
 
-Node *get_operators(Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error)
+Node *get_instructions(Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error)
 {
     my_assert(token != NULL, ERR_PTR);
     my_assert(pos   != NULL, ERR_PTR);
@@ -163,16 +167,16 @@ Node *get_operators(Token *token, size_t *pos, ScopeTableName *cur_scope, int *c
 
     Node *node = OP_(END_EXPR, NULL);
 
-    node->left = get_op(token, pos, cur_scope, code_error);
+    node->left = get_node(token, pos, cur_scope, code_error);
     ERR_RET(NULL);
 
-    node->right = get_operators(token, pos, cur_scope, code_error);
+    node->right = get_instructions(token, pos, cur_scope, code_error);
     ERR_RET(NULL);
 
     return node;
 }
 
-Node *get_op (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error)
+Node *get_node (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error)
 {
     my_assert(token != NULL, ERR_PTR);
     my_assert(pos   != NULL, ERR_PTR);
@@ -183,46 +187,7 @@ Node *get_op (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_er
     {
         case (OP):
         {
-            switch (CUR_TOK.data.types_op)
-            {
-                case (IF):
-                {
-                    node = get_if_else(token, pos, cur_scope, IF, code_error);
-                    break;
-                }
-                case (WHILE):
-                {
-                    node = get_while(token, pos, cur_scope, code_error);
-                    break;
-                }
-                case (OPEN_BRACE):
-                {
-                    node = get_body_scope(token, pos, cur_scope, code_error);
-                    break;
-                }
-                case (PRINT):
-                case (INPUT):
-                {
-                    node = get_stdin(token, pos, cur_scope, CUR_TOK.data.types_op, code_error);
-                    break;
-                }
-                case (BREAK):
-                case (CONTINUE):
-                case (ABORT):
-                {
-                    node = get_abc(token, pos, CUR_TOK.data.types_op, code_error);
-                    break;
-                }
-                case (RETURN):
-                {
-                    node = get_return(token, pos, cur_scope, code_error);
-                    break;
-                }
-                default:
-                {
-                    break;
-                }
-            }
+            node = get_op(token, pos, cur_scope, code_error);
 
             break;
         }
@@ -242,7 +207,60 @@ Node *get_op (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_er
         }
     }
 
-    ERR_RET (NULL);
+    ERR_RET(NULL);
+
+    return node;
+}
+
+Node *get_op (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_error)
+{
+    my_assert(token != NULL, ERR_PTR);
+    my_assert(pos   != NULL, ERR_PTR);
+
+    Node *node = NULL;
+
+    switch (CUR_TOK.data.types_op)
+    {
+        case (IF):
+        {
+            node = get_if_else(token, pos, cur_scope, IF, code_error);
+            break;
+        }
+        case (WHILE):
+        {
+            node = get_while(token, pos, cur_scope, code_error);
+            break;
+        }
+        case (OPEN_BRACE):
+        {
+            node = get_body_scope(token, pos, cur_scope, code_error);
+            break;
+        }
+        case (PRINT):
+        case (INPUT):
+        {
+            node = get_stdin(token, pos, cur_scope, CUR_TOK.data.types_op, code_error);
+            break;
+        }
+        case (BREAK):
+        case (CONTINUE):
+        case (ABORT):
+        {
+            node = get_abc(token, pos, CUR_TOK.data.types_op, code_error);
+            break;
+        }
+        case (RETURN):
+        {
+            node = get_return(token, pos, cur_scope, code_error);
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
+
+    ERR_RET(NULL);
 
     return node;
 }
@@ -313,7 +331,7 @@ Node *get_stdin (Token *token, size_t *pos, ScopeTableName *cur_scope, op_comman
 
     node->left = get_params(token, pos, cur_scope, code_error);
 
-    my_assert(IS_TYPE(OP) && IS_OP(END_EXPR), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(END_EXPR), NOT_END_EXPR);
     INCREM;
 
     return node;
@@ -327,7 +345,7 @@ Node *get_abc (Token *token, size_t *pos, op_command op_type, int *code_error)
     Node *node = OP_(op_type, NULL);
     INCREM;
 
-    my_assert(IS_TYPE(OP) && IS_OP(END_EXPR), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(END_EXPR), NOT_END_EXPR);
     INCREM;
 
     return node;
@@ -343,7 +361,7 @@ Node *get_return (Token *token, size_t *pos, ScopeTableName *cur_scope, int *cod
 
     node->left = get_add_sub(token, pos, cur_scope, code_error);
 
-    my_assert(IS_TYPE(OP) && IS_OP(END_EXPR), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(END_EXPR), NOT_END_EXPR);
     INCREM;
 
     return node;
@@ -354,7 +372,7 @@ Node *get_condition (Token *token, size_t *pos, ScopeTableName *cur_scope, int *
     my_assert(token != NULL, ERR_PTR);
     my_assert(pos   != NULL, ERR_PTR);
 
-    my_assert(IS_TYPE(OP) && IS_OP(OPEN_BRACKET), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(OPEN_BRACKET), NOT_OPEN_BRACKET);
     INCREM;
 
     Node *node = get_compare(token, pos, cur_scope, code_error);
@@ -389,7 +407,7 @@ Node *get_condition (Token *token, size_t *pos, ScopeTableName *cur_scope, int *
         }
     }
 
-    my_assert(IS_TYPE(OP) && IS_OP(CLOSE_BRACKET), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(CLOSE_BRACKET), NOT_CLOSE_BRACKET);
     INCREM;
 
     return node;
@@ -403,7 +421,7 @@ Node *get_compare (Token *token, size_t *pos, ScopeTableName *cur_scope, int *co
     Node *node_l = get_add_sub(token, pos, cur_scope, code_error);
     ERR_RET(NULL);
 
-    my_assert(IS_TYPE(OP), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP), NOT_OP);
     op_command op = CUR_TOK.data.types_op;
     INCREM;
 
@@ -428,7 +446,7 @@ Node *get_call_func (Token *token, size_t *pos, ScopeTableName *cur_scope, int *
     node->left = get_params(token, pos, cur_scope, code_error);
     ERR_RET(NULL);
 
-    my_assert(IS_TYPE(OP) && IS_OP(END_EXPR), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(END_EXPR), NOT_END_EXPR);
     INCREM;
 
     return node;
@@ -443,7 +461,7 @@ Node *get_expr (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_
     add_table_name_elem(cur_scope, CUR_TOK.data.ident, IDENT, code_error);
     INCREM;
 
-    my_assert(IS_TYPE(OP) && IS_OP(ASSIG), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(ASSIG), NOT_ASSIG);
     INCREM;
 
     Node *node_r = get_add_sub(token, pos, cur_scope, code_error);
@@ -452,7 +470,7 @@ Node *get_expr (Token *token, size_t *pos, ScopeTableName *cur_scope, int *code_
     Node *node = create_node_op(ASSIG, node_l, node_r, NULL, code_error);
     ERR_RET(NULL);
 
-    my_assert(IS_TYPE(OP) && IS_OP(END_EXPR), SYNTAX_ERROR);
+    syntax_assert(IS_TYPE(OP) && IS_OP(END_EXPR), NOT_END_EXPR);
     INCREM;
 
     return node;
@@ -579,7 +597,7 @@ Node *get_bracket (Token *token, size_t *pos, ScopeTableName *cur_scope, int *co
         Node *node = get_add_sub(token, pos, cur_scope, code_error);
         ERR_RET(NULL);
 
-        my_assert(IS_TYPE(OP) && IS_OP(CLOSE_BRACKET), SYNTAX_ERROR);
+        syntax_assert(IS_TYPE(OP) && IS_OP(CLOSE_BRACKET), NOT_CLOSE_BRACKET);
         INCREM;
 
         ERR_RET(NULL);

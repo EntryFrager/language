@@ -4,6 +4,8 @@
 #include "../inc/reverse_frontend.h"
 
 static int offset_begin_line = 0;
+static int cur_scope         = 0;
+const  int func_scope        = -1;
 
 #define DEF_CMD(num, name) name,
 
@@ -14,16 +16,17 @@ static const char *OP_NAME[] = {
     "no key word"
 };
 
-static void print_funcs             (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_func              (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_params            (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_param             (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_body              (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_node              (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_op                (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_if_else           (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_while             (Node *node, Identificators *idents, FILE *stream, int *code_error);
-static void print_offset_begin_line (FILE *stream);
+static void  print_funcs             (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_func              (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_params            (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_param             (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_body              (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_node              (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_op                (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_if_else           (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_while             (Node *node, Identificators *idents, FILE *stream, int *code_error);
+static void  print_offset_begin_line (FILE *stream);
+static char *get_name_ident          (Identificators *idents, int n_var, int n_scope, int *code_error);
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wswitch-enum"
@@ -53,6 +56,8 @@ void print_funcs (Node *node, Identificators *idents, FILE *stream, int *code_er
 
         fprintf(stream, "\n");
 
+        cur_scope++;
+
         copy_node = copy_node->right;
     }
 }
@@ -63,7 +68,7 @@ void print_func (Node *node, Identificators *idents, FILE *stream, int *code_err
     my_assert(idents != NULL, ERR_PTR);
     my_assert(stream != NULL, ERR_PTR);
 
-    fprintf(stream, "%s %s", OP_NAME[FUNC], idents->ident[node->data.ident].name_var);
+    fprintf(stream, "%s %s", OP_NAME[FUNC], get_name_ident(idents, node->data.ident, -1, code_error));
 
     print_params(node->left, idents, stream, code_error);
 
@@ -99,7 +104,7 @@ void print_param (Node *node, Identificators *idents, FILE *stream, int *code_er
     my_assert(idents != NULL, ERR_PTR);
     my_assert(stream != NULL, ERR_PTR);
 
-    fprintf(stream, "%s", idents->ident[node->data.ident].name_var);
+    fprintf(stream, "%s", get_name_ident(idents, node->data.ident, cur_scope, code_error));
 
     if (node->left != NULL)
     {
@@ -157,12 +162,12 @@ void print_node (Node *node, Identificators *idents, FILE *stream, int *code_err
         }
         case (IDENT):
         {
-            fprintf(stream, "%s", idents->ident[node->data.ident].name_var);
+            fprintf(stream, "%s", get_name_ident(idents, node->data.ident, cur_scope, code_error));
             break;
         }
         case (CALL_FUNC):
         {
-            fprintf(stream, "%s", idents->ident[node->data.ident].name_var);
+            fprintf(stream, "%s", get_name_ident(idents, node->data.ident, -1, code_error));
             print_params(node->left, idents, stream, code_error);
             break;
         }
@@ -308,6 +313,24 @@ void print_offset_begin_line (FILE *stream)
     {
         fprintf(stream, "\t");
     }
+}
+
+char *get_name_ident (Identificators *idents, int n_var, int n_scope, int *code_error)
+{
+    my_assert(idents != NULL, ERR_PTR);
+
+    printf("%d %d\n", n_scope, n_var);
+
+    for (size_t i = 0; i < idents->n_ident; i++)
+    {
+        if (idents->ident[i].n_var == n_var && idents->ident[i].n_scope == n_scope)
+        {
+            printf("%s\n", idents->ident[i].name_var);
+            return idents->ident[i].name_var;
+        }
+    }
+
+    return NULL;
 }
 
 #pragma GCC diagnostic pop
