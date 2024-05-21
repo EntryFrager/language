@@ -3,10 +3,10 @@
 
 #include "tree.h"
 
-static const char *FP_NAME_EXPR       = "../files/expr.txt";
-static const char *FP_NAME_TREE       = "../files/tree.txt";
-static const char *FP_NAME_ASM        = "../files/asm.txt";
-static const char *FP_NAME_TABLE_NAME = "../files/table_name.txt";
+static const char *FP_NAME_EXPR       = "./files/expr.txt";
+static const char *FP_NAME_TREE       = "./files/tree.txt";
+static const char *FP_NAME_ASM        = "./files/code.asm";
+static const char *FP_NAME_TABLE_NAME = "./files/table_name.txt";
 
 static Node           *calloc_node              (Node *left, Node *right, Node *parent, int *code_error);
 static ScopeTableName *init_scope_table_name    (int code_table_name, int *code_error);
