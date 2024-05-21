@@ -4,6 +4,10 @@ all:
 	make -f backend_nasm/MakeBackendNasm
 	make -f reverse_frontend/MakeReverseFrontend
 	make -f middlend/MakeMiddlend
+nasm:
+	make -f MakeNasm
+run:
+
 clean:
 	rm -rf ./*.o
 	rm -rf ./*.exe

@@ -2,10 +2,10 @@ def main()
 {
 	input(a, b, c);
 
-	solve_dispetcher(a, b, c);
+	solve_dispatcher(a, b, c);
 }
 
-def solve_dispetcher(a, b, c)
+def solve_dispatcher(a, b, c)
 {
 	if (a == 0)
 	{

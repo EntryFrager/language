@@ -16,14 +16,14 @@ static const char *OP_NAME[] = {
 
 #undef DEF_CMD
 
-static const char *DEBUG_FOLDER              = "../debug";
-static const char *TREE_DEBUG_FOLDER         = "../debug/tree_debug";
-static const char *TREE_FP_ERR_NAME          = "../debug/tree_debug/tree_debug.txt";
-static const char *TREE_FP_DOT_NAME          = "../debug/tree_debug/dump.dot";
-static const char *TREE_FP_HTML_DOT_NAME     = "../debug/tree_debug/dot.html";
-static const char *TREE_FP_IMAGE             = "../debug/tree_debug/dot.svg";
+static const char *DEBUG_FOLDER              = "./debug";
+static const char *TREE_DEBUG_FOLDER         = "./debug/tree_debug";
+static const char *TREE_FP_ERR_NAME          = "./debug/tree_debug/tree_debug.txt";
+static const char *TREE_FP_DOT_NAME          = "./debug/tree_debug/dump.dot";
+static const char *TREE_FP_HTML_DOT_NAME     = "./debug/tree_debug/dot.html";
+static const char *TREE_FP_IMAGE             = "./debug/tree_debug/dot.svg";
 
-static const char *CMD_COMPILE_TREE_DOT_FILE = "dot -Tsvg ../debug/tree_debug/dump.dot -o ../debug/tree_debug/dot.svg";
+static const char *CMD_COMPILE_TREE_DOT_FILE = "dot -Tsvg ./debug/tree_debug/dump.dot -o ./debug/tree_debug/dot.svg";
 
 static void print_tree_dump (Node *node, FILE *fp_err);
 static int  create_node_dot (Node *node, FILE *stream, int ip_parent, int ip);

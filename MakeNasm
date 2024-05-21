@@ -1,0 +1,15 @@
+all: asm_1 asm_2 result
+
+result: code.o stdio.o
+	g++ -no-pie code.o stdio.o -o code.exe
+
+asm_1: ./nasm_libs/stdio.asm
+	nasm -f elf64 ./nasm_libs/stdio.asm -o stdio.o
+
+asm_2: ./files/code.asm
+	nasm -f elf64 ./files/code.asm -o code.o
+
+.PHONY: clean
+
+clean:
+	rm -rf *.o

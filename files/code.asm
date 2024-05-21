@@ -4,9 +4,15 @@ extern print
 
 extern input
 
+extern sqrt_int
+
 section .text
 
-num: dq 1.1
+
+;------------------------------------------------------------------------------
+;-----------------------------------Function-----------------------------------
+;------------------------------------------------------------------------------
+
 
 main:
 		push rbp
@@ -17,438 +23,172 @@ main:
 		xor r12, r12
 		xor r15, r15
 
-		call input
-		mov qword [ram + (r15 + 0) * 8], rax
+;--------------------Input--------------------
 
 		call input
-		mov qword [ram + (r15 + 1) * 8], rax
+		mov qword [ram + r15 + 0 * 8], rax
 
-		call input
-		mov qword [ram + (r15 + 2) * 8], rax
+;------------------End-Input------------------
 
-		push qword [num]
-		call print
+;--------------------Expression--------------------
 
-		push qword [ram + (r15 + 0) * 8]
-		pop qword [ram + (r15 + 3) * 8]
+		push 1
+		pop qword [ram + r15 + 1 * 8]
 
-		push qword [ram + (r15 + 1) * 8]
-		pop qword [ram + (r15 + 4) * 8]
+;------------------End-Expression------------------
 
-		push qword [ram + (r15 + 2) * 8]
-		pop qword [ram + (r15 + 5) * 8]
+;-------------------------If-Condition-------------------------
 
-		push r15
-		add r15, 3
-		call solve_dispetcher
-
-		pop r15
-		push rax
-
-		mov rsp, rbp
-		pop rbp
-
-		ret
-
-solve_dispetcher:
-		push rbp
-		mov rbp, rsp
-
-		push qword [ram + (r15 + 0) * 8]
+		push qword [ram + r15 + 0 * 8]
 		push 0
 		pop r11
 		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		cmpneqsd xmm1, xmm0
-		movq rax, xmm1
-		test rax, rax
-		jnz .if_1
+		cmp r12, r11
+		jb .if_2
 
-		push qword [ram + (r15 + 1) * 8]
-		pop qword [ram + (r15 + 3) * 8]
+		push qword [ram + r15 + 0 * 8]
+		push 0
+		pop r11
+		pop r12
+		cmp r12, r11
+		jne .if_1
 
-		push qword [ram + (r15 + 2) * 8]
-		pop qword [ram + (r15 + 4) * 8]
+	.if_2:
 
-		push r15
-		add r15, 3
-		call solve_linear
+;-----------------------End-If-Condition-----------------------
 
-		pop r15
-		push rax
+;-------------------------If-Body-------------------------
 
+;--------------------Print--------------------
+
+		mov rsi, qword [ram + r15 + 1 * 8]
+		call print
+
+;------------------End-Print------------------
+
+;-----------------------End-If-Body-----------------------
 		jmp .end_if_0
 	.if_1:
-		push qword [ram + (r15 + 0) * 8]
-		pop qword [ram + (r15 + 3) * 8]
 
-		push qword [ram + (r15 + 1) * 8]
-		pop qword [ram + (r15 + 4) * 8]
+;-------------------------If-Body-------------------------
 
-		push qword [ram + (r15 + 2) * 8]
-		pop qword [ram + (r15 + 5) * 8]
+;--------------------Expression--------------------
+
+
+;-------------------------Call-Function-------------------------
+
+		push qword [ram + r15 + 0 * 8]
+		pop qword [ram + r15 + 3 * 8]
 
 		push r15
+		shr r15, 3
 		add r15, 3
-		call solve_square
+		shl r15, 3
+		call fact
 
 		pop r15
 		push rax
 
+;-----------------------End-Call-Function-----------------------
+		pop qword [ram + r15 + 2 * 8]
+
+;------------------End-Expression------------------
+
+;--------------------Print--------------------
+
+		mov rsi, qword [ram + r15 + 2 * 8]
+		call print
+
+;------------------End-Print------------------
+
+;-----------------------End-If-Body-----------------------
 	.end_if_0:
-		push 0
+		pop rbp
+		ret
+
+
+;------------------------------------------------------------------------------
+;-----------------------------------Function-----------------------------------
+;------------------------------------------------------------------------------
+
+
+fact:
+		push rbp
+		mov rbp, rsp
+
+;-------------------------If-Condition-------------------------
+
+		push qword [ram + r15 + 0 * 8]
+		push 1
+		pop r11
+		pop r12
+		cmp r12, r11
+		jne .if_4
+
+
+;-----------------------End-If-Condition-----------------------
+
+;-------------------------If-Body-------------------------
+
+;--------------------Return--------------------
+
+		push qword [ram + r15 + 0 * 8]
 		pop rax
 
-		mov rsp, rbp
 		pop rbp
 
 		ret
 
 
-solve_linear:
-		push rbp
-		mov rbp, rsp
+;-----------------------End-If-Body-----------------------
+		jmp .end_if_3
+	.if_4:
+	.end_if_3:
 
-		push 0
+;--------------------Expression--------------------
+
+		push qword [ram + r15 + 0 * 8]
 		push 1
 		pop r11
 		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop qword [ram + (r15 + 2) * 8]
+		sub r12, r11
+		push r12
+		pop qword [ram + r15 + 1 * 8]
 
-		push 1
-		pop qword [ram + (r15 + 3) * 8]
+;------------------End-Expression------------------
 
-		push 1000
-		pop qword [ram + (r15 + 4) * 8]
+;--------------------Expression--------------------
 
-		push qword [ram + (r15 + 0) * 8]
-		push 0
+		push qword [ram + r15 + 0 * 8]
+
+;-------------------------Call-Function-------------------------
+
+		push qword [ram + r15 + 1 * 8]
+		pop qword [ram + r15 + 2 * 8]
+
+		push r15
+		shr r15, 3
+		add r15, 2
+		shl r15, 3
+		call fact
+
+		pop r15
+		push rax
+
+;-----------------------End-Call-Function-----------------------
 		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		cmpneqsd xmm1, xmm0
-		movq rax, xmm1
-		test rax, rax
-		jnz .if_3
+		pop rax
+		imul r11
+		push rax
+		pop qword [ram + r15 + 0 * 8]
 
-		push qword [ram + (r15 + 1) * 8]
-		push 0
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		cmpneqsd xmm1, xmm0
-		movq rax, xmm1
-		test rax, rax
-		jnz .if_5
+;------------------End-Expression------------------
 
-		push qword [ram + (r15 + 4) * 8]
-		call print
+;--------------------Return--------------------
 
-		jmp .end_if_4
-	.if_5:
-		push qword [ram + (r15 + 2) * 8]
-		call print
-
-	.end_if_4:
-		jmp .end_if_2
-	.if_3:
-		push 0
-		push qword [ram + (r15 + 1) * 8]
-		push qword [ram + (r15 + 0) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		divsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop qword [ram + (r15 + 5) * 8]
-
-		push qword [ram + (r15 + 3) * 8]
-		call print
-
-		push qword [ram + (r15 + 5) * 8]
-		call print
-
-	.end_if_2:
-		push 0
+		push qword [ram + r15 + 0 * 8]
 		pop rax
 
-		mov rsp, rbp
-		pop rbp
-
-		ret
-
-
-solve_square:
-		push rbp
-		mov rbp, rsp
-
-		push 0
-		push 1
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop qword [ram + (r15 + 3) * 8]
-
-		push 1
-		pop qword [ram + (r15 + 4) * 8]
-
-		push 2
-		pop qword [ram + (r15 + 5) * 8]
-
-		push qword [ram + (r15 + 2) * 8]
-		push 0
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		cmpneqsd xmm1, xmm0
-		movq rax, xmm1
-		test rax, rax
-		jnz .if_7
-
-		push 0
-		pop qword [ram + (r15 + 6) * 8]
-
-		push 0
-		push qword [ram + (r15 + 1) * 8]
-		push qword [ram + (r15 + 0) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		divsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop qword [ram + (r15 + 7) * 8]
-
-		push qword [ram + (r15 + 5) * 8]
-		call print
-
-		push qword [ram + (r15 + 6) * 8]
-		call print
-
-		push qword [ram + (r15 + 7) * 8]
-		call print
-
-		jmp .end_if_6
-	.if_7:
-		push qword [ram + (r15 + 1) * 8]
-		push qword [ram + (r15 + 1) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		mulsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		push 4
-		push qword [ram + (r15 + 0) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		mulsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		push qword [ram + (r15 + 2) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		mulsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop qword [ram + (r15 + 8) * 8]
-
-		push qword [ram + (r15 + 8) * 8]
-		push 0
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		cmplesd xmm1, xmm0
-		movq rax, xmm1
-		test rax, rax
-		jnz .if_9
-
-		pop r11
-		movq xmm0, r11
-		sqrtsd xmm0, xmm0
-		movq r11, xmm0
-		push r11
-		pop qword [ram + (r15 + 9) * 8]
-
-		push 0
-		push qword [ram + (r15 + 1) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		push qword [ram + (r15 + 9) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		push 2
-		push qword [ram + (r15 + 0) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		mulsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		divsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop qword [ram + (r15 + 6) * 8]
-
-		push 0
-		push qword [ram + (r15 + 1) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		push qword [ram + (r15 + 9) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		addsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		push 2
-		push qword [ram + (r15 + 0) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		mulsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		divsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop qword [ram + (r15 + 7) * 8]
-
-		push qword [ram + (r15 + 5) * 8]
-		call print
-
-		push qword [ram + (r15 + 6) * 8]
-		call print
-
-		push qword [ram + (r15 + 7) * 8]
-		call print
-
-		jmp .end_if_8
-	.if_9:
-		push qword [ram + (r15 + 8) * 8]
-		push 0
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		cmpneqsd xmm1, xmm0
-		movq rax, xmm1
-		test rax, rax
-		jnz .if_10
-
-		push 0
-		push qword [ram + (r15 + 1) * 8]
-		push 2
-		push qword [ram + (r15 + 0) * 8]
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		mulsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		divsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop r11
-		pop r12
-		movq xmm0, r11
-		movq xmm1, r12
-		subsd xmm1, xmm0
-		movq r11, xmm1
-		push r11
-		pop qword [ram + (r15 + 10) * 8]
-
-		push qword [ram + (r15 + 4) * 8]
-		call print
-
-		push qword [ram + (r15 + 10) * 8]
-		call print
-
-		jmp .end_if_8
-	.if_10:
-		push qword [ram + (r15 + 3) * 8]
-		call print
-
-	.end_if_8:
-	.end_if_6:
-		push 0
-		pop rax
-
-		mov rsp, rbp
 		pop rbp
 
 		ret

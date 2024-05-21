@@ -8,6 +8,8 @@ static int while_label = 0;
 
 static bool is_ret = 0;
 
+static bool main_func = true;
+
 static void asm_funcs       (Tree *tree, Node *node, int *code_error);
 static void asm_func        (Tree *tree, Node *node, int *code_error);
 static void asm_body        (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error);
@@ -39,14 +41,8 @@ void print_asm_code (Tree *tree, int *code_error)
     PRINT_ASM("global main\n\n"
               "extern print\n\n"
               "extern input\n\n"
-              "section .text\n\n"
-              "main:\n"
-              "\t\tpush rbp\n"
-              "\t\tmov rbp, rsp\n\n"
-              "\t\txor rax, rax\n"
-              "\t\txor r11, r11\n"
-              "\t\txor r12, r12\n"
-              "\t\txor r15, r15\n\n");
+              "extern sqrt_int\n\n"
+              "section .text\n");
 
     asm_funcs(tree, tree->root, code_error);
 
@@ -74,13 +70,21 @@ void asm_func (Tree *tree, Node *node, int *code_error)
 
     IS_NODE_PTR_NULL();
 
-    char *func_name = get_func_name(&tree->idents, node->data.ident, code_error);
+    PRINT_ASM("\n\n;------------------------------------------------------------------------------\n");
+    PRINT_ASM(";-----------------------------------Function-----------------------------------\n");
+    PRINT_ASM(";------------------------------------------------------------------------------\n\n\n");
+    PRINT_ASM_PARAM("%s:\n"
+                    "\t\tpush rbp\n"
+                    "\t\tmov rbp, rsp\n", get_func_name(&tree->idents, node->data.ident, code_error));
 
-    if (strcmp(func_name, "main") != 0)
+    if (main_func)
     {
-        PRINT_ASM_PARAM("\n%s:\n"
-                        "\t\tpush rbp\n"
-                        "\t\tmov rbp, rsp\n\n", func_name);
+        PRINT_ASM("\n\t\txor rax, rax\n"
+                  "\t\txor r11, r11\n"
+                  "\t\txor r12, r12\n"
+                  "\t\txor r15, r15\n");
+
+        main_func = false;
     }
 
     ScopeTableName *func_table_name = NULL;
@@ -97,8 +101,7 @@ void asm_func (Tree *tree, Node *node, int *code_error)
 
     if (!is_ret)
     {
-        PRINT_ASM("\t\tmov rsp, rbp\n"
-                  "\t\tpop rbp\n\n"
+        PRINT_ASM("\t\tpop rbp\n"
                   "\t\tret\n");
     }
 
@@ -134,7 +137,7 @@ void asm_node (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_erro
         }
         case (IDENT):
         {
-            PRINT_ASM_PARAM("\t\tpush qword [ram + (r15 + %d) * 8]\n", node->data.ident);
+            PRINT_ASM_PARAM("\t\tpush qword [ram + r15 + %d * 8]\n", node->data.ident);
             break;
         }
         case (CALL_FUNC):
@@ -144,7 +147,7 @@ void asm_node (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_erro
         }
         case (PARAM):
         {
-            PRINT_ASM_PARAM("\t\tpush qword [ram + (r15 + %d) * 8]\n", node->data.ident);
+            PRINT_ASM_PARAM("\t\tpush qword [ram + r15 + %d * 8]\n", node->data.ident);
             break;
         }
         case (OP):
@@ -165,15 +168,25 @@ void asm_call_func (Tree *tree, Node *node, ScopeTableName *cur_table, int *code
     my_assert(cur_table != NULL, ERR_PTR);
     my_assert(node      != NULL, ERR_PTR);
 
+    PRINT_ASM("\n;-------------------------Call-Function-------------------------\n\n");
+
     asm_params(tree, node->left, cur_table, code_error);
 
     PRINT_ASM_PARAM("\t\tpush r15\n"
-                    "\t\tadd r15, %ld\n", cur_table->n_elem - cur_table->n_call_func);
+                    "\t\tshr r15, 3\n"
+                    "\t\tadd r15, %ld\n"
+                    "\t\tshl r15, 3\n", cur_table->n_elem - cur_table->n_call_func);
 
     PRINT_ASM_PARAM("\t\tcall %s\n\n", get_func_name(&tree->idents, node->data.ident, code_error));
 
-    PRINT_ASM("\t\tpop r15\n"
-              "\t\tpush rax\n\n");
+    PRINT_ASM("\t\tpop r15\n");
+
+    if (node->parent->type == OP && node->parent->data.types_op != END_EXPR)
+    {
+        PRINT_ASM("\t\tpush rax\n");
+    }
+
+    PRINT_ASM("\n;-----------------------End-Call-Function-----------------------\n");
 }
 
 void asm_params (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
@@ -187,7 +200,7 @@ void asm_params (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_er
     {
         asm_node(tree, temp_node, cur_table, code_error);
 
-        PRINT_ASM_PARAM("\t\tpop qword [ram + (r15 + %ld) * 8]\n\n", cur_table->n_elem + i - cur_table->n_call_func);
+        PRINT_ASM_PARAM("\t\tpop qword [ram + r15 + %ld * 8]\n\n", cur_table->n_elem + i - cur_table->n_call_func);
 
         temp_node = temp_node->left;
     }
@@ -198,11 +211,8 @@ void asm_params (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_er
     asm_node(tree, node->right, cur_table, code_error); \
     PRINT_ASM("\t\tpop r11\n"                           \
               "\t\tpop r12\n"                           \
-              "\t\tmovq xmm0, r11\n"                    \
-              "\t\tmovq xmm1, r12\n"                    \
-              "\t\t" str " xmm1, xmm0\n"                \
-              "\t\tmovq r11, xmm1\n"                    \
-              "\t\tpush r11\n");
+              "\t\t" str " r12, r11\n"                  \
+              "\t\tpush r12\n");
 
 #define EXPR_ASM_SIDE(str)                              \
     asm_node(tree, node->left, cur_table, code_error);  \
@@ -225,38 +235,51 @@ void asm_op (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
         }
         case (ADD):
         {
-            EXPR_ASM("addsd");
+            EXPR_ASM("add");
             break;
         }
         case (SUB):
         {
-            EXPR_ASM("subsd");
+            EXPR_ASM("sub");
             break;
         }
         case (MUL):
         {
-            EXPR_ASM("mulsd");
+            asm_node(tree, node->left, cur_table, code_error);
+            asm_node(tree, node->right, cur_table, code_error);
+            PRINT_ASM("\t\tpop r11\n"
+                      "\t\tpop rax\n"
+                      "\t\timul r11\n"
+                      "\t\tpush rax\n");
             break;
         }
         case (DIV):
         {
-            EXPR_ASM("divsd");
+            asm_node(tree, node->left, cur_table, code_error);
+            asm_node(tree, node->right, cur_table, code_error);
+            PRINT_ASM("\t\tpop r11\n"
+                     "\t\tpop rax\n"
+                     "\t\tidiv r11\n"
+                     "\t\tpush rax\n");
             break;
         }
         case (SQRT):
         {
-            PRINT_ASM("\t\tpop r11\n"
-                      "\t\tmovq xmm0, r11\n"
-                      "\t\tsqrtsd xmm0, xmm0\n"
-                      "\t\tmovq r11, xmm0\n"
-                      "\t\tpush r11\n");
+            asm_node(tree, node->left, cur_table, code_error);
+            PRINT_ASM("\t\tpop rsi\n"
+                      "\t\tcall sqrt_int\n"
+                      "\t\push rax\n");
             break;
         }
         case (ASSIG):
         {
+            PRINT_ASM("\n;--------------------Expression--------------------\n\n");
+
             int item_ident = node->left->data.ident;
             asm_node(tree, node->right, cur_table, code_error);
-            PRINT_ASM_PARAM("\t\tpop qword [ram + (r15 + %d) * 8]\n\n", item_ident);
+            PRINT_ASM_PARAM("\t\tpop qword [ram + r15 + %d * 8]\n", item_ident);
+
+            PRINT_ASM("\n;------------------End-Expression------------------\n");
 
             break;
         }
@@ -329,10 +352,18 @@ void asm_if_else (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_e
         {
             end_label_body = if_label++;
 
+            PRINT_ASM("\n;-------------------------If-Condition-------------------------\n\n");
+
             asm_condition(tree, temp_node->left->left, cur_table, IF, end_label_body, code_error);
+
+            PRINT_ASM("\n;-----------------------End-If-Condition-----------------------\n");
         }
 
+        PRINT_ASM("\n;-------------------------If-Body-------------------------\n");
+
         asm_node(tree, temp_node->left->right, cur_table, code_error);
+
+        PRINT_ASM("\n;-----------------------End-If-Body-----------------------\n");
 
         if (temp_node->data.types_op != ELSE)
         {
@@ -357,11 +388,19 @@ void asm_while (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_err
 
     PRINT_ASM_PARAM("\t.while_%d:\n", start_label_body);
 
+    PRINT_ASM("\n;-------------------------While-Condition-------------------------\n\n");
+
     asm_condition(tree, node->left, cur_table, WHILE, end_label_body, code_error);
+
+    PRINT_ASM("\n;-----------------------End-While-Condition-----------------------\n");
 
     while_label++;
 
+    PRINT_ASM("\n;-------------------------While-Body-------------------------\n\n");
+
     asm_node(tree, node->right, cur_table, code_error);
+
+    PRINT_ASM("\n;-----------------------End-While-Body-----------------------\n");
 
     PRINT_ASM_PARAM("\t\tjmp .while_%d\n", end_label_body);
     PRINT_ASM_PARAM("\t.while_%d:\n", end_label_body);
@@ -412,17 +451,15 @@ void asm_condition (Tree *tree, Node *node, ScopeTableName *cur_table, op_comman
     }
 }
 
-#define PRINT_LABEL(cmp)                                  \
-    PRINT_ASM("\t\t" cmp " xmm1, xmm0\n"                  \
-              "\t\tmovq rax, xmm1\n"                      \
-              "\t\ttest rax, rax\n");                     \
-    if (mode == WHILE)                                    \
-    {                                                     \
-        PRINT_ASM_PARAM("\t\tjnz .while_%d\n\n", label);  \
-    }                                                     \
-    else                                                  \
-    {                                                     \
-        PRINT_ASM_PARAM("\t\tjnz .if_%d\n\n", label);     \
+#define PRINT_LABEL(jmp)                                      \
+    PRINT_ASM("\t\tcmp r12, r11\n");                          \
+    if (mode == WHILE)                                        \
+    {                                                         \
+        PRINT_ASM_PARAM("\t\t" jmp " .while_%d\n\n", label);  \
+    }                                                         \
+    else                                                      \
+    {                                                         \
+        PRINT_ASM_PARAM("\t\t" jmp " .if_%d\n\n", label);     \
     }
 
 
@@ -432,40 +469,38 @@ void asm_compare (Tree *tree, Node *node, op_command mode, int label, int *code_
     my_assert(node != NULL, ERR_PTR);
 
     PRINT_ASM("\t\tpop r11\n"
-              "\t\tpop r12\n"
-              "\t\tmovq xmm0, r11\n"
-              "\t\tmovq xmm1, r12\n");
+              "\t\tpop r12\n");
 
     switch (node->data.types_op)
     {
         case (AE):
         {
-            PRINT_LABEL("cmpnltsd");
+            PRINT_LABEL("jae");
             break;
         }
         case (BE):
         {
-            PRINT_LABEL("cmplesd");
+            PRINT_LABEL("jbe");
             break;
         }
         case (ABOVE):
         {
-            PRINT_LABEL("cmpnlesd");
+            PRINT_LABEL("ja");
             break;
         }
         case (LESS):
         {
-            PRINT_LABEL("cmpltsd");
+            PRINT_LABEL("jb");
             break;
         }
         case (EQUAL):
         {
-            PRINT_LABEL("cmpeqsd");
+            PRINT_LABEL("je");
             break;
         }
         case (NE):
         {
-            PRINT_LABEL("cmpneqsd");
+            PRINT_LABEL("jne");
             break;
         }
         default:
@@ -481,40 +516,38 @@ void asm_opp_compare (Tree *tree, Node *node, op_command mode, int label, int *c
     my_assert(tree != NULL, ERR_PTR);
 
     PRINT_ASM("\t\tpop r11\n"
-              "\t\tpop r12\n"
-              "\t\tmovq xmm0, r11\n"
-              "\t\tmovq xmm1, r12\n");
+              "\t\tpop r12\n");
 
     switch (node->data.types_op)
     {
         case (AE):
         {
-            PRINT_LABEL("cmpltsd");
+            PRINT_LABEL("jb");
             break;
         }
         case (BE):
         {
-            PRINT_LABEL("cmpnlesd");
+            PRINT_LABEL("ja");
             break;
         }
         case (ABOVE):
         {
-            PRINT_LABEL("cmplesd");
+            PRINT_LABEL("jbe");
             break;
         }
         case (LESS):
         {
-            PRINT_LABEL("cmpnltsd");
+            PRINT_LABEL("jae");
             break;
         }
         case (EQUAL):
         {
-            PRINT_LABEL("cmpneqsd");
+            PRINT_LABEL("jne");
             break;
         }
         case (NE):
         {
-            PRINT_LABEL("cmpeqsd");
+            PRINT_LABEL("je");
             break;
         }
         default:
@@ -533,13 +566,17 @@ void asm_print (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_err
 
     Node *temp_node = node->left;
 
+    PRINT_ASM("\n;--------------------Print--------------------\n\n");
+
     while (temp_node != NULL)
     {
-        asm_node(tree, temp_node, cur_table, code_error);
-        PRINT_ASM("\t\tcall print\n\n");
+        PRINT_ASM_PARAM("\t\tmov rsi, qword [ram + r15 + %d * 8]\n", temp_node->data.ident);
+        PRINT_ASM("\t\tcall print\n");
 
         temp_node = temp_node->left;
     }
+
+    PRINT_ASM("\n;------------------End-Print------------------\n");
 }
 
 void asm_input (Tree *tree, Node *node, int *code_error)
@@ -549,13 +586,17 @@ void asm_input (Tree *tree, Node *node, int *code_error)
 
     Node *temp_node = node->left;
 
+    PRINT_ASM("\n;--------------------Input--------------------\n\n");
+
     while (temp_node != NULL)
     {
         PRINT_ASM("\t\tcall input\n");
-        PRINT_ASM_PARAM("\t\tmov qword [ram + (r15 + %d) * 8], rax\n\n", temp_node->data.ident);
+        PRINT_ASM_PARAM("\t\tmov qword [ram + r15 + %d * 8], rax\n", temp_node->data.ident);
 
         temp_node = temp_node->left;
     }
+
+    PRINT_ASM("\n;------------------End-Input------------------\n");
 }
 
 void asm_return (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_error)
@@ -564,16 +605,17 @@ void asm_return (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_er
     my_assert(node      != NULL, ERR_PTR);
     my_assert(cur_table != NULL, ERR_PTR);
 
+    PRINT_ASM("\n;--------------------Return--------------------\n\n");
+
     asm_node(tree, node->left, cur_table, code_error);
 
     if (node->left->type != CALL_FUNC)
     {
-        PRINT_ASM("\t\tpop rax\n\n");
+        PRINT_ASM("\t\tpop rax\n\n"
+                  "\t\tpop rbp\n\n");
     }
 
-    PRINT_ASM("\t\tmov rsp, rbp\n"
-              "\t\tpop rbp\n\n"
-              "\t\tret\n\n");
+    PRINT_ASM("\t\tret\n\n");
 
     is_ret = true;
 }
