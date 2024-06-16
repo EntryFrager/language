@@ -4,15 +4,22 @@ def main()
 
     NO_FACT = 1;
 
-    if (a < 0 || a == 0)
-    {
-        print(NO_FACT);
-    }
-    else
-    {
-        result = fact(a);
+    c = 100000;
 
-        print(result);
+    while (c > 0)
+    {
+        if (a < 0 || a == 0)
+        {
+            print(NO_FACT);
+        }
+        else
+        {
+            result = fact(a);
+
+            print(result);
+        }
+
+        c = c - 1;
     }
 }
 

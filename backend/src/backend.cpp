@@ -363,7 +363,7 @@ void asm_while (Tree *tree, Node *node, ScopeTableName *cur_table, int *code_err
 
     asm_node(tree, node->right, cur_table, code_error);
 
-    PRINT_ASM_PARAM("\t\tjmp while_%d\n", end_label_body);
+    PRINT_ASM_PARAM("\t\tjmp while_%d\n", start_label_body);
     PRINT_ASM_PARAM("\twhile_%d:\n", end_label_body);
 }
 
@@ -405,7 +405,7 @@ void asm_condition (Tree *tree, Node *node, ScopeTableName *cur_table, op_comman
         asm_node(tree, node->left, cur_table, code_error);
         asm_node(tree, node->right, cur_table, code_error);
 
-        if (node->parent->data.types_op == OP_NO)
+        if (node->parent->data.types_op == OP_NO || node->parent->data.types_op == WHILE)
         {
             asm_opp_compare(tree, node, mode, n_label, code_error);
         }

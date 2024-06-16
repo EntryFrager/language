@@ -13,7 +13,7 @@ void spu_ctor (Spu *spu, int argc, char **argv, int *code_error)
     }
     else
     {
-        spu->file_name_input = "../../files/asm.txt";
+        spu->file_name_input = "../../files/code.asm";
     }
 
     spu->file_name_print_bin = "../../files/ass_output.bin";
