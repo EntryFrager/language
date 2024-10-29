@@ -7,7 +7,7 @@ static void split_commands (Spu *spu, int *code_error);
 static void skip_nul_str (Spu *spu, int *code_error);
 static void process_label (Spu *spu, size_t ip, size_t counter_ip, int *code_error);
 static void pars_command (Spu *spu, int *code_error);
-static int write_buf (Commands *cmd, int *buf, size_t counter, int *code_error);
+static int write_buf (Commands *cmd, double *buf, size_t counter, int *code_error);
 static void process_param (Spu *spu, size_t ip, size_t cmd_len, int *code_error);
 static void get_param (Spu *spu, size_t ip, size_t cmd_len, size_t len, int *code_error);
 static void print_listing (Spu *spu, int *code_error);
@@ -122,11 +122,11 @@ void code_compilation (Spu *spu, int *code_error)
 
     spu->n_words -= spu->n_label;
 
-    calloc_init_(spu->buf_output, int *, spu->n_words, sizeof(int));
+    calloc_init_(spu->buf_output, double *, spu->n_words, sizeof(double));
 
     pars_command(spu, code_error);
 
-    fwrite(spu->buf_output, sizeof(int), spu->n_words, spu->fp_print_bin);
+    fwrite(spu->buf_output, sizeof(double), spu->n_words, spu->fp_print_bin);
 
     print_listing(spu, code_error);
 }
@@ -190,25 +190,25 @@ void pars_command (Spu *spu, int *code_error)
 
 #undef DEF_CMD
 
-int write_buf (Commands *cmd, int *buf, size_t counter, int *code_error)
+int write_buf (Commands *cmd, double *buf, size_t counter, int *code_error)
 {
     my_assert(cmd != NULL, ERR_PTR);
     my_assert(buf != NULL, ERR_PTR);
 
-    buf[counter++] = cmd->cmd_code;
+    buf[counter++] = (double) cmd->cmd_code;
 
     if ((cmd->cmd_code & HAVE_REG) && (cmd->cmd_code & HAVE_ARG))
     {
-        buf[counter++] = cmd->reg;
-        buf[counter++] = cmd->argc;
+        buf[counter++] = (double) cmd->reg;
+        buf[counter++] = (double) cmd->argc;
     }
     else if (cmd->cmd_code & HAVE_REG)
     {
-        buf[counter++] = cmd->reg;
+        buf[counter++] = (double) cmd->reg;
     }
     else if (cmd->cmd_code & HAVE_ARG)
     {
-        buf[counter++] = cmd->argc;
+        buf[counter++] = (double) cmd->argc;
     }
 
     return counter;
@@ -345,7 +345,7 @@ void print_listing (Spu *spu, int *code_error)
     {
         if (*(spu->cmd[ip].command + spu->cmd[ip].size_str - 1) != ':')
         {
-            fprintf(spu->fp_print_txt, "|%12s|%12x|%12d|%12d|\n", spu->cmd[ip].command, spu->cmd[ip].cmd_code, spu->cmd[ip].argc, spu->cmd[ip].reg);
+            fprintf(spu->fp_print_txt, "|%12s|%12x|%12lg|%12d|\n", spu->cmd[ip].command, spu->cmd[ip].cmd_code, spu->cmd[ip].argc, spu->cmd[ip].reg);
             fprintf(spu->fp_print_txt, "+------------+------------+------------+------------+\n");
         }
     }

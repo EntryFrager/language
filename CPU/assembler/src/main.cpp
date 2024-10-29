@@ -6,6 +6,9 @@ int main (int argc, char *argv[])
 
     Spu spu = {};
 
+
+    printf("%d\n", sizeof("push"));
+
     spu_ctor(&spu, argc, argv, &code_error);
 
     input_text(&spu, &code_error);

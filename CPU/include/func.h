@@ -59,7 +59,7 @@ typedef struct {
     FILE *fp_input = NULL;
     FILE *fp_print = NULL;
 
-    int *buf = NULL;
+    int64_t *buf = NULL;
 
     size_t size_file = VALUE_DEFAULT;
 

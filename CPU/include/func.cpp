@@ -7,12 +7,12 @@ int input_text (SPU* spu, int *code_error)
 {
     my_assert(spu != NULL, ERR_PTR);
 
-    spu->size_file = get_file_size(spu->fp_input, code_error) / 4;
+    spu->size_file = get_file_size(spu->fp_input, code_error) / sizeof(int64_t);
 
-    calloc_init_(spu->buf, int *, spu->size_file * sizeof(int), sizeof(char));
+    calloc_init_(spu->buf, int64_t *, spu->size_file * sizeof(int64_t), sizeof(char));
 
-    size_t read_size = fread(spu->buf, sizeof (int), spu->size_file, spu->fp_input);
-    my_assert (read_size == spu->size_file, ERR_FREAD);
+    size_t read_size = fread(spu->buf, sizeof(int64_t), spu->size_file, spu->fp_input);
+    my_assert(read_size == spu->size_file, ERR_FREAD);
 
     return ERR_NO;
 }

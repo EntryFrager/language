@@ -12,7 +12,7 @@
 #include "../../Include_file/utilities/utils.h"
 
 #ifdef DEBUG
-    #define CANARIES_CHECK
+    //#define CANARIES_CHECK
     //#define HASH_CHECK
 #endif
 

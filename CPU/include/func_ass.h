@@ -67,7 +67,7 @@ typedef struct {
     char *command = NULL;
 
     int cmd_code = VALUE_DEFAULT;
-    int argc = VALUE_DEFAULT;
+    double argc = VALUE_DEFAULT;
     int reg = VALUE_DEFAULT;
 } Commands;
 
@@ -81,7 +81,7 @@ typedef struct {
     FILE *fp_print_bin = NULL;
 
     char *buf_input = NULL;
-    int *buf_output = NULL;
+    double *buf_output = NULL;
 
     size_t size_file = 0;
     size_t n_cmd = 0;
